@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1024</width>
-    <height>82</height>
+    <width>800</width>
+    <height>65</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,11 +25,9 @@ QLabel
 
 QPushButton
 {
-	font: 20px, &quot;微软雅黑&quot;;
-    color: white;
-	background-color: rgb(0, 100, 255);
-	
-
+	font:16px;
+    color: rgb(192,192,192);
+	background-color: rgb(0, 0, 0);
 	border-top: 2px solid white;	
 	border-left: 2px solid white;
 
@@ -39,181 +37,179 @@ QPushButton
   <widget class="QPushButton" name="NButton1">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>16</y>
-     <width>110</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::NoFocus</enum>
-   </property>
-   <property name="text">
-    <string>一般信息</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>3</x>
-     <y>5</y>
-     <width>1018</width>
-     <height>72</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>TextLabel</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="NButton2">
-   <property name="geometry">
-    <rect>
-     <x>122</x>
-     <y>16</y>
-     <width>110</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::NoFocus</enum>
-   </property>
-   <property name="text">
-    <string>制动</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="NButton3">
-   <property name="geometry">
-    <rect>
-     <x>234</x>
-     <y>16</y>
-     <width>110</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::NoFocus</enum>
-   </property>
-   <property name="text">
-    <string>牵引</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="NButton4">
-   <property name="geometry">
-    <rect>
-     <x>346</x>
-     <y>16</y>
-     <width>110</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::NoFocus</enum>
-   </property>
-   <property name="text">
-    <string>辅助</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="NButton5">
-   <property name="geometry">
-    <rect>
-     <x>458</x>
-     <y>16</y>
-     <width>110</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::NoFocus</enum>
-   </property>
-   <property name="text">
-    <string>空调</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="NButton6">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>16</y>
-     <width>110</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::NoFocus</enum>
-   </property>
-   <property name="text">
-    <string>故障履历</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="NButton7">
-   <property name="geometry">
-    <rect>
-     <x>682</x>
-     <y>16</y>
-     <width>110</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::NoFocus</enum>
-   </property>
-   <property name="text">
-    <string>当前车况</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="NButton8">
-   <property name="geometry">
-    <rect>
-     <x>794</x>
-     <y>16</y>
-     <width>110</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::NoFocus</enum>
-   </property>
-   <property name="text">
-    <string>维修菜单</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="NButton9">
-   <property name="geometry">
-    <rect>
-     <x>915</x>
-     <y>16</y>
-     <width>100</width>
-     <height>50</height>
+     <x>1</x>
+     <y>2</y>
+     <width>75</width>
+     <height>60</height>
     </rect>
    </property>
    <property name="focusPolicy">
     <enum>Qt::NoFocus</enum>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton
-{
-	font: 20px, &quot;微软雅黑&quot;;
-    color: white;
-	background-color: rgb(0, 176, 80);
-    border-top: 2px solid white;
-	border-left: 2px solid white;
-
-}</string>
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>主要
+数据</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton2">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>2</y>
+     <width>75</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="text">
+    <string>机车
+设置</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton3">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>2</y>
+     <width>75</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="text">
+    <string>运行
+条件</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton4">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>2</y>
+     <width>75</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="text">
+    <string>设备
+数据</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton5">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>2</y>
+     <width>75</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="text">
+    <string>维护
+测试</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton6">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>2</y>
+     <width>75</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <zorder>label</zorder>
-  <zorder>NButton1</zorder>
-  <zorder>NButton2</zorder>
-  <zorder>NButton3</zorder>
-  <zorder>NButton4</zorder>
-  <zorder>NButton5</zorder>
-  <zorder>NButton6</zorder>
-  <zorder>NButton7</zorder>
-  <zorder>NButton8</zorder>
-  <zorder>NButton9</zorder>
+  <widget class="QPushButton" name="NButton7">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>2</y>
+     <width>75</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton8">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>2</y>
+     <width>75</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton9">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>2</y>
+     <width>75</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>故障
+查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton10">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>2</y>
+     <width>75</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>合屏
+模式</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

@@ -24,9 +24,6 @@ public:
 private:
     Ui::Header *ui;
 
-private slots:
-    void on_CurrentFaultBtn_pressed();
-    void on_HelpItemBtn_pressed();
 };
 
 #endif // HEADER_H

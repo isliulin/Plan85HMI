@@ -1,11 +1,21 @@
 #ifndef GLOBAL_H
 #define GLOBAL_H
 
-#define NButtonUP    "font: 20px, \"微软雅黑\";color: white;background-color: rgb(0, 100, 255);border-top: 2px solid white;border-left: 2px solid white;"
-#define NButtonDOWN  "font: 20px, \"微软雅黑\";color: white;background-color: rgb(0, 0, 255);border-top: 2px solid  rgb(0, 0, 255);border-left: 2px solid  rgb(0, 0, 255);border-bottom: 2px solid white;border-right: 2px solid white;"
+#define NButtonUP    "font: 16px;color: rgb(192,192,192);background-color: rgb(0, 0, 0);border-top: 2px solid white;border-left: 2px solid white;"
+#define NButtonDOWN  "font: 16px;color: rgb(0, 0, 0);background-color: rgb(240, 240, 0);border-bottom: 2px solid white;border-right: 2px solid white;"
 
 //#define WINDOWS_MODE
 #define QT_VERSION_5_6
+
+#define YELLOW     "color:rgb(240,240,0);"
+#define GREEN     "color:rgb(0,240,0);"
+#define DARKBLUE     "color:rgb(0,0,240);"
+#define CYAN     "color:rgb(0,240,240);"
+#define GRAY1     "color:rgb(128,128,128);"
+#define RED     "color:rgb(240,0,0);"
+#define WHITE     "color:rgb(248,248,248);"
+#define GRAY2     "color:rgb(192,192,192);"
+#define BLACK     "color:rgb(0,0,0);"
 
 
 #include <stdlib.h>
@@ -20,7 +30,15 @@ enum pagePosition
     uMiddle,
     uBottom,
     uHuge,
-    uLargeMiddle
+    //按照导航区的种类，设置多种界面模式。所有模式来源于“牵引”模式下的导航按钮
+    uMiddleTraction,//牵引模式
+    uMiddleMainData,//主要数据
+    uMiddleSetting,//机车设置
+    uMiddleCondition,//运行条件
+    uMiddleDeviceData,//设备数据
+    uMiddleMain,//维护测试
+    uMiddleFault,//故障查询
+    uMiddleUnite,//合屏模式
 };
 enum pageIndex
 {

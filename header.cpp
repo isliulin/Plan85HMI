@@ -15,22 +15,13 @@ Header::~Header()
 }
 void Header::updatePage()
 {
-    this->ui->DateTime->setText(QDateTime::currentDateTime().date().toString("yyyy-MM-dd")+"\n"+QDateTime::currentDateTime().time().toString("hh:mm:ss"));
+    this->ui->LBLDate->setText(QDateTime::currentDateTime().date().toString("yyyy-MM-dd"));
+    this->ui->LBLTime->setText(QDateTime::currentDateTime().time().toString("hh:mm:ss"));
+
 }
 void Header::setPageName(QString name)
 {
-    this->ui->PageName->setText(name);
-}
-
-
-void Header::on_HelpItemBtn_pressed()
-{
-
-}
-
-void Header::on_CurrentFaultBtn_pressed()
-{
-
+    this->ui->LBLPagename->setText(name);
 }
 void Header::updateLanguage()
 {
