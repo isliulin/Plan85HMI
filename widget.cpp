@@ -45,9 +45,7 @@ Widget::Widget(QWidget *parent) :
     }
 
 
-    this->header = new Header(this);
-    this->header->setMyBase(uTop,QString("标题栏"));
-    this->header->show();
+
 
     this->navigator = new Navigator(this);
     this->navigator->setMyBase(uBottom,QString("导航栏"));
@@ -55,13 +53,18 @@ Widget::Widget(QWidget *parent) :
     connect(navigator,SIGNAL(translateLanguage()),this,SLOT(translateLanguage()));
 
     this->vehicleRunStatePage = new VehicleRunStatePage(this);
-    this->vehicleRunStatePage->setMyBase(uMiddle,QString("一般信息"));
+    this->vehicleRunStatePage->setMyBase(uMiddleTraction,QString("牵引模式"));
     this->vehicleRunStatePage->show();
+
+    this->header = new Header(this);
+    this->header->setMyBase(uTop,QString("标题栏"));
+    this->header->show();
 
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uHeader,this->header);
     this->widgets.insert(uNavigator,this->navigator);
 
+    this->header->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();
 }
 

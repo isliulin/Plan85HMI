@@ -8,7 +8,7 @@ Navigator::Navigator(QWidget *parent) :
     ui->setupUi(this);
 
     buttons<<this->ui->NButton1<<this->ui->NButton2<<this->ui->NButton3<<this->ui->NButton5<<this->ui->NButton4
-            <<this->ui->NButton6<<this->ui->NButton7<<this->ui->NButton8<<this->ui->NButton9;
+            <<this->ui->NButton6<<this->ui->NButton7<<this->ui->NButton8<<this->ui->NButton9<<this->ui->NButton10;
 
     foreach (QPushButton *button, buttons)
     {
@@ -28,10 +28,10 @@ void Navigator::NBpressEvent()
         buttons[i]->setStyleSheet(NButtonUP);
     }
     ((QPushButton *)this->sender())->setStyleSheet(NButtonDOWN);
-    if(BTNname == "NButton9")
-    {
-        emit translateLanguage();
-    }
+//    if(BTNname == "NButton9")
+//    {
+//        emit translateLanguage();
+//    }
 }
 
 void Navigator::updateLanguage()

@@ -20,18 +20,25 @@ void MyBase::setMyBase(pagePosition position, QString name)
     }
     else if (position == uMiddle)
     {
-        this->setGeometry(0, 82, this->width(), this->height());
+        this->setGeometry(0, 36, this->width(), this->height());
     }
     else if (position == uBottom)
     {
-        this->setGeometry(0, 686, this->width(), this->height());
+        this->setGeometry(0, 536, this->width(), this->height());
     }
     else if (position == uHuge)
     {
         this->setGeometry(0, 0, this->width(), this->height());
-    }else if (position == uLargeMiddle)
+    }else if (position == uMiddleTraction ||
+              position == uMiddleMainData ||
+              position == uMiddleSetting ||
+              position == uMiddleCondition ||
+              position == uMiddleDeviceData ||
+              position == uMiddleMain ||
+              position == uMiddleFault ||
+              position == uMiddleUnite)
     {
-        this->setGeometry(0, 82, this->width(), this->height());
+        this->setGeometry(0, 36, this->width(), this->height());
     }
 
     this->name = name;
