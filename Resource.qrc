@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>images/helpitem.bmp</file>
+        <file>images/CurrentFaultItem.bmp</file>
+        <file>images/logo.bmp</file>
+    </qresource>
+</RCC>
