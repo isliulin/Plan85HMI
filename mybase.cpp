@@ -36,7 +36,8 @@ void MyBase::setMyBase(pagePosition position, QString name)
               position == uMiddleDeviceData ||
               position == uMiddleMain ||
               position == uMiddleFault ||
-              position == uMiddleUnite)
+              position == uMiddleUnite ||
+              position == uMiddleBrake)
     {
         this->setGeometry(0, 36, this->width(), this->height());
     }

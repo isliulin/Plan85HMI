@@ -13,6 +13,8 @@
 #include "qdesktopwidget.h"
 #endif
 
+#include "maindata_trainoutline.h"
+#include "settng_bypass.h"
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -60,9 +62,21 @@ Widget::Widget(QWidget *parent) :
     this->header->setMyBase(uTop,QString("标题栏"));
     this->header->show();
 
+    //add maindata pages
+
+    this->mainData_TrainOutline = new MainData_TrainOutline(this);
+    this->mainData_TrainOutline->setMyBase(uMiddleMainData,QString("机车概况"));
+    this->mainData_TrainOutline->hide();
+
+    //add setting pages
+    this->settng_Bypass = new Settng_Bypass(this);
+    this->settng_Bypass->setMyBase(uMiddleSetting,QString("隔离"));
+    this->settng_Bypass->hide();
+
+
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
-    this->widgets.insert(uHeader,this->header);
-    this->widgets.insert(uNavigator,this->navigator);
+    this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
+    this->widgets.insert(uSettng_Bypass,this->settng_Bypass);
 
     this->header->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();
@@ -113,6 +127,8 @@ void Widget::changePage(int page)
             this->widgets[key]->hide();
         }
     }
+    navigator->updateButtonsNamesByPositon(this->widgets[MyBase::currentPage]->Position);
+
 }
 void Widget::showEvent(QShowEvent *)
 {

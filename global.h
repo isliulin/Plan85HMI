@@ -32,6 +32,7 @@ enum pagePosition
     uHuge,
     //按照导航区的种类，设置多种界面模式。所有模式来源于“牵引”模式下的导航按钮
     uMiddleTraction,//牵引模式
+    uMiddleBrake,//制动模式
     uMiddleMainData,//主要数据
     uMiddleSetting,//机车设置
     uMiddleCondition,//运行条件
@@ -42,10 +43,54 @@ enum pagePosition
 };
 enum pageIndex
 {
-    uVehicleRunStatePage = 0,
+    uNULL = 0,
+    uVehicleRunStatePage,
     uHeader,
-    uNavigator
+    uNavigator,
+    //主要数据
+    uMainData_TrainOutline,
+    uMainData_DriverOutline,
+    uMainData_TracBrakeOutline,
+    //机车设置
+    uSettng_Bypass,
+    uSettng_Panto,
+    uSettng_Distance,
+    uSettng_TrainCode,
+    uSettng_Lubrication,
+    uSettng_Separation,
+    uSettng_HangMode,
+    uSettng_Others,
+    //运行条件
+    uCondition_PantoUp,
+    uCondition_Breaker,
+    uCondition_Traction,
+    uCondition_Brake,
+    //设备数据
+    uDeviceData_breaker,
+    uDeviceData_ACU,
+    uDeviceData_MainConv,
+    uDeviceData_Online,
+    uDeviceData_Version,
+    uDeviceData_IO,
+    uDeviceData_AirBrake,
+    //维护测试
+    uMain_Simulate,
+    uMain_AssistantDevice,
+    uMain_380,
+    uMain_Light,
+    uMain_Lubrication,
+    uMain_Separation,
+    uMain_Wheel,
+    uMain_Datetime,
+    //故障查询
+    uFault_Current,
+    uFault_History,
+    uFault_Download,
 
+    //合屏模式
+    uUniteMode,
+    //制动模式
+    uBrakeMode
 };
 enum keyboardIndex{
     key_NULL = 0,
