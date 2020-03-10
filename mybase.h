@@ -19,7 +19,7 @@ public:
     static int currentPage;
     static Database *database;
     QString name;
-    int Position;
+    enum pagePosition Position;
 
 public slots:
 signals:

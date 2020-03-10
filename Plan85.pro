@@ -83,7 +83,9 @@ SOURCES += main.cpp\
     mvbcx/c_mvbsock.cpp \
     cxExtDev/blacklightthread.cpp \
     cxExtDev/externaldevicelib.cpp \
-    data/data_ccu.cpp
+    data/data_ccu.cpp \
+    maindata_trainoutline.cpp \
+    settng_bypass.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -149,12 +151,16 @@ HEADERS  += widget.h \
     mvbcx/c_mvbsock.h \
     cxExtDev/blacklightthread.h \
     cxExtDev/externaldevicelib.h \
-    data/data_ccu.h
+    data/data_ccu.h \
+    maindata_trainoutline.h \
+    settng_bypass.h
 
 FORMS    += widget.ui \
     header.ui \
     navigator.ui \
-    vehiclerunstatepage.ui
+    vehiclerunstatepage.ui \
+    maindata_trainoutline.ui \
+    settng_bypass.ui
 
 RESOURCES += \
     Resource.qrc

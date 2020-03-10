@@ -16,9 +16,14 @@ public:
     explicit Navigator(QWidget *parent = 0);
     ~Navigator();
     void updateLanguage();
+    void updateButtonsNamesByPositon(enum pagePosition p);
 private:
     Ui::Navigator *ui;
     QList<QPushButton*>buttons;
+    QList<pageIndex >buttonIndexList;
+    QList<QString >buttonNameList;
+    int m_ButtonIndex;
+    enum pagePosition m_position,m_oldposition;
 
 private slots:
     void NBpressEvent();

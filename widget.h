@@ -19,7 +19,8 @@ class VehicleRunStatePage;
 class CrrcMvb;
 class CrrcFault;
 
-
+class MainData_TrainOutline;
+class Settng_Bypass;
 class Widget : public QWidget
 {
     Q_OBJECT
@@ -30,7 +31,6 @@ public:
     void keyPressEvent(QKeyEvent *event);
     void showEvent(QShowEvent *);
     QMap<int, MyBase *> widgets;
-
 
     ~Widget();
 
@@ -48,6 +48,9 @@ private:
     Header *header;
     CrrcMvb* crrcMvb;
     CrrcFault* crrcFault;
+
+    MainData_TrainOutline* mainData_TrainOutline;
+    Settng_Bypass* settng_Bypass;
 };
 
 #endif // WIDGET_H
