@@ -19,6 +19,11 @@ public:
     void updatePage();
     void showEvent(QShowEvent *);
 
+private slots:
+    void on_BTNMinus1_clicked();
+
+    void on_BTNPlus1_clicked();
+
 private:
     Ui::VehicleRunStatePage *ui;
 };
