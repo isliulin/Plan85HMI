@@ -85,7 +85,14 @@ SOURCES += main.cpp\
     cxExtDev/externaldevicelib.cpp \
     data/data_ccu.cpp \
     maindata_trainoutline.cpp \
-    settng_bypass.cpp
+    settng_bypass.cpp \
+    settng_panto.cpp \
+    settng_distance.cpp \
+    settng_traincode.cpp \
+    settng_lubrication.cpp \
+    settng_separation.cpp \
+    settng_hangmode.cpp \
+    settng_others.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -153,14 +160,28 @@ HEADERS  += widget.h \
     cxExtDev/externaldevicelib.h \
     data/data_ccu.h \
     maindata_trainoutline.h \
-    settng_bypass.h
+    settng_bypass.h \
+    settng_panto.h \
+    settng_distance.h \
+    settng_traincode.h \
+    settng_lubrication.h \
+    settng_separation.h \
+    settng_hangmode.h \
+    settng_others.h
 
 FORMS    += widget.ui \
     header.ui \
     navigator.ui \
     vehiclerunstatepage.ui \
     maindata_trainoutline.ui \
-    settng_bypass.ui
+    settng_bypass.ui \
+    settng_panto.ui \
+    settng_distance.ui \
+    settng_traincode.ui \
+    settng_lubrication.ui \
+    settng_separation.ui \
+    settng_hangmode.ui \
+    settng_others.ui
 
 RESOURCES += \
     Resource.qrc

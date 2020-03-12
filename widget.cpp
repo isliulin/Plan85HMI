@@ -15,6 +15,14 @@
 
 #include "maindata_trainoutline.h"
 #include "settng_bypass.h"
+#include "settng_panto.h"
+#include "settng_distance.h"
+#include "settng_traincode.h"
+#include "settng_lubrication.h"
+#include "settng_separation.h"
+#include "settng_hangmode.h"
+#include "settng_others.h"
+
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -73,10 +81,45 @@ Widget::Widget(QWidget *parent) :
     this->settng_Bypass->setMyBase(uMiddleSetting,QString("隔离"));
     this->settng_Bypass->hide();
 
+    this->settng_Panto = new Settng_Panto(this);
+    this->settng_Panto->setMyBase(uMiddleSetting,QString("受电弓"));
+    this->settng_Panto->hide();
+
+    this->settng_Distance = new Settng_Distance(this);
+    this->settng_Distance->setMyBase(uMiddleSetting,QString("距离计数"));
+    this->settng_Distance->hide();
+
+    this->settng_TrainCode = new Settng_TrainCode(this);
+    this->settng_TrainCode->setMyBase(uMiddleSetting,QString("车号设置"));
+    this->settng_TrainCode->hide();
+
+    this->settng_Lubrication = new Settng_Lubrication(this);
+    this->settng_Lubrication->setMyBase(uMiddleSetting,QString("轮缘润滑"));
+    this->settng_Lubrication->hide();
+
+    this->settng_Separation = new Settng_Separation(this);
+    this->settng_Separation->setMyBase(uMiddleSetting,QString("分相线路"));
+    this->settng_Separation->hide();
+
+    this->settng_HangMode = new Settng_HangMode(this);
+    this->settng_HangMode->setMyBase(uMiddleSetting,QString("挂车模式"));
+    this->settng_HangMode->hide();
+
+    this->settng_Others = new Settng_Others(this);
+    this->settng_Others->setMyBase(uMiddleSetting,QString("其他设置"));
+    this->settng_Others->hide();
 
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
     this->widgets.insert(uSettng_Bypass,this->settng_Bypass);
+    this->widgets.insert(uSettng_Panto,this->settng_Panto);
+    this->widgets.insert(uSettng_Distance,this->settng_Distance);
+    this->widgets.insert(uSettng_TrainCode,this->settng_TrainCode);
+    this->widgets.insert(uSettng_Lubrication,this->settng_Lubrication);
+    this->widgets.insert(uSettng_Separation,this->settng_Separation);
+    this->widgets.insert(uSettng_HangMode,this->settng_HangMode);
+    this->widgets.insert(uSettng_Others,this->settng_Others);
+
 
     this->header->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();
