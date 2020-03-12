@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Navigator</class>
+ <widget class="QWidget" name="Navigator">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>65</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	background-color: black;
+}
+QLabel
+{
+	border:1px solid white;
+}
+
+QPushButton
+{
+	font:16px;
+    color: rgb(192,192,192);
+	background-color: rgb(0, 0, 0);
+	border-top: 2px solid white;	
+	border-left: 2px solid white;
+
+
+}</string>
+  </property>
+  <widget class="QPushButton" name="NButton1">
+   <property name="geometry">
+    <rect>
+     <x>1</x>
+     <y>2</y>
+     <width>75</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>0</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>主要
+数据</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton2">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>2</y>
+     <width>75</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>1</string>
+   </property>
+   <property name="text">
+    <string>机车
+设置</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton3">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>2</y>
+     <width>75</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>2</string>
+   </property>
+   <property name="text">
+    <string>运行
+条件</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton4">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>2</y>
+     <width>75</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>3</string>
+   </property>
+   <property name="text">
+    <string>设备
+数据</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton5">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>2</y>
+     <width>75</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>4</string>
+   </property>
+   <property name="text">
+    <string>维护
+测试</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton6">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>2</y>
+     <width>75</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>5</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton7">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>2</y>
+     <width>75</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>6</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton8">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>2</y>
+     <width>75</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>7</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton9">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>2</y>
+     <width>75</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>8</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>故障
+查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton10">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>2</y>
+     <width>75</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>9</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>合屏
+模式</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
