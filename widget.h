@@ -21,6 +21,14 @@ class CrrcFault;
 
 class MainData_TrainOutline;
 class Settng_Bypass;
+class Settng_Panto;
+class Settng_Distance;
+class Settng_TrainCode;
+class Settng_Lubrication;
+class Settng_Separation;
+class Settng_HangMode;
+class Settng_Others;
+
 class Widget : public QWidget
 {
     Q_OBJECT
@@ -51,6 +59,13 @@ private:
 
     MainData_TrainOutline* mainData_TrainOutline;
     Settng_Bypass* settng_Bypass;
+    Settng_Panto* settng_Panto;
+    Settng_Distance* settng_Distance;
+    Settng_TrainCode* settng_TrainCode;
+    Settng_Lubrication* settng_Lubrication;
+    Settng_Separation* settng_Separation;
+    Settng_HangMode* settng_HangMode;
+    Settng_Others* settng_Others;
 };
 
 #endif // WIDGET_H
