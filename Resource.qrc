@@ -3,5 +3,6 @@
         <file>images/helpitem.bmp</file>
         <file>images/CurrentFaultItem.bmp</file>
         <file>images/logo.bmp</file>
+        <file>images/TrainLogo.png</file>
     </qresource>
 </RCC>
