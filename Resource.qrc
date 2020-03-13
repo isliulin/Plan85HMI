@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/images">
+
         <file>images/helpitem.bmp</file>
         <file>images/CurrentFaultItem.bmp</file>
         <file>images/logo.bmp</file>
@@ -7,5 +8,42 @@
         <file>images/HSCutout.png</file>
         <file>images/pantoNormal.png</file>
         <file>images/Cheti.png</file>
+        <file>images/chengfazhidong.png</file>
+        <file>images/cheti.png</file>
+        <file>images/dingsumoshi.png</file>
+        <file>images/down.png</file>
+        <file>images/fenxiangqu.png</file>
+        <file>images/huaxing.png</file>
+        <file>images/jingtigeli.png</file>
+        <file>images/jingtizhengchang.png</file>
+        <file>images/jinjizhidong.png</file>
+        <file>images/jinjizhidonggeli.png</file>
+        <file>images/kongzhuan.png</file>
+        <file>images/panto1down2down.png</file>
+        <file>images/panto1down2iso.png</file>
+        <file>images/panto1down2up.png</file>
+        <file>images/panto1iso2down.png</file>
+        <file>images/panto1iso2up.png</file>
+        <file>images/panto1up2down.png</file>
+        <file>images/panto1up2iso.png</file>
+        <file>images/panto12up.png</file>
+        <file>images/pantoiso.png</file>
+        <file>images/qianyin.png</file>
+        <file>images/sasha.png</file>
+        <file>images/tingfanggeli.png</file>
+        <file>images/tingfanghuanjie.png</file>
+        <file>images/tingfangshijia.png</file>
+        <file>images/up.png</file>
+        <file>images/xianghou.png</file>
+        <file>images/xiangqian.png</file>
+        <file>images/zhidong.png</file>
+        <file>images/zhidonggeli.png</file>
+        <file>images/zhidonghuanjie.png</file>
+        <file>images/zhidongshijia.png</file>
+        <file>images/zhongli.png</file>
+        <file>images/zhuduanbihe.png</file>
+        <file>images/zhuduanduankai.png</file>
+        <file>images/zhuduangeli.png</file>
+        <file>images/zhuduanjiuxu.png</file>
     </qresource>
 </RCC>
