@@ -43,7 +43,7 @@ border:2px solid rgb(255,255,255);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/images/cheti.png);</string>
+    <string notr="true">border-image: url(:/images/images/Cheti.png);</string>
    </property>
    <property name="text">
     <string/>

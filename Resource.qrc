@@ -4,8 +4,8 @@
         <file>images/CurrentFaultItem.bmp</file>
         <file>images/logo.bmp</file>
         <file>images/TrainLogo.png</file>
-        <file>images/cheti.png</file>
         <file>images/HSCutout.png</file>
         <file>images/pantoNormal.png</file>
+        <file>images/Cheti.png</file>
     </qresource>
 </RCC>
