@@ -92,7 +92,8 @@ SOURCES += main.cpp\
     settng_lubrication.cpp \
     settng_separation.cpp \
     settng_hangmode.cpp \
-    settng_others.cpp
+    settng_others.cpp \
+    widgets/ctrlnetvoltage.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -167,7 +168,8 @@ HEADERS  += widget.h \
     settng_lubrication.h \
     settng_separation.h \
     settng_hangmode.h \
-    settng_others.h
+    settng_others.h \
+    widgets/ctrlnetvoltage.h
 
 FORMS    += widget.ui \
     header.ui \
@@ -181,7 +183,8 @@ FORMS    += widget.ui \
     settng_lubrication.ui \
     settng_separation.ui \
     settng_hangmode.ui \
-    settng_others.ui
+    settng_others.ui \
+    widgets/ctrlnetvoltage.ui
 
 RESOURCES += \
     Resource.qrc
