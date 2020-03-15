@@ -112,6 +112,7 @@ enum pageIndex
     uMain_380,
     uMain_Light,
     uMain_Lubrication,
+    uMain_Panto,
     uMain_Separation,
     uMain_Wheel,
     uMain_Datetime,
