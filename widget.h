@@ -28,6 +28,7 @@ class Settng_Lubrication;
 class Settng_Separation;
 class Settng_HangMode;
 class Settng_Others;
+class Main_Simulate;
 
 class Widget : public QWidget
 {
@@ -66,6 +67,7 @@ private:
     Settng_Separation* settng_Separation;
     Settng_HangMode* settng_HangMode;
     Settng_Others* settng_Others;
+    Main_Simulate* main_Simulate;
 };
 
 #endif // WIDGET_H
