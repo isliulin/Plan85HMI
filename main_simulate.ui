@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Main_Simulate</class>
+ <widget class="QWidget" name="Main_Simulate">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	background-color: black;
+}
+QPushButton
+{
+	font:14px;
+    color: rgb(0,0,0);
+	background-color: rgb(0, 255, 0);
+	border-top: 2px solid white;	
+	border-left: 2px solid white;
+}
+QLabel
+{
+color:rgb(255,255,255);
+}
+</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>340</y>
+     <width>351</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 0, 0);
+font-size:18px;</string>
+   </property>
+   <property name="text">
+    <string>高压隔离开关没有隔离，请隔离</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>390</y>
+     <width>351</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 0, 0);
+font-size:18px;</string>
+   </property>
+   <property name="text">
+    <string>钥匙没有激活，请激活</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>350</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font:16px;
+    color: rgb(0,0,0);
+	background-color: rgb(255, 0, 0);
+</string>
+   </property>
+   <property name="text">
+    <string>高压隔离开关</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>350</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font:16px;
+    color: rgb(0,0,0);
+	background-color: rgb(255, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>钥匙开关</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
