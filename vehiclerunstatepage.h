@@ -4,6 +4,8 @@
 #include <QWidget>
 #include "mybase.h"
 
+#include "widgets/ctrlnetvoltage.h"
+#include "widgets/ctrlnetcurrent.h"
 namespace Ui {
     class VehicleRunStatePage;
 }
@@ -26,6 +28,9 @@ private slots:
 
 private:
     Ui::VehicleRunStatePage *ui;
+
+    CtrlNetVoltage* ctrlNetVoltage;
+    CtrlNetCurrent* ctrlNetCurrent;
 };
 
 #endif // VEHICLERUNSTATEPAGE_H
