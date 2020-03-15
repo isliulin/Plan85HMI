@@ -13,6 +13,9 @@ VehicleRunStatePage::VehicleRunStatePage(QWidget *parent) :
 
     ctrlNetVoltage = new CtrlNetVoltage(this);
     ctrlNetVoltage->setGeometry(10,10,this->ctrlNetVoltage->width(),this->ctrlNetVoltage->height());
+
+    ctrlNetCurrent = new CtrlNetCurrent(this);
+    ctrlNetCurrent->setGeometry(110,10,this->ctrlNetCurrent->width(),this->ctrlNetCurrent->height());
 }
 
 VehicleRunStatePage::~VehicleRunStatePage()
@@ -26,7 +29,9 @@ void VehicleRunStatePage::updatePage()
     ui->LBLFault2->setStyleSheet(FAULTLEVEL2);
     ui->LBLFault3->setStyleSheet(FAULTLEVEL3);
     static int i   = 0;
-    ctrlNetVoltage->setCtrlValueRect(i++);
+    i +=10;
+    ctrlNetVoltage->setCtrlValueRect(i/10);
+    ctrlNetCurrent->setCtrlValueRect(i);
 
 }
 void VehicleRunStatePage::showEvent(QShowEvent *)

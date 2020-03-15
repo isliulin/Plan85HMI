@@ -30,7 +30,7 @@ border:1px solid transparent;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:white</string>
+    <string notr="true">color:white;font:14px;</string>
    </property>
    <property name="text">
     <string>网压</string>
@@ -828,7 +828,7 @@ border:1px solid transparent;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid white;</string>
+    <string notr="true">border:1px solid white;background-color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -841,13 +841,13 @@ border:1px solid transparent;
    <property name="geometry">
     <rect>
      <x>36</x>
-     <y>329</y>
+     <y>31</y>
      <width>48</width>
      <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid transparent;background-color:yellow;</string>
+    <string notr="true">border:1px solid transparent;background-color:black;</string>
    </property>
    <property name="text">
     <string/>
@@ -886,7 +886,7 @@ font:10px;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:white</string>
+    <string notr="true">font:14px;color:white</string>
    </property>
    <property name="text">
     <string>0.0</string>
