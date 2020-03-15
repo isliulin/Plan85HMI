@@ -22,6 +22,7 @@
 #include "settng_separation.h"
 #include "settng_hangmode.h"
 #include "settng_others.h"
+#include "main_simulate.h"
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -109,6 +110,10 @@ Widget::Widget(QWidget *parent) :
     this->settng_Others->setMyBase(uMiddleSetting,QString("其他设置"));
     this->settng_Others->hide();
 
+    this->main_Simulate=new Main_Simulate(this);
+    this->main_Simulate->setMyBase(uMiddleMain,QString("仿真测试"));
+    this->main_Simulate->hide();
+
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
     this->widgets.insert(uSettng_Bypass,this->settng_Bypass);
@@ -119,6 +124,7 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uSettng_Separation,this->settng_Separation);
     this->widgets.insert(uSettng_HangMode,this->settng_HangMode);
     this->widgets.insert(uSettng_Others,this->settng_Others);
+    this->widgets.insert(uMain_Simulate,this->main_Simulate);
 
 
     this->header->setPageName(this->widgets[uVehicleRunStatePage]->name);

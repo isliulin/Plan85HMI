@@ -51,6 +51,11 @@ void Navigator::NBpressEvent()
         buttonIndexList<<uSettng_Bypass<<uSettng_Panto<<uSettng_Distance<<uSettng_TrainCode<<
                      uSettng_Lubrication<<uSettng_Separation<<uSettng_HangMode<<uSettng_Others<<uNULL<<uVehicleRunStatePage;
         break;
+
+    case uMiddleMain:
+        buttonIndexList<<uMain_Simulate<<uMain_AssistantDevice<<uMain_380<<uMain_Light<<uMain_Lubrication<<uMain_Panto<<uMain_Separation
+        <<uMain_Wheel<<uMain_Datetime<<uVehicleRunStatePage;
+        break;
     }
     changePage(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()));
 }
@@ -71,6 +76,11 @@ void Navigator::updateButtonsNamesByPositon(enum pagePosition p)
         case uMiddleSetting:
         buttonNameList<<"隔离"<<"受电弓"<<"距离\n计数"<<"车号\n设置"<<"轮缘\n润滑"
                         <<"分相\n线路"<<"挂车\n模式"<<"其他\n设置"<<""<<"主界面";
+        break;
+
+    case uMiddleMain:
+        buttonNameList<<"仿真测试"<<"辅机测试"<<"库内380测试"<<"指示灯测试"
+                     <<"轮缘润滑测试"<<"双弓测试"<<"过分相测试"<<"轮径设置"<<"日期时间"<<"主界面";
         break;
     }
     for(int i = 0; i < buttons.size();i++)
