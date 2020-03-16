@@ -12,3 +12,7 @@ Settng_Bypass::~Settng_Bypass()
 {
     delete ui;
 }
+void Settng_Bypass::updatePage()
+{
+
+}

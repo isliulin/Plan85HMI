@@ -14,7 +14,7 @@ class Settng_Bypass : public MyBase
 public:
     explicit Settng_Bypass(QWidget *parent = 0);
     ~Settng_Bypass();
-
+    void updatePage();
 private:
     Ui::Settng_Bypass *ui;
 };
