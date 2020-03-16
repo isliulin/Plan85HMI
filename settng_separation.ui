@@ -17,8 +17,104 @@
    <string notr="true">QWidget
 {
 background-color:black;
+}
+QLabel
+{
+font:14px;
+}
+QPushButton
+{
+border:1px solid white;
+background-color:black;
+color:white;
+font:14px;
 }</string>
   </property>
+  <widget class="QLabel" name="LBL_Tips1">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>110</y>
+     <width>121</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,0);
+</string>
+   </property>
+   <property name="text">
+    <string>分相线路返回模式:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Tips2">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>174</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+</string>
+   </property>
+   <property name="text">
+    <string>分相线路选择</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_NormalLine">
+   <property name="geometry">
+    <rect>
+     <x>412</x>
+     <y>150</y>
+     <width>110</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>常规线路</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_FreightLine">
+   <property name="geometry">
+    <rect>
+     <x>412</x>
+     <y>188</y>
+     <width>110</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>货运专线</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Tips3">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>270</y>
+     <width>251</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;
+background-color:black;
+color:white;
+font:14px;</string>
+   </property>
+   <property name="text">
+    <string>提示：
+
+常规线路：预告电和强迫点间距170m
+货运线路：预告电和强迫点间距265m</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
