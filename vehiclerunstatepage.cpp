@@ -16,6 +16,11 @@ VehicleRunStatePage::VehicleRunStatePage(QWidget *parent) :
 
     ctrlNetCurrent = new CtrlNetCurrent(this);
     ctrlNetCurrent->setGeometry(110,10,this->ctrlNetCurrent->width(),this->ctrlNetCurrent->height());
+
+    ctrlControlVoltage = new CtrlControlVoltage(this);
+    ctrlControlVoltage->setGeometry(210,10,this->ctrlControlVoltage->width(),this->ctrlControlVoltage->height());
+
+
 }
 
 VehicleRunStatePage::~VehicleRunStatePage()
@@ -32,6 +37,7 @@ void VehicleRunStatePage::updatePage()
     i +=10;
     ctrlNetVoltage->setCtrlValueRect(i/10);
     ctrlNetCurrent->setCtrlValueRect(i);
+    ctrlControlVoltage->setCtrlValueRect(i,i);
 
 }
 void VehicleRunStatePage::showEvent(QShowEvent *)

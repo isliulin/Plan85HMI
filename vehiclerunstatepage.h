@@ -6,6 +6,7 @@
 
 #include "widgets/ctrlnetvoltage.h"
 #include "widgets/ctrlnetcurrent.h"
+#include "widgets/ctrlcontrolvoltage.h"
 namespace Ui {
     class VehicleRunStatePage;
 }
@@ -31,6 +32,7 @@ private:
 
     CtrlNetVoltage* ctrlNetVoltage;
     CtrlNetCurrent* ctrlNetCurrent;
+    CtrlControlVoltage* ctrlControlVoltage;
 };
 
 #endif // VEHICLERUNSTATEPAGE_H
