@@ -52,7 +52,7 @@ void Navigator::NBpressEvent()
                      uSettng_Lubrication<<uSettng_Separation<<uSettng_HangMode<<uSettng_Others<<uNULL<<uVehicleRunStatePage;
         break;
 
-    case uMiddleMain:
+        case uMiddleMain:
         buttonIndexList<<uMain_Simulate<<uMain_AssistantDevice<<uMain_380<<uMain_Light<<uMain_Lubrication<<uMain_Panto<<uMain_Separation
         <<uMain_Wheel<<uMain_Datetime<<uVehicleRunStatePage;
         break;

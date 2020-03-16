@@ -5,6 +5,7 @@ Database::Database()
     HMIPosition = MainGetDefaultPara::getInt("/Position/HMI");
 
     data_CCU = new Data_CCU();
+    data_TCN = new Data_TCN();
 
 }
 void Database::getHMISourceSinkPost(QList<unsigned short int> &ports)
@@ -15,4 +16,5 @@ void Database::getHMISourceSinkPost(QList<unsigned short int> &ports)
 void Database::updateData()
 {
     data_CCU->updateData();
+    data_TCN->updateData(true,false);
 }

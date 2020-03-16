@@ -184,35 +184,234 @@ void Widget::showEvent(QShowEvent *)
     if(MainGetDefaultPara::configureValid())
     {
 #ifndef WINDOWS_MODE
-        if(database->HMIPosition == 1)//config  sourcePORT and IP
-        {
-            system("ifconfig eth0 192.168.2.3");
+//        if(database->HMIPosition == 1)//config  sourcePORT and IP
+//        {
+//            system("ifconfig eth0 192.168.2.3");
 
-            if(!crrcMvb->initializeMvb())
-            {
-                logger()->error("MVB板卡初始化失败");
-            }
-            this->database->HMIPosition = 1;
-            QList<unsigned short int> tmp_list;
-            tmp_list<<0x310<<0x311<<0x312<<0x313<<0x320<<0x321<<0x322<<0x323;
-            this->database->getHMISourceSinkPost(tmp_list);
-            //HMI-CCU
+//            if(!crrcMvb->initializeMvb())
+//            {
+//                logger()->error("MVB板卡初始化失败");
+//            }
+//            this->database->HMIPosition = 1;
+//            QList<unsigned short int> tmp_list;
+//            tmp_list<<0x310<<0x311<<0x312<<0x313<<0x320<<0x321<<0x322<<0x323;
+//            this->database->getHMISourceSinkPost(tmp_list);
+//            //HMI-CCU
 
-        }else if(database->HMIPosition == 2)
+//        }else if(database->HMIPosition == 2)
+//        {
+//            system("ifconfig eth0 192.168.2.4");
+//            if(!crrcMvb->initializeMvb())
+//            {
+//                logger()->error("MVB板卡初始化失败");
+//            }
+//            //HMI-CCU
+//            this->database->HMIPosition = 2;
+//            QList<unsigned short int> tmp_list;
+//            tmp_list<<0x320<<0x321<<0x322<<0x323<<0x310<<0x311<<0x312<<0x313;
+//            this->database->getHMISourceSinkPost(tmp_list);
+//        }
+
+        if(!crrcMvb->initializeMvb())
         {
-            system("ifconfig eth0 192.168.2.4");
-            if(!crrcMvb->initializeMvb())
-            {
-                logger()->error("MVB板卡初始化失败");
-            }
-            //HMI-CCU
-            this->database->HMIPosition = 2;
-            QList<unsigned short int> tmp_list;
-            tmp_list<<0x320<<0x321<<0x322<<0x323<<0x310<<0x311<<0x312<<0x313;
-            this->database->getHMISourceSinkPost(tmp_list);
+            logger()->error("MVB板卡初始化失败");
         }
         //add ports
         {
+            //source
+            CrrcMvb::getCrrcMvb()->addSourcePort(0x710,MVB_FCode4,32);
+            CrrcMvb::getCrrcMvb()->addSourcePort(0x711,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSourcePort(0x712,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSourcePort(0x713,MVB_FCode4,128);
+
+            //sink
+            //acu
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x103,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x104,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x105,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x113,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x114,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x115,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x100,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x110,MVB_FCode4,128);
+
+            //bcu
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x136,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x1f,MVB_FCode4,128);
+
+            //riom
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x210,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x211,MVB_FCode4,32);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x212,MVB_FCode4,512);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x220,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x221,MVB_FCode4,32);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x222,MVB_FCode4,512);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x218,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x228,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x229,MVB_FCode4,512);
+
+            //ddu
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x300,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x301,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x302,MVB_FCode4,128);
+
+            //cmd
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x310,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x320,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x321,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x322,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x323,MVB_FCode4,128);
+
+            //tcu
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x400,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x401,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x402,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x410,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x411,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x412,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x420,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x421,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x422,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x430,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x431,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x432,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x500,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x501,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x502,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x503,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x530,MVB_FCode4,32);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x531,MVB_FCode4,64);
+
+            //erm
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x610,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x611,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x800,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x801,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x802,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x803,MVB_FCode4,128);
+
+            //tcn
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xe10,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xe11,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xe12,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xe13,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xe14,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xe20,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xe21,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xe22,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xe23,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xe24,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xe30,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xe31,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xe32,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xe33,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xe34,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xe40,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xe41,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xe42,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xe43,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xe44,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xea0,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xf10,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xf11,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xf12,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xf13,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xf14,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xf20,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xf21,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xf22,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xf23,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xf24,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xf30,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xf31,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xf32,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xf33,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xf34,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xf40,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xf41,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xf42,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xf43,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xf44,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xfa0,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x700,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x701,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x702,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x703,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x704,MVB_FCode4,128);
+            //virtual ports TCN1/2主从
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe10,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe11,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe12,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe13,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe14,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe20,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe21,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe22,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe23,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe24,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe30,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe31,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe32,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe33,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe34,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe40,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe41,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe42,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe43,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe44,MVB_FCode4);
+            // 0xE/F*2 端口6分时 虚拟端口命名为0xf1*2 0xf2*2 0xf3*2 0xf4*2 0xf5*2 0xf6*2
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf112,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf212,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf312,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf412,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf512,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf612,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf122,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf222,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf322,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf422,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf522,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf622,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf132,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf232,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf332,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf432,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf532,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf632,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf142,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf242,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf342,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf442,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf542,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf642,MVB_FCode4);
+            // 0xE/F*4 端口4分时 虚拟端口命名为0xf1*4 0xf2*4 0xf3*4 0xf4*4
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf114,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf214,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf314,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf414,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf124,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf224,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf324,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf424,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf134,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf234,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf334,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf434,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf144,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf244,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf344,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0xf444,MVB_FCode4);
+
+
+            //ato
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xfb0,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xfc0,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xfc1,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xfc2,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xfc3,MVB_FCode4,128);
+
+
+
 
         }
 #endif

@@ -42,6 +42,9 @@ void VehicleRunStatePage::updatePage()
     ctrlControlVoltage->setCtrlValueRect(i,i);
     ctrlTracBrake->setCtrlValueRect(i/10,i/10%2,i/10%3);
 
+    //eg
+    //database->data_TCN->train[i]->xxx
+
 }
 void VehicleRunStatePage::showEvent(QShowEvent *)
 {
