@@ -41,5 +41,7 @@
         <file>images/zhuduanduankai.png</file>
         <file>images/zhuduangeli.png</file>
         <file>images/zhuduanjiuxu.png</file>
+        <file>images/LubAdd.png</file>
+        <file>images/LubSub.png</file>
     </qresource>
 </RCC>
