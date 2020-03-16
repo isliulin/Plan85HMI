@@ -24,9 +24,9 @@ void CtrlControlVoltage::setCtrlValueRect(int value1,int value2)
     if(value2 > 130)
         value2 = 130;
 
-    ui->LBLValueRect->setGeometry(41,31,ui->LBLValueRect->width(),320-(float)value1*320/130);
+    ui->LBLValueRect->setGeometry(51,31,ui->LBLValueRect->width(),320-(float)value1*320/130);
     ui->LBLValue->setText(QString::number(value1));
 
-    ui->LBLValueRect2->setGeometry(96,31,ui->LBLValueRect2->width(),320-(float)value2*320/130);
+    ui->LBLValueRect2->setGeometry(106,31,ui->LBLValueRect2->width(),320-(float)value2*320/130);
     ui->LBLValue2->setText(QString::number(value2));
 }

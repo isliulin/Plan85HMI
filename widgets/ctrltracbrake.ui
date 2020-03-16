@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>CtrlControlVoltage</class>
- <widget class="QWidget" name="CtrlControlVoltage">
+ <class>CtrlTracBrake</class>
+ <widget class="QWidget" name="CtrlTracBrake">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>160</width>
+    <width>90</width>
     <height>380</height>
    </rect>
   </property>
@@ -20,11 +20,11 @@
 border:1px solid transparent;
 }</string>
   </property>
-  <widget class="QLabel" name="label_8">
+  <widget class="QLabel" name="label_15">
    <property name="geometry">
     <rect>
-     <x>15</x>
-     <y>40</y>
+     <x>0</x>
+     <y>308</y>
      <width>20</width>
      <height>17</height>
     </rect>
@@ -33,237 +33,7 @@ border:1px solid transparent;
     <string notr="true">font:10px;color:white</string>
    </property>
    <property name="text">
-    <string>120</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="L1_36">
-   <property name="geometry">
-    <rect>
-     <x>45</x>
-     <y>30</y>
-     <width>1</width>
-     <height>320</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:1px solid white;</string>
-   </property>
-   <property name="text">
-    <string>0.0</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>15</x>
-     <y>340</y>
-     <width>20</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font:10px;color:white</string>
-   </property>
-   <property name="text">
-    <string>0</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="L1_22">
-   <property name="geometry">
-    <rect>
-     <x>35</x>
-     <y>150</y>
-     <width>10</width>
-     <height>1</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:1px solid white;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
-     <y>360</y>
-     <width>41</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color:white;
-font:14px;</string>
-   </property>
-   <property name="text">
-    <string>本车</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="LBLValue">
-   <property name="geometry">
-    <rect>
-     <x>55</x>
-     <y>10</y>
-     <width>40</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color:white;font:14px;</string>
-   </property>
-   <property name="text">
-    <string>0.0</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="L1_27">
-   <property name="geometry">
-    <rect>
-     <x>35</x>
-     <y>100</y>
-     <width>10</width>
-     <height>1</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:1px solid white;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_7">
-   <property name="geometry">
-    <rect>
-     <x>15</x>
-     <y>90</y>
-     <width>20</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font:10px;color:white</string>
-   </property>
-   <property name="text">
-    <string>100</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_9">
-   <property name="geometry">
-    <rect>
-     <x>15</x>
-     <y>80</y>
-     <width>21</width>
-     <height>15</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color:white;
-font:10px;</string>
-   </property>
-   <property name="text">
-    <string>[V]</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>15</x>
-     <y>290</y>
-     <width>20</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font:10px;color:white</string>
-   </property>
-   <property name="text">
-    <string>20</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="L1_32">
-   <property name="geometry">
-    <rect>
-     <x>35</x>
-     <y>50</y>
-     <width>10</width>
-     <height>1</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:1px solid white;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_6">
-   <property name="geometry">
-    <rect>
-     <x>15</x>
-     <y>140</y>
-     <width>20</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font:10px;color:white</string>
-   </property>
-   <property name="text">
-    <string>80</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="LBLBackground">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>30</y>
-     <width>51</width>
-     <height>320</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:yellow;border:1px solid white;</string>
-   </property>
-   <property name="text">
-    <string/>
+    <string>10</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -272,7 +42,7 @@ font:10px;</string>
   <widget class="QLabel" name="L1">
    <property name="geometry">
     <rect>
-     <x>35</x>
+     <x>20</x>
      <y>350</y>
      <width>10</width>
      <height>1</height>
@@ -288,49 +58,11 @@ font:10px;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="L1_22">
    <property name="geometry">
     <rect>
-     <x>15</x>
-     <y>240</y>
-     <width>20</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font:10px;color:white</string>
-   </property>
-   <property name="text">
-    <string>40</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="LBLValueRect">
-   <property name="geometry">
-    <rect>
-     <x>51</x>
-     <y>31</y>
-     <width>49</width>
-     <height>200</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:1px solid transparent;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="L1_12">
-   <property name="geometry">
-    <rect>
-     <x>35</x>
-     <y>250</y>
+     <x>20</x>
+     <y>94</y>
      <width>10</width>
      <height>1</height>
     </rect>
@@ -348,8 +80,8 @@ font:10px;</string>
   <widget class="QLabel" name="L1_17">
    <property name="geometry">
     <rect>
-     <x>35</x>
-     <y>200</y>
+     <x>20</x>
+     <y>158</y>
      <width>10</width>
      <height>1</height>
     </rect>
@@ -364,11 +96,30 @@ font:10px;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
+  <widget class="QLabel" name="L1_27">
    <property name="geometry">
     <rect>
-     <x>15</x>
-     <y>190</y>
+     <x>20</x>
+     <y>30</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>212</y>
      <width>20</width>
      <height>17</height>
     </rect>
@@ -377,7 +128,103 @@ font:10px;</string>
     <string notr="true">font:10px;color:white</string>
    </property>
    <property name="text">
-    <string>60</string>
+    <string>40</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>116</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white</string>
+   </property>
+   <property name="text">
+    <string>70</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>335</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>360</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(0,0,240);
+font:14px;</string>
+   </property>
+   <property name="text">
+    <string>牵引</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_18">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>62</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>276</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white</string>
+   </property>
+   <property name="text">
+    <string>20</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -386,8 +233,8 @@ font:10px;</string>
   <widget class="QLabel" name="L1_9">
    <property name="geometry">
     <rect>
-     <x>35</x>
-     <y>300</y>
+     <x>20</x>
+     <y>286</y>
      <width>10</width>
      <height>1</height>
     </rect>
@@ -402,58 +249,21 @@ font:10px;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="LBLBackground2">
+  <widget class="QLabel" name="LBLBackground">
    <property name="geometry">
     <rect>
-     <x>105</x>
+     <x>35</x>
      <y>30</y>
      <width>51</width>
      <height>320</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:yellow;border:1px solid white;</string>
+    <string notr="true">background-color:rgb(0,0,240);
+border:1px solid white;</string>
    </property>
    <property name="text">
     <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="LBLValueRect2">
-   <property name="geometry">
-    <rect>
-     <x>106</x>
-     <y>31</y>
-     <width>49</width>
-     <height>300</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:1px solid transparent;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="LBLValue2">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>10</y>
-     <width>40</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color:white;font:14px;</string>
-   </property>
-   <property name="text">
-    <string>0.0</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -462,27 +272,8 @@ font:10px;</string>
   <widget class="QLabel" name="L1_13">
    <property name="geometry">
     <rect>
-     <x>35</x>
-     <y>275</y>
-     <width>10</width>
-     <height>1</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:1px solid white;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="L1_14">
-   <property name="geometry">
-    <rect>
-     <x>35</x>
-     <y>325</y>
+     <x>20</x>
+     <y>254</y>
      <width>10</width>
      <height>1</height>
     </rect>
@@ -500,8 +291,8 @@ font:10px;</string>
   <widget class="QLabel" name="L1_15">
    <property name="geometry">
     <rect>
-     <x>35</x>
-     <y>225</y>
+     <x>20</x>
+     <y>190</y>
      <width>10</width>
      <height>1</height>
     </rect>
@@ -516,68 +307,30 @@ font:10px;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="L1_16">
+  <widget class="QLabel" name="LBLValue">
    <property name="geometry">
     <rect>
-     <x>35</x>
-     <y>175</y>
-     <width>10</width>
-     <height>1</height>
+     <x>40</x>
+     <y>10</y>
+     <width>40</width>
+     <height>17</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid white;</string>
+    <string notr="true">color:white;font:14px;</string>
    </property>
    <property name="text">
-    <string/>
+    <string>0</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="L1_18">
+  <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>35</x>
-     <y>125</y>
-     <width>10</width>
-     <height>1</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:1px solid white;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="L1_19">
-   <property name="geometry">
-    <rect>
-     <x>35</x>
-     <y>75</y>
-     <width>10</width>
-     <height>1</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:1px solid white;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_10">
-   <property name="geometry">
-    <rect>
-     <x>15</x>
-     <y>65</y>
+     <x>0</x>
+     <y>84</y>
      <width>20</width>
      <height>17</height>
     </rect>
@@ -586,7 +339,7 @@ font:10px;</string>
     <string notr="true">font:10px;color:white</string>
    </property>
    <property name="text">
-    <string>110</string>
+    <string>80</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -595,8 +348,8 @@ font:10px;</string>
   <widget class="QLabel" name="label_11">
    <property name="geometry">
     <rect>
-     <x>15</x>
-     <y>115</y>
+     <x>0</x>
+     <y>52</y>
      <width>20</width>
      <height>17</height>
     </rect>
@@ -611,39 +364,39 @@ font:10px;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_12">
+  <widget class="QLabel" name="L1_16">
    <property name="geometry">
     <rect>
-     <x>15</x>
-     <y>165</y>
-     <width>20</width>
-     <height>17</height>
+     <x>20</x>
+     <y>126</y>
+     <width>10</width>
+     <height>1</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font:10px;color:white</string>
+    <string notr="true">border:1px solid white;</string>
    </property>
    <property name="text">
-    <string>70</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_13">
+  <widget class="QLabel" name="LBLValueRect">
    <property name="geometry">
     <rect>
-     <x>15</x>
-     <y>215</y>
-     <width>20</width>
-     <height>17</height>
+     <x>36</x>
+     <y>31</y>
+     <width>49</width>
+     <height>200</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font:10px;color:white</string>
+    <string notr="true">border:1px solid transparent;</string>
    </property>
    <property name="text">
-    <string>50</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -652,8 +405,8 @@ font:10px;</string>
   <widget class="QLabel" name="label_14">
    <property name="geometry">
     <rect>
-     <x>15</x>
-     <y>265</y>
+     <x>0</x>
+     <y>244</y>
      <width>20</width>
      <height>17</height>
     </rect>
@@ -668,11 +421,68 @@ font:10px;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_15">
+  <widget class="QLabel" name="L1_14">
    <property name="geometry">
     <rect>
-     <x>15</x>
-     <y>315</y>
+     <x>20</x>
+     <y>318</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_36">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>1</width>
+     <height>320</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string>0.0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_12">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>222</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>20</y>
      <width>20</width>
      <height>17</height>
     </rect>
@@ -681,83 +491,65 @@ font:10px;</string>
     <string notr="true">font:10px;color:white</string>
    </property>
    <property name="text">
-    <string>10</string>
+    <string>100</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="LBLredline1">
+  <widget class="QLabel" name="label_9">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>100</y>
-     <width>50</width>
-     <height>2</height>
+     <x>0</x>
+     <y>40</y>
+     <width>21</width>
+     <height>15</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:4px solid red;</string>
+    <string notr="true">color:white;
+font:10px;</string>
    </property>
    <property name="text">
-    <string/>
+    <string>[%]</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="LBLredline2">
+  <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>105</x>
-     <y>120</y>
-     <width>50</width>
-     <height>2</height>
+     <x>0</x>
+     <y>148</y>
+     <width>20</width>
+     <height>17</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:4px solid red;</string>
+    <string notr="true">font:10px;color:white</string>
    </property>
    <property name="text">
-    <string/>
+    <string>60</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="LBLyellowline2">
+  <widget class="QLabel" name="label_13">
    <property name="geometry">
     <rect>
-     <x>105</x>
-     <y>150</y>
-     <width>50</width>
-     <height>2</height>
+     <x>0</x>
+     <y>180</y>
+     <width>20</width>
+     <height>17</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:4px solid yellow;</string>
+    <string notr="true">font:10px;color:white</string>
    </property>
    <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="LBLyellowline1">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>210</y>
-     <width>50</width>
-     <height>2</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:4px solid yellow;</string>
-   </property>
-   <property name="text">
-    <string/>
+    <string>50</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -766,18 +558,18 @@ font:10px;</string>
   <widget class="QLabel" name="label_16">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>50</x>
      <y>360</y>
-     <width>41</width>
+     <width>31</width>
      <height>17</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:white;
+    <string notr="true">color:rgb(240,0,0);
 font:14px;</string>
    </property>
    <property name="text">
-    <string>它车</string>
+    <string>制动</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -786,18 +578,19 @@ font:14px;</string>
   <widget class="QLabel" name="label_17">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>40</x>
      <y>360</y>
-     <width>61</width>
+     <width>16</width>
      <height>17</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">color:white;
-font:14px;</string>
+font:14px;
+background-color:transparent;</string>
    </property>
    <property name="text">
-    <string>控制电压</string>
+    <string>/</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>

@@ -96,7 +96,8 @@ SOURCES += main.cpp\
     widgets/ctrlnetvoltage.cpp \
     widgets/ctrlnetcurrent.cpp \
     main_simulate.cpp \
-    widgets/ctrlcontrolvoltage.cpp
+    widgets/ctrlcontrolvoltage.cpp \
+    widgets/ctrltracbrake.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -175,7 +176,8 @@ HEADERS  += widget.h \
     widgets/ctrlnetvoltage.h \
     widgets/ctrlnetcurrent.h \
     main_simulate.h \
-    widgets/ctrlcontrolvoltage.h
+    widgets/ctrlcontrolvoltage.h \
+    widgets/ctrltracbrake.h
 
 FORMS    += widget.ui \
     header.ui \
@@ -193,7 +195,8 @@ FORMS    += widget.ui \
     widgets/ctrlnetvoltage.ui \
     widgets/ctrlnetcurrent.ui \
     main_simulate.ui \
-    widgets/ctrlcontrolvoltage.ui
+    widgets/ctrlcontrolvoltage.ui \
+    widgets/ctrltracbrake.ui
 
 RESOURCES += \
     Resource.qrc
