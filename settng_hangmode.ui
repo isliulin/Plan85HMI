@@ -77,25 +77,6 @@ font:14px;
     <string>8</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="Button_B">
-   <property name="geometry">
-    <rect>
-     <x>553</x>
-     <y>300</y>
-     <width>50</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::NoFocus</enum>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-   <property name="text">
-    <string>B</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="Button_Num4">
    <property name="geometry">
     <rect>
@@ -119,7 +100,7 @@ font:14px;
    <property name="geometry">
     <rect>
      <x>493</x>
-     <y>360</y>
+     <y>300</y>
      <width>111</width>
      <height>50</height>
     </rect>
@@ -145,25 +126,6 @@ font:14px;
    </property>
    <property name="text">
     <string>9</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Button_A">
-   <property name="geometry">
-    <rect>
-     <x>493</x>
-     <y>300</y>
-     <width>50</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::NoFocus</enum>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-   <property name="text">
-    <string>A</string>
    </property>
   </widget>
   <widget class="QPushButton" name="Button_Num2">
