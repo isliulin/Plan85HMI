@@ -218,6 +218,12 @@ void Widget::showEvent(QShowEvent *)
         }
         //add ports
         {
+            CrrcMvb::getCrrcMvb()->addSourcePort(0xfff,MVB_FCode4,32);
+            for(int i = 0;i < 32;i++)
+            {
+                CrrcMvb::getCrrcMvb()->setUnsignedChar(0xfff,i,0);
+            }
+
             //source
             CrrcMvb::getCrrcMvb()->addSourcePort(0x710,MVB_FCode4,32);
             CrrcMvb::getCrrcMvb()->addSourcePort(0x711,MVB_FCode4,128);
