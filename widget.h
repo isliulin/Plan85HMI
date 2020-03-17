@@ -21,6 +21,7 @@ class CrrcFault;
 class Simulation;
 
 class MainData_TrainOutline;
+class MainData_DriverOutline;
 class Settng_Bypass;
 class Settng_Panto;
 class Settng_Distance;
@@ -41,6 +42,7 @@ class Main_Datetime;
 class Fault_Current;
 class Fault_History;
 class Fault_Download;
+class Panto_Condition;
 
 class Widget : public QWidget
 {
@@ -71,6 +73,7 @@ private:
     CrrcFault* crrcFault;
 
     MainData_TrainOutline* mainData_TrainOutline;
+    MainData_DriverOutline* mainData_DriverOutline;
     Settng_Bypass* settng_Bypass;
     Settng_Panto* settng_Panto;
     Settng_Distance* settng_Distance;
@@ -93,9 +96,8 @@ private:
     Fault_Download* fault_Download;
 
     Simulation* simulation;
-;
 
-
+    Panto_Condition* panto_Condition;
 };
 
 #endif // WIDGET_H

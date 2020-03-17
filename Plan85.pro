@@ -84,7 +84,6 @@ SOURCES += main.cpp\
     cxExtDev/blacklightthread.cpp \
     cxExtDev/externaldevicelib.cpp \
     data/data_ccu.cpp \
-    maindata_trainoutline.cpp \
     settng_bypass.cpp \
     settng_panto.cpp \
     settng_distance.cpp \
@@ -114,7 +113,13 @@ SOURCES += main.cpp\
     fault_download.cpp
 
     simulation.cpp
-
+    maindata_driveroutline.cpp \
+    maindata_trainoutline.cpp \
+    operating_condition.cpp \
+    panto_condition.cpp \
+    breaker_condition.cpp \
+    traction_condition.cpp \
+    brake_condition.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -212,6 +217,12 @@ HEADERS  += widget.h \
 
     simulation.h
 
+    maindata_driveroutline.h \
+    operating_condition.h \
+    panto_condition.h \
+    breaker_condition.h \
+    traction_condition.h \
+    brake_condition.h
 
 FORMS    += widget.ui \
     header.ui \
@@ -246,6 +257,12 @@ FORMS    += widget.ui \
 
     simulation.ui
 
+    maindata_driveroutline.ui \
+    operating_condition.ui \
+    panto_condition.ui \
+    breaker_condition.ui \
+    traction_condition.ui \
+    brake_condition.ui
 
 RESOURCES += \
     Resource.qrc

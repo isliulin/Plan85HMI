@@ -14,6 +14,7 @@
 #endif
 
 #include "maindata_trainoutline.h"
+#include "maindata_driveroutline.h"
 #include "settng_bypass.h"
 #include "settng_panto.h"
 #include "settng_distance.h"
@@ -34,6 +35,7 @@
 #include "fault_current.h"
 #include "fault_history.h"
 #include "fault_download.h"
+#include "panto_condition.h"
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -87,6 +89,10 @@ Widget::Widget(QWidget *parent) :
     this->mainData_TrainOutline = new MainData_TrainOutline(this);
     this->mainData_TrainOutline->setMyBase(uMiddleMainData,QString("机车概况"));
     this->mainData_TrainOutline->hide();
+
+    this->mainData_DriverOutline = new MainData_DriverOutline(this);
+    this->mainData_DriverOutline->setMyBase(uMiddleMainData,QString("驱动概况"));
+    this->mainData_DriverOutline->hide();
 
     //add setting pages
     this->settng_Bypass = new Settng_Bypass(this);
@@ -173,9 +179,15 @@ Widget::Widget(QWidget *parent) :
     this->simulation = new Simulation();
     this->simulation->hide();
 
+    //运行条件
+    this->panto_Condition = new Panto_Condition(this);
+    this->panto_Condition->setMyBase(uMiddleCondition,QString("升弓条件"));
+    this->panto_Condition->hide();
 
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
+    this->widgets.insert(uMainData_DriverOutline,this->mainData_DriverOutline);
+    this->widgets.insert(uCondition_PantoUp,this->panto_Condition);
     this->widgets.insert(uSettng_Bypass,this->settng_Bypass);
     this->widgets.insert(uSettng_Panto,this->settng_Panto);
     this->widgets.insert(uSettng_Distance,this->settng_Distance);
