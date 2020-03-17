@@ -1,6 +1,6 @@
 #include "navigator.h"
 #include "ui_navigator.h"
-
+#include "qdebug.h"
 Navigator::Navigator(QWidget *parent) :
     MyBase(parent),
     ui(new Ui::Navigator)
@@ -35,7 +35,7 @@ void Navigator::NBpressEvent()
         buttons[i]->setStyleSheet(NButtonUP);
     }
 
-
+    qDebug()<<m_position;
     buttonIndexList.clear();
     switch (m_position)
     {
@@ -51,6 +51,11 @@ void Navigator::NBpressEvent()
         buttonIndexList<<uSettng_Bypass<<uSettng_Panto<<uSettng_Distance<<uSettng_TrainCode<<
                      uSettng_Lubrication<<uSettng_Separation<<uSettng_HangMode<<uSettng_Others<<uNULL<<uVehicleRunStatePage;
         break;
+    case uMiddleCondition:
+
+        buttonIndexList<<uCondition_PantoUp<<uCondition_Breaker<<uCondition_Traction<<uCondition_Brake<<uNULL
+                      <<uNULL<<uNULL<<uNULL<<uNULL<<uMainData_DriverOutline;
+    break;
     }
     changePage(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()));
 }
@@ -71,6 +76,10 @@ void Navigator::updateButtonsNamesByPositon(enum pagePosition p)
         case uMiddleSetting:
         buttonNameList<<"隔离"<<"受电弓"<<"距离\n计数"<<"车号\n设置"<<"轮缘\n润滑"
                         <<"分相\n线路"<<"挂车\n模式"<<"其他\n设置"<<""<<"主界面";
+        break;
+        case uMiddleCondition:
+        buttonNameList<<"升弓\n条件"<<"主断\n条件"<<"牵引\n条件"<<"制动\n条件"
+                        <<""<<""<<""<<""<<""<<"";
         break;
     }
     for(int i = 0; i < buttons.size();i++)

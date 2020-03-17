@@ -14,6 +14,7 @@ class MainData_TrainOutline : public MyBase
 public:
     explicit MainData_TrainOutline(QWidget *parent = 0);
     ~MainData_TrainOutline();
+    void updatePage();
 
 private:
     Ui::MainData_TrainOutline *ui;

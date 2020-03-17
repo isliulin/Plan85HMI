@@ -41,5 +41,7 @@
         <file>images/zhuduanduankai.png</file>
         <file>images/zhuduangeli.png</file>
         <file>images/zhuduanjiuxu.png</file>
+        <file>images/qianyin1.png</file>
+        <file>images/linevbreakerfault.png</file>
     </qresource>
 </RCC>

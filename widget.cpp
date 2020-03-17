@@ -14,6 +14,7 @@
 #endif
 
 #include "maindata_trainoutline.h"
+#include "maindata_driveroutline.h"
 #include "settng_bypass.h"
 #include "settng_panto.h"
 #include "settng_distance.h"
@@ -22,6 +23,7 @@
 #include "settng_separation.h"
 #include "settng_hangmode.h"
 #include "settng_others.h"
+#include "panto_condition.h"
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -76,6 +78,10 @@ Widget::Widget(QWidget *parent) :
     this->mainData_TrainOutline->setMyBase(uMiddleMainData,QString("机车概况"));
     this->mainData_TrainOutline->hide();
 
+    this->mainData_DriverOutline = new MainData_DriverOutline(this);
+    this->mainData_DriverOutline->setMyBase(uMiddleMainData,QString("驱动概况"));
+    this->mainData_DriverOutline->hide();
+
     //add setting pages
     this->settng_Bypass = new Settng_Bypass(this);
     this->settng_Bypass->setMyBase(uMiddleSetting,QString("隔离"));
@@ -109,8 +115,15 @@ Widget::Widget(QWidget *parent) :
     this->settng_Others->setMyBase(uMiddleSetting,QString("其他设置"));
     this->settng_Others->hide();
 
+    //运行条件
+    this->panto_Condition = new Panto_Condition(this);
+    this->panto_Condition->setMyBase(uMiddleCondition,QString("升弓条件"));
+    this->panto_Condition->hide();
+
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
+    this->widgets.insert(uMainData_DriverOutline,this->mainData_DriverOutline);
+    this->widgets.insert(uCondition_PantoUp,this->panto_Condition);
     this->widgets.insert(uSettng_Bypass,this->settng_Bypass);
     this->widgets.insert(uSettng_Panto,this->settng_Panto);
     this->widgets.insert(uSettng_Distance,this->settng_Distance);
@@ -119,7 +132,6 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uSettng_Separation,this->settng_Separation);
     this->widgets.insert(uSettng_HangMode,this->settng_HangMode);
     this->widgets.insert(uSettng_Others,this->settng_Others);
-
 
     this->header->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();

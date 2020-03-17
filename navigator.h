@@ -27,6 +27,7 @@ private:
 
 private slots:
     void NBpressEvent();
+
 signals:
     void translateLanguage();
 
