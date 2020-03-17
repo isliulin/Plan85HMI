@@ -864,7 +864,7 @@ font:14px;</string>
      <x>36</x>
      <y>31</y>
      <width>48</width>
-     <height>20</height>
+     <height>200</height>
     </rect>
    </property>
    <property name="styleSheet">
