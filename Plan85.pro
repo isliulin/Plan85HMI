@@ -99,7 +99,8 @@ SOURCES += main.cpp\
     widgets/ctrlcontrolvoltage.cpp \
     widgets/ctrltracbrake.cpp \
     data/data_tcn.cpp \
-    data/trainbean.cpp
+    data/trainbean.cpp \
+    simulation.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -181,7 +182,8 @@ HEADERS  += widget.h \
     widgets/ctrlcontrolvoltage.h \
     widgets/ctrltracbrake.h \
     data/data_tcn.h \
-    data/trainbean.h
+    data/trainbean.h \
+    simulation.h
 
 FORMS    += widget.ui \
     header.ui \
@@ -200,7 +202,8 @@ FORMS    += widget.ui \
     widgets/ctrlnetcurrent.ui \
     main_simulate.ui \
     widgets/ctrlcontrolvoltage.ui \
-    widgets/ctrltracbrake.ui
+    widgets/ctrltracbrake.ui \
+    simulation.ui
 
 RESOURCES += \
     Resource.qrc
