@@ -30,7 +30,7 @@ border:1px solid transparent;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:white</string>
+    <string notr="true">color:white;font:14px;</string>
    </property>
    <property name="text">
     <string>网压</string>
@@ -828,7 +828,7 @@ border:1px solid transparent;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid white;</string>
+    <string notr="true">border:1px solid white;background-color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -841,13 +841,13 @@ border:1px solid transparent;
    <property name="geometry">
     <rect>
      <x>36</x>
-     <y>329</y>
+     <y>31</y>
      <width>48</width>
-     <height>20</height>
+     <height>300</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid transparent;background-color:yellow;</string>
+    <string notr="true">border:1px solid transparent;background-color:black;</string>
    </property>
    <property name="text">
     <string/>
@@ -886,7 +886,7 @@ font:10px;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:white</string>
+    <string notr="true">font:14px;color:white</string>
    </property>
    <property name="text">
     <string>0.0</string>
@@ -901,7 +901,7 @@ font:10px;</string>
      <x>35</x>
      <y>170</y>
      <width>50</width>
-     <height>1</height>
+     <height>2</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -920,7 +920,7 @@ font:10px;</string>
      <x>35</x>
      <y>160</y>
      <width>50</width>
-     <height>1</height>
+     <height>2</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -939,7 +939,7 @@ font:10px;</string>
      <x>35</x>
      <y>120</y>
      <width>50</width>
-     <height>1</height>
+     <height>2</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -958,7 +958,7 @@ font:10px;</string>
      <x>35</x>
      <y>50</y>
      <width>50</width>
-     <height>1</height>
+     <height>2</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -977,11 +977,11 @@ font:10px;</string>
      <x>35</x>
      <y>40</y>
      <width>50</width>
-     <height>1</height>
+     <height>2</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:2px solid red;</string>
+    <string notr="true">border:4px solid red;</string>
    </property>
    <property name="text">
     <string/>

@@ -7,15 +7,16 @@
 //#define WINDOWS_MODE
 #define QT_VERSION_5_6
 
-#define YELLOW     "color:rgb(240,240,0);"
-#define GREEN     "color:rgb(0,240,0);"
-#define DARKBLUE     "color:rgb(0,0,240);"
-#define CYAN     "color:rgb(0,240,240);"
-#define GRAY1     "color:rgb(128,128,128);"
-#define RED     "color:rgb(240,0,0);"
-#define WHITE     "color:rgb(248,248,248);"
-#define GRAY2     "color:rgb(192,192,192);"
-#define BLACK     "color:rgb(0,0,0);"
+#define YELLOW     "background-color:rgb(240,240,0);border:1px solid white;"
+#define GREEN     "background-color:rgb(0,240,0);border:1px solid white;"
+#define DARKBLUE     "background-color:rgb(0,0,240);border:1px solid white;"
+#define CYAN     "background-color:rgb(0,240,240);border:1px solid white;"
+#define GRAY1     "background-color:rgb(128,128,128);border:1px solid white;"
+#define RED     "background-color:rgb(240,0,0);border:1px solid white;"
+#define WHITE     "background-color:rgb(248,248,248);border:1px solid white;"
+#define GRAY2     "background-color:rgb(192,192,192);border:1px solid white;"
+#define BLACK     "background-color:rgb(0,0,0);border:1px solid white;"
+
 
 #define	FANGXIANGXIANGQIAN	"border-image: url(:/images/images/xiangqian.png);"
 #define	FANGXIANGXIANGHOU	"border-image: url(:/images/images/xianghou.png);"
@@ -112,6 +113,7 @@ enum pageIndex
     uMain_380,
     uMain_Light,
     uMain_Lubrication,
+    uMain_Panto,
     uMain_Separation,
     uMain_Wheel,
     uMain_Datetime,

@@ -13,6 +13,16 @@ VehicleRunStatePage::VehicleRunStatePage(QWidget *parent) :
 
     ctrlNetVoltage = new CtrlNetVoltage(this);
     ctrlNetVoltage->setGeometry(10,10,this->ctrlNetVoltage->width(),this->ctrlNetVoltage->height());
+
+    ctrlNetCurrent = new CtrlNetCurrent(this);
+    ctrlNetCurrent->setGeometry(105,10,this->ctrlNetCurrent->width(),this->ctrlNetCurrent->height());
+
+    ctrlControlVoltage = new CtrlControlVoltage(this);
+    ctrlControlVoltage->setGeometry(200,10,this->ctrlControlVoltage->width(),this->ctrlControlVoltage->height());
+
+    ctrlTracBrake = new CtrlTracBrake(this);
+    ctrlTracBrake->setGeometry(365,10,this->ctrlTracBrake->width(),this->ctrlTracBrake->height());
+
 }
 
 VehicleRunStatePage::~VehicleRunStatePage()
@@ -26,7 +36,14 @@ void VehicleRunStatePage::updatePage()
     ui->LBLFault2->setStyleSheet(FAULTLEVEL2);
     ui->LBLFault3->setStyleSheet(FAULTLEVEL3);
     static int i   = 0;
-    ctrlNetVoltage->setCtrlValueRect(i++);
+    i +=10;
+    ctrlNetVoltage->setCtrlValueRect(i/10);
+    ctrlNetCurrent->setCtrlValueRect(i);
+    ctrlControlVoltage->setCtrlValueRect(i,i);
+    ctrlTracBrake->setCtrlValueRect(i/10,i/10%2,i/10%3);
+
+    //eg
+    //database->data_TCN->train[i]->xxx
 
 }
 void VehicleRunStatePage::showEvent(QShowEvent *)

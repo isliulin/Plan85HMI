@@ -93,7 +93,13 @@ SOURCES += main.cpp\
     settng_separation.cpp \
     settng_hangmode.cpp \
     settng_others.cpp \
-    widgets/ctrlnetvoltage.cpp
+    widgets/ctrlnetvoltage.cpp \
+    widgets/ctrlnetcurrent.cpp \
+    main_simulate.cpp \
+    widgets/ctrlcontrolvoltage.cpp \
+    widgets/ctrltracbrake.cpp \
+    data/data_tcn.cpp \
+    data/trainbean.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -169,7 +175,13 @@ HEADERS  += widget.h \
     settng_separation.h \
     settng_hangmode.h \
     settng_others.h \
-    widgets/ctrlnetvoltage.h
+    widgets/ctrlnetvoltage.h \
+    widgets/ctrlnetcurrent.h \
+    main_simulate.h \
+    widgets/ctrlcontrolvoltage.h \
+    widgets/ctrltracbrake.h \
+    data/data_tcn.h \
+    data/trainbean.h
 
 FORMS    += widget.ui \
     header.ui \
@@ -184,7 +196,11 @@ FORMS    += widget.ui \
     settng_separation.ui \
     settng_hangmode.ui \
     settng_others.ui \
-    widgets/ctrlnetvoltage.ui
+    widgets/ctrlnetvoltage.ui \
+    widgets/ctrlnetcurrent.ui \
+    main_simulate.ui \
+    widgets/ctrlcontrolvoltage.ui \
+    widgets/ctrltracbrake.ui
 
 RESOURCES += \
     Resource.qrc

@@ -4,7 +4,7 @@
 #include "global.h"
 #include <QWidget>
 #include "database.h"
-
+#include "qdebug.h"
 class MyBase : public QWidget
 {
     Q_OBJECT
