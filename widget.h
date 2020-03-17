@@ -18,6 +18,7 @@ class Navigator;
 class VehicleRunStatePage;
 class CrrcMvb;
 class CrrcFault;
+class Simulation;
 
 class MainData_TrainOutline;
 class Settng_Bypass;
@@ -78,7 +79,7 @@ private:
     Settng_Separation* settng_Separation;
     Settng_HangMode* settng_HangMode;
     Settng_Others* settng_Others;
-    Main_Simulate* main_Simulate;
+
     Main_AssistantDevice* main_AssistantDevice;
     Main_380* main_380;
     Main_Light* main_Light;
@@ -90,6 +91,11 @@ private:
     Fault_Current* fault_Current;
     Fault_History* fault_History;
     Fault_Download* fault_Download;
+
+    Simulation* simulation;
+;
+
+
 };
 
 #endif // WIDGET_H

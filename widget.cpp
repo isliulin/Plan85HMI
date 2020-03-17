@@ -8,7 +8,7 @@
 #include "vehiclerunstatepage.h"
 #include "crrcmvb.h"
 #include "crrcfault.h"
-
+#include "simulation.h"
 #ifdef QT_VERSION_5_6
 #include "qdesktopwidget.h"
 #endif
@@ -125,6 +125,7 @@ Widget::Widget(QWidget *parent) :
     this->main_Simulate->setMyBase(uMiddleMain,QString("仿真测试"));
     this->main_Simulate->hide();
 
+
     this->main_AssistantDevice=new Main_AssistantDevice(this);
     this->main_AssistantDevice->setMyBase(uMiddleMain,QString("辅机测试"));
     this->main_AssistantDevice->hide();
@@ -169,6 +170,10 @@ Widget::Widget(QWidget *parent) :
     this->fault_Download->setMyBase(uMiddleFault,QString("故障下载"));
     this->fault_Download->hide();
 
+    this->simulation = new Simulation();
+    this->simulation->hide();
+
+
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
     this->widgets.insert(uSettng_Bypass,this->settng_Bypass);
@@ -210,6 +215,8 @@ void Widget::updatePage()
     if(counter%2 == 0)
     {
         crrcMvb->synchronizeMvbData();
+        this->simulation->installMvb(CrrcMvb::getCrrcMvb());
+        this->database->updateData();
     }
 
     // start fault scanning thread
@@ -283,6 +290,12 @@ void Widget::showEvent(QShowEvent *)
         }
         //add ports
         {
+            CrrcMvb::getCrrcMvb()->addSourcePort(0xfff,MVB_FCode4,32);
+            for(int i = 0;i < 32;i++)
+            {
+                CrrcMvb::getCrrcMvb()->setUnsignedChar(0xfff,i,0);
+            }
+
             //source
             CrrcMvb::getCrrcMvb()->addSourcePort(0x710,MVB_FCode4,32);
             CrrcMvb::getCrrcMvb()->addSourcePort(0x711,MVB_FCode4,128);
@@ -501,6 +514,14 @@ void Widget::keyPressEvent(QKeyEvent *event)
     if (event->key() == Qt::Key_Escape)
     {
         this->close();
+    }else if (event->key() == Qt::Key_S)
+    {
+        QDesktopWidget *desktop = QApplication::desktop();
+
+        // show a window uesd to manipulate the mvb ports and change page
+
+        simulation->move((desktop->width() - simulation->width()) / 2, (desktop->height() - simulation->height()) / 2);
+        simulation->show();
     }
 }
 void Widget::translateLanguage()
