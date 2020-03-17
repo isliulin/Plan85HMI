@@ -29,6 +29,17 @@ class Settng_Separation;
 class Settng_HangMode;
 class Settng_Others;
 class Main_Simulate;
+class Main_AssistantDevice;
+class Main_380;
+class Main_Light;
+class Main_Lubrication;
+class Main_Panto;
+class Main_Separation;
+class Main_Wheel;
+class Main_Datetime;
+class Fault_Current;
+class Fault_History;
+class Fault_Download;
 
 class Widget : public QWidget
 {
@@ -68,6 +79,17 @@ private:
     Settng_HangMode* settng_HangMode;
     Settng_Others* settng_Others;
     Main_Simulate* main_Simulate;
+    Main_AssistantDevice* main_AssistantDevice;
+    Main_380* main_380;
+    Main_Light* main_Light;
+    Main_Lubrication* main_Lubrication;
+    Main_Panto* main_Panto;
+    Main_Separation* main_Separation;
+    Main_Wheel* main_Wheel;
+    Main_Datetime* main_Datetime;
+    Fault_Current* fault_Current;
+    Fault_History* fault_History;
+    Fault_Download* fault_Download;
 };
 
 #endif // WIDGET_H
