@@ -54,7 +54,7 @@ void Navigator::NBpressEvent()
     case uMiddleCondition:
 
         buttonIndexList<<uCondition_PantoUp<<uCondition_Breaker<<uCondition_Traction<<uCondition_Brake<<uNULL
-                      <<uNULL<<uNULL<<uNULL<<uNULL<<uMainData_DriverOutline;
+                      <<uNULL<<uNULL<<uNULL<<uNULL<<uVehicleRunStatePage;
     break;
     }
     changePage(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()));
@@ -79,7 +79,7 @@ void Navigator::updateButtonsNamesByPositon(enum pagePosition p)
         break;
         case uMiddleCondition:
         buttonNameList<<"升弓\n条件"<<"主断\n条件"<<"牵引\n条件"<<"制动\n条件"
-                        <<""<<""<<""<<""<<""<<"";
+                        <<""<<""<<""<<""<<""<<"主界面";
         break;
     }
     for(int i = 0; i < buttons.size();i++)
