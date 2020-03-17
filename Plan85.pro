@@ -99,7 +99,6 @@ SOURCES += main.cpp\
     widgets/ctrltracbrake.cpp \
     data/data_tcn.cpp \
     data/trainbean.cpp \
-
     main_assistantdevice.cpp \
     main_380.cpp \
     main_light.cpp \
@@ -110,9 +109,8 @@ SOURCES += main.cpp\
     main_datetime.cpp \
     fault_current.cpp \
     fault_history.cpp \
-    fault_download.cpp
-
-    simulation.cpp
+    fault_download.cpp \
+    simulation.cpp \
     maindata_driveroutline.cpp \
     maindata_trainoutline.cpp \
     operating_condition.cpp \
@@ -202,7 +200,6 @@ HEADERS  += widget.h \
     widgets/ctrltracbrake.h \
     data/data_tcn.h \
     data/trainbean.h \
-
     main_assistantdevice.h \
     main_380.h \
     main_light.h \
@@ -213,10 +210,8 @@ HEADERS  += widget.h \
     main_datetime.h \
     fault_current.h \
     fault_history.h \
-    fault_download.h
-
-    simulation.h
-
+    fault_download.h \
+    simulation.h \
     maindata_driveroutline.h \
     operating_condition.h \
     panto_condition.h \
@@ -242,7 +237,6 @@ FORMS    += widget.ui \
     main_simulate.ui \
     widgets/ctrlcontrolvoltage.ui \
     widgets/ctrltracbrake.ui \
-
     main_assistantdevice.ui \
     main_380.ui \
     main_light.ui \
@@ -253,10 +247,8 @@ FORMS    += widget.ui \
     main_datetime.ui \
     fault_current.ui \
     fault_history.ui \
-    fault_download.ui
-
-    simulation.ui
-
+    fault_download.ui \
+    simulation.ui \
     maindata_driveroutline.ui \
     operating_condition.ui \
     panto_condition.ui \
