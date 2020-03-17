@@ -9,6 +9,7 @@ Data_TCN::Data_TCN()
 }
 void Data_TCN::updateData(bool TCN1Master,bool TCN2Master)
 {
+
     if(TCN1Master)
     {
         CrrcMvb::getCrrcMvb()->copyPort(0xfe10,0xe10);
@@ -112,7 +113,6 @@ void Data_TCN::updateData(bool TCN1Master,bool TCN2Master)
     //fill TCN data
     for(int i = 0;i<4;i++)
     {
-
         // tcn1
         train[i]->B_CMD_ANSC1 = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(0),11,0);//过分相预告/恢复
         train[i]->B_CMD_ANSC2 = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(0),11,1);//过分相强迫
