@@ -82,7 +82,7 @@ private:
     Settng_Separation* settng_Separation;
     Settng_HangMode* settng_HangMode;
     Settng_Others* settng_Others;
-
+    Main_Simulate* main_Simulate;
     Main_AssistantDevice* main_AssistantDevice;
     Main_380* main_380;
     Main_Light* main_Light;
