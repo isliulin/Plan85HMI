@@ -100,7 +100,21 @@ SOURCES += main.cpp\
     widgets/ctrltracbrake.cpp \
     data/data_tcn.cpp \
     data/trainbean.cpp \
+
+    main_assistantdevice.cpp \
+    main_380.cpp \
+    main_light.cpp \
+    main_lubrication.cpp \
+    main_panto.cpp \
+    main_separation.cpp \
+    main_wheel.cpp \
+    main_datetime.cpp \
+    fault_current.cpp \
+    fault_history.cpp \
+    fault_download.cpp
+
     simulation.cpp
+
 
 HEADERS  += widget.h \
     mybase.h \
@@ -183,7 +197,21 @@ HEADERS  += widget.h \
     widgets/ctrltracbrake.h \
     data/data_tcn.h \
     data/trainbean.h \
+
+    main_assistantdevice.h \
+    main_380.h \
+    main_light.h \
+    main_lubrication.h \
+    main_panto.h \
+    main_separation.h \
+    main_wheel.h \
+    main_datetime.h \
+    fault_current.h \
+    fault_history.h \
+    fault_download.h
+
     simulation.h
+
 
 FORMS    += widget.ui \
     header.ui \
@@ -203,7 +231,21 @@ FORMS    += widget.ui \
     main_simulate.ui \
     widgets/ctrlcontrolvoltage.ui \
     widgets/ctrltracbrake.ui \
+
+    main_assistantdevice.ui \
+    main_380.ui \
+    main_light.ui \
+    main_lubrication.ui \
+    main_panto.ui \
+    main_separation.ui \
+    main_wheel.ui \
+    main_datetime.ui \
+    fault_current.ui \
+    fault_history.ui \
+    fault_download.ui
+
     simulation.ui
+
 
 RESOURCES += \
     Resource.qrc

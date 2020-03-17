@@ -23,6 +23,17 @@
 #include "settng_hangmode.h"
 #include "settng_others.h"
 #include "main_simulate.h"
+#include "main_assistantdevice.h"
+#include "main_380.h"
+#include "main_light.h"
+#include "main_lubrication.h"
+#include "main_panto.h"
+#include "main_separation.h"
+#include "main_wheel.h"
+#include "main_datetime.h"
+#include "fault_current.h"
+#include "fault_history.h"
+#include "fault_download.h"
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -114,8 +125,54 @@ Widget::Widget(QWidget *parent) :
     this->main_Simulate->setMyBase(uMiddleMain,QString("仿真测试"));
     this->main_Simulate->hide();
 
+
+    this->main_AssistantDevice=new Main_AssistantDevice(this);
+    this->main_AssistantDevice->setMyBase(uMiddleMain,QString("辅机测试"));
+    this->main_AssistantDevice->hide();
+
+    this->main_380=new Main_380(this);
+    this->main_380->setMyBase(uMiddleMain,QString("库内380测试"));
+    this->main_380->hide();
+
+    this->main_Light=new Main_Light(this);
+    this->main_Light->setMyBase(uMiddleMain,QString("指示灯测试"));
+    this->main_Light->hide();
+
+    this->main_Lubrication=new Main_Lubrication(this);
+    this->main_Lubrication->setMyBase(uMiddleMain,QString("轮缘润滑"));
+    this->main_Lubrication->hide();
+
+    this->main_Panto=new Main_Panto(this);
+    this->main_Panto->setMyBase(uMiddleMain,QString("双弓测试"));
+    this->main_Panto->hide();
+
+    this->main_Separation=new Main_Separation(this);
+    this->main_Separation->setMyBase(uMiddleMain,QString("过分相测试"));
+    this->main_Separation->hide();
+
+    this->main_Wheel=new Main_Wheel(this);
+    this->main_Wheel->setMyBase(uMiddleMain,QString("轮径设置"));
+    this->main_Wheel->hide();
+
+    this->main_Datetime=new Main_Datetime(this);
+    this->main_Datetime->setMyBase(uMiddleMain,QString("日期时间"));
+    this->main_Datetime->hide();
+
+    this->fault_Current=new Fault_Current(this);
+    this->fault_Current->setMyBase(uMiddleFault,QString("实时故障"));
+    this->fault_Current->hide();
+
+    this->fault_History=new Fault_History(this);
+    this->fault_History->setMyBase(uMiddleFault,QString("历史故障"));
+    this->fault_History->hide();
+
+    this->fault_Download=new Fault_Download(this);
+    this->fault_Download->setMyBase(uMiddleFault,QString("故障下载"));
+    this->fault_Download->hide();
+
     this->simulation = new Simulation();
     this->simulation->hide();
+
 
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
@@ -128,7 +185,17 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uSettng_HangMode,this->settng_HangMode);
     this->widgets.insert(uSettng_Others,this->settng_Others);
     this->widgets.insert(uMain_Simulate,this->main_Simulate);
-
+    this->widgets.insert(uMain_AssistantDevice,this->main_AssistantDevice);
+    this->widgets.insert(uMain_380,this->main_380);
+    this->widgets.insert(uMain_Light,this->main_Light);
+    this->widgets.insert(uMain_Lubrication,this->main_Lubrication);
+    this->widgets.insert(uMain_Panto,this->main_Panto);
+    this->widgets.insert(uMain_Separation,this->main_Separation);
+    this->widgets.insert(uMain_Wheel,this->main_Wheel);
+    this->widgets.insert(uMain_Datetime,this->main_Datetime);
+    this->widgets.insert(uFault_Current,this->fault_Current);
+    this->widgets.insert(uFault_History,this->fault_History);
+    this->widgets.insert(uFault_Download,this->fault_Download);
 
     this->header->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();

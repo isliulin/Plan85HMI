@@ -56,6 +56,12 @@ void Navigator::NBpressEvent()
         buttonIndexList<<uMain_Simulate<<uMain_AssistantDevice<<uMain_380<<uMain_Light<<uMain_Lubrication<<uMain_Panto<<uMain_Separation
         <<uMain_Wheel<<uMain_Datetime<<uVehicleRunStatePage;
         break;
+
+        case uMiddleFault:
+        buttonIndexList<<uFault_Current<<uFault_History<<uFault_Download<<uNULL<<uNULL
+                      <<uNULL<<uNULL<<uNULL<<uNULL<<uVehicleRunStatePage;
+        break;
+
     }
     changePage(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()));
 }
@@ -78,10 +84,16 @@ void Navigator::updateButtonsNamesByPositon(enum pagePosition p)
                         <<"分相\n线路"<<"挂车\n模式"<<"其他\n设置"<<""<<"主界面";
         break;
 
-    case uMiddleMain:
-        buttonNameList<<"仿真测试"<<"辅机测试"<<"库内380测试"<<"指示灯测试"
-                     <<"轮缘润滑测试"<<"双弓测试"<<"过分相测试"<<"轮径设置"<<"日期时间"<<"主界面";
+        case uMiddleMain:
+        buttonNameList<<"仿真\n测试"<<"辅机\n测试"<<"库内380\n测试"<<"指示灯\n测试"
+                     <<"轮缘润滑\n测试"<<"双弓\n测试"<<"过分相\n测试"<<"轮径\n设置"<<"日期\n时间"<<"主界面";
         break;
+
+        case uMiddleFault:
+        buttonNameList<<"实时\n故障"<<"历史\n故障"<<"故障\n下载"<<""<<""
+                     <<""<<""<<""<<""<<"主界面";
+        break;
+
     }
     for(int i = 0; i < buttons.size();i++)
     {
