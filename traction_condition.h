@@ -1,13 +1,13 @@
 #ifndef TRACTION_CONDITION_H
 #define TRACTION_CONDITION_H
 
-#include <QWidget>
+#include <mybase.h>
 
 namespace Ui {
 class Traction_Condition;
 }
 
-class Traction_Condition : public QWidget
+class Traction_Condition : public MyBase
 {
     Q_OBJECT
 

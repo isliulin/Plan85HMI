@@ -19,12 +19,13 @@ Panto_Condition::~Panto_Condition()
 void Panto_Condition::updatePage()
 {
     faultString.clear();
-
+/*
     faultString<< "q"<< "a"<< "q"<< "a"<< "q"<< "a"<< "q"<< "a"<< "q"<< "a"<< "q"<< "a"<< "q"<< "a"<< "q"<< "a"
                   << "q"<< "a"<< "q"<< "a"<< "q"<< "a"<< "q"<< "a"<< "q"<< "a"<< "q"<< "a"<< "q"<< "a"<< "q"<< "a"
                      << "z"<< "x"<< "xq"<< "xa"<< "xq"<< "xa"<< "xq"<< "da"<< "dq"<< "da"<< "dq"<< "da"<< "qd"<< "a"<< "q"<< "a"
                         << "dq"<< "da"<< "dq"<< "da"<< "q"<< "a"<< "q"<< "sa"<< "q"<< "a"<< "q"<< "a"<< "q"<< "a"<< "q"<< "a";
-
+*/
+faultString<< "q"<< "a"<< "q"<< "a"<< "q"<< "a";
     int remainder = faultString.size() % 16;
     totalPage = faultString.size()/16;
     if (remainder > 0)
@@ -46,6 +47,18 @@ void Panto_Condition::updatePage()
             oc->updateLineText(faultString, curPage, curPage*16 , (curPage+1)*16);
         }
     }
+    if (curPage == 0)
+    {
+        this->ui->BTN_Page->hide();
+    }
+    else if (curPage = totalPage - 1)
+    {
+        this->ui->BTN_Page->setText("上一页");
+    }
+    else
+    {
+        this->ui->BTN_Page->setText("上一页");
+    }
     oc->show();
 }
 
@@ -54,8 +67,11 @@ void Panto_Condition::on_BTN_Page_clicked()
 
     if (curPage == totalPage - 1)
     {
-        return;
+        curPage = 0;
     }
-    curPage++;
+    else
+    {
+        curPage++;
+    }
     this->updatePage();
 }

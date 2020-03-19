@@ -2,7 +2,7 @@
 #include "ui_operating_condition.h"
 
 Operating_Condition::Operating_Condition(QWidget *parent) :
-    MyBase(parent),
+    QWidget(parent),
     ui(new Ui::Operating_Condition)
 {
     ui->setupUi(this);
