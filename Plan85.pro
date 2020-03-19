@@ -117,7 +117,8 @@ SOURCES += main.cpp\
     panto_condition.cpp \
     breaker_condition.cpp \
     traction_condition.cpp \
-    brake_condition.cpp
+    brake_condition.cpp \
+    maindata_tracbrakeoutline.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -217,7 +218,8 @@ HEADERS  += widget.h \
     panto_condition.h \
     breaker_condition.h \
     traction_condition.h \
-    brake_condition.h
+    brake_condition.h \
+    maindata_tracbrakeoutline.h
 
 FORMS    += widget.ui \
     header.ui \
@@ -254,7 +256,8 @@ FORMS    += widget.ui \
     panto_condition.ui \
     breaker_condition.ui \
     traction_condition.ui \
-    brake_condition.ui
+    brake_condition.ui \
+    maindata_tracbrakeoutline.ui
 
 RESOURCES += \
     Resource.qrc

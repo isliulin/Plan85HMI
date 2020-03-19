@@ -2,7 +2,7 @@
 #include "ui_traction_condition.h"
 
 Traction_Condition::Traction_Condition(QWidget *parent) :
-    QWidget(parent),
+    MyBase(parent),
     ui(new Ui::Traction_Condition)
 {
     ui->setupUi(this);

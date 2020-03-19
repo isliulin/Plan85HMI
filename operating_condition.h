@@ -1,14 +1,14 @@
 #ifndef OPERATING_CONDITION_H
 #define OPERATING_CONDITION_H
 
-#include <mybase.h>
+#include <QWidget>
 #include "qlabel.h"
 
 namespace Ui {
 class Operating_Condition;
 }
 
-class Operating_Condition : public MyBase
+class Operating_Condition : public QWidget
 {
     Q_OBJECT
 
