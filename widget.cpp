@@ -135,6 +135,7 @@ Widget::Widget(QWidget *parent) :
     this->settng_Others->setMyBase(uMiddleSetting,QString("其他设置"));
     this->settng_Others->hide();
 
+    //maintaince
     this->main_Simulate=new Main_Simulate(this);
     this->main_Simulate->setMyBase(uMiddleMain,QString("仿真测试"));
     this->main_Simulate->hide();
