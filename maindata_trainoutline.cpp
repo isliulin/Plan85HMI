@@ -12,3 +12,8 @@ MainData_TrainOutline::~MainData_TrainOutline()
 {
     delete ui;
 }
+
+void MainData_TrainOutline::updatePage()
+{
+
+}

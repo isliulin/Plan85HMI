@@ -21,6 +21,8 @@ class CrrcFault;
 class Simulation;
 
 class MainData_TrainOutline;
+class MainData_DriverOutline;
+class MainData_TracBrakeOutline;
 class Settng_Bypass;
 class Settng_Panto;
 class Settng_Distance;
@@ -41,6 +43,10 @@ class Main_Datetime;
 class Fault_Current;
 class Fault_History;
 class Fault_Download;
+class Panto_Condition;
+class Breaker_Condition;
+class Brake_Condition;
+class Traction_Condition;
 
 class Widget : public QWidget
 {
@@ -71,6 +77,8 @@ private:
     CrrcFault* crrcFault;
 
     MainData_TrainOutline* mainData_TrainOutline;
+    MainData_DriverOutline* mainData_DriverOutline;
+    MainData_TracBrakeOutline* mainData_TracBrakeOutline;
     Settng_Bypass* settng_Bypass;
     Settng_Panto* settng_Panto;
     Settng_Distance* settng_Distance;
@@ -79,7 +87,7 @@ private:
     Settng_Separation* settng_Separation;
     Settng_HangMode* settng_HangMode;
     Settng_Others* settng_Others;
-
+    Main_Simulate* main_Simulate;
     Main_AssistantDevice* main_AssistantDevice;
     Main_380* main_380;
     Main_Light* main_Light;
@@ -93,9 +101,11 @@ private:
     Fault_Download* fault_Download;
 
     Simulation* simulation;
-;
 
-
+    Panto_Condition* panto_Condition;
+    Brake_Condition* brake_Condition;
+    Breaker_Condition* breaker_Condition;
+    Traction_Condition* traction_Condition;
 };
 
 #endif // WIDGET_H

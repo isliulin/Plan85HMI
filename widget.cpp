@@ -14,6 +14,7 @@
 #endif
 
 #include "maindata_trainoutline.h"
+#include "maindata_driveroutline.h"
 #include "settng_bypass.h"
 #include "settng_panto.h"
 #include "settng_distance.h"
@@ -34,6 +35,11 @@
 #include "fault_current.h"
 #include "fault_history.h"
 #include "fault_download.h"
+#include "panto_condition.h"
+#include "breaker_condition.h"
+#include "brake_condition.h"
+#include "traction_condition.h"
+#include "maindata_tracbrakeoutline.h"
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -88,6 +94,14 @@ Widget::Widget(QWidget *parent) :
     this->mainData_TrainOutline->setMyBase(uMiddleMainData,QString("机车概况"));
     this->mainData_TrainOutline->hide();
 
+    this->mainData_DriverOutline = new MainData_DriverOutline(this);
+    this->mainData_DriverOutline->setMyBase(uMiddleMainData,QString("驱动概况"));
+    this->mainData_DriverOutline->hide();
+
+    this->mainData_TracBrakeOutline = new MainData_TracBrakeOutline(this);
+    this->mainData_TracBrakeOutline->setMyBase(uMiddleMainData,QString("牵引制动"));
+    this->mainData_TracBrakeOutline->hide();
+
     //add setting pages
     this->settng_Bypass = new Settng_Bypass(this);
     this->settng_Bypass->setMyBase(uMiddleSetting,QString("隔离"));
@@ -121,6 +135,7 @@ Widget::Widget(QWidget *parent) :
     this->settng_Others->setMyBase(uMiddleSetting,QString("其他设置"));
     this->settng_Others->hide();
 
+    //maintaince
     this->main_Simulate=new Main_Simulate(this);
     this->main_Simulate->setMyBase(uMiddleMain,QString("仿真测试"));
     this->main_Simulate->hide();
@@ -173,9 +188,27 @@ Widget::Widget(QWidget *parent) :
     this->simulation = new Simulation();
     this->simulation->hide();
 
+    //运行条件
+    this->panto_Condition = new Panto_Condition(this);
+    this->panto_Condition->setMyBase(uMiddleCondition,QString("升弓条件"));
+    this->panto_Condition->hide();
+
+    this->breaker_Condition = new Breaker_Condition(this);
+    this->breaker_Condition->setMyBase(uMiddleCondition,QString("主断条件"));
+    this->breaker_Condition->hide();
+
+    this->brake_Condition = new Brake_Condition(this);
+    this->brake_Condition->setMyBase(uMiddleCondition,QString("制动条件"));
+    this->brake_Condition->hide();
+
+    this->traction_Condition = new Traction_Condition(this);
+    this->traction_Condition->setMyBase(uMiddleCondition,QString("牵引条件"));
+    this->traction_Condition->hide();
 
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
+    this->widgets.insert(uMainData_DriverOutline,this->mainData_DriverOutline);
+    this->widgets.insert(uMainData_TracBrakeOutline,this->mainData_TracBrakeOutline);
     this->widgets.insert(uSettng_Bypass,this->settng_Bypass);
     this->widgets.insert(uSettng_Panto,this->settng_Panto);
     this->widgets.insert(uSettng_Distance,this->settng_Distance);
@@ -196,7 +229,10 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uFault_Current,this->fault_Current);
     this->widgets.insert(uFault_History,this->fault_History);
     this->widgets.insert(uFault_Download,this->fault_Download);
-
+    this->widgets.insert(uCondition_PantoUp,this->panto_Condition);
+    this->widgets.insert(uCondition_Breaker,this->breaker_Condition);
+    this->widgets.insert(uCondition_Traction,this->traction_Condition);
+    this->widgets.insert(uCondition_Brake,this->brake_Condition);
     this->header->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();
 }

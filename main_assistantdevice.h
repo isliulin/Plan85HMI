@@ -15,6 +15,7 @@ class Main_AssistantDevice : public MyBase
 public:
     explicit Main_AssistantDevice(QWidget *parent = 0);
     ~Main_AssistantDevice();
+    void updatePage();
 
 private:
     Ui::Main_AssistantDevice *ui;
