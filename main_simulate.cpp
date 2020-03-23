@@ -17,5 +17,5 @@ Main_Simulate::~Main_Simulate()
 
 void Main_Simulate::updatePage()
 {
-    qDebug()<<"this is simulate";
+    //qDebug()<<"this is simulate";
 }
