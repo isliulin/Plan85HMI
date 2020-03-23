@@ -1,6 +1,6 @@
 #ifndef MAIN_SIMULATE_H
 #define MAIN_SIMULATE_H
-#include <mybase.h>
+#include "mybase.h"
 
 #include <QWidget>
 
@@ -15,6 +15,7 @@ class Main_Simulate : public MyBase
 public:
     explicit Main_Simulate(QWidget *parent = 0);
     ~Main_Simulate();
+    void updatePage();
 
 private:
     Ui::Main_Simulate *ui;

@@ -51,7 +51,9 @@ void Navigator::NBpressEvent()
         buttonIndexList<<uSettng_Bypass<<uSettng_Panto<<uSettng_Distance<<uSettng_TrainCode<<
                      uSettng_Lubrication<<uSettng_Separation<<uSettng_HangMode<<uSettng_Others<<uNULL<<uVehicleRunStatePage;
         break;
+
         case uMiddleMain:
+        //uMain_Simulate
         buttonIndexList<<uMain_Simulate<<uMain_AssistantDevice<<uMain_380<<uMain_Light<<uMain_Lubrication<<uMain_Panto<<uMain_Separation
         <<uMain_Wheel<<uMain_Datetime<<uVehicleRunStatePage;
         break;
@@ -67,6 +69,7 @@ void Navigator::NBpressEvent()
 		break;
 
     }
+    qDebug()<<buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt());
     changePage(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()));
 }
 void Navigator::updateButtonsNamesByPositon(enum pagePosition p)

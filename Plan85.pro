@@ -236,9 +236,9 @@ FORMS    += widget.ui \
     settng_others.ui \
     widgets/ctrlnetvoltage.ui \
     widgets/ctrlnetcurrent.ui \
-    main_simulate.ui \
     widgets/ctrlcontrolvoltage.ui \
     widgets/ctrltracbrake.ui \
+    main_simulate.ui \
     main_assistantdevice.ui \
     main_380.ui \
     main_light.ui \
