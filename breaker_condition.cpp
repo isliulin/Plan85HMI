@@ -8,6 +8,7 @@ Breaker_Condition::Breaker_Condition(QWidget *parent) :
     ui->setupUi(this);
     oc = new Operating_Condition(this);
     oc->hide();
+    this->ui->BTN_Page->hide();
     curPage = 0;
 }
 
@@ -54,10 +55,12 @@ faultString<< "q"<< "a"<< "q"<< "a"<< "q"<< "a";
     else if (curPage = totalPage - 1)
     {
         this->ui->BTN_Page->setText("上一页");
+        this->ui->BTN_Page->show();
     }
     else
     {
         this->ui->BTN_Page->setText("上一页");
+        this->ui->BTN_Page->show();
     }
     oc->show();
 }
