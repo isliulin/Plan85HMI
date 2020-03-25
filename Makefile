@@ -1047,6 +1047,7 @@ qrc_Resource.cpp: Resource.qrc \
 		images/tingfangshijia.png \
 		images/chengfazhidong.png \
 		images/jingtigeli.png \
+		images/Cheti-reverse.png \
 		images/qianyin.png \
 		images/zhidonghuanjie.png \
 		images/Cheti.png \
@@ -1068,6 +1069,7 @@ qrc_Resource.cpp: Resource.qrc \
 		images/fenxiangqu.png \
 		images/zhuduangeli.png \
 		images/sasha.png \
+		images/right.png \
 		images/xianghou.png \
 		images/panto1up2down.png \
 		images/up.png \
@@ -1077,6 +1079,7 @@ qrc_Resource.cpp: Resource.qrc \
 		images/panto1down2iso.png \
 		images/panto1down2down.png \
 		images/LubAdd.png \
+		images/left.png \
 		images/panto1down2up.png \
 		images/huaxing.png \
 		images/zhuduanjiuxu.png \
@@ -7393,6 +7396,9 @@ moc_traction_condition.cpp: mybase.h \
 		data/data_ccu.h \
 		data/data_tcn.h \
 		data/trainbean.h \
+		operating_condition.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
 		traction_condition.h
 	/opt/Qt5.6.2/5.6/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.6.2/5.6/gcc_64/mkspecs/linux-g++ -I/home/my/Plan85HMI -I/ -I/home/my/Plan85HMI -I/home/my/Plan85HMI/log4qt -I/home/my/Plan85HMI/log4qt/helpers -I/home/my/Plan85HMI/log4qt/spi -I/home/my/Plan85HMI/log4qt/varia -I/opt/Qt5.6.2/5.6/gcc_64/include -I/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets -I/opt/Qt5.6.2/5.6/gcc_64/include/QtGui -I/opt/Qt5.6.2/5.6/gcc_64/include/QtSql -I/opt/Qt5.6.2/5.6/gcc_64/include/QtNetwork -I/opt/Qt5.6.2/5.6/gcc_64/include/QtCore traction_condition.h -o moc_traction_condition.cpp
 
@@ -14200,7 +14206,18 @@ settng_traincode.o: settng_traincode.cpp settng_traincode.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
-		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLineEdit \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlineedit.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o settng_traincode.o settng_traincode.cpp
 
 settng_lubrication.o: settng_lubrication.cpp settng_lubrication.h \
@@ -14351,7 +14368,12 @@ settng_lubrication.o: settng_lubrication.cpp settng_lubrication.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
-		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o settng_lubrication.o settng_lubrication.cpp
 
 settng_separation.o: settng_separation.cpp settng_separation.h \
@@ -14502,7 +14524,12 @@ settng_separation.o: settng_separation.cpp settng_separation.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
-		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o settng_separation.o settng_separation.cpp
 
 settng_hangmode.o: settng_hangmode.cpp settng_hangmode.h \
@@ -14653,7 +14680,18 @@ settng_hangmode.o: settng_hangmode.cpp settng_hangmode.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
-		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLineEdit \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlineedit.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o settng_hangmode.o settng_hangmode.cpp
 
 settng_others.o: settng_others.cpp settng_others.h \
@@ -14804,7 +14842,18 @@ settng_others.o: settng_others.cpp settng_others.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
-		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLineEdit \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlineedit.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o settng_others.o settng_others.cpp
 
 ctrlnetvoltage.o: widgets/ctrlnetvoltage.cpp widgets/ctrlnetvoltage.h \
@@ -15239,7 +15288,12 @@ main_simulate.o: main_simulate.cpp main_simulate.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
-		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main_simulate.o main_simulate.cpp
 
 ctrlcontrolvoltage.o: widgets/ctrlcontrolvoltage.cpp widgets/ctrlcontrolvoltage.h \
@@ -15347,7 +15401,41 @@ ctrlcontrolvoltage.o: widgets/ctrlcontrolvoltage.cpp widgets/ctrlcontrolvoltage.
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qfiledevice.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvector2d.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qtouchdevice.h \
-		ui_ctrlcontrolvoltage.h
+		ui_ctrlcontrolvoltage.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ctrlcontrolvoltage.o widgets/ctrlcontrolvoltage.cpp
 
 ctrltracbrake.o: widgets/ctrltracbrake.cpp widgets/ctrltracbrake.h \
@@ -15456,7 +15544,41 @@ ctrltracbrake.o: widgets/ctrltracbrake.cpp widgets/ctrltracbrake.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvector2d.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qtouchdevice.h \
 		global.h \
-		ui_ctrltracbrake.h
+		ui_ctrltracbrake.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ctrltracbrake.o widgets/ctrltracbrake.cpp
 
 data_tcn.o: data/data_tcn.cpp data/data_tcn.h \
@@ -15658,7 +15780,42 @@ main_assistantdevice.o: main_assistantdevice.cpp main_assistantdevice.h \
 		data/data_ccu.h \
 		data/data_tcn.h \
 		data/trainbean.h \
-		ui_main_assistantdevice.h
+		ui_main_assistantdevice.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main_assistantdevice.o main_assistantdevice.cpp
 
 main_380.o: main_380.cpp main_380.h \
@@ -15777,7 +15934,44 @@ main_380.o: main_380.cpp main_380.h \
 		data/data_ccu.h \
 		data/data_tcn.h \
 		data/trainbean.h \
-		ui_main_380.h
+		ui_main_380.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main_380.o main_380.cpp
 
 main_light.o: main_light.cpp main_light.h \
@@ -15896,7 +16090,42 @@ main_light.o: main_light.cpp main_light.h \
 		data/data_ccu.h \
 		data/data_tcn.h \
 		data/trainbean.h \
-		ui_main_light.h
+		ui_main_light.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main_light.o main_light.cpp
 
 main_lubrication.o: main_lubrication.cpp main_lubrication.h \
@@ -16015,7 +16244,44 @@ main_lubrication.o: main_lubrication.cpp main_lubrication.h \
 		data/data_ccu.h \
 		data/data_tcn.h \
 		data/trainbean.h \
-		ui_main_lubrication.h
+		ui_main_lubrication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main_lubrication.o main_lubrication.cpp
 
 main_panto.o: main_panto.cpp main_panto.h \
@@ -16134,7 +16400,44 @@ main_panto.o: main_panto.cpp main_panto.h \
 		data/data_ccu.h \
 		data/data_tcn.h \
 		data/trainbean.h \
-		ui_main_panto.h
+		ui_main_panto.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main_panto.o main_panto.cpp
 
 main_separation.o: main_separation.cpp main_separation.h \
@@ -16253,7 +16556,44 @@ main_separation.o: main_separation.cpp main_separation.h \
 		data/data_ccu.h \
 		data/data_tcn.h \
 		data/trainbean.h \
-		ui_main_separation.h
+		ui_main_separation.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main_separation.o main_separation.cpp
 
 main_wheel.o: main_wheel.cpp main_wheel.h \
@@ -16372,7 +16712,44 @@ main_wheel.o: main_wheel.cpp main_wheel.h \
 		data/data_ccu.h \
 		data/data_tcn.h \
 		data/trainbean.h \
-		ui_main_wheel.h
+		ui_main_wheel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main_wheel.o main_wheel.cpp
 
 main_datetime.o: main_datetime.cpp main_datetime.h \
@@ -16491,7 +16868,39 @@ main_datetime.o: main_datetime.cpp main_datetime.h \
 		data/data_ccu.h \
 		data/data_tcn.h \
 		data/trainbean.h \
-		ui_main_datetime.h
+		ui_main_datetime.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main_datetime.o main_datetime.cpp
 
 fault_current.o: fault_current.cpp fault_current.h \
@@ -16610,7 +17019,44 @@ fault_current.o: fault_current.cpp fault_current.h \
 		data/data_ccu.h \
 		data/data_tcn.h \
 		data/trainbean.h \
-		ui_fault_current.h
+		ui_fault_current.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o fault_current.o fault_current.cpp
 
 fault_history.o: fault_history.cpp fault_history.h \
@@ -16729,7 +17175,44 @@ fault_history.o: fault_history.cpp fault_history.h \
 		data/data_ccu.h \
 		data/data_tcn.h \
 		data/trainbean.h \
-		ui_fault_history.h
+		ui_fault_history.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o fault_history.o fault_history.cpp
 
 fault_download.o: fault_download.cpp fault_download.h \
@@ -16848,7 +17331,44 @@ fault_download.o: fault_download.cpp fault_download.h \
 		data/data_ccu.h \
 		data/data_tcn.h \
 		data/trainbean.h \
-		ui_fault_download.h
+		ui_fault_download.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o fault_download.o fault_download.cpp
 
 simulation.o: simulation.cpp simulation.h \
@@ -16979,6 +17499,55 @@ simulation.o: simulation.cpp simulation.h \
 		mvbcx/MVBC02C/mue_pd_full.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QMap \
 		ui_simulation.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QComboBox \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qcombobox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLineEdit \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlineedit.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QTextBrowser \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtextbrowser.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtextedit.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qtextdocument.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/QKeyEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o simulation.o simulation.cpp
 
@@ -17098,7 +17667,41 @@ maindata_driveroutline.o: maindata_driveroutline.cpp maindata_driveroutline.h \
 		data/data_ccu.h \
 		data/data_tcn.h \
 		data/trainbean.h \
-		ui_maindata_driveroutline.h
+		ui_maindata_driveroutline.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o maindata_driveroutline.o maindata_driveroutline.cpp
 
 maindata_trainoutline.o: maindata_trainoutline.cpp maindata_trainoutline.h \
@@ -17249,7 +17852,9 @@ maindata_trainoutline.o: maindata_trainoutline.cpp maindata_trainoutline.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
-		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o maindata_trainoutline.o maindata_trainoutline.cpp
 
 operating_condition.o: operating_condition.cpp operating_condition.h \
@@ -17359,7 +17964,39 @@ operating_condition.o: operating_condition.cpp operating_condition.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qtouchdevice.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
-		ui_operating_condition.h
+		ui_operating_condition.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o operating_condition.o operating_condition.cpp
 
 panto_condition.o: panto_condition.cpp panto_condition.h \
@@ -17481,7 +18118,41 @@ panto_condition.o: panto_condition.cpp panto_condition.h \
 		operating_condition.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
-		ui_panto_condition.h
+		ui_panto_condition.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o panto_condition.o panto_condition.cpp
 
 breaker_condition.o: breaker_condition.cpp breaker_condition.h \
@@ -17603,7 +18274,41 @@ breaker_condition.o: breaker_condition.cpp breaker_condition.h \
 		operating_condition.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
-		ui_breaker_condition.h
+		ui_breaker_condition.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o breaker_condition.o breaker_condition.cpp
 
 traction_condition.o: traction_condition.cpp traction_condition.h \
@@ -17722,7 +18427,44 @@ traction_condition.o: traction_condition.cpp traction_condition.h \
 		data/data_ccu.h \
 		data/data_tcn.h \
 		data/trainbean.h \
-		ui_traction_condition.h
+		operating_condition.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		ui_traction_condition.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o traction_condition.o traction_condition.cpp
 
 brake_condition.o: brake_condition.cpp brake_condition.h \
@@ -17844,7 +18586,41 @@ brake_condition.o: brake_condition.cpp brake_condition.h \
 		operating_condition.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
-		ui_brake_condition.h
+		ui_brake_condition.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o brake_condition.o brake_condition.cpp
 
 maindata_tracbrakeoutline.o: maindata_tracbrakeoutline.cpp maindata_tracbrakeoutline.h \
@@ -17963,7 +18739,43 @@ maindata_tracbrakeoutline.o: maindata_tracbrakeoutline.cpp maindata_tracbrakeout
 		data/data_ccu.h \
 		data/data_tcn.h \
 		data/trainbean.h \
-		ui_maindata_tracbrakeoutline.h
+		ui_maindata_tracbrakeoutline.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QProgressBar \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qprogressbar.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o maindata_tracbrakeoutline.o maindata_tracbrakeoutline.cpp
 
 qrc_Resource.o: qrc_Resource.cpp 

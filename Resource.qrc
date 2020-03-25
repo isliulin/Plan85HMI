@@ -45,5 +45,8 @@
         <file>images/LubSub.png</file>
         <file>images/qianyin1.png</file>
         <file>images/linevbreakerfault.png</file>
+        <file>images/Cheti-reverse.png</file>
+        <file>images/left.png</file>
+        <file>images/right.png</file>
     </qresource>
 </RCC>
