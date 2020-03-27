@@ -84,7 +84,6 @@ SOURCES += main.cpp\
     cxExtDev/blacklightthread.cpp \
     cxExtDev/externaldevicelib.cpp \
     data/data_ccu.cpp \
-    maindata_trainoutline.cpp \
     settng_bypass.cpp \
     settng_panto.cpp \
     settng_distance.cpp \
@@ -99,7 +98,27 @@ SOURCES += main.cpp\
     widgets/ctrlcontrolvoltage.cpp \
     widgets/ctrltracbrake.cpp \
     data/data_tcn.cpp \
-    data/trainbean.cpp
+    data/trainbean.cpp \
+    main_assistantdevice.cpp \
+    main_380.cpp \
+    main_light.cpp \
+    main_lubrication.cpp \
+    main_panto.cpp \
+    main_separation.cpp \
+    main_wheel.cpp \
+    main_datetime.cpp \
+    fault_current.cpp \
+    fault_history.cpp \
+    fault_download.cpp \
+    simulation.cpp \
+    maindata_driveroutline.cpp \
+    maindata_trainoutline.cpp \
+    operating_condition.cpp \
+    panto_condition.cpp \
+    breaker_condition.cpp \
+    traction_condition.cpp \
+    brake_condition.cpp \
+    maindata_tracbrakeoutline.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -181,7 +200,26 @@ HEADERS  += widget.h \
     widgets/ctrlcontrolvoltage.h \
     widgets/ctrltracbrake.h \
     data/data_tcn.h \
-    data/trainbean.h
+    data/trainbean.h \
+    main_assistantdevice.h \
+    main_380.h \
+    main_light.h \
+    main_lubrication.h \
+    main_panto.h \
+    main_separation.h \
+    main_wheel.h \
+    main_datetime.h \
+    fault_current.h \
+    fault_history.h \
+    fault_download.h \
+    simulation.h \
+    maindata_driveroutline.h \
+    operating_condition.h \
+    panto_condition.h \
+    breaker_condition.h \
+    traction_condition.h \
+    brake_condition.h \
+    maindata_tracbrakeoutline.h
 
 FORMS    += widget.ui \
     header.ui \
@@ -198,9 +236,28 @@ FORMS    += widget.ui \
     settng_others.ui \
     widgets/ctrlnetvoltage.ui \
     widgets/ctrlnetcurrent.ui \
-    main_simulate.ui \
     widgets/ctrlcontrolvoltage.ui \
-    widgets/ctrltracbrake.ui
+    widgets/ctrltracbrake.ui \
+    main_simulate.ui \
+    main_assistantdevice.ui \
+    main_380.ui \
+    main_light.ui \
+    main_lubrication.ui \
+    main_panto.ui \
+    main_separation.ui \
+    main_wheel.ui \
+    main_datetime.ui \
+    fault_current.ui \
+    fault_history.ui \
+    fault_download.ui \
+    simulation.ui \
+    maindata_driveroutline.ui \
+    operating_condition.ui \
+    panto_condition.ui \
+    breaker_condition.ui \
+    traction_condition.ui \
+    brake_condition.ui \
+    maindata_tracbrakeoutline.ui
 
 RESOURCES += \
     Resource.qrc
