@@ -3,238 +3,240 @@
 
 Data_CCU::Data_CCU()
 {
+    B_NORMAL_MODE = false;
+    B_LOAD_SET = false;
+
+    N_LOAD = 0;
 
 }
 void Data_CCU::updateData()
 {
     //DDU-MPU
     //0x300
-    B_TC1_BOGIE1_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,0,0);//车1 转向架1隔离请求
-    B_TC1_4Q1_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,0,1);//车1 整流器1隔离请求
-    B_TC1_4Q2_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,0,2);//车1 整流器2隔离请求
-    B_TC1_AXLE1_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,0,3);//车1 逆变器1隔离请求
-    B_TC1_AXLE2_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,0,4);//车1 逆变器2隔离请求
-    B_TC1_AXLE3_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,0,5);//车1 逆变器3隔离请求
-    B_TC1_AUX1_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,0,6);//车1 辅变流1隔离请求
-    B_TC1_BOGIE2_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,0,7);//车1 转向架2隔离请求
-    B_TC1_4Q3_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,1,0);//车1 整流器3隔离请求
-    B_TC1_4Q4_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,1,1);//车1 整流器4隔离请求
-    B_TC1_AXLE4_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,1,2);//车1 逆变器4隔离请求
-    B_TC1_AUX2_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,1,5);//车1 辅变流2隔离请求
-    B_TC1_QA_HV_ON = CrrcMvb::getCrrcMvb()->getBool(0x300,1,6);//车1 高压隔离开关开（5s高电平）
-    B_TC1_QA_HV_OFF = CrrcMvb::getCrrcMvb()->getBool(0x300,1,7);//车1 高压隔离开关关（5s高电平）
-    B_TC1_BOGIE1_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,2,0);//车1 转向架1隔离取消请求
-    B_TC1_4Q1_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,2,1);//车1 整流器1隔离取消请求
-    B_TC1_4Q2_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,2,2);//车1 整流器2隔离取消请求
-    B_TC1_AXLE1_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,2,3);//车1 逆变器1隔离取消请求
-    B_TC1_AXLE2_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,2,4);//车1 逆变器2隔离取消请求
-    B_TC1_AXLE3_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,2,5);//车1 逆变器3隔离取消请求
-    B_TC1_AUX1_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,2,6);//车1 辅变流1隔离取消请求
-    B_TC1_BOGIE2_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,2,7);//车1 转向架2隔离取消请求
-    B_TC1_4Q3_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,3,0);//车1 整流器3隔离取消请求
-    B_TC1_4Q4_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,3,1);//车1 整流器4隔离取消请求
-    B_TC1_AXLE4_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,3,2);//车1 逆变器4隔离取消请求
-    B_TC1_AUX2_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,3,5);//车1 辅变流2隔离取消请求
-    B_TC1_DAMAN_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,4,0);//车1 无人警惕隔离请求
-    B_TC1_EBRK_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,4,1);//车1 电制动隔离请求
-    B_TC1_CPR_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,4,2);//车1 空压机隔离请求
-    B_TC1_FLL_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,4,4);//车1 轮缘润滑隔离请求
-    B_TC1_PANTO_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,4,5);//车1 受电弓隔离请求
-    B_TC1_FAULT_RESET = CrrcMvb::getCrrcMvb()->getBool(0x300,4,7);//车1 故障复位
-    B_TC1_DAMAN_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,5,0);//车1 无人警惕隔离取消请求
-    B_TC1_EBRK_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,5,1);//车1 电制动隔离取消请求
-    B_TC1_CPR_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,5,2);//车1 空压机隔离取消请求
-    B_TC1_FLL_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,5,4);//车1 轮缘润滑隔离取消请求
-    B_TC1_PANTO_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,5,5);//车1 受电弓隔离取消请求
-    B_TC2_BOGIE1_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,6,0);//车2 转向架1隔离请求
-    B_TC2_4Q1_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,6,1);//车2 整流器1隔离请求
-    B_TC2_4Q2_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,6,2);//车2 整流器2隔离请求
-    B_TC2_AXLE1_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,6,3);//车2 逆变器1隔离请求
-    B_TC2_AXLE2_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,6,4);//车2 逆变器2隔离请求
-    B_TC2_AXLE3_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,6,5);//车2 逆变器3隔离请求
-    B_TC2_AUX1_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,6,6);//车2 辅变流1隔离请求
-    B_TC2_BOGIE2_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,6,7);//车2 转向架2隔离请求
-    B_TC2_4Q3_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,7,0);//车2 整流器3隔离请求
-    B_TC2_4Q4_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,7,1);//车2 整流器4隔离请求
-    B_TC2_AXLE4_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,7,2);//车2 逆变器4隔离请求
-    B_TC2_AUX2_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,7,5);//车2 辅变流2隔离请求
-    B_TC2_QA_HV_ON = CrrcMvb::getCrrcMvb()->getBool(0x300,7,6);//车2 高压隔离开关开（5s高电平）
-    B_TC2_QA_HV_OFF = CrrcMvb::getCrrcMvb()->getBool(0x300,7,7);//车2 高压隔离开关关（5s高电平）
-    B_TC2_BOGIE1_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,8,0);//车2 转向架1隔离取消请求
-    B_TC2_4Q1_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,8,1);//车2 整流器1隔离取消请求
-    B_TC2_4Q2_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,8,2);//车2 整流器2隔离取消请求
-    B_TC2_AXLE1_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,8,3);//车2 逆变器1隔离取消请求
-    B_TC2_AXLE2_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,8,4);//车2 逆变器2隔离取消请求
-    B_TC2_AXLE3_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,8,5);//车2 逆变器3隔离取消请求
-    B_TC2_AUX1_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,8,6);//车2 辅变流1隔离取消请求
-    B_TC2_BOGIE2_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,8,7);//车2 转向架2隔离取消请求
-    B_TC2_4Q3_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,9,0);//车2 整流器3隔离取消请求
-    B_TC2_4Q4_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,9,1);//车2 整流器4隔离取消请求
-    B_TC2_AXLE4_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,9,2);//车2 逆变器4隔离取消请求
-    B_TC2_AUX2_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,9,5);//车2 辅变流2隔离取消请求
-    B_TC2_DAMAN_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,10,0);//车2 无人警惕隔离请求
-    B_TC2_EBRK_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,10,1);//车2 电制动隔离请求
-    B_TC2_CPR_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,10,2);//车2 空压机隔离请求
-    B_TC2_FLL_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,10,4);//车2 轮缘润滑隔离请求
-    B_TC2_PANTO_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,10,5);//车2 受电弓隔离请求
-    B_TC2_FAULT_RESET = CrrcMvb::getCrrcMvb()->getBool(0x300,10,7);//车2 故障复位
-    B_TC2_DAMAN_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,11,0);//车2 无人警惕隔离取消请求
-    B_TC2_EBRK_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,11,1);//车2 电制动隔离取消请求
-    B_TC2_CPR_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,11,2);//车2 空压机隔离取消请求
-    B_TC2_FLL_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,11,4);//车2 轮缘润滑隔离取消请求
-    B_TC2_PANTO_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,11,5);//车2 受电弓隔离取消请求
-    B_TC3_BOGIE1_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,12,0);//车3 转向架1隔离请求
-    B_TC3_4Q1_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,12,1);//车3 整流器1隔离请求
-    B_TC3_4Q2_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,12,2);//车3 整流器2隔离请求
-    B_TC3_AXLE1_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,12,3);//车3 逆变器1隔离请求
-    B_TC3_AXLE2_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,12,4);//车3 逆变器2隔离请求
-    B_TC3_AXLE3_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,12,5);//车3 逆变器3隔离请求
-    B_TC3_AUX1_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,12,6);//车3 辅变流1隔离请求
-    B_TC3_BOGIE2_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,12,7);//车3 转向架2隔离请求
-    B_TC3_4Q3_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,13,0);//车3 整流器3隔离请求
-    B_TC3_4Q4_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,13,1);//车3 整流器4隔离请求
-    B_TC3_AXLE4_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,13,2);//车3 逆变器4隔离请求
-    B_TC3_AUX2_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,13,5);//车3 辅变流2隔离请求
-    B_TC3_QA_HV_ON = CrrcMvb::getCrrcMvb()->getBool(0x300,13,6);//车3 高压隔离开关开（5s高电平）
-    B_TC3_QA_HV_OFF = CrrcMvb::getCrrcMvb()->getBool(0x300,13,7);//车3 高压隔离开关关（5s高电平）
-    B_TC3_BOGIE1_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,14,0);//车3 转向架1隔离取消请求
-    B_TC3_4Q1_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,14,1);//车3 整流器1隔离取消请求
-    B_TC3_4Q2_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,14,2);//车3 整流器2隔离取消请求
-    B_TC3_AXLE1_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,14,3);//车3 逆变器1隔离取消请求
-    B_TC3_AXLE2_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,14,4);//车3 逆变器2隔离取消请求
-    B_TC3_AXLE3_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,14,5);//车3 逆变器3隔离取消请求
-    B_TC3_AUX1_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,14,6);//车3 辅变流1隔离取消请求
-    B_TC3_BOGIE2_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,14,7);//车3 转向架2隔离取消请求
-    B_TC3_4Q3_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,15,0);//车3 整流器3隔离取消请求
-    B_TC3_4Q4_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,15,1);//车3 整流器4隔离取消请求
-    B_TC3_AXLE4_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,15,2);//车3 逆变器4隔离取消请求
-    B_TC3_AUX2_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,15,5);//车3 辅变流2隔离取消请求
-    B_TC3_DAMAN_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,16,0);//车3 无人警惕隔离请求
-    B_TC3_EBRK_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,16,1);//车3 电制动隔离请求
-    B_TC3_CPR_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,16,2);//车3 空压机隔离请求
-    B_TC3_FLL_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,16,4);//车3 轮缘润滑隔离请求
-    B_TC3_PANTO_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,16,5);//车3 受电弓隔离请求
-    B_TC3_FAULT_RESET = CrrcMvb::getCrrcMvb()->getBool(0x300,16,7);//车3 故障复位
-    B_TC3_DAMAN_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,17,0);//车3 无人警惕隔离取消请求
-    B_TC3_EBRK_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,17,1);//车3 电制动隔离取消请求
-    B_TC3_CPR_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,17,2);//车3 空压机隔离取消请求
-    B_TC3_FLL_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,17,4);//车3 轮缘润滑隔离取消请求
-    B_TC3_PANTO_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,17,5);//车3 受电弓隔离取消请求
-    B_TC4_BOGIE1_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,18,0);//车4 转向架1隔离请求
-    B_TC4_4Q1_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,18,1);//车4 整流器1隔离请求
-    B_TC4_4Q2_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,18,2);//车4 整流器2隔离请求
-    B_TC4_AXLE1_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,18,3);//车4 逆变器1隔离请求
-    B_TC4_AXLE2_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,18,4);//车4 逆变器2隔离请求
-    B_TC4_AXLE3_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,18,5);//车4 逆变器3隔离请求
-    B_TC4_AUX1_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,18,6);//车4 辅变流1隔离请求
-    B_TC4_BOGIE2_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,18,7);//车4 转向架2隔离请求
-    B_TC4_4Q3_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,19,0);//车4 整流器3隔离请求
-    B_TC4_4Q4_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,19,1);//车4 整流器4隔离请求
-    B_TC4_AXLE4_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,19,2);//车4 逆变器4隔离请求
-    B_TC4_AUX2_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,19,5);//车4 辅变流2隔离请求
-    B_TC4_QA_HV_ON = CrrcMvb::getCrrcMvb()->getBool(0x300,19,6);//车4 高压隔离开关开（5s高电平）
-    B_TC4_QA_HV_OFF = CrrcMvb::getCrrcMvb()->getBool(0x300,19,7);//车4 高压隔离开关关（5s高电平）
-    B_TC4_BOGIE1_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,20,0);//车4 转向架1隔离取消请求
-    B_TC4_4Q1_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,20,1);//车4 整流器1隔离取消请求
-    B_TC4_4Q2_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,20,2);//车4 整流器2隔离取消请求
-    B_TC4_AXLE1_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,20,3);//车4 逆变器1隔离取消请求
-    B_TC4_AXLE2_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,20,4);//车4 逆变器2隔离取消请求
-    B_TC4_AXLE3_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,20,5);//车4 逆变器3隔离取消请求
-    B_TC4_AUX1_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,20,6);//车4 辅变流1隔离取消请求
-    B_TC4_BOGIE2_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,20,7);//车4 转向架2隔离取消请求
-    B_TC4_4Q3_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,21,0);//车4 整流器3隔离取消请求
-    B_TC4_4Q4_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,21,1);//车4 整流器4隔离取消请求
-    B_TC4_AXLE4_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,21,2);//车4 逆变器4隔离取消请求
-    B_TC4_AUX2_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,21,5);//车4 辅变流2隔离取消请求
-    B_TC4_DAMAN_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,22,0);//车4 无人警惕隔离请求
-    B_TC4_EBRK_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,22,1);//车4 电制动隔离请求
-    B_TC4_CPR_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,22,2);//车4 空压机隔离请求
-    B_TC4_FLL_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,22,4);//车4 轮缘润滑隔离请求
-    B_TC4_PANTO_ISO_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,22,5);//车4 受电弓隔离请求
-    B_TC4_FAULT_RESET = CrrcMvb::getCrrcMvb()->getBool(0x300,22,7);//车4 故障复位
-    B_TC4_DAMAN_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,23,0);//车4 无人警惕隔离取消请求
-    B_TC4_EBRK_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,23,1);//车4 电制动隔离取消请求
-    B_TC4_CPR_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,23,2);//车4 空压机隔离取消请求
-    B_TC4_FLL_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,23,4);//车4 轮缘润滑隔离取消请求
-    B_TC4_PANTO_ISO_REL_RQ = CrrcMvb::getCrrcMvb()->getBool(0x300,23,5);//车4 受电弓隔离取消请求
-    B_LAMP_TEST = CrrcMvb::getCrrcMvb()->getBool(0x300,24,0);//指示灯测试
-    B_FLL_TEST_START = CrrcMvb::getCrrcMvb()->getBool(0x300,24,1);//轮缘润滑测试开始
-    B_FLL_TEST_CANCEL = CrrcMvb::getCrrcMvb()->getBool(0x300,24,2);//轮缘润滑测试取消
-    B_DEPOT_380_ACT = CrrcMvb::getCrrcMvb()->getBool(0x300,24,3);//库内模式 激活
-    B_DEPOT_380_DEACT = CrrcMvb::getCrrcMvb()->getBool(0x300,24,4);//库内模式 关闭
-    B_CPR_TEST = CrrcMvb::getCrrcMvb()->getBool(0x300,24,6);//空压机测试
-    B_VT_BM1_ST = CrrcMvb::getCrrcMvb()->getBool(0x300,24,7);//冷却塔风机1测试：1测试，0停止
-    B_VT_BM2_ST = CrrcMvb::getCrrcMvb()->getBool(0x300,25,0);//冷却塔风机2测试：1测试，0停止
-    B_SIM_ON = CrrcMvb::getCrrcMvb()->getBool(0x300,25,1);//仿真开关
-    B_NORMAL_MODE = CrrcMvb::getCrrcMvb()->getBool(0x300,25,3);//普通模式
-    B_SUMMER_MODE = CrrcMvb::getCrrcMvb()->getBool(0x300,25,4);//夏天模式
-    B_AXLE_23TON = CrrcMvb::getCrrcMvb()->getBool(0x300,25,6);//轴重23吨
-    B_AXLE_25TON = CrrcMvb::getCrrcMvb()->getBool(0x300,25,7);//轴重25吨
-    N_SIM_SPEED = CrrcMvb::getCrrcMvb()->getUnsignedInt(0x300,26);//模拟机车速度 单位：km/h
-    N_SIM_LINE_VOLT = CrrcMvb::getCrrcMvb()->getUnsignedInt(0x300,28);//模拟网压 单位：V
-    N_DDU_LIFE = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x300,30);//DDU生命信号 （0~255递增）
-    B_VT_MT1_ST = CrrcMvb::getCrrcMvb()->getBool(0x300,31,0);//牵引风机1测试：1测试，0停止
-    B_VT_MT2_ST = CrrcMvb::getCrrcMvb()->getBool(0x300,31,1);//牵引风机2测试：1测试，0停止
-    B_VT_SM1_ST = CrrcMvb::getCrrcMvb()->getBool(0x300,31,4);//机械间风机1测试：1测试，0停止
-    B_VT_SM2_ST = CrrcMvb::getCrrcMvb()->getBool(0x300,31,5);//机械间风机2测试：1测试，0停止
-    B_P300CHECK0 = CrrcMvb::getCrrcMvb()->getBool(0x300,31,6);//数据校验（固定发0）
-    B_P300CHECK1 = CrrcMvb::getCrrcMvb()->getBool(0x300,31,7);//数据校验（固定发1）
+    CrrcMvb::getCrrcMvb()->setBool(0x300,0,0,B_TC1_BOGIE1_ISO_RQ);//车1 转向架1隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,0,1,B_TC1_4Q1_ISO_RQ);//车1 整流器1隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,0,2,B_TC1_4Q2_ISO_RQ);//车1 整流器2隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,0,3,B_TC1_AXLE1_ISO_RQ);//车1 逆变器1隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,0,4,B_TC1_AXLE2_ISO_RQ);//车1 逆变器2隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,0,5,B_TC1_AXLE3_ISO_RQ);//车1 逆变器3隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,0,6,B_TC1_AUX1_ISO_RQ);//车1 辅变流1隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,0,7,B_TC1_BOGIE2_ISO_RQ);//车1 转向架2隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,1,0,B_TC1_4Q3_ISO_RQ);//车1 整流器3隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,1,1,B_TC1_4Q4_ISO_RQ);//车1 整流器4隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,1,2,B_TC1_AXLE4_ISO_RQ);//车1 逆变器4隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,1,5,B_TC1_AUX2_ISO_RQ);//车1 辅变流2隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,1,6,B_TC1_QA_HV_ON);//车1 高压隔离开关开（5s高电平）
+    CrrcMvb::getCrrcMvb()->setBool(0x300,1,7,B_TC1_QA_HV_OFF);//车1 高压隔离开关关（5s高电平）
+    CrrcMvb::getCrrcMvb()->setBool(0x300,2,0,B_TC1_BOGIE1_ISO_REL_RQ);//车1 转向架1隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,2,1,B_TC1_4Q1_ISO_REL_RQ);//车1 整流器1隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,2,2,B_TC1_4Q2_ISO_REL_RQ);//车1 整流器2隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,2,3,B_TC1_AXLE1_ISO_REL_RQ);//车1 逆变器1隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,2,4,B_TC1_AXLE2_ISO_REL_RQ);//车1 逆变器2隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,2,5,B_TC1_AXLE3_ISO_REL_RQ);//车1 逆变器3隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,2,6,B_TC1_AUX1_ISO_REL_RQ);//车1 辅变流1隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,2,7,B_TC1_BOGIE2_ISO_REL_RQ);//车1 转向架2隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,3,0,B_TC1_4Q3_ISO_REL_RQ);//车1 整流器3隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,3,1,B_TC1_4Q4_ISO_REL_RQ);//车1 整流器4隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,3,2,B_TC1_AXLE4_ISO_REL_RQ);//车1 逆变器4隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,3,5,B_TC1_AUX2_ISO_REL_RQ);//车1 辅变流2隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,4,0,B_TC1_DAMAN_ISO_RQ);//车1 无人警惕隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,4,1,B_TC1_EBRK_ISO_RQ);//车1 电制动隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,4,2,B_TC1_CPR_ISO_RQ);//车1 空压机隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,4,4,B_TC1_FLL_ISO_RQ);//车1 轮缘润滑隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,4,5,B_TC1_PANTO_ISO_RQ);//车1 受电弓隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,4,7,B_TC1_FAULT_RESET);//车1 故障复位
+    CrrcMvb::getCrrcMvb()->setBool(0x300,5,0,B_TC1_DAMAN_ISO_REL_RQ);//车1 无人警惕隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,5,1,B_TC1_EBRK_ISO_REL_RQ);//车1 电制动隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,5,2,B_TC1_CPR_ISO_REL_RQ);//车1 空压机隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,5,4,B_TC1_FLL_ISO_REL_RQ);//车1 轮缘润滑隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,5,5,B_TC1_PANTO_ISO_REL_RQ);//车1 受电弓隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,6,0,B_TC2_BOGIE1_ISO_RQ);//车2 转向架1隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,6,1,B_TC2_4Q1_ISO_RQ);//车2 整流器1隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,6,2,B_TC2_4Q2_ISO_RQ);//车2 整流器2隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,6,3,B_TC2_AXLE1_ISO_RQ);//车2 逆变器1隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,6,4,B_TC2_AXLE2_ISO_RQ);//车2 逆变器2隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,6,5,B_TC2_AXLE3_ISO_RQ);//车2 逆变器3隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,6,6,B_TC2_AUX1_ISO_RQ);//车2 辅变流1隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,6,7,B_TC2_BOGIE2_ISO_RQ);//车2 转向架2隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,7,0,B_TC2_4Q3_ISO_RQ);//车2 整流器3隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,7,1,B_TC2_4Q4_ISO_RQ);//车2 整流器4隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,7,2,B_TC2_AXLE4_ISO_RQ);//车2 逆变器4隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,7,5,B_TC2_AUX2_ISO_RQ);//车2 辅变流2隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,7,6,B_TC2_QA_HV_ON);//车2 高压隔离开关开（5s高电平）
+    CrrcMvb::getCrrcMvb()->setBool(0x300,7,7,B_TC2_QA_HV_OFF);//车2 高压隔离开关关（5s高电平）
+    CrrcMvb::getCrrcMvb()->setBool(0x300,8,0,B_TC2_BOGIE1_ISO_REL_RQ);//车2 转向架1隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,8,1,B_TC2_4Q1_ISO_REL_RQ);//车2 整流器1隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,8,2,B_TC2_4Q2_ISO_REL_RQ);//车2 整流器2隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,8,3,B_TC2_AXLE1_ISO_REL_RQ);//车2 逆变器1隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,8,4,B_TC2_AXLE2_ISO_REL_RQ);//车2 逆变器2隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,8,5,B_TC2_AXLE3_ISO_REL_RQ);//车2 逆变器3隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,8,6,B_TC2_AUX1_ISO_REL_RQ);//车2 辅变流1隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,8,7,B_TC2_BOGIE2_ISO_REL_RQ);//车2 转向架2隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,9,0,B_TC2_4Q3_ISO_REL_RQ);//车2 整流器3隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,9,1,B_TC2_4Q4_ISO_REL_RQ);//车2 整流器4隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,9,2,B_TC2_AXLE4_ISO_REL_RQ);//车2 逆变器4隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,9,5,B_TC2_AUX2_ISO_REL_RQ);//车2 辅变流2隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,10,0,B_TC2_DAMAN_ISO_RQ);//车2 无人警惕隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,10,1,B_TC2_EBRK_ISO_RQ);//车2 电制动隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,10,2,B_TC2_CPR_ISO_RQ);//车2 空压机隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,10,4,B_TC2_FLL_ISO_RQ);//车2 轮缘润滑隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,10,5,B_TC2_PANTO_ISO_RQ);//车2 受电弓隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,10,7,B_TC2_FAULT_RESET);//车2 故障复位
+    CrrcMvb::getCrrcMvb()->setBool(0x300,11,0,B_TC2_DAMAN_ISO_REL_RQ);//车2 无人警惕隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,11,1,B_TC2_EBRK_ISO_REL_RQ);//车2 电制动隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,11,2,B_TC2_CPR_ISO_REL_RQ);//车2 空压机隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,11,4,B_TC2_FLL_ISO_REL_RQ);//车2 轮缘润滑隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,11,5,B_TC2_PANTO_ISO_REL_RQ);//车2 受电弓隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,12,0,B_TC3_BOGIE1_ISO_RQ);//车3 转向架1隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,12,1,B_TC3_4Q1_ISO_RQ);//车3 整流器1隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,12,2,B_TC3_4Q2_ISO_RQ);//车3 整流器2隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,12,3,B_TC3_AXLE1_ISO_RQ);//车3 逆变器1隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,12,4,B_TC3_AXLE2_ISO_RQ);//车3 逆变器2隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,12,5,B_TC3_AXLE3_ISO_RQ);//车3 逆变器3隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,12,6,B_TC3_AUX1_ISO_RQ);//车3 辅变流1隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,12,7,B_TC3_BOGIE2_ISO_RQ);//车3 转向架2隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,13,0,B_TC3_4Q3_ISO_RQ);//车3 整流器3隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,13,1,B_TC3_4Q4_ISO_RQ);//车3 整流器4隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,13,2,B_TC3_AXLE4_ISO_RQ);//车3 逆变器4隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,13,5,B_TC3_AUX2_ISO_RQ);//车3 辅变流2隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,13,6,B_TC3_QA_HV_ON);//车3 高压隔离开关开（5s高电平）
+    CrrcMvb::getCrrcMvb()->setBool(0x300,13,7,B_TC3_QA_HV_OFF);//车3 高压隔离开关关（5s高电平）
+    CrrcMvb::getCrrcMvb()->setBool(0x300,14,0,B_TC3_BOGIE1_ISO_REL_RQ);//车3 转向架1隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,14,1,B_TC3_4Q1_ISO_REL_RQ);//车3 整流器1隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,14,2,B_TC3_4Q2_ISO_REL_RQ);//车3 整流器2隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,14,3,B_TC3_AXLE1_ISO_REL_RQ);//车3 逆变器1隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,14,4,B_TC3_AXLE2_ISO_REL_RQ);//车3 逆变器2隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,14,5,B_TC3_AXLE3_ISO_REL_RQ);//车3 逆变器3隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,14,6,B_TC3_AUX1_ISO_REL_RQ);//车3 辅变流1隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,14,7,B_TC3_BOGIE2_ISO_REL_RQ);//车3 转向架2隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,15,0,B_TC3_4Q3_ISO_REL_RQ);//车3 整流器3隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,15,1,B_TC3_4Q4_ISO_REL_RQ);//车3 整流器4隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,15,2,B_TC3_AXLE4_ISO_REL_RQ);//车3 逆变器4隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,15,5,B_TC3_AUX2_ISO_REL_RQ);//车3 辅变流2隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,16,0,B_TC3_DAMAN_ISO_RQ);//车3 无人警惕隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,16,1,B_TC3_EBRK_ISO_RQ);//车3 电制动隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,16,2,B_TC3_CPR_ISO_RQ);//车3 空压机隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,16,4,B_TC3_FLL_ISO_RQ);//车3 轮缘润滑隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,16,5,B_TC3_PANTO_ISO_RQ);//车3 受电弓隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,16,7,B_TC3_FAULT_RESET);//车3 故障复位
+    CrrcMvb::getCrrcMvb()->setBool(0x300,17,0,B_TC3_DAMAN_ISO_REL_RQ);//车3 无人警惕隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,17,1,B_TC3_EBRK_ISO_REL_RQ);//车3 电制动隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,17,2,B_TC3_CPR_ISO_REL_RQ);//车3 空压机隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,17,4,B_TC3_FLL_ISO_REL_RQ);//车3 轮缘润滑隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,17,5,B_TC3_PANTO_ISO_REL_RQ);//车3 受电弓隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,18,0,B_TC4_BOGIE1_ISO_RQ);//车4 转向架1隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,18,1,B_TC4_4Q1_ISO_RQ);//车4 整流器1隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,18,2,B_TC4_4Q2_ISO_RQ);//车4 整流器2隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,18,3,B_TC4_AXLE1_ISO_RQ);//车4 逆变器1隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,18,4,B_TC4_AXLE2_ISO_RQ);//车4 逆变器2隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,18,5,B_TC4_AXLE3_ISO_RQ);//车4 逆变器3隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,18,6,B_TC4_AUX1_ISO_RQ);//车4 辅变流1隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,18,7,B_TC4_BOGIE2_ISO_RQ);//车4 转向架2隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,19,0,B_TC4_4Q3_ISO_RQ);//车4 整流器3隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,19,1,B_TC4_4Q4_ISO_RQ);//车4 整流器4隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,19,2,B_TC4_AXLE4_ISO_RQ);//车4 逆变器4隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,19,5,B_TC4_AUX2_ISO_RQ);//车4 辅变流2隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,19,6,B_TC4_QA_HV_ON);//车4 高压隔离开关开（5s高电平）
+    CrrcMvb::getCrrcMvb()->setBool(0x300,19,7,B_TC4_QA_HV_OFF);//车4 高压隔离开关关（5s高电平）
+    CrrcMvb::getCrrcMvb()->setBool(0x300,20,0,B_TC4_BOGIE1_ISO_REL_RQ);//车4 转向架1隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,20,1,B_TC4_4Q1_ISO_REL_RQ);//车4 整流器1隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,20,2,B_TC4_4Q2_ISO_REL_RQ);//车4 整流器2隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,20,3,B_TC4_AXLE1_ISO_REL_RQ);//车4 逆变器1隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,20,4,B_TC4_AXLE2_ISO_REL_RQ);//车4 逆变器2隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,20,5,B_TC4_AXLE3_ISO_REL_RQ);//车4 逆变器3隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,20,6,B_TC4_AUX1_ISO_REL_RQ);//车4 辅变流1隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,20,7,B_TC4_BOGIE2_ISO_REL_RQ);//车4 转向架2隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,21,0,B_TC4_4Q3_ISO_REL_RQ);//车4 整流器3隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,21,1,B_TC4_4Q4_ISO_REL_RQ);//车4 整流器4隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,21,2,B_TC4_AXLE4_ISO_REL_RQ);//车4 逆变器4隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,21,5,B_TC4_AUX2_ISO_REL_RQ);//车4 辅变流2隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,22,0,B_TC4_DAMAN_ISO_RQ);//车4 无人警惕隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,22,1,B_TC4_EBRK_ISO_RQ);//车4 电制动隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,22,2,B_TC4_CPR_ISO_RQ);//车4 空压机隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,22,4,B_TC4_FLL_ISO_RQ);//车4 轮缘润滑隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,22,5,B_TC4_PANTO_ISO_RQ);//车4 受电弓隔离请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,22,7,B_TC4_FAULT_RESET);//车4 故障复位
+    CrrcMvb::getCrrcMvb()->setBool(0x300,23,0,B_TC4_DAMAN_ISO_REL_RQ);//车4 无人警惕隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,23,1,B_TC4_EBRK_ISO_REL_RQ);//车4 电制动隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,23,2,B_TC4_CPR_ISO_REL_RQ);//车4 空压机隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,23,4,B_TC4_FLL_ISO_REL_RQ);//车4 轮缘润滑隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,23,5,B_TC4_PANTO_ISO_REL_RQ);//车4 受电弓隔离取消请求
+    CrrcMvb::getCrrcMvb()->setBool(0x300,24,0,B_LAMP_TEST);//指示灯测试
+    CrrcMvb::getCrrcMvb()->setBool(0x300,24,1,B_FLL_TEST_START);//轮缘润滑测试开始
+    CrrcMvb::getCrrcMvb()->setBool(0x300,24,2,B_FLL_TEST_CANCEL);//轮缘润滑测试取消
+    CrrcMvb::getCrrcMvb()->setBool(0x300,24,3,B_DEPOT_380_ACT);//库内模式 激活
+    CrrcMvb::getCrrcMvb()->setBool(0x300,24,4,B_DEPOT_380_DEACT);//库内模式 关闭
+    CrrcMvb::getCrrcMvb()->setBool(0x300,24,6,B_CPR_TEST);//空压机测试
+    CrrcMvb::getCrrcMvb()->setBool(0x300,24,7,B_VT_BM1_ST);//冷却塔风机1测试：1测试，0停止
+    CrrcMvb::getCrrcMvb()->setBool(0x300,25,0,B_VT_BM2_ST);//冷却塔风机2测试：1测试，0停止
+    CrrcMvb::getCrrcMvb()->setBool(0x300,25,1,B_SIM_ON);//仿真开关
+    CrrcMvb::getCrrcMvb()->setBool(0x300,25,3,B_NORMAL_MODE);//普通模式
+    CrrcMvb::getCrrcMvb()->setBool(0x300,25,4,B_SUMMER_MODE);//夏天模式
+    CrrcMvb::getCrrcMvb()->setBool(0x300,25,6,B_AXLE_23TON);//轴重23吨
+    CrrcMvb::getCrrcMvb()->setBool(0x300,25,7,B_AXLE_25TON);//轴重25吨
+    CrrcMvb::getCrrcMvb()->setUnsignedInt(0x300,26,N_SIM_SPEED);//模拟机车速度 单位：km/h
+    CrrcMvb::getCrrcMvb()->setUnsignedInt(0x300,28,N_SIM_LINE_VOLT);//模拟网压 单位：V
+    CrrcMvb::getCrrcMvb()->setUnsignedChar(0x300,30,N_DDU_LIFE);//DDU生命信号 （0~255递增）
+    CrrcMvb::getCrrcMvb()->setBool(0x300,31,0,B_VT_MT1_ST);//牵引风机1测试：1测试，0停止
+    CrrcMvb::getCrrcMvb()->setBool(0x300,31,1,B_VT_MT2_ST);//牵引风机2测试：1测试，0停止
+    CrrcMvb::getCrrcMvb()->setBool(0x300,31,4,B_VT_SM1_ST);//机械间风机1测试：1测试，0停止
+    CrrcMvb::getCrrcMvb()->setBool(0x300,31,5,B_VT_SM2_ST);//机械间风机2测试：1测试，0停止
+    CrrcMvb::getCrrcMvb()->setBool(0x300,31,6,B_P300CHECK0);//数据校验（固定发0）
+    CrrcMvb::getCrrcMvb()->setBool(0x300,31,7,B_P300CHECK1);//数据校验（固定发1）
     //0x301
-    N_YEAR = CrrcMvb::getCrrcMvb()->getUnsignedInt(0x301,0);//DDU发出的年份值
-    N_MONTH = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x301,2);//DDU发出的月份值
-    N_DAY = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x301,3);//DDU发出的日期值
-    N_HOUR = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x301,4);//DDU发出的小时值
-    N_MINUTE = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x301,5);//DDU发出的分钟值
-    N_SECOND = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x301,6);//DDU发出的秒钟值
-    B_FLL_SET = CrrcMvb::getCrrcMvb()->getBool(0x301,8,0);//轮缘润滑值设置标志
-    B_TIME_SET = CrrcMvb::getCrrcMvb()->getBool(0x301,8,1);//日期时间设置标志
-    B_BRK_CHAR_Z = CrrcMvb::getCrrcMvb()->getBool(0x301,8,2);//制动特性设定：恒转矩
-    B_WHEEL_DIA_SET = CrrcMvb::getCrrcMvb()->getBool(0x301,8,3);//轮径设置标志
-    B_TRAC_CHAR_H = CrrcMvb::getCrrcMvb()->getBool(0x301,8,4);//牵引特性设定，恒转矩
-    B_TRAC_CHAR_Z = CrrcMvb::getCrrcMvb()->getBool(0x301,8,5);//牵引特性设定，准恒速
-    B_BRK_CHAR_H = CrrcMvb::getCrrcMvb()->getBool(0x301,8,6);//制动特性：准恒速
-    B_LOCO_NO_SET = CrrcMvb::getCrrcMvb()->getBool(0x301,8,7);//机车编号设置标志
-    B_PARTNER_ID_SET = CrrcMvb::getCrrcMvb()->getBool(0x301,9,0);//内重联车编号设置标志
-    B_SEQUENCE_TEST = CrrcMvb::getCrrcMvb()->getBool(0x301,9,1);//顺序试验激活
-    B_AIR_ELE_SET_LOCK = CrrcMvb::getCrrcMvb()->getBool(0x301,9,2);//空电联合设定：空电连锁
-    B_AIR_ELE_SET_UNION = CrrcMvb::getCrrcMvb()->getBool(0x301,9,3);//空电联合设定：空电联合
-    B_SAND_CUT = CrrcMvb::getCrrcMvb()->getBool(0x301,9,4);//自动撒砂切除
-    B_DIS_SET = CrrcMvb::getCrrcMvb()->getBool(0x301,9,5);//总里程设置
-    B_MILEAGE_RESET = CrrcMvb::getCrrcMvb()->getBool(0x301,9,6);//单次里程清零
-    B_SAND_CUT_REL = CrrcMvb::getCrrcMvb()->getBool(0x301,9,7);//自动撒砂切除取消
-    N_SPEED_SET = CrrcMvb::getCrrcMvb()->getUnsignedInt(0x301,10);//机车定速值 单位：km/h
-    N_WHEEL_DIA = CrrcMvb::getCrrcMvb()->getUnsignedInt(0x301,12);//轴2车轮直径值 单位：mm
-    N_PARTNER_ID = CrrcMvb::getCrrcMvb()->getUnsignedInt(0x301,14);//内重联车编号 单位：1
-    N_LOAD = CrrcMvb::getCrrcMvb()->getUnsignedInt(0x301,16);//牵引吨位 单位：吨
-    N_FLL_DIS = CrrcMvb::getCrrcMvb()->getUnsignedInt(0x301,18);//轮缘润滑距离 单位：m
-    N_FLL_TIME = CrrcMvb::getCrrcMvb()->getUnsignedInt(0x301,20);//轮缘润滑时间 单位：秒
-    N_LOCO_ID = CrrcMvb::getCrrcMvb()->getUnsignedInt(0x301,22);//机车编号 单位：1
-    N_DIS_VALUE = CrrcMvb::getCrrcMvb()->getUnsignedInt32(0x301,24);//里程设置值
-    N_DDU_VX = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x301,28);//DDU版本号x
-    N_DDU_VY = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x301,29);//DDU版本号y
-    N_DDU_VZ = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x301,30);//DDU版本号z
-    B_FIR_ALARM_CONFIRM = CrrcMvb::getCrrcMvb()->getBool(0x301,31,0);//火灾报警确认
-    B_LOAD_SET = CrrcMvb::getCrrcMvb()->getBool(0x301,31,1);//牵引吨位设置标志(持续5s)
-    B_DAMAN_TEST = CrrcMvb::getCrrcMvb()->getBool(0x301,31,2);//无人警惕测试
-    B_ANSC_TEST = CrrcMvb::getCrrcMvb()->getBool(0x301,31,3);//自动过分相测试
-    B_MSCT_BOXING_SET = CrrcMvb::getCrrcMvb()->getBool(0x301,31,4);//司控器正常、跛行选择:0-正常，1-跛行
-    B_P301CHECK0 = CrrcMvb::getCrrcMvb()->getBool(0x301,31,6);//数据校验（固定发0）
-    B_P301CHECK1 = CrrcMvb::getCrrcMvb()->getBool(0x301,31,7);//数据校验（固定发1）
+    CrrcMvb::getCrrcMvb()->setUnsignedInt(0x301,0,N_YEAR);//DDU发出的年份值
+    CrrcMvb::getCrrcMvb()->setUnsignedChar(0x301,2,N_MONTH);//DDU发出的月份值
+    CrrcMvb::getCrrcMvb()->setUnsignedChar(0x301,3,N_DAY);//DDU发出的日期值
+    CrrcMvb::getCrrcMvb()->setUnsignedChar(0x301,4,N_HOUR);//DDU发出的小时值
+    CrrcMvb::getCrrcMvb()->setUnsignedChar(0x301,5,N_MINUTE);//DDU发出的分钟值
+    CrrcMvb::getCrrcMvb()->setUnsignedChar(0x301,6,N_SECOND);//DDU发出的秒钟值
+    CrrcMvb::getCrrcMvb()->setBool(0x301,8,0,B_FLL_SET);//轮缘润滑值设置标志
+    CrrcMvb::getCrrcMvb()->setBool(0x301,8,1,B_TIME_SET);//日期时间设置标志
+    CrrcMvb::getCrrcMvb()->setBool(0x301,8,2,B_BRK_CHAR_Z);//制动特性设定：恒转矩
+    CrrcMvb::getCrrcMvb()->setBool(0x301,8,3,B_WHEEL_DIA_SET);//轮径设置标志
+    CrrcMvb::getCrrcMvb()->setBool(0x301,8,4,B_TRAC_CHAR_H);//牵引特性设定，恒转矩
+    CrrcMvb::getCrrcMvb()->setBool(0x301,8,5,B_TRAC_CHAR_Z);//牵引特性设定，准恒速
+    CrrcMvb::getCrrcMvb()->setBool(0x301,8,6,B_BRK_CHAR_H);//制动特性：准恒速
+    CrrcMvb::getCrrcMvb()->setBool(0x301,8,7,B_LOCO_NO_SET);//机车编号设置标志
+    CrrcMvb::getCrrcMvb()->setBool(0x301,9,0,B_PARTNER_ID_SET);//内重联车编号设置标志
+    CrrcMvb::getCrrcMvb()->setBool(0x301,9,1,B_SEQUENCE_TEST);//顺序试验激活
+    CrrcMvb::getCrrcMvb()->setBool(0x301,9,2,B_AIR_ELE_SET_LOCK);//空电联合设定：空电连锁
+    CrrcMvb::getCrrcMvb()->setBool(0x301,9,3,B_AIR_ELE_SET_UNION);//空电联合设定：空电联合
+    CrrcMvb::getCrrcMvb()->setBool(0x301,9,4,B_SAND_CUT);//自动撒砂切除
+    CrrcMvb::getCrrcMvb()->setBool(0x301,9,5,B_DIS_SET);//总里程设置
+    CrrcMvb::getCrrcMvb()->setBool(0x301,9,6,B_MILEAGE_RESET);//单次里程清零
+    CrrcMvb::getCrrcMvb()->setBool(0x301,9,7,B_SAND_CUT_REL);//自动撒砂切除取消
+    CrrcMvb::getCrrcMvb()->setUnsignedInt(0x301,10,N_SPEED_SET);//机车定速值 单位：km/h
+    CrrcMvb::getCrrcMvb()->setUnsignedInt(0x301,12,N_WHEEL_DIA);//轴2车轮直径值 单位：mm
+    CrrcMvb::getCrrcMvb()->setUnsignedInt(0x301,16,N_LOAD);//牵引吨位 单位：吨
+    CrrcMvb::getCrrcMvb()->setUnsignedInt(0x301,18,N_FLL_DIS);//轮缘润滑距离 单位：m
+    CrrcMvb::getCrrcMvb()->setUnsignedInt(0x301,20,N_FLL_TIME);//轮缘润滑时间 单位：秒
+    CrrcMvb::getCrrcMvb()->setUnsignedInt32(0x301,24,N_DIS_VALUE);//里程设置值
+    CrrcMvb::getCrrcMvb()->setUnsignedChar(0x301,28,N_DDU_VX);//DDU版本号x
+    CrrcMvb::getCrrcMvb()->setUnsignedChar(0x301,29,N_DDU_VY);//DDU版本号y
+    CrrcMvb::getCrrcMvb()->setUnsignedChar(0x301,30,N_DDU_VZ);//DDU版本号z
+    CrrcMvb::getCrrcMvb()->setBool(0x301,31,0,B_FIR_ALARM_CONFIRM);//火灾报警确认
+    CrrcMvb::getCrrcMvb()->setBool(0x301,31,1,B_LOAD_SET);//牵引吨位设置标志(持续5s)
+    CrrcMvb::getCrrcMvb()->setBool(0x301,31,2,B_DAMAN_TEST);//无人警惕测试
+    CrrcMvb::getCrrcMvb()->setBool(0x301,31,3,B_ANSC_TEST);//自动过分相测试
+    CrrcMvb::getCrrcMvb()->setBool(0x301,31,4,B_MSCT_BOXING_SET);//司控器正常、跛行选择:0-正常，1-跛行
+    CrrcMvb::getCrrcMvb()->setBool(0x301,31,6,B_P301CHECK0);//数据校验（固定发0）
+    CrrcMvb::getCrrcMvb()->setBool(0x301,31,7,B_P301CHECK1);//数据校验（固定发1）
     //0x302
-    B_NSC_DISTANCE1 = CrrcMvb::getCrrcMvb()->getBool(0x302,0,0);//常规线路过分相：170m模式
-    B_NSC_DISTANCE2 = CrrcMvb::getCrrcMvb()->getBool(0x302,0,1);//货运专线过分相：265m模式
-    B_NSC_SET = CrrcMvb::getCrrcMvb()->getBool(0x302,0,2);//过分相模式设定标志
-    B_DOUBLE_PG = CrrcMvb::getCrrcMvb()->getBool(0x302,0,3);//双弓测试模式设定:0-正常，1-测试
-    B_TRAILER_MODE = CrrcMvb::getCrrcMvb()->getBool(0x302,0,4);//挂车模式:0-正常，1-挂车
-    B_DADMAN_SET = CrrcMvb::getCrrcMvb()->getBool(0x302,0,5);//无人警惕设置标志
-    N_DADMAN_TIMESAPCE = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x302,2);//无人警惕采样时间
-    N_DADMAN_TIMEALARM = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x302,3);//无人警惕报警时间
-    N_LOCO_ID = CrrcMvb::getCrrcMvb()->getUnsignedInt32(0x302,4);//机车编号 单位：1
-    N_PARTNER_ID = CrrcMvb::getCrrcMvb()->getUnsignedInt32(0x302,8);//内重联车编号 单位：1
-    N_TRAILER_MODE_SPEED = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x302,29);//挂车模式速度设定
-    N_DOUBLE_PG_SPEED = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x302,30);//双弓测试模式速度设定
-    B_P302CHECK0 = CrrcMvb::getCrrcMvb()->getBool(0x302,31,6);//数据校验（固定发0）
-    B_P302CHECK1 = CrrcMvb::getCrrcMvb()->getBool(0x302,31,7);//数据校验（固定发1）
+    CrrcMvb::getCrrcMvb()->setBool(0x302,0,0,B_NSC_DISTANCE1);//常规线路过分相：170m模式
+    CrrcMvb::getCrrcMvb()->setBool(0x302,0,1,B_NSC_DISTANCE2);//货运专线过分相：265m模式
+    CrrcMvb::getCrrcMvb()->setBool(0x302,0,2,B_NSC_SET);//过分相模式设定标志
+    CrrcMvb::getCrrcMvb()->setBool(0x302,0,3,B_DOUBLE_PG);//双弓测试模式设定:0-正常，1-测试
+    CrrcMvb::getCrrcMvb()->setBool(0x302,0,4,B_TRAILER_MODE);//挂车模式:0-正常，1-挂车
+    CrrcMvb::getCrrcMvb()->setBool(0x302,0,5,B_DADMAN_SET);//无人警惕设置标志
+    CrrcMvb::getCrrcMvb()->setUnsignedChar(0x302,2,N_DADMAN_TIMESAPCE);//无人警惕采样时间
+    CrrcMvb::getCrrcMvb()->setUnsignedChar(0x302,3,N_DADMAN_TIMEALARM);//无人警惕报警时间
+    CrrcMvb::getCrrcMvb()->setUnsignedInt32(0x302,4,N_LOCO_ID);//机车编号 单位：1
+    CrrcMvb::getCrrcMvb()->setUnsignedInt32(0x302,8,N_PARTNER_ID);//内重联车编号 单位：1
+    CrrcMvb::getCrrcMvb()->setUnsignedChar(0x302,29,N_TRAILER_MODE_SPEED);//挂车模式速度设定
+    CrrcMvb::getCrrcMvb()->setUnsignedChar(0x302,30,N_DOUBLE_PG_SPEED);//双弓测试模式速度设定
+    CrrcMvb::getCrrcMvb()->setBool(0x302,31,6,B_P302CHECK0);//数据校验（固定发0）
+    CrrcMvb::getCrrcMvb()->setBool(0x302,31,7,B_P302CHECK1);//数据校验（固定发1）
     //MPU-DDU
     //0x710
     M1_D1_N_BAT_VOLT = CrrcMvb::getCrrcMvb()->getUnsignedInt(0x710,0);//蓄电池电压,小数点后1位，将数值乘以10
