@@ -23,7 +23,13 @@ QPushButton
 background-color:black;
 color:white;
 border:1px solid white;
-font:14px;
+font:16px;
+}
+QLineEdit
+{
+background-color:white;
+color:black;
+font:16px
 }</string>
   </property>
   <widget class="QPushButton" name="Button_Num1">
@@ -53,6 +59,12 @@ font:14px;
      <width>99</width>
      <height>35</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 16px;color: rgb(192,192,192);background-color: rgb(0, 0, 0);border-top: 2px solid white;border-left: 2px solid white;</string>
    </property>
    <property name="text">
     <string>数据发送</string>
@@ -104,6 +116,9 @@ font:14px;
      <width>111</width>
      <height>50</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="text">
     <string>清除</string>
@@ -278,9 +293,14 @@ font:14px;</string>
      <height>41</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>1</string>
+   </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 0);
-color:black;</string>
+    <string notr="true">font: 16px;color: rgb(192,192,192);background-color: rgb(0, 0, 0);border-top: 2px solid white;border-left: 2px solid white;</string>
    </property>
    <property name="text">
     <string>挂车模式激活</string>
@@ -294,6 +314,15 @@ color:black;</string>
      <width>191</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>2</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 16px;color: rgb(192,192,192);background-color: rgb(0, 0, 0);border-top: 2px solid white;border-left: 2px solid white;</string>
    </property>
    <property name="text">
     <string>挂车模式取消</string>
