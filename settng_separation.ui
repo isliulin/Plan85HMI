@@ -20,22 +20,19 @@ background-color:black;
 }
 QLabel
 {
-font:14px;
+font:16px;
 }
 QPushButton
 {
-border:1px solid white;
-background-color:black;
-color:white;
-font:14px;
+font: 16px;color: rgb(192,192,192);background-color: rgb(0, 0, 0);border-top: 2px solid white;border-left: 2px solid white;
 }</string>
   </property>
   <widget class="QLabel" name="LBL_Tips1">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>250</x>
      <y>110</y>
-     <width>121</width>
+     <width>141</width>
      <height>17</height>
     </rect>
    </property>
@@ -51,8 +48,8 @@ font:14px;
    <property name="geometry">
     <rect>
      <x>290</x>
-     <y>174</y>
-     <width>91</width>
+     <y>184</y>
+     <width>101</width>
      <height>17</height>
     </rect>
    </property>
@@ -67,11 +64,17 @@ font:14px;
   <widget class="QPushButton" name="BTN_NormalLine">
    <property name="geometry">
     <rect>
-     <x>412</x>
+     <x>420</x>
      <y>150</y>
      <width>110</width>
      <height>35</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>1</string>
    </property>
    <property name="text">
     <string>常规线路</string>
@@ -80,11 +83,17 @@ font:14px;
   <widget class="QPushButton" name="BTN_FreightLine">
    <property name="geometry">
     <rect>
-     <x>412</x>
-     <y>188</y>
+     <x>420</x>
+     <y>200</y>
      <width>110</width>
      <height>35</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>2</string>
    </property>
    <property name="text">
     <string>货运专线</string>
@@ -95,7 +104,7 @@ font:14px;
     <rect>
      <x>270</x>
      <y>270</y>
-     <width>251</width>
+     <width>281</width>
      <height>111</height>
     </rect>
    </property>
@@ -103,7 +112,7 @@ font:14px;
     <string notr="true">border:1px solid white;
 background-color:black;
 color:white;
-font:14px;</string>
+font:16px;</string>
    </property>
    <property name="text">
     <string>提示：
