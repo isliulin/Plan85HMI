@@ -7,7 +7,6 @@ Main_AssistantDevice::Main_AssistantDevice(QWidget *parent) :
     ui(new Ui::Main_AssistantDevice)
 {
     ui->setupUi(this);
-    qDebug()<<"this is fuji";
 }
 
 Main_AssistantDevice::~Main_AssistantDevice()
