@@ -118,7 +118,9 @@ SOURCES += main.cpp\
     breaker_condition.cpp \
     traction_condition.cpp \
     brake_condition.cpp \
-    maindata_tracbrakeoutline.cpp
+    maindata_tracbrakeoutline.cpp \
+    data/data_riom.cpp \
+    data/data_tcu.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -219,7 +221,9 @@ HEADERS  += widget.h \
     breaker_condition.h \
     traction_condition.h \
     brake_condition.h \
-    maindata_tracbrakeoutline.h
+    maindata_tracbrakeoutline.h \
+    data/data_riom.h \
+    data/data_tcu.h
 
 FORMS    += widget.ui \
     header.ui \
