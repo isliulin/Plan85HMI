@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Panto_Condition</class>
- <widget class="QWidget" name="Panto_Condition">
+ <class>Condition_Traction</class>
+ <widget class="QWidget" name="Condition_Traction">
   <property name="geometry">
    <rect>
     <x>0</x>

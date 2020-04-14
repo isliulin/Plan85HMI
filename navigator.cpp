@@ -35,7 +35,6 @@ void Navigator::NBpressEvent()
         buttons[i]->setStyleSheet(NButtonUP);
     }
 
-    qDebug()<<m_position;
     buttonIndexList.clear();
     switch (m_position)
     {
@@ -69,7 +68,6 @@ void Navigator::NBpressEvent()
 		break;
 
     }
-    qDebug()<<buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt());
     changePage(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()));
 }
 void Navigator::updateButtonsNamesByPositon(enum pagePosition p)

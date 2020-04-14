@@ -1,9 +1,9 @@
-#include "brake_condition.h"
-#include "ui_brake_condition.h"
+#include "condition_traction.h"
+#include "ui_condition_traction.h"
 
-Brake_Condition::Brake_Condition(QWidget *parent) :
+Condition_Traction::Condition_Traction(QWidget *parent) :
     MyBase(parent),
-    ui(new Ui::Brake_Condition)
+    ui(new Ui::Condition_Traction)
 {
     ui->setupUi(this);
     oc = new Operating_Condition(this);
@@ -12,12 +12,12 @@ Brake_Condition::Brake_Condition(QWidget *parent) :
     curPage = 0;
 }
 
-Brake_Condition::~Brake_Condition()
+Condition_Traction::~Condition_Traction()
 {
     delete ui;
 }
 
-void Brake_Condition::updatePage()
+void Condition_Traction::updatePage()
 {
     faultString.clear();
 /*
@@ -65,7 +65,7 @@ faultString<< "q"<< "a"<< "q"<< "a"<< "q"<< "a";
     oc->show();
 }
 
-void Brake_Condition::on_BTN_Page_clicked()
+void Condition_Traction::on_BTN_Page_clicked()
 {
 
     if (curPage == totalPage - 1)

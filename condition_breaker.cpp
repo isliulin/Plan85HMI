@@ -1,9 +1,9 @@
-#include "breaker_condition.h"
-#include "ui_breaker_condition.h"
+#include "condition_breaker.h"
+#include "ui_condition_breaker.h"
 
-Breaker_Condition::Breaker_Condition(QWidget *parent) :
+Condition_Breaker::Condition_Breaker(QWidget *parent) :
     MyBase(parent),
-    ui(new Ui::Breaker_Condition)
+    ui(new Ui::Condition_Breaker)
 {
     ui->setupUi(this);
     oc = new Operating_Condition(this);
@@ -12,12 +12,12 @@ Breaker_Condition::Breaker_Condition(QWidget *parent) :
     curPage = 0;
 }
 
-Breaker_Condition::~Breaker_Condition()
+Condition_Breaker::~Condition_Breaker()
 {
     delete ui;
 }
 
-void Breaker_Condition::updatePage()
+void Condition_Breaker::updatePage()
 {
     faultString.clear();
 /*
@@ -65,7 +65,7 @@ faultString<< "q"<< "a"<< "q"<< "a"<< "q"<< "a";
     oc->show();
 }
 
-void Breaker_Condition::on_BTN_Page_clicked()
+void Condition_Breaker::on_BTN_Page_clicked()
 {
 
     if (curPage == totalPage - 1)

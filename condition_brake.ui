@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Traction_Condition</class>
- <widget class="QWidget" name="Traction_Condition">
+ <class>Condition_Brake</class>
+ <widget class="QWidget" name="Condition_Brake">
   <property name="geometry">
    <rect>
     <x>0</x>

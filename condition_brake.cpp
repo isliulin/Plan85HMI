@@ -1,9 +1,9 @@
-#include "traction_condition.h"
-#include "ui_traction_condition.h"
+#include "condition_brake.h"
+#include "ui_condition_brake.h"
 
-Traction_Condition::Traction_Condition(QWidget *parent) :
+Condition_Brake::Condition_Brake(QWidget *parent) :
     MyBase(parent),
-    ui(new Ui::Traction_Condition)
+    ui(new Ui::Condition_Brake)
 {
     ui->setupUi(this);
     oc = new Operating_Condition(this);
@@ -12,12 +12,12 @@ Traction_Condition::Traction_Condition(QWidget *parent) :
     curPage = 0;
 }
 
-Traction_Condition::~Traction_Condition()
+Condition_Brake::~Condition_Brake()
 {
     delete ui;
 }
 
-void Traction_Condition::updatePage()
+void Condition_Brake::updatePage()
 {
     faultString.clear();
 /*
@@ -65,7 +65,7 @@ faultString<< "q"<< "a"<< "q"<< "a"<< "q"<< "a";
     oc->show();
 }
 
-void Traction_Condition::on_BTN_Page_clicked()
+void Condition_Brake::on_BTN_Page_clicked()
 {
 
     if (curPage == totalPage - 1)
@@ -78,4 +78,3 @@ void Traction_Condition::on_BTN_Page_clicked()
     }
     this->updatePage();
 }
-

@@ -35,10 +35,10 @@
 #include "fault_current.h"
 #include "fault_history.h"
 #include "fault_download.h"
-#include "panto_condition.h"
-#include "breaker_condition.h"
-#include "brake_condition.h"
-#include "traction_condition.h"
+#include "condition_pantoup.h"
+#include "condition_breaker.h"
+#include "condition_brake.h"
+#include "condition_traction.h"
 #include "maindata_tracbrakeoutline.h"
 
 Widget::Widget(QWidget *parent) :
@@ -189,21 +189,21 @@ Widget::Widget(QWidget *parent) :
     this->simulation->hide();
 
     //运行条件
-    this->panto_Condition = new Panto_Condition(this);
-    this->panto_Condition->setMyBase(uMiddleCondition,QString("升弓条件"));
-    this->panto_Condition->hide();
+    this->condition_PantoUp = new Condition_PantoUp(this);
+    this->condition_PantoUp->setMyBase(uMiddleCondition,QString("升弓条件"));
+    this->condition_PantoUp->hide();
 
-    this->breaker_Condition = new Breaker_Condition(this);
-    this->breaker_Condition->setMyBase(uMiddleCondition,QString("主断条件"));
-    this->breaker_Condition->hide();
+    this->condition_Breaker = new Condition_Breaker(this);
+    this->condition_Breaker->setMyBase(uMiddleCondition,QString("主断条件"));
+    this->condition_Breaker->hide();
 
-    this->brake_Condition = new Brake_Condition(this);
-    this->brake_Condition->setMyBase(uMiddleCondition,QString("制动条件"));
-    this->brake_Condition->hide();
+    this->condition_Brake = new Condition_Brake(this);
+    this->condition_Brake->setMyBase(uMiddleCondition,QString("制动条件"));
+    this->condition_Brake->hide();
 
-    this->traction_Condition = new Traction_Condition(this);
-    this->traction_Condition->setMyBase(uMiddleCondition,QString("牵引条件"));
-    this->traction_Condition->hide();
+    this->condition_Traction = new Condition_Traction(this);
+    this->condition_Traction->setMyBase(uMiddleCondition,QString("牵引条件"));
+    this->condition_Traction->hide();
 
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
@@ -229,10 +229,10 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uFault_Current,this->fault_Current);
     this->widgets.insert(uFault_History,this->fault_History);
     this->widgets.insert(uFault_Download,this->fault_Download);
-    this->widgets.insert(uCondition_PantoUp,this->panto_Condition);
-    this->widgets.insert(uCondition_Breaker,this->breaker_Condition);
-    this->widgets.insert(uCondition_Traction,this->traction_Condition);
-    this->widgets.insert(uCondition_Brake,this->brake_Condition);
+    this->widgets.insert(uCondition_PantoUp,this->condition_PantoUp);
+    this->widgets.insert(uCondition_Breaker,this->condition_Breaker);
+    this->widgets.insert(uCondition_Traction,this->condition_Traction);
+    this->widgets.insert(uCondition_Brake,this->condition_Brake);
     this->header->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();
 }

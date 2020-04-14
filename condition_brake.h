@@ -1,31 +1,31 @@
-#ifndef BRAKE_CONDITION_H
-#define BRAKE_CONDITION_H
+#ifndef CONDITION_BRAKE_H
+#define CONDITION_BRAKE_H
 
 #include <mybase.h>
 #include "operating_condition.h"
 
 namespace Ui {
-class Brake_Condition;
+class Condition_Brake;
 }
 
-class Brake_Condition : public MyBase
+class Condition_Brake : public MyBase
 {
     Q_OBJECT
 
 public:
-    explicit Brake_Condition(QWidget *parent = 0);
-    ~Brake_Condition();
+    explicit Condition_Brake(QWidget *parent = 0);
+    ~Condition_Brake();
     void updatePage();
 
 private slots:
     void on_BTN_Page_clicked();
 
 private:
-    Ui::Brake_Condition *ui;
+    Ui::Condition_Brake *ui;
     Operating_Condition *oc;
     QList<Operating_Condition *> operating_Condition;
     QList<QString > faultString;
     int curPage,totalPage;
 };
 
-#endif // BRAKE_CONDITION_H
+#endif // CONDITION_BRAKE_H

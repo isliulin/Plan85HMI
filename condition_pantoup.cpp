@@ -1,9 +1,9 @@
-#include "panto_condition.h"
-#include "ui_panto_condition.h"
+#include "condition_pantoup.h"
+#include "ui_condition_pantoup.h"
 
-Panto_Condition::Panto_Condition(QWidget *parent) :
+Condition_PantoUp::Condition_PantoUp(QWidget *parent) :
     MyBase(parent),
-    ui(new Ui::Panto_Condition)
+    ui(new Ui::Condition_PantoUp)
 {
     ui->setupUi(this);
     oc = new Operating_Condition(this);
@@ -12,12 +12,12 @@ Panto_Condition::Panto_Condition(QWidget *parent) :
     curPage = 0;
 }
 
-Panto_Condition::~Panto_Condition()
+Condition_PantoUp::~Condition_PantoUp()
 {
     delete ui;
 }
 
-void Panto_Condition::updatePage()
+void Condition_PantoUp::updatePage()
 {
     faultString.clear();
 /*
@@ -65,7 +65,7 @@ faultString<< "q"<< "a"<< "q"<< "a"<< "q"<< "a";
     oc->show();
 }
 
-void Panto_Condition::on_BTN_Page_clicked()
+void Condition_PantoUp::on_BTN_Page_clicked()
 {
 
     if (curPage == totalPage - 1)
