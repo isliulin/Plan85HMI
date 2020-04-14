@@ -1,31 +1,32 @@
-#ifndef TRACTION_CONDITION_H
-#define TRACTION_CONDITION_H
+#ifndef CONDITION_PANTOUP_H
+#define CONDITION_PANTOUP_H
 
 #include <mybase.h>
 #include "operating_condition.h"
 
 namespace Ui {
-class Traction_Condition;
+class Condition_PantoUp;
 }
 
-class Traction_Condition : public MyBase
+class Condition_PantoUp : public MyBase
 {
     Q_OBJECT
 
 public:
-    explicit Traction_Condition(QWidget *parent = 0);
-    ~Traction_Condition();
+    explicit Condition_PantoUp(QWidget *parent = 0);
+    ~Condition_PantoUp();
     void updatePage();
 
 private slots:
     void on_BTN_Page_clicked();
 
 private:
-    Ui::Traction_Condition *ui;
+    Ui::Condition_PantoUp *ui;
     Operating_Condition *oc;
     QList<Operating_Condition *> operating_Condition;
     QList<QString > faultString;
     int curPage,totalPage;
+
 };
 
-#endif // Traction_Condition_H
+#endif // CONDITION_PANTOUP_H

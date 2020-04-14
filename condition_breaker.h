@@ -1,31 +1,31 @@
-#ifndef BREAKER_CONDITION_H
-#define BREAKER_CONDITION_H
+#ifndef CONDITION_BREAKER_H
+#define CONDITION_BREAKER_H
 
 #include <mybase.h>
 #include "operating_condition.h"
 
 namespace Ui {
-class Breaker_Condition;
+class Condition_Breaker;
 }
 
-class Breaker_Condition : public MyBase
+class Condition_Breaker : public MyBase
 {
     Q_OBJECT
 
 public:
-    explicit Breaker_Condition(QWidget *parent = 0);
-    ~Breaker_Condition();
+    explicit Condition_Breaker(QWidget *parent = 0);
+    ~Condition_Breaker();
     void updatePage();
 
 private slots:
     void on_BTN_Page_clicked();
 
 private:
-    Ui::Breaker_Condition *ui;
+    Ui::Condition_Breaker *ui;
     Operating_Condition *oc;
     QList<Operating_Condition *> operating_Condition;
     QList<QString > faultString;
     int curPage,totalPage;
 };
 
-#endif // BREAKER_CONDITION_H
+#endif // CONDITION_BREAKER_H
