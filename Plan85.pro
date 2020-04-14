@@ -120,7 +120,11 @@ SOURCES += main.cpp\
     brake_condition.cpp \
     maindata_tracbrakeoutline.cpp \
     data/data_riom.cpp \
-    data/data_tcu.cpp
+    data/data_tcu.cpp \
+    data/data_acu.cpp \
+    data/data_bcu.cpp \
+    data/data_erm.cpp \
+    data/data_ato.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -223,7 +227,11 @@ HEADERS  += widget.h \
     brake_condition.h \
     maindata_tracbrakeoutline.h \
     data/data_riom.h \
-    data/data_tcu.h
+    data/data_tcu.h \
+    data/data_acu.h \
+    data/data_bcu.h \
+    data/data_erm.h \
+    data/data_ato.h
 
 FORMS    += widget.ui \
     header.ui \
