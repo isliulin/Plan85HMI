@@ -705,7 +705,7 @@ color:white;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="LBLJHFG_2">
+  <widget class="QLabel" name="LBLZFG">
    <property name="geometry">
     <rect>
      <x>480</x>
@@ -727,7 +727,7 @@ font:20px;
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="LBLLCG_2">
+  <widget class="QLabel" name="LBLZDG">
    <property name="geometry">
     <rect>
      <x>580</x>
@@ -791,7 +791,7 @@ color:white;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="LBLLCG_3">
+  <widget class="QLabel" name="LBLTCZDG">
    <property name="geometry">
     <rect>
      <x>680</x>
@@ -816,9 +816,9 @@ font:20px;
   <widget class="QLabel" name="LBLLCG_4">
    <property name="geometry">
     <rect>
-     <x>690</x>
+     <x>700</x>
      <y>120</y>
-     <width>91</width>
+     <width>81</width>
      <height>261</height>
     </rect>
    </property>
@@ -838,9 +838,9 @@ font:20px;
   <widget class="QLabel" name="lbl1_9">
    <property name="geometry">
     <rect>
-     <x>710</x>
+     <x>720</x>
      <y>110</y>
-     <width>51</width>
+     <width>41</width>
      <height>25</height>
     </rect>
    </property>
@@ -851,6 +851,26 @@ color:white;</string>
    </property>
    <property name="text">
     <string>流量</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblLG">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>340</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid transparent;
+font:18px;</string>
+   </property>
+   <property name="text">
+    <string>0</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -896,14 +916,15 @@ color:white;</string>
   <zorder>lbl1_3</zorder>
   <zorder>lbl1_4</zorder>
   <zorder>lbl1_5</zorder>
-  <zorder>LBLJHFG_2</zorder>
-  <zorder>LBLLCG_2</zorder>
+  <zorder>LBLZFG</zorder>
+  <zorder>LBLZDG</zorder>
   <zorder>lbl1_7</zorder>
   <zorder>lbl1_6</zorder>
-  <zorder>LBLLCG_3</zorder>
+  <zorder>LBLTCZDG</zorder>
   <zorder>lbl1_8</zorder>
   <zorder>LBLLCG_4</zorder>
   <zorder>lbl1_9</zorder>
+  <zorder>lblLG</zorder>
  </widget>
  <resources/>
  <connections/>

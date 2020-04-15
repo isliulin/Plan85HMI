@@ -130,7 +130,9 @@ SOURCES += main.cpp\
     condition_breaker.cpp \
     condition_pantoup.cpp \
     condition_traction.cpp \
-    widgets/ctrlspeedometer.cpp
+    widgets/ctrlspeedometer.cpp \
+    unity_brake.cpp \
+    widgets/ctrlkpadiagram.cpp
 
 
 HEADERS  += widget.h \
@@ -244,7 +246,9 @@ HEADERS  += widget.h \
     condition_breaker.h \
     condition_pantoup.h \
     condition_traction.h \
-    widgets/ctrlspeedometer.h
+    widgets/ctrlspeedometer.h \
+    unity_brake.h \
+    widgets/ctrlkpadiagram.h
 
 
 
@@ -290,7 +294,9 @@ FORMS    += widget.ui \
     condition_breaker.ui \
     condition_pantoup.ui \
     condition_traction.ui \
-    widgets/ctrlspeedometer.ui
+    widgets/ctrlspeedometer.ui \
+    unity_brake.ui \
+    widgets/ctrlkpadiagram.ui
     maindata_tracbrakeoutline.ui \
 
 

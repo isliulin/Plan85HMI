@@ -1,19 +1,19 @@
-#include "ctrlspeedometer.h"
-#include "ui_ctrlspeedometer.h"
+#include "ctrlkpadiagram.h"
+#include "ui_ctrlkpadiagram.h"
 
-CtrlSpeedometer::CtrlSpeedometer(QWidget *parent) :
+CtrlKpaDiagram::CtrlKpaDiagram(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::CtrlSpeedometer)
+    ui(new Ui::CtrlKpaDiagram)
 {
     ui->setupUi(this);
     m_value = 0;
 }
 
-CtrlSpeedometer::~CtrlSpeedometer()
+CtrlKpaDiagram::~CtrlKpaDiagram()
 {
     delete ui;
 }
-void CtrlSpeedometer::paintEvent(QPaintEvent *e)
+void CtrlKpaDiagram::paintEvent(QPaintEvent *e)
 {
     QPainter painter(this);
     QPen pen;
@@ -34,13 +34,13 @@ void CtrlSpeedometer::paintEvent(QPaintEvent *e)
 
 
     painter.setBrush(Qt::black);
-    painter.drawArc(15, 15, 200, 200, -30*16, 240*16);
+    painter.drawArc(5, 5, 240, 240, -60*16, 300*16);
 
     //painter.drawEllipse(QPoint(115,115),110,110);
     painter.setBrush(Qt::red);
     pen.setWidth(0);
     painter.setPen(pen);
-    painter.drawEllipse(QPoint(115,115),7,7);
+    painter.drawEllipse(QPoint(125,125),7,7);
     painter.translate(this->width() / 2,this->height() / 2 );
 
 
@@ -48,18 +48,17 @@ void CtrlSpeedometer::paintEvent(QPaintEvent *e)
 
     pen.setColor(QColor(255,255,255));
     painter.setPen(pen);
-    painter.drawText(QRect(-70,25,30,20),"0");
-    //painter.drawText(QRect(-80,5,25,20),"10");
-    painter.drawText(QRect(-70,-45,30,20),"300");
-    //painter.drawText(QRect(-50,-70,25,20),"30");
-    painter.drawText(QRect(-15,-85,30,20),"600");
-    //painter.drawText(QRect(25,-70,25,20),"50");
-    painter.drawText(QRect(40,-45,30,20),"900");
+    painter.drawText(QRect(-50,75,30,20),"0");
+    painter.drawText(QRect(-100,10,30,20),"200");
+    painter.drawText(QRect(-80,-70,30,20),"400");
+    painter.drawText(QRect(-15,-105,30,20),"600");
+    painter.drawText(QRect(50,-70,30,20),"800");
+    painter.drawText(QRect(60,10,35,20),"1000");
 
 //    pen.setColor(RED);
 //    painter.setPen(pen);
 //    painter.drawText(QRect(60,-10,25,20),"70");
-    painter.drawText(QRect(35,25,35,20),"1200");
+    painter.drawText(QRect(30,75,35,20),"1200");
 
     pen.setColor(YELLOW);
     painter.setPen(pen);
@@ -69,7 +68,7 @@ void CtrlSpeedometer::paintEvent(QPaintEvent *e)
 
 
 
-    painter.rotate(60);
+    painter.rotate(30);
     pen.setWidth(2);
     //pen.setWidth(1);
     for(int i = 0; i <  61; i ++)
@@ -86,10 +85,10 @@ void CtrlSpeedometer::paintEvent(QPaintEvent *e)
         painter.setPen(pen);
         if(i%5 == 0)
         {
-            painter.drawLine(0,85,0,98);
+            painter.drawLine(0,105,0,118);
         }else
         {
-            painter.drawLine(0,90,0,98);
+            painter.drawLine(0,110,0,118);
         }
 
         int t_value = m_value>1200?1200:m_value;
@@ -98,31 +97,24 @@ void CtrlSpeedometer::paintEvent(QPaintEvent *e)
             static const QPointF points[3] = {
                  QPointF(-3, 5),
                  QPointF(3,5),
-                 QPointF(0, 80)
+                 QPointF(0, 100)
                };
             painter.setBrush(QBrush(QColor(255,255,255,128)));
             painter.setPen(QPen(QColor(255,255,255,128), 0));
             painter.drawPolygon(points, 3);
         }
-        painter.rotate(4);
+        painter.rotate(5);
     }
-    painter.rotate(56);
+    painter.rotate(25);
 
-//    pen.setColor(QColor(140,140,140));
-//    font.setPixelSize(45);
-//    painter.setPen(pen);
-//    painter.setFont(font);
-//    QString t_speed;
-//    t_speed.sprintf("%02d",m_value);
-//    painter.drawText(QRect(-30,45,80,50),t_speed);
 
-//    font.setPixelSize(12);
-//    painter.setFont(font);
-//    painter.drawText(QRect(30,75,45,20),"km/h");
+    font.setPixelSize(18);
+    painter.setFont(font);
+    painter.drawText(QRect(-20,75,45,20),"kPa");
 
 
 }
-void CtrlSpeedometer::setSpeenometerValue(int value)
+void CtrlKpaDiagram::setSpeenometerValue(int value)
 {
     m_value = value>1200?1200:value;
     this->update();
