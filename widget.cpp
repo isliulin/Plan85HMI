@@ -40,6 +40,7 @@
 #include "brake_condition.h"
 #include "traction_condition.h"
 #include "maindata_tracbrakeoutline.h"
+#include "unity.h"
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -205,6 +206,11 @@ Widget::Widget(QWidget *parent) :
     this->traction_Condition->setMyBase(uMiddleCondition,QString("牵引条件"));
     this->traction_Condition->hide();
 
+
+    this->unity = new Unity(this);
+    this->unity->setMyBase(uMiddleUnite,QString("合屏模式"));
+    this->unity->hide();
+
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
     this->widgets.insert(uMainData_DriverOutline,this->mainData_DriverOutline);
@@ -233,6 +239,7 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uCondition_Breaker,this->breaker_Condition);
     this->widgets.insert(uCondition_Traction,this->traction_Condition);
     this->widgets.insert(uCondition_Brake,this->brake_Condition);
+    this->widgets.insert(uUnityMode,this->unity);
     this->header->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();
 }

@@ -47,7 +47,7 @@ class Panto_Condition;
 class Breaker_Condition;
 class Brake_Condition;
 class Traction_Condition;
-
+class Unity;
 class Widget : public QWidget
 {
     Q_OBJECT
@@ -106,6 +106,8 @@ private:
     Brake_Condition* brake_Condition;
     Breaker_Condition* breaker_Condition;
     Traction_Condition* traction_Condition;
+
+    Unity* unity;
 };
 
 #endif // WIDGET_H

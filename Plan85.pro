@@ -124,7 +124,12 @@ SOURCES += main.cpp\
     data/data_acu.cpp \
     data/data_bcu.cpp \
     data/data_erm.cpp \
-    data/data_ato.cpp
+    data/data_ato.cpp \
+    unity.cpp \
+    widgets/ctrlnetvoltage_unity.cpp \
+    widgets/ctrlnetcurrent_unity.cpp \
+    widgets/ctrcontrolvoltage_unity.cpp \
+    widgets/ctrltracbrake_unity.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -231,7 +236,12 @@ HEADERS  += widget.h \
     data/data_acu.h \
     data/data_bcu.h \
     data/data_erm.h \
-    data/data_ato.h
+    data/data_ato.h \
+    unity.h \
+    widgets/ctrlnetvoltage_unity.h \
+    widgets/ctrlnetcurrent_unity.h \
+    widgets/ctrcontrolvoltage_unity.h \
+    widgets/ctrltracbrake_unity.h
 
 FORMS    += widget.ui \
     header.ui \
@@ -269,7 +279,12 @@ FORMS    += widget.ui \
     breaker_condition.ui \
     traction_condition.ui \
     brake_condition.ui \
-    maindata_tracbrakeoutline.ui
+    maindata_tracbrakeoutline.ui \
+    unity.ui \
+    widgets/ctrlnetvoltage_unity.ui \
+    widgets/ctrlnetcurrent_unity.ui \
+    widgets/ctrcontrolvoltage_unity.ui \
+    widgets/ctrltracbrake_unity.ui
 
 RESOURCES += \
     Resource.qrc
