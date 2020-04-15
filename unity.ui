@@ -259,6 +259,672 @@ font:16px
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="LBLFault3">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>370</y>
+     <width>220</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid transparent;
+font:14px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLFault1">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>330</y>
+     <width>220</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid transparent;
+font:14px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLFault2">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>350</y>
+     <width>220</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid transparent;
+font:14px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL1_5">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>310</y>
+     <width>220</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(0,0,200);
+border:1px solid transparent;
+font:14px;</string>
+   </property>
+   <property name="text">
+    <string>故障信息</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLTips2">
+   <property name="geometry">
+    <rect>
+     <x>12</x>
+     <y>350</y>
+     <width>220</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid transparent;
+font:14px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLTips3">
+   <property name="geometry">
+    <rect>
+     <x>12</x>
+     <y>370</y>
+     <width>220</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid transparent;
+font:14px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL1_6">
+   <property name="geometry">
+    <rect>
+     <x>12</x>
+     <y>310</y>
+     <width>220</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(0,0,200);;
+border:1px solid transparent;
+font:14px;</string>
+   </property>
+   <property name="text">
+    <string>提示信息</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLTips1">
+   <property name="geometry">
+    <rect>
+     <x>12</x>
+     <y>330</y>
+     <width>220</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid transparent;
+font:14px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLD31">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>309</y>
+     <width>225</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBl2">
+   <property name="geometry">
+    <rect>
+     <x>236</x>
+     <y>309</y>
+     <width>225</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLMode">
+   <property name="geometry">
+    <rect>
+     <x>12</x>
+     <y>262</y>
+     <width>220</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid transparent;
+font:20px;
+background-color:rgb(0,0,240);</string>
+   </property>
+   <property name="text">
+    <string>转矩模式</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLGrade">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>270</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid lightgray ;
+font:20px;
+</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>260</y>
+     <width>451</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl1">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>270</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid transparent;
+font:14px;</string>
+   </property>
+   <property name="text">
+    <string>级位</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl1_2">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>270</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid transparent;
+font:14px;</string>
+   </property>
+   <property name="text">
+    <string>级</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL3_2">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>0</y>
+     <width>2</width>
+     <height>500</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLJHFG">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>210</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid lightgray ;
+border-radius:8px;
+font:20px;
+</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLLCG">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>210</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid lightgray ;
+border-radius:8px;
+font:20px;
+</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl1_3">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>195</y>
+     <width>71</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid transparent;
+font:18px;
+color:red;</string>
+   </property>
+   <property name="text">
+    <string>均衡风缸</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl1_4">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>195</y>
+     <width>71</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid transparent;
+font:18px;
+color:white;</string>
+   </property>
+   <property name="text">
+    <string>列车管</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl1_5">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>10</y>
+     <width>81</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid transparent;
+font:18px;
+color:white;</string>
+   </property>
+   <property name="text">
+    <string>系统状态</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLstatus">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>25</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid lightgray ;
+border-radius:8px;
+font:20px;
+</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl1_6">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>425</y>
+     <width>71</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid transparent;
+font:18px;
+color:white;</string>
+   </property>
+   <property name="text">
+    <string>制动缸</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLZFG">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>440</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid lightgray ;
+border-radius:8px;
+font:20px;
+</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLZDG">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>440</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid lightgray ;
+border-radius:8px;
+font:20px;
+</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl1_7">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>425</y>
+     <width>71</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid transparent;
+font:18px;
+color:red;</string>
+   </property>
+   <property name="text">
+    <string>总风管</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl1_8">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>425</y>
+     <width>91</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid transparent;
+font:18px;
+color:white;</string>
+   </property>
+   <property name="text">
+    <string>他节制动缸</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLTCZDG">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>440</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid lightgray ;
+border-radius:8px;
+font:20px;
+</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLLCG_4">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>120</y>
+     <width>81</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid lightgray ;
+border-radius:8px;
+font:20px;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl1_9">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>110</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid transparent;
+font:18px;
+color:white;</string>
+   </property>
+   <property name="text">
+    <string>流量</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblLG">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>340</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid transparent;
+font:18px;</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <zorder>LBLstatus</zorder>
+  <zorder>LBL3</zorder>
+  <zorder>LBl2</zorder>
+  <zorder>LBLD31</zorder>
+  <zorder>LBLC22</zorder>
+  <zorder>LBLC11</zorder>
+  <zorder>LBLC24</zorder>
+  <zorder>LBLC17</zorder>
+  <zorder>LBLC16</zorder>
+  <zorder>LBLC27</zorder>
+  <zorder>LBLC13</zorder>
+  <zorder>LBLC26</zorder>
+  <zorder>LBLC25</zorder>
+  <zorder>LBLC21</zorder>
+  <zorder>LBLC14</zorder>
+  <zorder>LBLC18</zorder>
+  <zorder>LBLC29</zorder>
+  <zorder>LBLC28</zorder>
+  <zorder>LBLC15</zorder>
+  <zorder>LBLC23</zorder>
+  <zorder>LBLC19</zorder>
+  <zorder>LBLC12</zorder>
+  <zorder>LBLFault3</zorder>
+  <zorder>LBLFault1</zorder>
+  <zorder>LBLFault2</zorder>
+  <zorder>LBL1_5</zorder>
+  <zorder>LBLTips2</zorder>
+  <zorder>LBLTips3</zorder>
+  <zorder>LBL1_6</zorder>
+  <zorder>LBLTips1</zorder>
+  <zorder>LBLMode</zorder>
+  <zorder>LBLGrade</zorder>
+  <zorder>lbl1</zorder>
+  <zorder>lbl1_2</zorder>
+  <zorder>LBL3_2</zorder>
+  <zorder>LBLJHFG</zorder>
+  <zorder>LBLLCG</zorder>
+  <zorder>lbl1_3</zorder>
+  <zorder>lbl1_4</zorder>
+  <zorder>lbl1_5</zorder>
+  <zorder>LBLZFG</zorder>
+  <zorder>LBLZDG</zorder>
+  <zorder>lbl1_7</zorder>
+  <zorder>lbl1_6</zorder>
+  <zorder>LBLTCZDG</zorder>
+  <zorder>lbl1_8</zorder>
+  <zorder>LBLLCG_4</zorder>
+  <zorder>lbl1_9</zorder>
+  <zorder>lblLG</zorder>
  </widget>
  <resources/>
  <connections/>
