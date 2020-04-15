@@ -18,6 +18,13 @@ Unity::Unity(QWidget *parent) :
 
     ctrlTracBrake_Unity = new CtrlTracBrake_Unity(this);
     ctrlTracBrake_Unity->setGeometry(365,10,this->ctrlTracBrake_Unity->width(),this->ctrlTracBrake_Unity->height());
+
+    ctrlSpeedometer1 = new CtrlSpeedometer(this);
+    ctrlSpeedometer1 ->setGeometry(470,20,ctrlSpeedometer1->width(),ctrlSpeedometer1->height());
+
+    ctrlSpeedometer2 = new CtrlSpeedometer(this);
+    ctrlSpeedometer2 ->setGeometry(470,250,ctrlSpeedometer2->width(),ctrlSpeedometer2->height());
+
 }
 
 Unity::~Unity()
@@ -32,6 +39,9 @@ void Unity::updatePage()
     ctrlNetCurrent_Unity->setCtrlValueRect(i);
     ctrlNetVoltage_Unity->setCtrlValueRect(i/10);
     ctrlTracBrake_Unity->setCtrlValueRect(i/10,i/10%2,i/10%3);
+
+    ctrlSpeedometer1->setSpeenometerValue(i);
+    ctrlSpeedometer2->setSpeenometerValue(i);
 
 }
 
