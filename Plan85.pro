@@ -125,11 +125,12 @@ SOURCES += main.cpp\
     widgets/ctrlnetvoltage_unity.cpp \
     widgets/ctrlnetcurrent_unity.cpp \
     widgets/ctrcontrolvoltage_unity.cpp \
-    widgets/ctrltracbrake_unity.cpp
-    condition_pantoup.cpp \
+    widgets/ctrltracbrake_unity.cpp\
+    condition_brake.cpp \
     condition_breaker.cpp \
-    condition_traction.cpp \
-    condition_brake.cpp
+    condition_pantoup.cpp \
+    condition_traction.cpp
+
 
 HEADERS  += widget.h \
     mybase.h \
@@ -237,11 +238,12 @@ HEADERS  += widget.h \
     widgets/ctrlnetvoltage_unity.h \
     widgets/ctrlnetcurrent_unity.h \
     widgets/ctrcontrolvoltage_unity.h \
-    widgets/ctrltracbrake_unity.h
-    condition_pantoup.h \
+    widgets/ctrltracbrake_unity.h\
+    condition_brake.h \
     condition_breaker.h \
-    condition_traction.h \
-    condition_brake.h
+    condition_pantoup.h \
+    condition_traction.h
+
 
 
 FORMS    += widget.ui \
@@ -276,21 +278,18 @@ FORMS    += widget.ui \
     simulation.ui \
     maindata_driveroutline.ui \
     operating_condition.ui \
-    panto_condition.ui \
-    breaker_condition.ui \
-    traction_condition.ui \
-    brake_condition.ui \
     maindata_tracbrakeoutline.ui \
     unity.ui \
     widgets/ctrlnetvoltage_unity.ui \
     widgets/ctrlnetcurrent_unity.ui \
     widgets/ctrcontrolvoltage_unity.ui \
-    widgets/ctrltracbrake_unity.ui
-    maindata_tracbrakeoutline.ui \
-    condition_pantoup.ui \
+    widgets/ctrltracbrake_unity.ui \
+    condition_brake.ui \
     condition_breaker.ui \
-    condition_traction.ui \
-    condition_brake.ui
+    condition_pantoup.ui \
+    condition_traction.ui
+    maindata_tracbrakeoutline.ui \
+
 
 
 RESOURCES += \
