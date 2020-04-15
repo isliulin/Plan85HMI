@@ -114,10 +114,6 @@ SOURCES += main.cpp\
     maindata_driveroutline.cpp \
     maindata_trainoutline.cpp \
     operating_condition.cpp \
-    panto_condition.cpp \
-    breaker_condition.cpp \
-    traction_condition.cpp \
-    brake_condition.cpp \
     maindata_tracbrakeoutline.cpp \
     data/data_riom.cpp \
     data/data_tcu.cpp \
@@ -130,6 +126,10 @@ SOURCES += main.cpp\
     widgets/ctrlnetcurrent_unity.cpp \
     widgets/ctrcontrolvoltage_unity.cpp \
     widgets/ctrltracbrake_unity.cpp
+    condition_pantoup.cpp \
+    condition_breaker.cpp \
+    condition_traction.cpp \
+    condition_brake.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -226,10 +226,6 @@ HEADERS  += widget.h \
     simulation.h \
     maindata_driveroutline.h \
     operating_condition.h \
-    panto_condition.h \
-    breaker_condition.h \
-    traction_condition.h \
-    brake_condition.h \
     maindata_tracbrakeoutline.h \
     data/data_riom.h \
     data/data_tcu.h \
@@ -242,6 +238,11 @@ HEADERS  += widget.h \
     widgets/ctrlnetcurrent_unity.h \
     widgets/ctrcontrolvoltage_unity.h \
     widgets/ctrltracbrake_unity.h
+    condition_pantoup.h \
+    condition_breaker.h \
+    condition_traction.h \
+    condition_brake.h
+
 
 FORMS    += widget.ui \
     header.ui \
@@ -285,6 +286,12 @@ FORMS    += widget.ui \
     widgets/ctrlnetcurrent_unity.ui \
     widgets/ctrcontrolvoltage_unity.ui \
     widgets/ctrltracbrake_unity.ui
+    maindata_tracbrakeoutline.ui \
+    condition_pantoup.ui \
+    condition_breaker.ui \
+    condition_traction.ui \
+    condition_brake.ui
+
 
 RESOURCES += \
     Resource.qrc
@@ -292,3 +299,4 @@ RESOURCES += \
 OTHER_FILES += \
     log4qt/log4qt.pri \
     log4qt/Log4Qt.pri
+QMAKE_CXXFLAGS +=  -Wno-unused-parameter
