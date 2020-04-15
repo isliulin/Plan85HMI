@@ -123,7 +123,7 @@ enum pageIndex
     uFault_Download,
 
     //合屏模式
-    uUniteMode,
+    uUnityMode,
     //制动模式
     uBrakeMode
 };

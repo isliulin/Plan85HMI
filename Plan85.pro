@@ -121,6 +121,11 @@ SOURCES += main.cpp\
     data/data_bcu.cpp \
     data/data_erm.cpp \
     data/data_ato.cpp \
+    unity.cpp \
+    widgets/ctrlnetvoltage_unity.cpp \
+    widgets/ctrlnetcurrent_unity.cpp \
+    widgets/ctrcontrolvoltage_unity.cpp \
+    widgets/ctrltracbrake_unity.cpp
     condition_pantoup.cpp \
     condition_breaker.cpp \
     condition_traction.cpp \
@@ -228,10 +233,16 @@ HEADERS  += widget.h \
     data/data_bcu.h \
     data/data_erm.h \
     data/data_ato.h \
+    unity.h \
+    widgets/ctrlnetvoltage_unity.h \
+    widgets/ctrlnetcurrent_unity.h \
+    widgets/ctrcontrolvoltage_unity.h \
+    widgets/ctrltracbrake_unity.h
     condition_pantoup.h \
     condition_breaker.h \
     condition_traction.h \
     condition_brake.h
+
 
 FORMS    += widget.ui \
     header.ui \
@@ -265,11 +276,22 @@ FORMS    += widget.ui \
     simulation.ui \
     maindata_driveroutline.ui \
     operating_condition.ui \
+    panto_condition.ui \
+    breaker_condition.ui \
+    traction_condition.ui \
+    brake_condition.ui \
+    maindata_tracbrakeoutline.ui \
+    unity.ui \
+    widgets/ctrlnetvoltage_unity.ui \
+    widgets/ctrlnetcurrent_unity.ui \
+    widgets/ctrcontrolvoltage_unity.ui \
+    widgets/ctrltracbrake_unity.ui
     maindata_tracbrakeoutline.ui \
     condition_pantoup.ui \
     condition_breaker.ui \
     condition_traction.ui \
     condition_brake.ui
+
 
 RESOURCES += \
     Resource.qrc
