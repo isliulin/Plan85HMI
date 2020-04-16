@@ -465,6 +465,19 @@ void Widget::showEvent(QShowEvent *)
             CrrcMvb::getCrrcMvb()->addSinkPort(0x702,MVB_FCode4,128);
             CrrcMvb::getCrrcMvb()->addSinkPort(0x703,MVB_FCode4,128);
             CrrcMvb::getCrrcMvb()->addSinkPort(0x704,MVB_FCode4,128);
+            //virtual ports 702  6分时  0x1702~0x6702
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0x1702,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0x2702,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0x3702,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0x4702,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0x5702,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0x6702,MVB_FCode4);
+            //virtual ports 704  4分时  0x1704~0x4704
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0x1704,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0x2704,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0x3704,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0x4704,MVB_FCode4);
+
             //virtual ports TCN1/2主从
             CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe10,MVB_FCode4);
             CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe11,MVB_FCode4);
@@ -528,6 +541,8 @@ void Widget::showEvent(QShowEvent *)
             CrrcMvb::getCrrcMvb()->addVirtualPort(0xf244,MVB_FCode4);
             CrrcMvb::getCrrcMvb()->addVirtualPort(0xf344,MVB_FCode4);
             CrrcMvb::getCrrcMvb()->addVirtualPort(0xf444,MVB_FCode4);
+
+            //
 
 
             //ato
