@@ -5,6 +5,7 @@
 #include <QWidget>
 #include "database.h"
 #include "qdebug.h"
+#include "qlabel.h"
 class MyBase : public QWidget
 {
     Q_OBJECT
@@ -20,6 +21,10 @@ public:
     static Database *database;
     QString name;
     enum pagePosition Position;
+    void setLBLtext(QLabel *lbl, int value,  float dem = 1,unsigned char scale = 0);
+    void setVLBLtext(QLabel *lbl,  bool vaild,int value, float dem = 1,unsigned char scale = 0);
+    void setLBLpic(QLabel *lbl, QList<bool> &status,QList<QString> &stylestr);
+    void setLBLpic(QLabel *lbl, bool status,QString stylestr);
 
 public slots:
 signals:

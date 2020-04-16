@@ -7,6 +7,7 @@
 #include "widgets/ctrcontrolvoltage_unity.h"
 #include "widgets/ctrltracbrake_unity.h"
 #include "widgets/ctrlspeedometer.h"
+#include "widgets/ctrlflowdiagram.h"
 namespace Ui {
 class Unity;
 }
@@ -27,6 +28,7 @@ private:
     CtrlNetVoltage_Unity* ctrlNetVoltage_Unity;
 
     CtrlTracBrake_Unity* ctrlTracBrake_Unity;
+    CtrlFlowDiagram* ctrlFlowDiagram;
 
     CtrlSpeedometer* ctrlSpeedometer1,*ctrlSpeedometer2;
 };

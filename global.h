@@ -15,7 +15,7 @@
 #define RED     "background-color:rgb(240,0,0);border:1px solid white;"
 #define WHITE     "background-color:rgb(248,248,248);border:1px solid white;"
 #define GRAY2     "background-color:rgb(192,192,192);border:1px solid white;"
-#define BLACK     "background-color:rgb(0,0,0);border:1px solid white;"
+#define BLACK     "background-color:rgb(0,0,0);border:1px solid lightgray;"
 
 
 #define	FANGXIANGXIANGQIAN	"border-image: url(:/images/images/xiangqian.png);"
@@ -50,6 +50,7 @@
 #define	DINGSUMOSHI	"border-image: url(:/images/images/dingsumoshi.png);"
 #define	JINGTIZHUANGZHIZHENGCHANG	"border-image: url(:/images/images/jingtizhengchang.png);"
 #define	JINGTIZHUANGZHIGELI	"border-image: url(:/images/images/jingtigeli.png);"
+#define	NULLIMAGE	"background-color:rgb(0,0,0);border:1px solid lightgray;"
 
 
 #include <stdlib.h>

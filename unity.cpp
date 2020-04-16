@@ -25,6 +25,9 @@ Unity::Unity(QWidget *parent) :
     ctrlSpeedometer2 = new CtrlSpeedometer(this);
     ctrlSpeedometer2 ->setGeometry(470,250,ctrlSpeedometer2->width(),ctrlSpeedometer2->height());
 
+    ctrlFlowDiagram = new CtrlFlowDiagram(this);
+    ctrlFlowDiagram ->setGeometry(690,160,ctrlFlowDiagram->width(),ctrlFlowDiagram->height());
+
 }
 
 Unity::~Unity()
@@ -42,7 +45,7 @@ void Unity::updatePage()
 
     ctrlSpeedometer1->setSpeenometerValue(i);
     ctrlSpeedometer2->setSpeenometerValue(i);
-
+    ctrlFlowDiagram->setCtrlValueRect(i);
 }
 
 void Unity::showEvent(QShowEvent *)

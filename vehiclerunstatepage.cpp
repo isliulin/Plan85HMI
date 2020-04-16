@@ -43,7 +43,25 @@ void VehicleRunStatePage::updatePage()
     ctrlTracBrake->setCtrlValueRect(i/10,i/10%2,i/10%3);
 
     //eg
-    //database->data_TCN->train[i]->xxx
+    QList<bool> t_status;
+    QList<QString> t_style;
+
+    //方向
+    t_style<<FANGXIANGZHONGLI<<FANGXIANGXIANGHOU<<FANGXIANGXIANGQIAN<<NULLIMAGE;
+    t_status<<database->data_TCN->TrainLocal->B_CMD_DIR_N<<database->data_TCN->TrainLocal->B_CMD_DIR_B<<database->data_TCN->TrainLocal->B_CMD_DIR_f<<true;
+    setLBLpic(ui->LBLC11,t_status,t_style);
+
+    //分相
+    t_style<<FENXIANGQU<<NULLIMAGE;
+    t_status<<(database->data_CCU->M1_D1_B_NSC_START||database->data_CCU->M1_D1_B_NSC_START)<<true;
+    setLBLpic(ui->LBLC12,t_status,t_style);
+
+//    //受电弓
+//    t_style<<PANTO12UP<<PANTO1UP2DOWN<<PANTO1DOWN2UP<<PANTO1UP2ISO<<PANTO1ISO2UP<<PANTO12DOWN<<PANTO1DOWN2ISO<<PANTO1ISO2DOWN<<PANTOISO;
+
+//    //主断路器
+//    t_style<<ZHUDUANBIHE<<ZHUDUANDUANKAI<<zhuduan;
+
 
 }
 void VehicleRunStatePage::showEvent(QShowEvent *)

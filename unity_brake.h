@@ -3,6 +3,7 @@
 
 #include <mybase.h>
 #include "widgets/ctrlkpadiagram.h"
+#include "widgets/ctrlflowdiagram.h"
 namespace Ui {
 class Unity_Brake;
 }
@@ -19,6 +20,8 @@ public:
 private:
     Ui::Unity_Brake *ui;
     CtrlKpaDiagram* ctrlKpaDiagram1,*ctrlKpaDiagram2;
+    CtrlFlowDiagram* ctrlFlowDiagram;
+
 };
 
 #endif // UNITY_BRAKE_H

@@ -12,6 +12,9 @@ Unity_Brake::Unity_Brake(QWidget *parent) :
 
     ctrlKpaDiagram2 = new CtrlKpaDiagram(this);
     ctrlKpaDiagram2 ->setGeometry(500,50,ctrlKpaDiagram2->width(),ctrlKpaDiagram2->height());
+
+    ctrlFlowDiagram = new CtrlFlowDiagram(this);
+    ctrlFlowDiagram ->setGeometry(20,80,ctrlFlowDiagram->width(),ctrlFlowDiagram->height());
 }
 
 Unity_Brake::~Unity_Brake()
