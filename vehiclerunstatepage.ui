@@ -22,7 +22,7 @@ QLabel
 {
 	border:1px solid lightgray;
     color:white;
-font:16px
+	font:16px
 }</string>
   </property>
   <widget class="QLabel" name="LBLC11">
@@ -33,6 +33,9 @@ font:16px
      <width>50</width>
      <height>50</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
    </property>
    <property name="text">
     <string/>

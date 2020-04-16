@@ -6,6 +6,7 @@ Data_TCN::Data_TCN()
     {
         train[i] = new TrainBean();
     }
+    //本车数据对象，命名和TCN-MPU一致。
     TrainLocal = new TrainBean();
 }
 void Data_TCN::updateData(bool TCN1Master,bool TCN2Master)
