@@ -132,7 +132,8 @@ SOURCES += main.cpp\
     condition_traction.cpp \
     widgets/ctrlspeedometer.cpp \
     unity_brake.cpp \
-    widgets/ctrlkpadiagram.cpp
+    widgets/ctrlkpadiagram.cpp \
+    widgets/ctrlflowdiagram.cpp
 
 
 HEADERS  += widget.h \
@@ -248,7 +249,8 @@ HEADERS  += widget.h \
     condition_traction.h \
     widgets/ctrlspeedometer.h \
     unity_brake.h \
-    widgets/ctrlkpadiagram.h
+    widgets/ctrlkpadiagram.h \
+    widgets/ctrlflowdiagram.h
 
 
 
@@ -296,7 +298,8 @@ FORMS    += widget.ui \
     condition_traction.ui \
     widgets/ctrlspeedometer.ui \
     unity_brake.ui \
-    widgets/ctrlkpadiagram.ui
+    widgets/ctrlkpadiagram.ui \
+    widgets/ctrlflowdiagram.ui
     maindata_tracbrakeoutline.ui \
 
 
