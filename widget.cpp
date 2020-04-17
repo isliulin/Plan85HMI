@@ -257,16 +257,17 @@ Widget::~Widget()
 void Widget::updatePage()
 {
     static int counter = 1;
-    this->header->updatePage();
-    this->widgets[MyBase::currentPage]->updatePage();
+
 
     // update comm data,some base logic
-    if(counter%2 == 0)
+    //if(counter%2 == 0)
     {
         crrcMvb->synchronizeMvbData();
         this->simulation->installMvb(CrrcMvb::getCrrcMvb());
         this->database->updateData();
     }
+    this->header->updatePage();
+    this->widgets[MyBase::currentPage]->updatePage();
 
     // start fault scanning thread
     static int faultdelaycnt = 0;

@@ -50,6 +50,9 @@ QLabel
      <height>50</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/images/images/panto1up2down.png);	</string>
+   </property>
    <property name="text">
     <string/>
    </property>
