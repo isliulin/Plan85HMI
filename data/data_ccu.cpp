@@ -249,7 +249,9 @@ void Data_CCU::updateData()
     M1_D1_N_WHEEL_DIA = CrrcMvb::getCrrcMvb()->getUnsignedInt(0x710,10);//轴2的车轮直径 单位：mm
     M1_D1_N_BAT_TMP = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x710,12);//蓄电池温度，50=0度，正表示零上，负表示零下
     M1_D1_N_RULOCO_NO = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x710,14);//重联机车数
-    M1_D1_N_UIC_ADDR = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x710,15);//UIC地址
+    M1_D1_N_UIC_ADDR = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x710,15) == 0?1:CrrcMvb::getCrrcMvb()->getUnsignedChar(0x710,15);//UIC地址
+    M1_D1_N_OTHERUIC_ADDR = M1_D1_N_UIC_ADDR == 1?2:1;//内重联他车UIC ID
+
     M1_D1_B_NSC_START = CrrcMvb::getCrrcMvb()->getBool(0x710,16,0);//过分相开始
     M1_D1_B_NSC_END = CrrcMvb::getCrrcMvb()->getBool(0x710,16,1);//过分相结束
     M1_D1_B_STATE_CAB_ACTIVE = CrrcMvb::getCrrcMvb()->getBool(0x710,16,2);//有司机室激活

@@ -43,10 +43,13 @@ class Main_Datetime;
 class Fault_Current;
 class Fault_History;
 class Fault_Download;
+class Unity;
 class Condition_PantoUp;
 class Condition_Breaker;
 class Condition_Brake;
 class Condition_Traction;
+class Unity_Brake;
+
 
 class Widget : public QWidget
 {
@@ -102,10 +105,13 @@ private:
 
     Simulation* simulation;
 
+    Unity* unity;
+    Unity_Brake* unity_Brake;
     Condition_PantoUp* condition_PantoUp;
     Condition_Brake* condition_Brake;
     Condition_Breaker* condition_Breaker;
     Condition_Traction* condition_Traction;
+
 };
 
 #endif // WIDGET_H

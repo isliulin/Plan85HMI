@@ -40,7 +40,8 @@
 #include "condition_brake.h"
 #include "condition_traction.h"
 #include "maindata_tracbrakeoutline.h"
-
+#include "unity.h"
+#include "unity_brake.h"
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -205,6 +206,15 @@ Widget::Widget(QWidget *parent) :
     this->condition_Traction->setMyBase(uMiddleCondition,QString("牵引条件"));
     this->condition_Traction->hide();
 
+
+    this->unity = new Unity(this);
+    this->unity->setMyBase(uMiddleUnite,QString("合屏模式"));
+    this->unity->hide();
+
+    this->unity_Brake = new Unity_Brake(this);
+    this->unity_Brake->setMyBase(uMiddleUnite,QString("电空制动"));
+    this->unity_Brake->hide();
+
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
     this->widgets.insert(uMainData_DriverOutline,this->mainData_DriverOutline);
@@ -229,10 +239,13 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uFault_Current,this->fault_Current);
     this->widgets.insert(uFault_History,this->fault_History);
     this->widgets.insert(uFault_Download,this->fault_Download);
+    this->widgets.insert(uUnityMode,this->unity);
     this->widgets.insert(uCondition_PantoUp,this->condition_PantoUp);
     this->widgets.insert(uCondition_Breaker,this->condition_Breaker);
     this->widgets.insert(uCondition_Traction,this->condition_Traction);
     this->widgets.insert(uCondition_Brake,this->condition_Brake);
+    this->widgets.insert(uBrakeMode,this->unity_Brake);
+
     this->header->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();
 }
@@ -244,16 +257,17 @@ Widget::~Widget()
 void Widget::updatePage()
 {
     static int counter = 1;
-    this->header->updatePage();
-    this->widgets[MyBase::currentPage]->updatePage();
+
 
     // update comm data,some base logic
-    if(counter%2 == 0)
+    //if(counter%2 == 0)
     {
         crrcMvb->synchronizeMvbData();
         this->simulation->installMvb(CrrcMvb::getCrrcMvb());
         this->database->updateData();
     }
+    this->header->updatePage();
+    this->widgets[MyBase::currentPage]->updatePage();
 
     // start fault scanning thread
     static int faultdelaycnt = 0;
@@ -452,6 +466,19 @@ void Widget::showEvent(QShowEvent *)
             CrrcMvb::getCrrcMvb()->addSinkPort(0x702,MVB_FCode4,128);
             CrrcMvb::getCrrcMvb()->addSinkPort(0x703,MVB_FCode4,128);
             CrrcMvb::getCrrcMvb()->addSinkPort(0x704,MVB_FCode4,128);
+            //virtual ports 702  6分时  0x1702~0x6702
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0x1702,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0x2702,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0x3702,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0x4702,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0x5702,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0x6702,MVB_FCode4);
+            //virtual ports 704  4分时  0x1704~0x4704
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0x1704,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0x2704,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0x3704,MVB_FCode4);
+            CrrcMvb::getCrrcMvb()->addVirtualPort(0x4704,MVB_FCode4);
+
             //virtual ports TCN1/2主从
             CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe10,MVB_FCode4);
             CrrcMvb::getCrrcMvb()->addVirtualPort(0xfe11,MVB_FCode4);
@@ -515,6 +542,8 @@ void Widget::showEvent(QShowEvent *)
             CrrcMvb::getCrrcMvb()->addVirtualPort(0xf244,MVB_FCode4);
             CrrcMvb::getCrrcMvb()->addVirtualPort(0xf344,MVB_FCode4);
             CrrcMvb::getCrrcMvb()->addVirtualPort(0xf444,MVB_FCode4);
+
+            //
 
 
             //ato
