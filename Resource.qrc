@@ -48,5 +48,8 @@
         <file>images/Cheti-reverse.png</file>
         <file>images/left.png</file>
         <file>images/right.png</file>
+        <file>images/Active.png</file>
+        <file>images/TrainLogo-reverse.png</file>
+        <file>images/HSClose.png</file>
     </qresource>
 </RCC>

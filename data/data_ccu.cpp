@@ -5,8 +5,10 @@ Data_CCU::Data_CCU()
 {
     B_NORMAL_MODE = false;
     B_LOAD_SET = false;
-
     N_LOAD = 0;
+    B_FLL_SET = false;
+    N_FLL_DIS = 250;
+    N_FLL_TIME = 5;
 
 }
 void Data_CCU::updateData()

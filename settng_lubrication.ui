@@ -23,7 +23,7 @@ background-color:black;
   <widget class="QLabel" name="LBL_Tips1">
    <property name="geometry">
     <rect>
-     <x>262</x>
+     <x>250</x>
      <y>40</y>
      <width>71</width>
      <height>21</height>
@@ -40,7 +40,7 @@ font:16px;</string>
   <widget class="QLabel" name="LBL_Tips2">
    <property name="geometry">
     <rect>
-     <x>466</x>
+     <x>471</x>
      <y>40</y>
      <width>71</width>
      <height>21</height>
@@ -54,12 +54,12 @@ font:16px;</string>
     <string>喷脂时间</string>
    </property>
   </widget>
-  <widget class="QLabel" name="LBL_DisReturnValue">
+  <widget class="QLabel" name="LBL_DisReturnTips">
    <property name="geometry">
     <rect>
-     <x>216</x>
+     <x>204</x>
      <y>80</y>
-     <width>161</width>
+     <width>121</width>
      <height>17</height>
     </rect>
    </property>
@@ -68,18 +68,18 @@ font:16px;</string>
 font:16px;</string>
    </property>
    <property name="text">
-    <string>间隔距离返回值: 0m</string>
+    <string>间隔距离返回值: </string>
    </property>
    <property name="alignment">
-    <set>Qt::AlignCenter</set>
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="LBL_TimeReturnValue">
+  <widget class="QLabel" name="LBL_TimeReturnTips">
    <property name="geometry">
     <rect>
-     <x>418</x>
+     <x>424</x>
      <y>80</y>
-     <width>161</width>
+     <width>121</width>
      <height>17</height>
     </rect>
    </property>
@@ -88,16 +88,16 @@ font:16px;</string>
 font:16px;</string>
    </property>
    <property name="text">
-    <string>喷脂时间返回值: 0s</string>
+    <string>喷脂时间返回值: </string>
    </property>
    <property name="alignment">
-    <set>Qt::AlignCenter</set>
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="LBL_DisValue">
    <property name="geometry">
     <rect>
-     <x>236</x>
+     <x>224</x>
      <y>180</y>
      <width>121</width>
      <height>41</height>
@@ -117,7 +117,7 @@ color:white;</string>
   <widget class="QLabel" name="LBL_TimeValue">
    <property name="geometry">
     <rect>
-     <x>438</x>
+     <x>443</x>
      <y>180</y>
      <width>121</width>
      <height>41</height>
@@ -137,7 +137,7 @@ color:white;</string>
   <widget class="QPushButton" name="BTN_DisAdd">
    <property name="geometry">
     <rect>
-     <x>262</x>
+     <x>250</x>
      <y>120</y>
      <width>71</width>
      <height>51</height>
@@ -156,7 +156,7 @@ color:white;</string>
   <widget class="QPushButton" name="BTN_DisSub">
    <property name="geometry">
     <rect>
-     <x>262</x>
+     <x>250</x>
      <y>230</y>
      <width>71</width>
      <height>51</height>
@@ -175,7 +175,7 @@ color:white;</string>
   <widget class="QPushButton" name="BTN_TimeAdd">
    <property name="geometry">
     <rect>
-     <x>464</x>
+     <x>469</x>
      <y>120</y>
      <width>71</width>
      <height>51</height>
@@ -194,7 +194,7 @@ color:white;</string>
   <widget class="QPushButton" name="BTN_TimeSub">
    <property name="geometry">
     <rect>
-     <x>464</x>
+     <x>469</x>
      <y>230</y>
      <width>71</width>
      <height>51</height>
@@ -213,7 +213,7 @@ color:white;</string>
   <widget class="QLabel" name="LBL_DisMAXValue">
    <property name="geometry">
     <rect>
-     <x>244</x>
+     <x>232</x>
      <y>340</y>
      <width>121</width>
      <height>17</height>
@@ -230,7 +230,7 @@ font:14px;</string>
   <widget class="QLabel" name="LBL_DisMINValue">
    <property name="geometry">
     <rect>
-     <x>244</x>
+     <x>232</x>
      <y>380</y>
      <width>121</width>
      <height>17</height>
@@ -247,7 +247,7 @@ font:14px;</string>
   <widget class="QLabel" name="LBL_DisEachValue">
    <property name="geometry">
     <rect>
-     <x>244</x>
+     <x>232</x>
      <y>420</y>
      <width>121</width>
      <height>17</height>
@@ -264,7 +264,7 @@ font:14px;</string>
   <widget class="QLabel" name="LBL_TimeEachValue">
    <property name="geometry">
     <rect>
-     <x>440</x>
+     <x>445</x>
      <y>420</y>
      <width>121</width>
      <height>17</height>
@@ -281,7 +281,7 @@ font:14px;</string>
   <widget class="QLabel" name="LBL_TimeMAXValue">
    <property name="geometry">
     <rect>
-     <x>440</x>
+     <x>445</x>
      <y>340</y>
      <width>121</width>
      <height>17</height>
@@ -298,7 +298,7 @@ font:14px;</string>
   <widget class="QLabel" name="LBL_TimeMINValue">
    <property name="geometry">
     <rect>
-     <x>440</x>
+     <x>445</x>
      <y>380</y>
      <width>121</width>
      <height>17</height>
@@ -310,6 +310,46 @@ font:14px;</string>
    </property>
    <property name="text">
     <string>最小值         10.0s</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_DisReturnValue">
+   <property name="geometry">
+    <rect>
+     <x>322</x>
+     <y>80</y>
+     <width>51</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font:16px;</string>
+   </property>
+   <property name="text">
+    <string>0m</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_TimeReturnValue">
+   <property name="geometry">
+    <rect>
+     <x>542</x>
+     <y>80</y>
+     <width>51</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font:16px;</string>
+   </property>
+   <property name="text">
+    <string>0s</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
    </property>
   </widget>
  </widget>

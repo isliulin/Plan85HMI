@@ -40,29 +40,16 @@ void Settng_HangMode::modePressEvent()
     switch(modeIndex)
     {
     case 1:
-        if(!this->database->data_CCU->M1_D1_B_MESG_BYTE1_BIT5)
-        {
-            this->database->data_CCU->B_TRAILER_MODE = true;
-            this->ui->Button_HangModeActive->setStyleSheet(NButtonDOWN);
-        }else
-        {
-            this->ui->Button_HangModeActive->setStyleSheet(NButtonUP);
-        }
+        this->database->data_CCU->B_TRAILER_MODE = true;
+        this->ui->Button_HangModeActive->setStyleSheet(NButtonDOWN);
         break;
     case 2:
-        if(this->database->data_CCU->M1_D1_B_MESG_BYTE1_BIT5)
-        {
-            this->database->data_CCU->B_TRAILER_MODE = false;
-            this->ui->Button_HangModeCancel->setStyleSheet(NButtonDOWN);
-        }else
-        {
-            this->ui->Button_HangModeCancel->setStyleSheet(NButtonUP);
-        }
+        this->database->data_CCU->B_TRAILER_MODE = false;
+        this->ui->Button_HangModeCancel->setStyleSheet(NButtonDOWN);
         break;
     default:
         break;
     }
-
 }
 
 void Settng_HangMode::setSpeedEvent()
@@ -70,13 +57,9 @@ void Settng_HangMode::setSpeedEvent()
     numValue = ((QPushButton*)this->sender())->text();
     if("数据发送" == numValue)
     {
-        if(this->database->data_CCU->M1_D1_B_MESG_BYTE1_BIT5)
-        {
-            this->database->data_CCU->N_TRAILER_MODE_SPEED = inputValue.toInt();
-        }else
-        {
-            this->database->data_CCU->N_TRAILER_MODE_SPEED = 0;
-        }
+        timer3S = startTimer(3000);
+        this->ui->Button_SendData->setStyleSheet(NButtonDOWN);
+        this->database->data_CCU->N_TRAILER_MODE_SPEED = inputValue.toInt();
 
     }else if("清除" == numValue)
     {
@@ -87,10 +70,15 @@ void Settng_HangMode::setSpeedEvent()
             this->inputValue += numValue;
         }else
         {
-
+            inputValue.clear();
         }
     }
     this->ui->Edit_InputSpeed->setText(this->inputValue);
+}
 
-
+void Settng_HangMode::timerEvent(QTimerEvent *e)
+{
+    killTimer(timer3S);
+    this->database->data_CCU->N_TRAILER_MODE_SPEED = 0;
+    this->ui->Button_SendData->setStyleSheet(NButtonUP);
 }
