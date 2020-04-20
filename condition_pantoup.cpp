@@ -52,7 +52,7 @@ faultString<< "q"<< "a"<< "q"<< "a"<< "q"<< "a";
     {
         this->ui->BTN_Page->hide();
     }
-    else if (curPage = totalPage - 1)
+    else if (curPage == totalPage - 1)
     {
         this->ui->BTN_Page->setText("上一页");
         this->ui->BTN_Page->show();

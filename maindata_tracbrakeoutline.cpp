@@ -12,3 +12,8 @@ MainData_TracBrakeOutline::~MainData_TracBrakeOutline()
 {
     delete ui;
 }
+
+void MainData_TracBrakeOutline::updatePage()
+{
+    //this->database->data_TCN->train[4]->B_CMD_T_CHAR_Z
+}

@@ -14,6 +14,7 @@ class MainData_TracBrakeOutline : public MyBase
 public:
     explicit MainData_TracBrakeOutline(QWidget *parent = 0);
     ~MainData_TracBrakeOutline();
+    void updatePage();
 
 private:
     Ui::MainData_TracBrakeOutline *ui;
