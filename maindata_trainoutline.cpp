@@ -130,6 +130,7 @@ void MainData_TrainOutline::HideAllTrain()
 void MainData_TrainOutline::updateData()
 {
     int curtrain = database->data_CCU->M1_D1_N_UIC_ADDR;
+    int trainmax = database->data_CCU->M1_D1_N_RULOCO_NO;
     QList<bool> dirction,panto,gaoya,zhuduan,parking,traction,brake;
     QList<unsigned short int>kn;
     switch(trainmax)
