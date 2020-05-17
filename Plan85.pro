@@ -299,8 +299,8 @@ FORMS    += widget.ui \
     widgets/ctrlspeedometer.ui \
     unity_brake.ui \
     widgets/ctrlkpadiagram.ui \
-    widgets/ctrlflowdiagram.ui
-    maindata_tracbrakeoutline.ui \
+    widgets/ctrlflowdiagram.ui\
+    maindata_tracbrakeoutline.ui
 
 
 
