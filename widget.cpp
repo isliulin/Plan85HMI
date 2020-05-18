@@ -347,10 +347,9 @@ void Widget::showEvent(QShowEvent *)
             }
 
             //source
-            CrrcMvb::getCrrcMvb()->addSourcePort(0x710,MVB_FCode4,32);
-            CrrcMvb::getCrrcMvb()->addSourcePort(0x711,MVB_FCode4,128);
-            CrrcMvb::getCrrcMvb()->addSourcePort(0x712,MVB_FCode4,128);
-            CrrcMvb::getCrrcMvb()->addSourcePort(0x713,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSourcePort(0x300,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSourcePort(0x301,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSourcePort(0x302,MVB_FCode4,128);
 
             //sink
             //acu
@@ -379,9 +378,11 @@ void Widget::showEvent(QShowEvent *)
             CrrcMvb::getCrrcMvb()->addSinkPort(0x229,MVB_FCode4,512);
 
             //ddu
-            CrrcMvb::getCrrcMvb()->addSinkPort(0x300,MVB_FCode4,128);
-            CrrcMvb::getCrrcMvb()->addSinkPort(0x301,MVB_FCode4,128);
-            CrrcMvb::getCrrcMvb()->addSinkPort(0x302,MVB_FCode4,128);
+
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x710,MVB_FCode4,32);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x711,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x712,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x713,MVB_FCode4,128);
 
             //cmd
             CrrcMvb::getCrrcMvb()->addSinkPort(0x310,MVB_FCode4,128);
