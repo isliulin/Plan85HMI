@@ -94,10 +94,44 @@ void VehicleRunStatePage::updatePage()
     t_status<<(database->data_TCN->TrainLocal->B_CMD_MSCT_T)<<(database->data_TCN->TrainLocal->B_CMD_MSCT_B)<<true;
     setLBLpic(ui->LBLC14,t_status,t_style);
 
-//    //常用制动状态
-//    t_style<<CHANGYONGZHIDONGSHIJIA<<CHANGYONGZHIDONGGELI<<CHANGYONGZHIDONGHUANJIE<<NULLIMAGE;
-//    t_status<<(database->data_TCN->TrainLocal->B_CMD_MSCT_T)<<(database->data_TCN->TrainLocal->B_CMD_MSCT_B)<<true;
-//    setLBLpic(ui->LBLC14,t_status,t_style);
+    //空转
+    t_style<<KONGZHUAN<<HUAXING<<NULLIMAGE;
+    t_status<<(database->data_CCU->M1_D1_B_RACING)<<(database->data_CCU->M1_D1_B_SLIP)<<true;
+    setLBLpic(ui->LBLC15,t_status,t_style);
+
+    //停放制动
+    t_style<<TINGFANGZHIDONGGELI<<TINGFANGZHIDONGSHIJIA<<TINGFANGZHIDONGHUANJIE<<NULLIMAGE;
+    t_status<<(database->data_TCN->TrainLocal->B_STATE_PARK_BRK_I)<<(database->data_TCN->TrainLocal->B_STATE_PARK_BRK_ON)
+           <<(database->data_TCN->TrainLocal->B_STATE_PARK_BRK_REL)<<true;
+    setLBLpic(ui->LBLC25,t_status,t_style);
+
+    //撒沙
+    t_style<<SASHA<<NULLIMAGE;
+    t_status<<(database->data_CCU->M1_D1_B_SANDING)<<true;
+    setLBLpic(ui->LBLC16,t_status,t_style);
+
+    //紧急制动 惩罚制动
+    t_style<<CHENGFAZHIDONG<<JINJIZHIDONG<<NULLIMAGE;
+    t_status<<(database->data_TCN->TrainLocal->B_STATE_PENALTY_ON)<<(database->data_TCN->TrainLocal->B_STATE_EMG_BRK_ON)<<true;
+    setLBLpic(ui->LBLC26,t_status,t_style);
+
+    //定速
+    t_style<<DINGSUMOSHI<<NULLIMAGE;
+    t_status<<(database->data_CCU->M1_D1_B_SPEED_CTL)<<true;
+    setLBLpic(ui->LBLC19,t_status,t_style);
+
+    //常用制动状态
+    t_style<<CHANGYONGZHIDONGGELI<<CHANGYONGZHIDONGSHIJIA<<CHANGYONGZHIDONGHUANJIE;
+    t_status<<(database->data_TCN->train[0]->B_STATE_AIR_BRK1_I || database->data_TCN->train[1]->B_STATE_AIR_BRK1_I ||
+               database->data_TCN->train[2]->B_STATE_AIR_BRK1_I ||database->data_TCN->train[3]->B_STATE_AIR_BRK1_I||
+               database->data_TCN->train[0]->B_STATE_AIR_BRK2_I || database->data_TCN->train[1]->B_STATE_AIR_BRK2_I ||
+               database->data_TCN->train[2]->B_STATE_AIR_BRK2_I ||database->data_TCN->train[3]->B_STATE_AIR_BRK2_I)
+            <<(database->data_TCN->train[0]->B_STATE_AIR_BRK1_ON || database->data_TCN->train[1]->B_STATE_AIR_BRK1_ON ||
+               database->data_TCN->train[2]->B_STATE_AIR_BRK1_ON ||database->data_TCN->train[3]->B_STATE_AIR_BRK1_ON ||
+               database->data_TCN->train[0]->B_STATE_AIR_BRK2_ON || database->data_TCN->train[1]->B_STATE_AIR_BRK2_ON ||
+               database->data_TCN->train[2]->B_STATE_AIR_BRK2_ON ||database->data_TCN->train[3]->B_STATE_AIR_BRK2_ON)
+            <<true;
+    setLBLpic(ui->LBLC24,t_status,t_style);
 
 
 }
