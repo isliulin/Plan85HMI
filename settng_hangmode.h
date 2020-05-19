@@ -16,6 +16,7 @@ public:
     explicit Settng_HangMode(QWidget *parent = 0);
     ~Settng_HangMode();
     void updatePage();
+    void timerEvent(QTimerEvent *e);
 
 private slots:
     void modePressEvent();
@@ -24,7 +25,7 @@ private slots:
 private:
     Ui::Settng_HangMode *ui;
     QList<QPushButton* > ModebuttonList,NumbuttonList;
-    int modeIndex;
+    int modeIndex,timer3S;
     QString numValue,inputValue;
 };
 

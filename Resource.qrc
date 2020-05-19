@@ -1,8 +1,6 @@
 <RCC>
     <qresource prefix="/images">
-        <file>images/TrainLogo.png</file>
         <file>images/HSCutout.png</file>
-        <file>images/pantoNormal.png</file>
         <file>images/Cheti.png</file>
         <file>images/chengfazhidong.png</file>
         <file>images/cheti.png</file>
@@ -48,5 +46,13 @@
         <file>images/Cheti-reverse.png</file>
         <file>images/left.png</file>
         <file>images/right.png</file>
+        <file>images/Active.png</file>
+        <file>images/HSClose.png</file>
+        <file>images/pantoSetISO.png</file>
+        <file>images/pantoSetDOWN.png</file>
+        <file>images/pantoSetUP.png</file>
+        <file>images/HandCut.png</file>
+        <file>images/TrainLogo.png</file>
+        <file>images/TrainLogo-reverse.png</file>
     </qresource>
 </RCC>

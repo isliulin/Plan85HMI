@@ -35,18 +35,12 @@ void Settng_Others::updatePage()
     if(this->database->data_CCU->M1_D1_B_NORMAL_MODE)
     {
         this->ui->LBL_Tips2->setText("当前模式：普通模式");
-        this->ui->BTN_NormalMode->setStyleSheet(NButtonDOWN);
-        this->ui->BTN_SummerMode->setStyleSheet(NButtonUP);
     }else if(this->database->data_CCU->M1_D1_B_SUMMER_MODE)
     {
         this->ui->LBL_Tips2->setText("当前模式：夏季模式");
-        this->ui->BTN_NormalMode->setStyleSheet(NButtonUP);
-        this->ui->BTN_SummerMode->setStyleSheet(NButtonDOWN);
     }else
     {
         this->ui->LBL_Tips2->setText("当前模式：～模式");
-        this->ui->BTN_NormalMode->setStyleSheet(NButtonUP);
-        this->ui->BTN_SummerMode->setStyleSheet(NButtonUP);
     }
     //牵引吨位
     this->ui->LBL_WeightValue->setText(QString::number(this->database->data_CCU->M1_D1_N_LOAD));
@@ -60,15 +54,16 @@ void Settng_Others::modePressEvent()
     {
     case 1:
         this->database->data_CCU->B_NORMAL_MODE = true;
-        this->database->data_CCU->B_SUMMER_MODE = false;
+        timerNorMode = startTimer(3000);
+        this->ui->BTN_NormalMode->setStyleSheet(NButtonDOWN);
         break;
     case 2:
-        this->database->data_CCU->B_NORMAL_MODE = false;
         this->database->data_CCU->B_SUMMER_MODE = true;
+        timerSumMode = startTimer(3000);
+        this->ui->BTN_SummerMode->setStyleSheet(NButtonDOWN);
     default:
         break;
     }
-
 }
 
 void Settng_Others::setWeightEvent()
@@ -90,7 +85,7 @@ void Settng_Others::setWeightEvent()
             this->inputValue += numValue;
         }else
         {
-
+            this->inputValue.clear();
         }
     }
     this->ui->Edit_InputWeight->setText(this->inputValue);
@@ -105,6 +100,21 @@ void Settng_Others::timerEvent(QTimerEvent *e)
         this->ui->Button_Save->setStyleSheet(NButtonUP);
         this->database->data_CCU->N_LOAD = 0;
         this->database->data_CCU->B_LOAD_SET = false;
+        timerSave = 0;
+    }
+    if(timerNorMode == e->timerId())
+    {
+        killTimer(timerNorMode);
+        this->database->data_CCU->B_NORMAL_MODE = false;
+        this->ui->BTN_NormalMode->setStyleSheet(NButtonUP);
+        timerNorMode = 0;
+    }
+    if(timerSumMode == e->timerId())
+    {
+        killTimer(timerSumMode);
+        this->database->data_CCU->B_SUMMER_MODE = false;
+        this->ui->BTN_SummerMode->setStyleSheet(NButtonUP);
+        timerSumMode = 0;
     }
 }
 

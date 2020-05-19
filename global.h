@@ -4,6 +4,14 @@
 #define NButtonUP    "font: 16px;color: rgb(192,192,192);background-color: rgb(0, 0, 0);border-top: 2px solid white;border-left: 2px solid white;"
 #define NButtonDOWN  "font: 16px;color: rgb(0, 0, 0);background-color: rgb(240, 240, 0);border-bottom: 2px solid white;border-right: 2px solid white;"
 
+#define BYPASSDOWN "font: 16px;color: rgb(255,255,255);background-color: rgb(0, 0, 240);border:1px solid white;"
+#define BYPASSUP "font: 16px;color: rgb(255,255,255);background-color: rgb(140, 140, 140);border:1px solid white;"
+
+#define TRAINDOWNL "border:1px solid white;image: url(:/images/images/TrainLogo.png);background-color:black;"
+#define TRAINUPL "border:1px solid white;image: url(:/images/images/Cheti.png);background-color:black;"
+#define TRAINDOWNR "border:1px solid white;image: url(:/images/images/TrainLogo-reverse.png);background-color:black;"
+#define TRAINUPR "border:1px solid white;image: url(:/images/images/Cheti-reverse.png);background-color:black;"
+
 //#define WINDOWS_MODE
 #define QT_VERSION_5_6
 
@@ -51,6 +59,9 @@
 #define	JINGTIZHUANGZHIZHENGCHANG	"image: url(:/images/images/jingtizhengchang.png);"
 #define	JINGTIZHUANGZHIGELI	"image: url(:/images/images/jingtigeli.png);"
 #define	NULLIMAGE	"background-color:rgb(0,0,0);border:1px solid lightgray;"
+#define PANTOSETDOWN "image: url(:/images/images/pantoSetDOWN.png);"
+#define PANTOSETUP "image: url(:/images/images/pantoSetUP.png);"
+#define PANTOSETISO "image: url(:/images/images/pantoSetISO.png);"
 
 
 #include <stdlib.h>

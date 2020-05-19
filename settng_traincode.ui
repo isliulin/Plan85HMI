@@ -20,10 +20,17 @@ background-color:black;
 }
 QPushButton
 {
-background-color:black;
-color:white;
-border:1px solid white;
-font:14px;
+font: 16px;
+color: rgb(192,192,192);
+background-color: rgb(0, 0, 0);
+border-top: 2px solid white;
+border-left: 2px solid white;
+
+}
+QLineEdit
+{
+color:black;
+background-color:white;
 }</string>
   </property>
   <widget class="QPushButton" name="Button_CurrentCarNum">
@@ -34,6 +41,16 @@ font:14px;
      <width>91</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 16px;
+color: rgb(192,192,192);
+background-color: rgb(0, 0, 0);
+border-top: 2px solid white;
+border-left: 2px solid white;</string>
    </property>
    <property name="text">
     <string>本车车号</string>
@@ -47,6 +64,16 @@ font:14px;
      <width>91</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 16px;
+color: rgb(192,192,192);
+background-color: rgb(0, 0, 0);
+border-top: 2px solid white;
+border-left: 2px solid white;</string>
    </property>
    <property name="text">
     <string>它车车号</string>
@@ -340,9 +367,9 @@ font:14px;</string>
   <widget class="QLineEdit" name="Edit_InputCarNum">
    <property name="geometry">
     <rect>
-     <x>193</x>
+     <x>191</x>
      <y>230</y>
-     <width>141</width>
+     <width>154</width>
      <height>41</height>
     </rect>
    </property>
@@ -355,6 +382,16 @@ font:14px;</string>
      <width>99</width>
      <height>35</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 16px;
+color: rgb(192,192,192);
+background-color: rgb(0, 0, 0);
+border-top: 2px solid white;
+border-left: 2px solid white;</string>
    </property>
    <property name="text">
     <string>本车设置</string>
@@ -369,6 +406,16 @@ font:14px;</string>
      <height>35</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 16px;
+color: rgb(192,192,192);
+background-color: rgb(0, 0, 0);
+border-top: 2px solid white;
+border-left: 2px solid white;</string>
+   </property>
    <property name="text">
     <string>它车设置</string>
    </property>
@@ -381,6 +428,9 @@ font:14px;</string>
      <width>111</width>
      <height>50</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="text">
     <string>清除</string>

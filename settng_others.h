@@ -24,7 +24,7 @@ private slots:
 private:
     Ui::Settng_Others *ui;
     QList<QPushButton* > ModebuttonList,NumbuttonList;
-    int modeIndex,timerSave;
+    int modeIndex,timerSave,timerNorMode,timerSumMode;
     QString numValue,inputValue;
 };
 

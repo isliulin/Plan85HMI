@@ -16,14 +16,15 @@ public:
     explicit Settng_Separation(QWidget *parent = 0);
     ~Settng_Separation();
     void updatePage();
+    void timerEvent(QTimerEvent* e);
 
 private slots:
     void modePressEvent();
-
 private:
     Ui::Settng_Separation *ui;
     QList<QPushButton*> modeButtonList;
-    int modeIndex;
+    int modeIndex,timerNormal,timerFreight,count;
+    bool flag;
 };
 
 #endif // SETTNG_SEPARATION_H
