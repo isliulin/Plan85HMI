@@ -27,6 +27,8 @@ private slots:
 private:
     Ui::Settng_Panto *ui;
     QList<QPushButton*> TrainList;
+    QList<QString> t_style;
+    QList<bool> t_status1,t_status2,t_status3,t_status4;
     void show1Train();
     void show2Train();
     void show4Train();

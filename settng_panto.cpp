@@ -1,11 +1,6 @@
 #include "settng_panto.h"
 #include "ui_settng_panto.h"
 
-#define TRAINDOWNL "border:1px solid white;image: url(:/images/images/TrainLogo.png);"
-#define TRAINUPL "border:1px solid white;image: url(:/images/images/Cheti.png);"
-#define TRAINDOWNR "border:1px solid white;image: url(:/images/images/TrainLogo-reverse.png);"
-#define TRAINUPR "border:1px solid white;image: url(:/images/images/Cheti-reverse.png);"
-
 #define HSOPEN "border-image: url(:/images/images/HSCutout.png);"
 #define HSCLOSE "border-image: url(:/images/images/HSClose.png);"
 
@@ -21,6 +16,13 @@ Settng_Panto::Settng_Panto(QWidget *parent) :
         connect(button,SIGNAL(pressed()),this,SLOT(TrainSelectEvent()));
     }
     hideAllTrain();
+
+    t_style<<PANTOSETDOWN<<PANTOSETUP<<PANTOSETISO;
+    t_status1<<database->data_TCN->train[0]->B_STATE_PANTO_RD<<database->data_TCN->train[0]->B_STATE_PANTO_DN<<database->data_TCN->train[0]->B_STATE_PANTO_ISO;
+    t_status2<<database->data_TCN->train[1]->B_STATE_PANTO_RD<<database->data_TCN->train[1]->B_STATE_PANTO_DN<<database->data_TCN->train[1]->B_STATE_PANTO_ISO;
+    t_status3<<database->data_TCN->train[2]->B_STATE_PANTO_RD<<database->data_TCN->train[2]->B_STATE_PANTO_DN<<database->data_TCN->train[2]->B_STATE_PANTO_ISO;
+    t_status4<<database->data_TCN->train[3]->B_STATE_PANTO_RD<<database->data_TCN->train[3]->B_STATE_PANTO_DN<<database->data_TCN->train[3]->B_STATE_PANTO_ISO;
+
 }
 
 Settng_Panto::~Settng_Panto()
@@ -37,6 +39,7 @@ void Settng_Panto::updatePage()
         HSstate(this->ui->LBL_2HS1,this->database->data_TCN->train[0]->B_STATE_QS_HV1_OFF,this->database->data_TCN->train[0]->B_STATE_QS_HV1_ON);
         this->ui->LBL_Train1Num->setText("HXD2  "+QString::number(this->database->data_TCN->train[0]->N_LOCO_NO,16));
         Active(this->ui->LBL_2Active1,this->database->data_TCN->train[0]->B_STATE_CAB_ACT);
+        setLBLpic(this->ui->LBL_2PANTO1,t_status1,t_style);
         break;
     case 1:
         show2Train();
@@ -46,6 +49,8 @@ void Settng_Panto::updatePage()
         this->ui->LBL_Train2Num->setText("HXD2  "+QString::number(this->database->data_TCN->train[1]->N_LOCO_NO,16));
         Active(this->ui->LBL_2Active1,this->database->data_TCN->train[0]->B_STATE_CAB_ACT);
         Active(this->ui->LBL_2Active2,this->database->data_TCN->train[1]->B_STATE_CAB_ACT);
+        setLBLpic(this->ui->LBL_2PANTO1,t_status1,t_style);
+        setLBLpic(this->ui->LBL_2PANTO2,t_status2,t_style);
         break;
     case 2:
         show3Train();
@@ -58,6 +63,9 @@ void Settng_Panto::updatePage()
         Active(this->ui->LBL_4Active1,this->database->data_TCN->train[0]->B_STATE_CAB_ACT);
         Active(this->ui->LBL_4Active2,this->database->data_TCN->train[1]->B_STATE_CAB_ACT);
         Active(this->ui->LBL_4Active3,this->database->data_TCN->train[2]->B_STATE_CAB_ACT);
+        setLBLpic(this->ui->LBL_4PANTO1,t_status1,t_style);
+        setLBLpic(this->ui->LBL_4PANTO2,t_status2,t_style);
+        setLBLpic(this->ui->LBL_4PANTO3,t_status3,t_style);
         break;
     case 3:
         show4Train();
@@ -73,6 +81,10 @@ void Settng_Panto::updatePage()
         Active(this->ui->LBL_4Active2,this->database->data_TCN->train[1]->B_STATE_CAB_ACT);
         Active(this->ui->LBL_4Active3,this->database->data_TCN->train[2]->B_STATE_CAB_ACT);
         Active(this->ui->LBL_4Active4,this->database->data_TCN->train[3]->B_STATE_CAB_ACT);
+        setLBLpic(this->ui->LBL_4PANTO1,t_status1,t_style);
+        setLBLpic(this->ui->LBL_4PANTO2,t_status2,t_style);
+        setLBLpic(this->ui->LBL_4PANTO3,t_status3,t_style);
+        setLBLpic(this->ui->LBL_4PANTO4,t_status4,t_style);
         break;
     default:
         break;

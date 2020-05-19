@@ -19,42 +19,52 @@ void Data_TCN::updateData(bool TCN1Master,bool TCN2Master)
         CrrcMvb::getCrrcMvb()->copyPort(0xfe11,0xe11);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe12,0xe12);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe13,0xe13);
+        CrrcMvb::getCrrcMvb()->copyPort(0xfe14,0xe14);
 
         CrrcMvb::getCrrcMvb()->copyPort(0xfe20,0xe20);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe21,0xe21);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe22,0xe22);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe23,0xe23);
+        CrrcMvb::getCrrcMvb()->copyPort(0xfe24,0xe24);
 
         CrrcMvb::getCrrcMvb()->copyPort(0xfe30,0xe30);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe31,0xe31);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe32,0xe32);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe33,0xe33);
+        CrrcMvb::getCrrcMvb()->copyPort(0xfe34,0xe34);
 
         CrrcMvb::getCrrcMvb()->copyPort(0xfe40,0xe40);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe41,0xe41);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe42,0xe42);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe43,0xe43);
+        CrrcMvb::getCrrcMvb()->copyPort(0xfe44,0xe44);
+
     }else if(TCN2Master)
     {
         CrrcMvb::getCrrcMvb()->copyPort(0xfe10,0xf10);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe11,0xf11);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe12,0xf12);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe13,0xf13);
+        CrrcMvb::getCrrcMvb()->copyPort(0xfe14,0xf14);
 
         CrrcMvb::getCrrcMvb()->copyPort(0xfe20,0xf20);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe21,0xf21);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe22,0xf22);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe23,0xf23);
+        CrrcMvb::getCrrcMvb()->copyPort(0xfe24,0xf24);
 
         CrrcMvb::getCrrcMvb()->copyPort(0xfe30,0xf30);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe31,0xf31);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe32,0xf32);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe33,0xf33);
+        CrrcMvb::getCrrcMvb()->copyPort(0xfe34,0xf34);
 
         CrrcMvb::getCrrcMvb()->copyPort(0xfe40,0xf40);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe41,0xf41);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe42,0xf42);
         CrrcMvb::getCrrcMvb()->copyPort(0xfe43,0xf43);
+        CrrcMvb::getCrrcMvb()->copyPort(0xfe44,0xf44);
+
     }else
     {
 
@@ -104,11 +114,42 @@ void Data_TCN::updateData(bool TCN1Master,bool TCN2Master)
 
     }
 
+    switch (CrrcMvb::getCrrcMvb()->getUnsignedChar(0xfe14,1))
+    {
+    case 1:
+        CrrcMvb::getCrrcMvb()->copyPort(0xf114,0xfe14);//对tcn1-4分别copy数据
+        CrrcMvb::getCrrcMvb()->copyPort(0xf124,0xfe24);
+        CrrcMvb::getCrrcMvb()->copyPort(0xf134,0xfe34);
+        CrrcMvb::getCrrcMvb()->copyPort(0xf144,0xfe44);
+        break;
+    case 2:
+        CrrcMvb::getCrrcMvb()->copyPort(0xf214,0xfe12);//对tcn1-4分别copy数据
+        CrrcMvb::getCrrcMvb()->copyPort(0xf224,0xfe22);
+        CrrcMvb::getCrrcMvb()->copyPort(0xf234,0xfe32);
+        CrrcMvb::getCrrcMvb()->copyPort(0xf244,0xfe42);
+        break;
+    case 3:
+        CrrcMvb::getCrrcMvb()->copyPort(0xf314,0xfe12);//对tcn1-4分别copy数据
+        CrrcMvb::getCrrcMvb()->copyPort(0xf324,0xfe22);
+        CrrcMvb::getCrrcMvb()->copyPort(0xf334,0xfe32);
+        CrrcMvb::getCrrcMvb()->copyPort(0xf344,0xfe42);
+        break;
+    case 4:
+        CrrcMvb::getCrrcMvb()->copyPort(0xf414,0xfe12);//对tcn1-4分别copy数据
+        CrrcMvb::getCrrcMvb()->copyPort(0xf424,0xfe22);
+        CrrcMvb::getCrrcMvb()->copyPort(0xf434,0xfe32);
+        CrrcMvb::getCrrcMvb()->copyPort(0xf444,0xfe42);
+        break;
+    default:
+        // clear??
+        break;
+    }
+
     QList<int > t_train1portlist,t_train2portlist,t_train3portlist,t_train4portlist;
-    t_train1portlist<<0xfe10<<0xfe11<<0xf112<<0xf212<<0xf312<<0xf412<<0xf512<<0xf612<<0xfe13;
-    t_train2portlist<<0xfe20<<0xfe21<<0xf122<<0xf222<<0xf322<<0xf422<<0xf522<<0xf622<<0xfe23;
-    t_train3portlist<<0xfe30<<0xfe31<<0xf132<<0xf232<<0xf332<<0xf432<<0xf532<<0xf632<<0xfe33;
-    t_train4portlist<<0xfe40<<0xfe41<<0xf142<<0xf242<<0xf342<<0xf442<<0xf542<<0xf642<<0xfe43;
+    t_train1portlist<<0xfe10<<0xfe11<<0xf112<<0xf212<<0xf312<<0xf412<<0xf512<<0xf612<<0xfe13<<0xf114<<0xf214<<0xf314<<0xf414;
+    t_train2portlist<<0xfe20<<0xfe21<<0xf122<<0xf222<<0xf322<<0xf422<<0xf522<<0xf622<<0xfe23<<0xf124<<0xf224<<0xf324<<0xf424;
+    t_train3portlist<<0xfe30<<0xfe31<<0xf132<<0xf232<<0xf332<<0xf432<<0xf532<<0xf632<<0xfe33<<0xf134<<0xf234<<0xf334<<0xf434;
+    t_train4portlist<<0xfe40<<0xfe41<<0xf142<<0xf242<<0xf342<<0xf442<<0xf542<<0xf642<<0xfe43<<0xf144<<0xf244<<0xf344<<0xf444;
 
     QList<QList<int >>t_portlist;
     t_portlist<<t_train1portlist<<t_train2portlist<<t_train3portlist<<t_train4portlist;
@@ -507,11 +548,46 @@ void Data_TCN::updateData(bool TCN1Master,bool TCN2Master)
        train[i]->B_NSC_DISTANCE2 = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(8),24,2);//货运专线过分相：265m模式
        train[i]->B_Trailer_mode = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(8),24,3);//挂车模式
 
+       train[i]->FAULT_COV1_ISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),8,2);
+       train[i]->FAULT_COV2_ISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),8,3);
+       train[i]->FAULT_COV3_ISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),8,4);
+       train[i]->FAULT_COV4_ISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),8,5);
+       train[i]->FAULT_INV1_ISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),9,2);
+       train[i]->FAULT_INV2_ISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),9,3);
+       train[i]->FAULT_INV3_ISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),9,4);
+       train[i]->FAULT_INV4_ISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),9,5);
+       train[i]->FAULT_ACU1_ISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),10,2);
+       train[i]->FAULT_ACU2_ISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),10,3);
+
+       train[i]->FAULT_COV1_HISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),8,6);
+       train[i]->FAULT_COV2_HISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),8,7);
+       train[i]->FAULT_COV3_HISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),9,0);
+       train[i]->FAULT_COV4_HISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),9,1);
+       train[i]->FAULT_INV1_HISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),9,6);
+       train[i]->FAULT_INV2_HISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),9,7);
+       train[i]->FAULT_INV3_HISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),10,0);
+       train[i]->FAULT_INV4_HISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),10,1);
+       train[i]->FAULT_ACU1_HISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),10,4);
+       train[i]->FAULT_ACU2_HISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),10,5);
+
+       train[i]->FAULT_DEADMAN_ISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),11,2);
+       train[i]->FAULT_DLZD_ISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),10,6);
+       train[i]->FAULT_DLZD_HISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),10,7);
+       train[i]->FAULT_KYJ_HISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),11,1);
+       train[i]->FAULT_LUBRA_ISO = CrrcMvb::getCrrcMvb()->getBool(t_portlist.at(i).at(9),14,2);
+
+       train[i]->BOGIE1ISO = (train[i]->FAULT_COV1_ISO && train[i]->FAULT_COV2_ISO && train[i]->FAULT_INV1_ISO && train[i]->FAULT_INV2_ISO && train[i]->FAULT_ACU1_ISO);
+       train[i]->BOGIE2ISO = (train[i]->FAULT_COV3_ISO && train[i]->FAULT_COV4_ISO && train[i]->FAULT_INV3_ISO && train[i]->FAULT_INV4_ISO && train[i]->FAULT_ACU2_ISO);
+
+       train[i]->BOGIE1HISO = (train[i]->FAULT_COV1_HISO && train[i]->FAULT_COV2_HISO && train[i]->FAULT_INV1_HISO && train[i]->FAULT_INV2_HISO && train[i]->FAULT_ACU1_HISO);
+       train[i]->BOGIE2HISO = (train[i]->FAULT_COV3_HISO && train[i]->FAULT_COV4_HISO && train[i]->FAULT_INV3_HISO && train[i]->FAULT_INV4_HISO && train[i]->FAULT_ACU2_HISO);
+
+
     }
 
     //MPU->GW
     QList<int > t_trainlocalportlist;
-    t_trainlocalportlist<<0x700<<0x701<<0x1702<<0x2702<<0x3702<<0x4702<<0x5702<<0x6702<<0x703;
+    t_trainlocalportlist<<0x700<<0x701<<0x1702<<0x2702<<0x3702<<0x4702<<0x5702<<0x6702<<0x703<<0x1704<<0x2704<<0x3704<<0x4704;
     //对分时标志位做判断
     switch (CrrcMvb::getCrrcMvb()->getUnsignedChar(0x702,0))
     {
@@ -532,6 +608,26 @@ void Data_TCN::updateData(bool TCN1Master,bool TCN2Master)
         break;
     case 6:
         CrrcMvb::getCrrcMvb()->copyPort(0x6702,0x702);//对virtual port 分别copy数据
+        break;
+    default:
+        // clear??
+        break;
+
+    }
+
+    switch (CrrcMvb::getCrrcMvb()->getUnsignedChar(0x704,1))
+    {
+    case 1:
+        CrrcMvb::getCrrcMvb()->copyPort(0x1704,0x704);//对virtual port 分别copy数据
+        break;
+    case 2:
+        CrrcMvb::getCrrcMvb()->copyPort(0x2704,0x704);//对virtual port 分别copy数据
+        break;
+    case 3:
+        CrrcMvb::getCrrcMvb()->copyPort(0x3704,0x704);//对virtual port 分别copy数据
+        break;
+    case 4:
+        CrrcMvb::getCrrcMvb()->copyPort(0x4704,0x704);//对virtual port 分别copy数据
         break;
     default:
         // clear??
@@ -931,6 +1027,40 @@ void Data_TCN::updateData(bool TCN1Master,bool TCN2Master)
        TrainLocal->B_NSC_DISTANCE1 = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(8),24,1);//常规线路过分相：170m模式
        TrainLocal->B_NSC_DISTANCE2 = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(8),24,2);//货运专线过分相：265m模式
        TrainLocal->B_Trailer_mode = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(8),24,3);//挂车模式
+
+       TrainLocal->FAULT_COV1_ISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),8,2);
+       TrainLocal->FAULT_COV2_ISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),8,3);
+       TrainLocal->FAULT_COV3_ISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),8,4);
+       TrainLocal->FAULT_COV4_ISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),8,5);
+       TrainLocal->FAULT_INV1_ISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),9,2);
+       TrainLocal->FAULT_INV2_ISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),9,3);
+       TrainLocal->FAULT_INV3_ISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),9,4);
+       TrainLocal->FAULT_INV4_ISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),9,5);
+       TrainLocal->FAULT_ACU1_ISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),10,2);
+       TrainLocal->FAULT_ACU2_ISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),10,3);
+
+       TrainLocal->FAULT_COV1_HISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),8,6);
+       TrainLocal->FAULT_COV2_HISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),8,7);
+       TrainLocal->FAULT_COV3_HISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),9,0);
+       TrainLocal->FAULT_COV4_HISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),9,1);
+       TrainLocal->FAULT_INV1_HISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),9,6);
+       TrainLocal->FAULT_INV2_HISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),9,7);
+       TrainLocal->FAULT_INV3_HISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),10,0);
+       TrainLocal->FAULT_INV4_HISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),10,1);
+       TrainLocal->FAULT_ACU1_HISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),10,4);
+       TrainLocal->FAULT_ACU2_HISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),10,5);
+
+       TrainLocal->FAULT_DEADMAN_ISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),11,2);
+       TrainLocal->FAULT_DLZD_ISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),10,6);
+       TrainLocal->FAULT_DLZD_HISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),10,7);
+       TrainLocal->FAULT_KYJ_HISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),11,1);
+       TrainLocal->FAULT_LUBRA_ISO = CrrcMvb::getCrrcMvb()->getBool(t_trainlocalportlist.at(9),14,2);
+
+       TrainLocal->BOGIE1ISO = (TrainLocal->FAULT_COV1_ISO && TrainLocal->FAULT_COV2_ISO && TrainLocal->FAULT_INV1_ISO && TrainLocal->FAULT_INV2_ISO && TrainLocal->FAULT_ACU1_ISO);
+       TrainLocal->BOGIE2ISO = (TrainLocal->FAULT_COV3_ISO && TrainLocal->FAULT_COV4_ISO && TrainLocal->FAULT_INV3_ISO && TrainLocal->FAULT_INV4_ISO && TrainLocal->FAULT_ACU2_ISO);
+
+       TrainLocal->BOGIE1HISO = (TrainLocal->FAULT_COV1_HISO && TrainLocal->FAULT_COV2_HISO && TrainLocal->FAULT_INV1_HISO && TrainLocal->FAULT_INV2_HISO && TrainLocal->FAULT_ACU1_HISO);
+       TrainLocal->BOGIE2HISO = (TrainLocal->FAULT_COV3_HISO && TrainLocal->FAULT_COV4_HISO && TrainLocal->FAULT_INV3_HISO && TrainLocal->FAULT_INV4_HISO && TrainLocal->FAULT_ACU2_HISO);
 
     }
 
