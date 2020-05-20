@@ -1,5 +1,6 @@
 #ifndef MAIN_SEPARATION_H
 #define MAIN_SEPARATION_H
+#include "widgets/ctrlnumbertable.h"
 
 #include <QWidget>
 #include "mybase.h"
@@ -15,6 +16,10 @@ class Main_Separation : public MyBase
 public:
     explicit Main_Separation(QWidget *parent = 0);
     ~Main_Separation();
+    CtrlNumberTable* ctrlNumberTable;
+    static QString separationNumber;
+    void updatePage();
+
 
 private:
     Ui::Main_Separation *ui;

@@ -9,6 +9,7 @@
 #include "crrcmvb.h"
 #include "crrcfault.h"
 #include "simulation.h"
+#include "widgets/ctrlnumbertable.h"
 #ifdef QT_VERSION_5_6
 #include "qdesktopwidget.h"
 #endif
@@ -292,6 +293,7 @@ void Widget::changePage(int page)
             this->header->setPageName(this->widgets[page]->name);
 
             _LOG << "change page to" << this->widgets[page]->name;
+            CtrlNumberTable::numbers="";
         }
         else
         {
