@@ -256,7 +256,7 @@ font:10px;</string>
      <x>50</x>
      <y>30</y>
      <width>51</width>
-     <height>320</height>
+     <height>322</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -408,7 +408,7 @@ font:10px;</string>
      <x>105</x>
      <y>30</y>
      <width>51</width>
-     <height>320</height>
+     <height>322</height>
     </rect>
    </property>
    <property name="styleSheet">

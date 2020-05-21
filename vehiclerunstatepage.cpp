@@ -1,6 +1,6 @@
 #include "vehiclerunstatepage.h"
 #include "ui_vehiclerunstatepage.h"
-
+#include "crrcfault.h"
 #define FAULTLEVEL1 "background-color:rgb(240,0,0);color:black;border:transparent;"
 #define FAULTLEVEL2 "background-color:rgb(240,240,0);color:black;border:transparent;"
 #define FAULTLEVEL3 "background-color:rgb(0,0,0);color:rgb(248,248,248);border:transparent;"
@@ -23,6 +23,12 @@ VehicleRunStatePage::VehicleRunStatePage(QWidget *parent) :
     ctrlTracBrake = new CtrlTracBrake(this);
     ctrlTracBrake->setGeometry(365,10,this->ctrlTracBrake->width(),this->ctrlTracBrake->height());
 
+    timer3s = new QTimer();
+    connect(timer3s,SIGNAL(timeout()),this,SLOT(timer3sEvent()));
+
+    FirstFaultIndex = 0;
+    labellist<<ui->LBLFault1<<ui->LBLFault2<<ui->LBLFault3<<ui->LBLFault4<<ui->LBLFault5<<ui->LBLFault6<<ui->LBLFault7;
+
 }
 
 VehicleRunStatePage::~VehicleRunStatePage()
@@ -35,12 +41,14 @@ void VehicleRunStatePage::updatePage()
     ui->LBLFault1->setStyleSheet(FAULTLEVEL1);
     ui->LBLFault2->setStyleSheet(FAULTLEVEL2);
     ui->LBLFault3->setStyleSheet(FAULTLEVEL3);
-    static int i   = 0;
-    i +=10;
-    ctrlNetVoltage->setCtrlValueRect(i/10);
-    ctrlNetCurrent->setCtrlValueRect(i);
-    ctrlControlVoltage->setCtrlValueRect(i,i);
-    ctrlTracBrake->setCtrlValueRect(i/10,i/10%2,i/10%3);
+
+
+    ctrlNetVoltage->setCtrlValueRect(database->data_TCN->TrainLocal->N_Voltage_U8);
+    ctrlNetCurrent->setCtrlValueRect(database->data_TCN->TrainLocal->N_Current_U8);
+    ctrlControlVoltage->setCtrlValueRect(database->data_TCN->train[database->data_CCU->M1_D1_N_UIC_ADDR-1]->N_BAT_VOLT,
+            database->data_TCN->train[database->data_CCU->M1_D1_N_OTHERUIC_ADDR-1]->N_BAT_VOLT);
+
+    ctrlTracBrake->setCtrlValueRect(database->data_TCN->TrainLocal->N_BAT_VOLT);
 
     //eg
     QList<bool> t_status;
@@ -133,8 +141,73 @@ void VehicleRunStatePage::updatePage()
             <<true;
     setLBLpic(ui->LBLC24,t_status,t_style);
 
+    //级位
+    setLBLtext(ui->LBLGrade,(database->data_CCU->M1_D1_N_MSCT_GRD-200),10,1);
+    setLBLtext(ui->LBLSetSpeed,database->data_CCU->M1_D1_N_SET_SPEED);
+    setLBLtext(ui->LBLSpeed,database->data_CCU->M1_D1_N_ACTUAL_SPEED,10);
+
 
 }
+void VehicleRunStatePage::FaultRoll()
+{
+    if(CrrcFault::getCrrcFault()->getCurrentFaultListSize()>7)
+    {
+        for(int i =0;i<labellist.size();i++)
+        {
+            labellist.at(i)->setText(CrrcFault::getCrrcFault()->getCurrentFaultName(i));
+            if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i) == "1")
+            {
+                labellist.at(i)->setStyleSheet(FAULTLEVEL1);
+            }else if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i) == "2")
+            {
+                labellist.at(i)->setStyleSheet(FAULTLEVEL2);
+            }else if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i) == "3")
+            {
+                labellist.at(i)->setStyleSheet(FAULTLEVEL3);
+            }
+        }
+        timer3s->start(3000);
+
+    }else if(CrrcFault::getCrrcFault()->getCurrentFaultListSize()>0)
+    {
+        for(int i =0;i<labellist.size();i++)
+        {
+            if(i<CrrcFault::getCrrcFault()->getCurrentFaultListSize())
+            {
+                labellist.at(i)->setText(CrrcFault::getCrrcFault()->getCurrentFaultName(i));
+                if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i) == "1")
+                {
+                    labellist.at(i)->setStyleSheet(FAULTLEVEL1);
+                }else if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i) == "2")
+                {
+                    labellist.at(i)->setStyleSheet(FAULTLEVEL2);
+                }else if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i) == "3")
+                {
+                    labellist.at(i)->setStyleSheet(FAULTLEVEL3);
+                }
+            }else
+            {
+                labellist.at(i)->setText("");
+                labellist.at(i)->setStyleSheet(FAULTLEVEL3);
+            }
+        }
+
+        timer3s->stop();
+
+    }else
+    {
+        for(int i =0;i<labellist.size();i++)
+        {
+
+            labellist.at(i)->setText("");
+            labellist.at(i)->setStyleSheet(FAULTLEVEL3);
+
+        }
+        timer3s->stop();
+
+    }
+}
+
 void VehicleRunStatePage::showEvent(QShowEvent *)
 {
 
@@ -142,10 +215,48 @@ void VehicleRunStatePage::showEvent(QShowEvent *)
 
 void VehicleRunStatePage::on_BTNMinus1_clicked()
 {
-
+    if(this->database->data_CCU->N_SIM_SPEED>0)
+    this->database->data_CCU->N_SIM_SPEED--;
 }
 
 void VehicleRunStatePage::on_BTNPlus1_clicked()
 {
+    this->database->data_CCU->N_SIM_SPEED++;
+}
+void VehicleRunStatePage::timer3sEvent()
+{
+    FirstFaultIndex++;
+    for(int i =0;i<labellist.size();i++)
+    {
+        if((i+FirstFaultIndex)>CrrcFault::getCrrcFault()->getCurrentFaultListSize())
+        {
+            if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i+FirstFaultIndex-CrrcFault::getCrrcFault()->getCurrentFaultListSize()) == "1")
+            {
+                labellist.at(i)->setStyleSheet(FAULTLEVEL1);
+            }else if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i+FirstFaultIndex-CrrcFault::getCrrcFault()->getCurrentFaultListSize()) == "2")
+            {
+                labellist.at(i)->setStyleSheet(FAULTLEVEL2);
+            }else if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i+FirstFaultIndex-CrrcFault::getCrrcFault()->getCurrentFaultListSize()) == "3")
+            {
+                labellist.at(i)->setStyleSheet(FAULTLEVEL3);
+            }
+            labellist.at(i)->setText(CrrcFault::getCrrcFault()->getCurrentFaultName(i+FirstFaultIndex-CrrcFault::getCrrcFault()->getCurrentFaultListSize()));
+        }
+        else
+        {
+            if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i+FirstFaultIndex) == "1")
+            {
+                labellist.at(i)->setStyleSheet(FAULTLEVEL1);
+            }else if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i+FirstFaultIndex) == "2")
+            {
+                labellist.at(i)->setStyleSheet(FAULTLEVEL2);
+            }else if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i+FirstFaultIndex) == "3")
+            {
+                labellist.at(i)->setStyleSheet(FAULTLEVEL3);
+            }
+            labellist.at(i)->setText(CrrcFault::getCrrcFault()->getCurrentFaultName(i+FirstFaultIndex));
 
+        }
+
+    }
 }

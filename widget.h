@@ -63,6 +63,10 @@ public:
     QMap<int, MyBase *> widgets;
 
     ~Widget();
+    void VCUtime2HMI10s();
+
+    bool systimeset(unsigned short int year,unsigned short int month,unsigned short int day,
+                     unsigned short int hour,unsigned short int min,unsigned short int sec);
 
 public slots:
     void changePage(int page);
