@@ -5381,6 +5381,8 @@ moc_main_simulate.cpp: mybase.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qbasictimer.h \
 		main_simulate.h
 	/opt/Qt5.6.2/5.6/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.6.2/5.6/gcc_64/mkspecs/linux-g++ -I/home/my/Plan85HMI -I/ -I/home/my/Plan85HMI -I/home/my/Plan85HMI/log4qt -I/home/my/Plan85HMI/log4qt/helpers -I/home/my/Plan85HMI/log4qt/spi -I/home/my/Plan85HMI/log4qt/varia -I/opt/Qt5.6.2/5.6/gcc_64/include -I/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets -I/opt/Qt5.6.2/5.6/gcc_64/include/QtGui -I/opt/Qt5.6.2/5.6/gcc_64/include/QtSql -I/opt/Qt5.6.2/5.6/gcc_64/include/QtNetwork -I/opt/Qt5.6.2/5.6/gcc_64/include/QtCore main_simulate.h -o moc_main_simulate.cpp
 
@@ -5722,6 +5724,11 @@ moc_main_assistantdevice.cpp: mybase.h \
 		data/data_bcu.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qbasictimer.h \
 		main_assistantdevice.h
 	/opt/Qt5.6.2/5.6/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.6.2/5.6/gcc_64/mkspecs/linux-g++ -I/home/my/Plan85HMI -I/ -I/home/my/Plan85HMI -I/home/my/Plan85HMI/log4qt -I/home/my/Plan85HMI/log4qt/helpers -I/home/my/Plan85HMI/log4qt/spi -I/home/my/Plan85HMI/log4qt/varia -I/opt/Qt5.6.2/5.6/gcc_64/include -I/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets -I/opt/Qt5.6.2/5.6/gcc_64/include/QtGui -I/opt/Qt5.6.2/5.6/gcc_64/include/QtSql -I/opt/Qt5.6.2/5.6/gcc_64/include/QtNetwork -I/opt/Qt5.6.2/5.6/gcc_64/include/QtCore main_assistantdevice.h -o moc_main_assistantdevice.cpp
 
@@ -5974,6 +5981,8 @@ moc_main_light.cpp: /opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QWidget \
 		data/data_bcu.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qbasictimer.h \
 		main_light.h
 	/opt/Qt5.6.2/5.6/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.6.2/5.6/gcc_64/mkspecs/linux-g++ -I/home/my/Plan85HMI -I/ -I/home/my/Plan85HMI -I/home/my/Plan85HMI/log4qt -I/home/my/Plan85HMI/log4qt/helpers -I/home/my/Plan85HMI/log4qt/spi -I/home/my/Plan85HMI/log4qt/varia -I/opt/Qt5.6.2/5.6/gcc_64/include -I/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets -I/opt/Qt5.6.2/5.6/gcc_64/include/QtGui -I/opt/Qt5.6.2/5.6/gcc_64/include/QtSql -I/opt/Qt5.6.2/5.6/gcc_64/include/QtNetwork -I/opt/Qt5.6.2/5.6/gcc_64/include/QtCore main_light.h -o moc_main_light.cpp
 
@@ -6100,6 +6109,8 @@ moc_main_lubrication.cpp: /opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QWidget \
 		data/data_bcu.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qbasictimer.h \
 		main_lubrication.h
 	/opt/Qt5.6.2/5.6/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.6.2/5.6/gcc_64/mkspecs/linux-g++ -I/home/my/Plan85HMI -I/ -I/home/my/Plan85HMI -I/home/my/Plan85HMI/log4qt -I/home/my/Plan85HMI/log4qt/helpers -I/home/my/Plan85HMI/log4qt/spi -I/home/my/Plan85HMI/log4qt/varia -I/opt/Qt5.6.2/5.6/gcc_64/include -I/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets -I/opt/Qt5.6.2/5.6/gcc_64/include/QtGui -I/opt/Qt5.6.2/5.6/gcc_64/include/QtSql -I/opt/Qt5.6.2/5.6/gcc_64/include/QtNetwork -I/opt/Qt5.6.2/5.6/gcc_64/include/QtCore main_lubrication.h -o moc_main_lubrication.cpp
 
@@ -6226,6 +6237,11 @@ moc_main_panto.cpp: /opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QWidget \
 		data/data_bcu.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qbasictimer.h \
 		main_panto.h
 	/opt/Qt5.6.2/5.6/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.6.2/5.6/gcc_64/mkspecs/linux-g++ -I/home/my/Plan85HMI -I/ -I/home/my/Plan85HMI -I/home/my/Plan85HMI/log4qt -I/home/my/Plan85HMI/log4qt/helpers -I/home/my/Plan85HMI/log4qt/spi -I/home/my/Plan85HMI/log4qt/varia -I/opt/Qt5.6.2/5.6/gcc_64/include -I/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets -I/opt/Qt5.6.2/5.6/gcc_64/include/QtGui -I/opt/Qt5.6.2/5.6/gcc_64/include/QtSql -I/opt/Qt5.6.2/5.6/gcc_64/include/QtNetwork -I/opt/Qt5.6.2/5.6/gcc_64/include/QtCore main_panto.h -o moc_main_panto.cpp
 
@@ -6356,6 +6372,8 @@ moc_main_separation.cpp: widgets/ctrlnumbertable.h \
 		data/data_erm.h \
 		data/data_tcu.h \
 		data/data_bcu.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qbasictimer.h \
 		main_separation.h
 	/opt/Qt5.6.2/5.6/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.6.2/5.6/gcc_64/mkspecs/linux-g++ -I/home/my/Plan85HMI -I/ -I/home/my/Plan85HMI -I/home/my/Plan85HMI/log4qt -I/home/my/Plan85HMI/log4qt/helpers -I/home/my/Plan85HMI/log4qt/spi -I/home/my/Plan85HMI/log4qt/varia -I/opt/Qt5.6.2/5.6/gcc_64/include -I/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets -I/opt/Qt5.6.2/5.6/gcc_64/include/QtGui -I/opt/Qt5.6.2/5.6/gcc_64/include/QtSql -I/opt/Qt5.6.2/5.6/gcc_64/include/QtNetwork -I/opt/Qt5.6.2/5.6/gcc_64/include/QtCore main_separation.h -o moc_main_separation.cpp
 
@@ -6486,6 +6504,8 @@ moc_main_wheel.cpp: widgets/ctrlnumbertable.h \
 		data/data_erm.h \
 		data/data_tcu.h \
 		data/data_bcu.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qbasictimer.h \
 		main_wheel.h
 	/opt/Qt5.6.2/5.6/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.6.2/5.6/gcc_64/mkspecs/linux-g++ -I/home/my/Plan85HMI -I/ -I/home/my/Plan85HMI -I/home/my/Plan85HMI/log4qt -I/home/my/Plan85HMI/log4qt/helpers -I/home/my/Plan85HMI/log4qt/spi -I/home/my/Plan85HMI/log4qt/varia -I/opt/Qt5.6.2/5.6/gcc_64/include -I/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets -I/opt/Qt5.6.2/5.6/gcc_64/include/QtGui -I/opt/Qt5.6.2/5.6/gcc_64/include/QtSql -I/opt/Qt5.6.2/5.6/gcc_64/include/QtNetwork -I/opt/Qt5.6.2/5.6/gcc_64/include/QtCore main_wheel.h -o moc_main_wheel.cpp
 
@@ -6615,6 +6635,8 @@ moc_main_datetime.cpp: /opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
 		data/data_bcu.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qbasictimer.h \
 		main_datetime.h
 	/opt/Qt5.6.2/5.6/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.6.2/5.6/gcc_64/mkspecs/linux-g++ -I/home/my/Plan85HMI -I/ -I/home/my/Plan85HMI -I/home/my/Plan85HMI/log4qt -I/home/my/Plan85HMI/log4qt/helpers -I/home/my/Plan85HMI/log4qt/spi -I/home/my/Plan85HMI/log4qt/varia -I/opt/Qt5.6.2/5.6/gcc_64/include -I/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets -I/opt/Qt5.6.2/5.6/gcc_64/include/QtGui -I/opt/Qt5.6.2/5.6/gcc_64/include/QtSql -I/opt/Qt5.6.2/5.6/gcc_64/include/QtNetwork -I/opt/Qt5.6.2/5.6/gcc_64/include/QtCore main_datetime.h -o moc_main_datetime.cpp
 
@@ -16897,6 +16919,8 @@ main_simulate.o: main_simulate.cpp main_simulate.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qbasictimer.h \
 		ui_main_simulate.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
@@ -17424,11 +17448,15 @@ main_assistantdevice.o: main_assistantdevice.cpp main_assistantdevice.h \
 		data/data_bcu.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qbasictimer.h \
 		ui_main_assistantdevice.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
-		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
@@ -17456,9 +17484,7 @@ main_assistantdevice.o: main_assistantdevice.cpp main_assistantdevice.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabbar.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
-		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
-		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
-		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main_assistantdevice.o main_assistantdevice.cpp
 
 main_380.o: main_380.cpp main_380.h \
@@ -17747,6 +17773,8 @@ main_light.o: main_light.cpp main_light.h \
 		data/data_bcu.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qbasictimer.h \
 		ui_main_light.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
@@ -17908,6 +17936,8 @@ main_lubrication.o: main_lubrication.cpp main_lubrication.h \
 		data/data_bcu.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qbasictimer.h \
 		ui_main_lubrication.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
@@ -18070,11 +18100,15 @@ main_panto.o: main_panto.cpp main_panto.h \
 		data/data_bcu.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qbasictimer.h \
 		ui_main_panto.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qaction.h \
-		/opt/Qt5.6.2/5.6/gcc_64/include/QtGui/qicon.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QApplication \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qapplication.h \
@@ -18103,9 +18137,7 @@ main_panto.o: main_panto.cpp main_panto.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qrubberband.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
-		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
-		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
-		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main_panto.o main_panto.cpp
 
 main_separation.o: main_separation.cpp main_separation.h \
@@ -18236,6 +18268,8 @@ main_separation.o: main_separation.cpp main_separation.h \
 		data/data_erm.h \
 		data/data_tcu.h \
 		data/data_bcu.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qbasictimer.h \
 		ui_main_separation.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
@@ -18399,6 +18433,8 @@ main_wheel.o: main_wheel.cpp main_wheel.h \
 		data/data_erm.h \
 		data/data_tcu.h \
 		data/data_bcu.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qbasictimer.h \
 		ui_main_wheel.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
@@ -18561,6 +18597,8 @@ main_datetime.o: main_datetime.cpp main_datetime.h \
 		data/data_bcu.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qbasictimer.h \
 		ui_main_datetime.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QAction \
@@ -18755,7 +18793,37 @@ fault_current.o: fault_current.cpp fault_current.h \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QLabel \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/QPushButton \
 		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
-		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtWidgets/qabstractbutton.h \
+		crrcfault.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QMap \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qbasictimer.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qthread.h \
+		log4qt/logger.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QObject \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QAtomicPointer \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QReadWriteLock \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/qreadwritelock.h \
+		log4qt/helpers/logerror.h \
+		log4qt/helpers/classlogger.h \
+		log4qt/custom.h \
+		log4qt/helpers/logobjectptr.h \
+		log4qt/helpers/logobject.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QAtomicInt \
+		log4qt/level.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtCore/QMetaType \
+		log4qt/log4qt.h \
+		crrcfaultmapper.h \
+		faultbean.h \
+		faulttypebean.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtSql/QSqlDatabase \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtSql/qsqldatabase.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtSql/qsql.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtSql/QSqlError \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtSql/qsqlerror.h \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtSql/QSqlQuery \
+		/opt/Qt5.6.2/5.6/gcc_64/include/QtSql/qsqlquery.h \
+		sqlite3.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o fault_current.o fault_current.cpp
 
 fault_history.o: fault_history.cpp fault_history.h \
