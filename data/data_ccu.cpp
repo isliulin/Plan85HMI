@@ -4,6 +4,10 @@
 Data_CCU::Data_CCU()
 {
 
+
+    N_LOAD = 0;
+    N_SIM_SPEED = 80;
+
     N_FLL_DIS = 250;
     N_FLL_TIME = 5;
 
@@ -425,5 +429,42 @@ void Data_CCU::updateData()
 
     M1_D1_B_P712CHECK0 = CrrcMvb::getCrrcMvb()->getBool(0x712,31,6);//数据校验(固定发0)
     M1_D1_B_P712CHECK1 = CrrcMvb::getCrrcMvb()->getBool(0x712,31,7);//数据校验(固定发1)
+
+    CCUOnline = CheckLifesignal(this->M1_D1_N_MPU_LIFE);
+
+
+}
+bool Data_CCU::CheckLifesignal(unsigned char lifeSignal)
+{
+    static unsigned short int temp = 0;
+    static int counter = 0;
+
+    if (temp == lifeSignal)
+    {
+        counter --;
+    }
+    else if (temp != lifeSignal)
+    {
+        counter ++;
+    }
+
+    temp = lifeSignal;
+
+    if (counter >= 10)
+    {
+        counter = 10;
+
+        return true;
+    }
+    else if (counter <= 0)
+    {
+        counter = 0;
+
+        return false;
+    }
+    else
+    {
+        return false;
+    }
 
 }
