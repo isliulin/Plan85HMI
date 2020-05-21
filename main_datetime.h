@@ -4,6 +4,7 @@
 
 #include <QWidget>
 #include "mybase.h"
+#include "qtimer.h"
 
 namespace Ui {
 class Main_Datetime;
@@ -41,10 +42,14 @@ public:
         Second_Asc
     };
 
+    QTimer *qTimer;
+
 private:
     Ui::Main_Datetime *ui;
 private slots:
     void buttonsPressEvent();
+    void on_PB_Update_pressed();
+    void timeoutEvent();
 };
 
 #endif // MAIN_DATETIME_H

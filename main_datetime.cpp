@@ -33,6 +33,9 @@ Main_Datetime::Main_Datetime(QWidget *parent) :
         connect(button,SIGNAL(pressed()),this,SLOT(buttonsPressEvent()));
     }
 
+    qTimer=new QTimer(this);
+    connect(qTimer,SIGNAL(timeout()),this,SLOT(timeoutEvent()));
+
 }
 
 Main_Datetime::~Main_Datetime()
@@ -132,4 +135,15 @@ void Main_Datetime::buttonsPressEvent()
         ui->lbl_Set_Second->setText(QString::number(second));
         break;
     }
+}
+
+void Main_Datetime::on_PB_Update_pressed()
+{
+    ui->PB_Update->setStyleSheet(MAINBUTTONDOWN);
+    qTimer->start(2000);
+}
+
+void Main_Datetime::timeoutEvent()
+{
+    ui->PB_Update->setStyleSheet(MAINBUTTONUP);
 }

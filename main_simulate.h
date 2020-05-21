@@ -2,6 +2,7 @@
 #define MAIN_SIMULATE_H
 #include "mybase.h"
 #include "qpushbutton.h"
+#include "qtimer.h"
 
 #include <QWidget>
 
@@ -32,11 +33,17 @@ public:
         send
     };
 
+    QTimer *qTimer;
+
 private:
     Ui::Main_Simulate *ui;
+    void releaseAllButtons();
+    void unableAllButtons();
+    void ableAllButtons();
 private slots:
     void numberButtonsPressedEvent();
     void funcButtonsPressedEvent();
+    void timeoutEvent();
 };
 
 #endif // MAIN_SIMULATE_H

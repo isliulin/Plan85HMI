@@ -52,6 +52,8 @@
 #define	JINGTIZHUANGZHIGELI	"image: url(:/images/images/jingtigeli.png);"
 #define	NULLIMAGE	"background-color:rgb(0,0,0);border:1px solid lightgray;"
 
+#define MAINBUTTONUP  "font:16px;color: rgb(255,255,255);background-color: rgb(0, 0, 0);border:2px solid white;"
+#define MAINBUTTONDOWN "font:16px;color: rgb(255,255,255);background-color: yellow;border:2px solid white;"
 
 #include <stdlib.h>
 

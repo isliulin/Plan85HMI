@@ -3,6 +3,8 @@
 
 #include <QWidget>
 #include "mybase.h"
+#include "qpushbutton.h"
+#include "qtimer.h"
 
 namespace Ui {
 class Main_Panto;
@@ -18,6 +20,18 @@ public:
 
 private:
     Ui::Main_Panto *ui;
+    QList<QPushButton*> funcButtons;
+    QTimer *qTimer;
+    enum funcNumber{
+        speedAsc=1,
+        speedDec,
+        send,
+    };
+    void releaseAllButtons();
+    void unableAllButtons();
+private slots:
+    void timeoutEvent();
+    void buttonsPressedEvent();
 };
 
 #endif // MAIN_PANTO_H

@@ -4,6 +4,7 @@
 
 #include <QWidget>
 #include "mybase.h"
+#include "qtimer.h"
 
 namespace Ui {
 class Main_Separation;
@@ -21,8 +22,17 @@ public:
     void updatePage();
 
 
+private slots:
+    void on_PB_send_pressed();
+
+    void on_PB_testActive_pressed();
+
+    void on_PB_testCancel_pressed();
+    void timeoutEvent();
+
 private:
     Ui::Main_Separation *ui;
+    QTimer* qTimer;
 };
 
 #endif // MAIN_SEPARATION_H

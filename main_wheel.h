@@ -4,6 +4,7 @@
 
 #include <QWidget>
 #include "mybase.h"
+#include "qtimer.h"
 
 namespace Ui {
 class Main_Wheel;
@@ -20,8 +21,13 @@ public:
     static QString wheelNumber;
     void updatePage();
 
+private slots:
+    void on_PB_store_pressed();
+    void timeoutEvent();
+
 private:
     Ui::Main_Wheel *ui;
+    QTimer* qTimer;
 };
 
 #endif // MAIN_WHEEL_H

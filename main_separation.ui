@@ -31,7 +31,7 @@ QLabel
 color:rgb(255,255,255);
 }</string>
   </property>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="PB_testActive">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -41,16 +41,17 @@ color:rgb(255,255,255);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:2px solid white;
-background-color: rgb(0, 0, 0);
-font:18px;
-color: rgb(255, 255, 255);</string>
+    <string notr="true">	font:16px;
+    color: rgb(255,255,255);
+	background-color: rgb(0, 0, 0);
+border:2px solid white;
+</string>
    </property>
    <property name="text">
     <string>自动过分相测试激活</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="PB_testCancel">
    <property name="geometry">
     <rect>
      <x>450</x>
@@ -60,10 +61,11 @@ color: rgb(255, 255, 255);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:2px solid white;
-background-color: rgb(0, 0, 0);
-font:18px;
-color: rgb(255, 255, 255);</string>
+    <string notr="true">	font:16px;
+    color: rgb(255,255,255);
+	background-color: rgb(0, 0, 0);
+border:2px solid white;
+</string>
    </property>
    <property name="text">
     <string>自动过分相测试取消</string>
@@ -102,7 +104,7 @@ color: rgb(0, 0, 0);</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QPushButton" name="PB_send">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -112,10 +114,11 @@ color: rgb(0, 0, 0);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:2px solid white;
-background-color: rgb(0, 0, 0);
-font:18px;
-color: rgb(255, 255, 255);</string>
+    <string notr="true">	font:16px;
+    color: rgb(255,255,255);
+	background-color: rgb(0, 0, 0);
+border:2px solid white;
+</string>
    </property>
    <property name="text">
     <string>发送数据</string>
