@@ -401,7 +401,6 @@ void Widget::showEvent(QShowEvent *)
             CrrcMvb::getCrrcMvb()->addSinkPort(0x229,MVB_FCode4,512);
 
             //ddu
-
             CrrcMvb::getCrrcMvb()->addSinkPort(0x710,MVB_FCode4,32);
             CrrcMvb::getCrrcMvb()->addSinkPort(0x711,MVB_FCode4,128);
             CrrcMvb::getCrrcMvb()->addSinkPort(0x712,MVB_FCode4,128);
