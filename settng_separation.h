@@ -17,6 +17,7 @@ public:
     ~Settng_Separation();
     void updatePage();
     void timerEvent(QTimerEvent* e);
+    void hideEvent(QHideEvent*);
 
 private slots:
     void modePressEvent();

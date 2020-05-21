@@ -82,3 +82,8 @@ void Settng_HangMode::timerEvent(QTimerEvent *e)
     this->database->data_CCU->N_TRAILER_MODE_SPEED = 0;
     this->ui->Button_SendData->setStyleSheet(NButtonUP);
 }
+
+void Settng_HangMode::hideEvent(QHideEvent *)
+{
+    this->database->data_CCU->N_TRAILER_MODE_SPEED = 0;
+}

@@ -100,3 +100,9 @@ void Settng_TrainCode::timerEvent(QTimerEvent *e)
         timerOther = 0;
     }
 }
+
+void Settng_TrainCode::hideEvent(QHideEvent *)
+{
+    this->database->data_CCU->B_LOCO_NO_SET = false;
+    this->database->data_CCU->B_PARTNER_ID_SET = false;
+}
