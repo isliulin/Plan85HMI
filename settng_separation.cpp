@@ -74,3 +74,9 @@ void Settng_Separation::timerEvent(QTimerEvent *e)
     }
 }
 
+void Settng_Separation::hideEvent(QHideEvent *)
+{
+    this->database->data_CCU->B_NSC_DISTANCE1 = false;
+    this->database->data_CCU->B_NSC_DISTANCE2 = false;
+}
+

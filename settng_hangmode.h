@@ -17,6 +17,7 @@ public:
     ~Settng_HangMode();
     void updatePage();
     void timerEvent(QTimerEvent *e);
+    void hideEvent(QHideEvent*);
 
 private slots:
     void modePressEvent();

@@ -53,8 +53,8 @@ void Settng_Bypass::updatePage()
 {
 
     hideAll();
-    setButtonState(this->ui->BTN_AutoSandCutout,this->database->data_CCU->M1_D1_B_SAND_CUT,"☝自动撒沙切除","自动撒沙切除");
-    setButtonState(this->ui->BTN_CombCutout,this->database->data_CCU->M1_D1_B_AIR_ELE,"☝空电联合切除","空电联合切除");
+//    setButtonState(this->ui->BTN_AutoSandCutout,this->database->data_CCU->M1_D1_B_SAND_CUT,"☝自动撒沙切除","自动撒沙切除");
+//    setButtonState(this->ui->BTN_CombCutout,this->database->data_CCU->M1_D1_B_AIR_ELE,"☝空电联合切除","空电联合切除");
 
     TrainBrkISOstate[TrainIndex]<<this->database->data_TCN->train[TrainIndex]->B_STATE_RB_EMG<<this->database->data_TCN->train[TrainIndex]->B_STATE_RB_IS_FS
                                <<this->database->data_TCN->train[TrainIndex]->B_STATE_RB_IS_CF1<<this->database->data_TCN->train[TrainIndex]->B_STATE_RB_IS_CF2;
@@ -325,6 +325,7 @@ void Settng_Bypass::on_BTN_HandISO_pressed()
     default:
         break;
     }
+    this->ui->BTN_Close->setDisabled(true);
     timerISO = startTimer(3000);
 }
 
@@ -347,6 +348,7 @@ void Settng_Bypass::on_BTN_ISOCancel_pressed()
     default:
         break;
     }
+    this->ui->BTN_Close->setDisabled(true);
     timerREL = startTimer(3000);
 }
 
@@ -373,6 +375,7 @@ void Settng_Bypass::timerEvent(QTimerEvent *e)
             break;
         }
         timerISO = 0;
+        this->ui->BTN_Close->setDisabled(false);
     }
 
     if(timerREL == e->timerId())
@@ -396,6 +399,7 @@ void Settng_Bypass::timerEvent(QTimerEvent *e)
             break;
         }
         timerREL = 0;
+        this->ui->BTN_Close->setDisabled(false);
     }
 
     if(timerResetFault == e->timerId())
@@ -411,27 +415,35 @@ void Settng_Bypass::timerEvent(QTimerEvent *e)
 
 void Settng_Bypass::on_BTN_AutoSandCutout_pressed()
 {
-    if(this->database->data_CCU->M1_D1_B_SAND_CUT)
+    if(this->database->data_CCU->B_SAND_CUT)
     {
+        this->database->data_CCU->B_SAND_CUT = false;
         this->database->data_CCU->B_SAND_CUT_REL = true;
-        this->ui->BTN_AutoSandCutout->setStyleSheet(NButtonUP);
+        this->ui->BTN_AutoSandCutout->setStyleSheet(BrkNISO);
+        this->ui->BTN_AutoSandCutout->setText("自动撒沙切除");
     }else
     {
+        this->database->data_CCU->B_SAND_CUT_REL = false;
         this->database->data_CCU->B_SAND_CUT = true;
-        this->ui->BTN_AutoSandCutout->setStyleSheet(NButtonDOWN);
+        this->ui->BTN_AutoSandCutout->setStyleSheet(BrkISO);
+        this->ui->BTN_AutoSandCutout->setText("☝自动撒沙切除");
     }
 }
 
 void Settng_Bypass::on_BTN_CombCutout_pressed()
 {
-    if(this->database->data_CCU->M1_D1_B_AIR_ELE)
+    if(this->database->data_CCU->B_AIR_ELE_SET_LOCK)
     {
+        this->database->data_CCU->B_AIR_ELE_SET_LOCK = false;
         this->database->data_CCU->B_AIR_ELE_SET_UNION = true;
-        this->ui->BTN_CombCutout->setStyleSheet(NButtonUP);
+        this->ui->BTN_CombCutout->setStyleSheet(BrkNISO);
+        this->ui->BTN_CombCutout->setText("空电联合切除");
     }else
     {
         this->database->data_CCU->B_AIR_ELE_SET_LOCK = true;
-        this->ui->BTN_CombCutout->setStyleSheet(NButtonDOWN);
+        this->database->data_CCU->B_AIR_ELE_SET_UNION = false;
+        this->ui->BTN_CombCutout->setStyleSheet(BrkISO);
+        this->ui->BTN_CombCutout->setText("☝空电联合切除");
     }
 }
 
@@ -446,4 +458,17 @@ void Settng_Bypass::on_BTN_ClearFault_pressed()
         *FaultReset[TrainIndex] = true;
         timerResetFault = startTimer(3000);
     }
+}
+
+void Settng_Bypass::hideEvent(QHideEvent*)
+{
+    *Train1CutSignal.at(SelectIndex) = false;
+    *Train2CutSignal.at(SelectIndex) = false;
+    *Train3CutSignal.at(SelectIndex) = false;
+    *Train4CutSignal.at(SelectIndex) = false;
+    *Train1CancelSignal.at(SelectIndex) = false;
+    *Train2CancelSignal.at(SelectIndex) = false;
+    *Train3CancelSignal.at(SelectIndex) = false;
+    *Train4CancelSignal.at(SelectIndex) = false;
+    *FaultReset[TrainIndex] = false;
 }

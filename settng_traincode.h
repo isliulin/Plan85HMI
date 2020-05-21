@@ -18,6 +18,7 @@ public:
     ~Settng_TrainCode();
     void updatePage();
     void timerEvent(QTimerEvent* e);
+    void hideEvent(QHideEvent*);
 
 private slots:
     void setCodeEvent();

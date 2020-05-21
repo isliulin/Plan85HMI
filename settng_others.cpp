@@ -118,3 +118,10 @@ void Settng_Others::timerEvent(QTimerEvent *e)
     }
 }
 
+void Settng_Others::hideEvent(QHideEvent *)
+{
+    this->database->data_CCU->B_LOAD_SET = false;
+    this->database->data_CCU->B_NORMAL_MODE = false;
+    this->database->data_CCU->B_SUMMER_MODE = false;
+}
+

@@ -315,6 +315,9 @@ font:16px;
    <property name="focusPolicy">
     <enum>Qt::NoFocus</enum>
    </property>
+   <property name="whatsThis">
+    <string>15</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: transparent;</string>
    </property>
@@ -455,6 +458,9 @@ font:16px;
    <property name="focusPolicy">
     <enum>Qt::NoFocus</enum>
    </property>
+   <property name="whatsThis">
+    <string>14</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: transparent;</string>
    </property>
@@ -474,6 +480,9 @@ font:16px;
    <property name="focusPolicy">
     <enum>Qt::NoFocus</enum>
    </property>
+   <property name="whatsThis">
+    <string>13</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: transparent;</string>
    </property>
@@ -492,6 +501,9 @@ font:16px;
    </property>
    <property name="focusPolicy">
     <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>12</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: transparent;</string>
