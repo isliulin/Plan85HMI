@@ -407,3 +407,15 @@ void Settng_Panto::timerEvent(QTimerEvent *e)
         timerCancel = 0;
     }
 }
+
+void Settng_Panto::hideEvent(QHideEvent *)
+{
+    this->database->data_CCU->B_TC1_PANTO_ISO_RQ = false;
+    this->database->data_CCU->B_TC2_PANTO_ISO_RQ = false;
+    this->database->data_CCU->B_TC3_PANTO_ISO_RQ = false;
+    this->database->data_CCU->B_TC4_PANTO_ISO_RQ = false;
+    this->database->data_CCU->B_TC1_PANTO_ISO_REL_RQ = false;
+    this->database->data_CCU->B_TC2_PANTO_ISO_REL_RQ = false;
+    this->database->data_CCU->B_TC3_PANTO_ISO_REL_RQ = false;
+    this->database->data_CCU->B_TC4_PANTO_ISO_REL_RQ = false;
+}
