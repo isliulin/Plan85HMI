@@ -6,9 +6,11 @@
 #include "database.h"
 #include "qdebug.h"
 #include "qlabel.h"
+#include "logger.h"
 class MyBase : public QWidget
 {
     Q_OBJECT
+    LOG4QT_DECLARE_QCLASS_LOGGER
 public:
     explicit MyBase(QWidget *parent = 0);
     void setMyBase(enum pagePosition position, QString name);

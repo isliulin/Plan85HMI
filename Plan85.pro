@@ -133,7 +133,14 @@ SOURCES += main.cpp\
     widgets/ctrlspeedometer.cpp \
     unity_brake.cpp \
     widgets/ctrlkpadiagram.cpp \
-    widgets/ctrlflowdiagram.cpp
+    widgets/ctrlflowdiagram.cpp \
+    devicedatabreaker.cpp \
+    devicedatasiv.cpp \
+    devicedataversion.cpp \
+    devicedataairbrake.cpp \
+    devicedatamainconv.cpp \
+    devicedatanetwork.cpp \
+    devicedatariom.cpp
 
 
 HEADERS  += widget.h \
@@ -250,7 +257,14 @@ HEADERS  += widget.h \
     widgets/ctrlspeedometer.h \
     unity_brake.h \
     widgets/ctrlkpadiagram.h \
-    widgets/ctrlflowdiagram.h
+    widgets/ctrlflowdiagram.h \
+    devicedatabreaker.h \
+    devicedatasiv.h \
+    devicedataversion.h \
+    devicedataairbrake.h \
+    devicedatamainconv.h \
+    devicedatanetwork.h \
+    devicedatariom.h
 
 
 
@@ -300,7 +314,14 @@ FORMS    += widget.ui \
     unity_brake.ui \
     widgets/ctrlkpadiagram.ui \
     widgets/ctrlflowdiagram.ui\
-    maindata_tracbrakeoutline.ui
+    maindata_tracbrakeoutline.ui \
+    devicedatabreaker.ui \
+    devicedatasiv.ui \
+    devicedataversion.ui \
+    devicedataairbrake.ui \
+    devicedatamainconv.ui \
+    devicedatanetwork.ui \
+    devicedatariom.ui
 
 
 

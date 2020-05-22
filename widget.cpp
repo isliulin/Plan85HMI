@@ -42,6 +42,15 @@
 #include "maindata_tracbrakeoutline.h"
 #include "unity.h"
 #include "unity_brake.h"
+
+#include "devicedataairbrake.h"
+#include "devicedatabreaker.h"
+#include "devicedatamainconv.h"
+#include "devicedatanetwork.h"
+#include "devicedatariom.h"
+#include "devicedatasiv.h"
+#include "devicedataversion.h"
+
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -215,6 +224,27 @@ Widget::Widget(QWidget *parent) :
     this->unity_Brake->setMyBase(uMiddleUnite,QString("电空制动"));
     this->unity_Brake->hide();
 
+    this->deviceDataAirBrake = new DeviceDataAirBrake(this);
+    this->deviceDataAirBrake->setMyBase(uMiddleDeviceData, QString("空气制动"));
+    this->deviceDataAirBrake->hide();
+    this->deviceDataBreaker = new DeviceDataBreaker(this);
+    this->deviceDataBreaker->setMyBase(uMiddleDeviceData, QString("断路器"));
+    this->deviceDataBreaker->hide();
+    this->deviceDataMainConv = new DeviceDataMainConv(this);
+    this->deviceDataMainConv->setMyBase(uMiddleDeviceData, QString("主变流"));
+    this->deviceDataMainConv->hide();
+    this->deviceDataNetwork = new DeviceDataNetwork(this);
+    this->deviceDataNetwork->setMyBase(uMiddleDeviceData, QString("在线状态"));
+    this->deviceDataNetwork->hide();
+    this->deviceDataRIOM = new DeviceDataRIOM(this);
+    this->deviceDataRIOM->setMyBase(uMiddleDeviceData, QString("信号状态"));
+    this->deviceDataRIOM->hide();
+    this->deviceDataSIV = new DeviceDataSIV(this);
+    this->deviceDataSIV->setMyBase(uMiddleDeviceData, QString("辅助"));
+    this->deviceDataSIV->hide();
+    this->deviceDataVersion = new DeviceDataVersion(this);
+    this->deviceDataVersion->setMyBase(uMiddleDeviceData, QString("软件版本"));
+
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
     this->widgets.insert(uMainData_DriverOutline,this->mainData_DriverOutline);
@@ -245,6 +275,15 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uCondition_Traction,this->condition_Traction);
     this->widgets.insert(uCondition_Brake,this->condition_Brake);
     this->widgets.insert(uBrakeMode,this->unity_Brake);
+
+    this->widgets.insert(uDeviceDataBreaker, this->deviceDataBreaker);
+    this->widgets.insert(uDeviceDataSIV, this->deviceDataSIV);
+    this->widgets.insert(uDeviceDataMainConv, this->deviceDataMainConv);
+    this->widgets.insert(uDeviceDataNetwork, this->deviceDataNetwork);
+    this->widgets.insert(uDeviceDataVersion, this->deviceDataVersion);
+    this->widgets.insert(uDeviceDataRIOM, this->deviceDataRIOM);
+    this->widgets.insert(uDeviceDataAirBrake, this->deviceDataAirBrake);
+
 
     this->header->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();

@@ -48,5 +48,14 @@
         <file>images/Cheti-reverse.png</file>
         <file>images/left.png</file>
         <file>images/right.png</file>
+        <file>images/Circle.png</file>
+        <file>images/Circle_Green.png</file>
+        <file>images/Coil.png</file>
+        <file>images/Coil_GND.png</file>
+        <file>images/PCQUAI.png</file>
+        <file>images/PHclose.png</file>
+        <file>images/PHopen.png</file>
+        <file>images/SWclose.png</file>
+        <file>images/SWopen.png</file>
     </qresource>
 </RCC>

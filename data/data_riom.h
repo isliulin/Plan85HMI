@@ -185,6 +185,57 @@ public:
       unsigned char	RIOM2_AX1_LifeSign_U8;
 
       unsigned char	RIOM2_DI123_SlfChk;
+
+      bool	M1_R1_B_LIHGT_CABCHANGE;
+      bool	M1_R1_B_LIGHT_BATLOW;
+      bool	M1_R1_B_LIGHT_CPR;
+      bool	M1_R1_B_LIGHT_ISO_ACU;
+      bool	M1_R1_B_LIGHT_ISO_AXI;
+      bool	M1_R1_B_LIGHT_MCB_OFF;
+      bool	M1_R1_B_LIGHT_OTHERCAB;
+
+      bool	M1_R2_B_COVER_SM2_RELAY;
+      bool	M1_R2_B_C3_CPR;
+      bool	M1_R2_B_C2_CPR;
+      bool	M1_R2_B_C1_CPR;
+      bool	M1_R2_B_MCBON1;
+      bool	M1_R2_B_Q_FLT_LOCK;
+      bool	M1_R2_B_DEADMAN_ALARM1;
+      bool	M1_R2_B_Q1_PT;
+      bool	M1_R2_B_DEADMAN_ALARM2;
+      bool	M1_R2_B_PARKBRAKE_LIGHT;
+      bool	M1_R2_B_C_PC_QUAI;
+      bool	M1_R2_B_C_IS_QUAI;
+      bool	M1_R2_B_BATCUT_FORBID;
+      bool	M1_R2_B_Q_FIRE1_T;
+      bool	M1_R2_B_Q_FIRE1_B;
+      bool	M1_R2_B_Q_DJM_F;
+      bool	M1_R2_B_BAT_LOW;
+      bool	M1_R2_B_Q_UAI;;
+      bool	M1_R2_B_MCBON2;
+      bool	M1_R2_B_Q_FIRE2_T;
+      bool	M1_R2_B_Q_FIRE2_B;
+      bool	M1_R2_B_MSCT_BRAKE;
+      bool	M1_R2_B_MSCT_NEUTRAL;
+      bool	M1_R2_B_MSCT_TRACTION;
+      bool	M1_R2_B_DIR_BACK;
+      bool	M1_R2_B_DIR_FORWARD;
+      bool	M1_R2_B_PARKB_RELAY;
+      bool	M1_R2_B_FLL_RELAY;
+      bool	M1_R2_B_Q2_CAB;
+      bool	M1_R2_B_Q1_CAB;
+      bool	M1_R2_B_SPEED_ZERO ;
+      bool	M1_R2_B_Q2_PT;
+      bool	M1_R2_B_DANJIE_Q_MU;
+      bool	M1_R2_B_H_HT_OPEN;
+      bool	M1_R2_B_H_HT_CLOSE;
+      bool	M1_R2_B_SAND_BACK;
+      bool	M1_R2_B_SAND_FORWARD;
+      bool	M1_R2_B_AIR_ELE_LOCK;
+      bool	M1_R2_B_BCU_EM;
+      bool	M1_R2_B_DEADMAN_BCU;
+      bool	M1_R2_B_CPR_AUX_RELAY;
+
 };
 
 #endif // DATA_RIOM_H
