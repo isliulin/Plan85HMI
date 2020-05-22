@@ -12,3 +12,15 @@ Main_380::~Main_380()
 {
     delete ui;
 }
+
+void Main_380::on_PB_active_pressed()
+{
+    ui->PB_active->setStyleSheet(MAINBUTTONDOWN);
+    ui->PB_cancel->setStyleSheet(MAINBUTTONUP);
+}
+
+void Main_380::on_PB_cancel_pressed()
+{
+    ui->PB_active->setStyleSheet(MAINBUTTONUP);
+    ui->PB_cancel->setStyleSheet(MAINBUTTONDOWN);
+}

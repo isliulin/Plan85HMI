@@ -16,6 +16,11 @@ public:
     explicit Main_380(QWidget *parent = 0);
     ~Main_380();
 
+private slots:
+    void on_PB_active_pressed();
+
+    void on_PB_cancel_pressed();
+
 private:
     Ui::Main_380 *ui;
 };
