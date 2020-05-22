@@ -1,9 +1,10 @@
 #include "vehiclerunstatepage.h"
 #include "ui_vehiclerunstatepage.h"
 #include "crrcfault.h"
-#define FAULTLEVEL1 "background-color:rgb(240,0,0);color:black;border:transparent;"
-#define FAULTLEVEL2 "background-color:rgb(240,240,0);color:black;border:transparent;"
-#define FAULTLEVEL3 "background-color:rgb(0,0,0);color:rgb(248,248,248);border:transparent;"
+#define FAULTLEVEL1 "background-color:rgb(240,0,0);color:black;border:transparent;border-bottom:1px solid black;"
+#define FAULTLEVEL2 "background-color:rgb(240,240,0);color:black;border:transparent;border-bottom:1px solid black;"
+#define FAULTLEVEL3 "background-color:rgb(0,0,0);color:rgb(248,248,248);border:transparent;border-bottom:1px solid black;"
+#define MAXCNTPERPAGE 7
 
 VehicleRunStatePage::VehicleRunStatePage(QWidget *parent) :
     MyBase(parent),
@@ -29,6 +30,11 @@ VehicleRunStatePage::VehicleRunStatePage(QWidget *parent) :
     FirstFaultIndex = 0;
     labellist<<ui->LBLFault1<<ui->LBLFault2<<ui->LBLFault3<<ui->LBLFault4<<ui->LBLFault5<<ui->LBLFault6<<ui->LBLFault7;
 
+    m_currentPageIndex  = 1;
+    m_totalPageIndex = 1;
+    m_currentPageFaultNum = 0;
+    m_totalFaultNum = 0;
+
 }
 
 VehicleRunStatePage::~VehicleRunStatePage()
@@ -38,10 +44,8 @@ VehicleRunStatePage::~VehicleRunStatePage()
 
 void VehicleRunStatePage::updatePage()
 {
-    ui->LBLFault1->setStyleSheet(FAULTLEVEL1);
-    ui->LBLFault2->setStyleSheet(FAULTLEVEL2);
-    ui->LBLFault3->setStyleSheet(FAULTLEVEL3);
 
+    this->FaultRoll();
 
     ctrlNetVoltage->setCtrlValueRect(database->data_TCN->TrainLocal->N_Voltage_U8);
     ctrlNetCurrent->setCtrlValueRect(database->data_TCN->TrainLocal->N_Current_U8);
@@ -150,62 +154,68 @@ void VehicleRunStatePage::updatePage()
 }
 void VehicleRunStatePage::FaultRoll()
 {
-    if(CrrcFault::getCrrcFault()->getCurrentFaultListSize()>7)
-    {
-        for(int i =0;i<labellist.size();i++)
-        {
-            labellist.at(i)->setText(CrrcFault::getCrrcFault()->getCurrentFaultName(i));
-            if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i) == "1")
-            {
-                labellist.at(i)->setStyleSheet(FAULTLEVEL1);
-            }else if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i) == "2")
-            {
-                labellist.at(i)->setStyleSheet(FAULTLEVEL2);
-            }else if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i) == "3")
-            {
-                labellist.at(i)->setStyleSheet(FAULTLEVEL3);
-            }
-        }
-        timer3s->start(3000);
+    m_totalFaultNum = CrrcFault::getCrrcFault()->getCurrentFaultListSize();
 
-    }else if(CrrcFault::getCrrcFault()->getCurrentFaultListSize()>0)
-    {
-        for(int i =0;i<labellist.size();i++)
-        {
-            if(i<CrrcFault::getCrrcFault()->getCurrentFaultListSize())
-            {
-                labellist.at(i)->setText(CrrcFault::getCrrcFault()->getCurrentFaultName(i));
-                if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i) == "1")
-                {
-                    labellist.at(i)->setStyleSheet(FAULTLEVEL1);
-                }else if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i) == "2")
-                {
-                    labellist.at(i)->setStyleSheet(FAULTLEVEL2);
-                }else if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i) == "3")
-                {
-                    labellist.at(i)->setStyleSheet(FAULTLEVEL3);
-                }
-            }else
-            {
-                labellist.at(i)->setText("");
-                labellist.at(i)->setStyleSheet(FAULTLEVEL3);
-            }
-        }
+       if(m_totalFaultNum < 1)
+       {
+           timer3s->stop();
+           for(int i = 0; i < MAXCNTPERPAGE; i++)
+           {
+               labellist.at(i)->setText("");
+               labellist.at(i)->setStyleSheet(FAULTLEVEL3);
+           }
+           return ;
+       }
 
-        timer3s->stop();
+       if(timer3s->isActive())
+       {
 
-    }else
-    {
-        for(int i =0;i<labellist.size();i++)
-        {
+       }else
+       {
+           timer3s->start(3000);
+       }
+       if(m_totalFaultNum%MAXCNTPERPAGE == 0)
+       {
+           m_totalPageIndex = m_totalFaultNum/MAXCNTPERPAGE;
+           m_currentPageFaultNum = MAXCNTPERPAGE;
+       }
+       else
+       {
+           m_totalPageIndex = m_totalFaultNum/MAXCNTPERPAGE+1;
+           if(m_currentPageIndex<m_totalPageIndex)
+           {
+               m_currentPageFaultNum = MAXCNTPERPAGE;
+           }else
+           {
+               m_currentPageFaultNum = m_totalFaultNum%MAXCNTPERPAGE;
+           }
+       }
 
-            labellist.at(i)->setText("");
-            labellist.at(i)->setStyleSheet(FAULTLEVEL3);
+       if(m_currentPageIndex > m_totalPageIndex)
+           m_currentPageIndex = m_totalPageIndex;
 
-        }
-        timer3s->stop();
+       if(m_currentPageIndex < m_totalPageIndex)
+       {
+           for(int i = 0; i < MAXCNTPERPAGE;i++)
+           {
+               this->DrawFaults(i);
+           }
 
-    }
+       }else
+       {
+           for(int i = 0; i < MAXCNTPERPAGE; i++)
+           {
+               if(i < m_currentPageFaultNum)
+               {
+                   this->DrawFaults(i);
+               }else
+               {
+                   labellist.at(i)->setText("");
+                   labellist.at(i)->setStyleSheet(FAULTLEVEL3);
+               }
+
+           }
+       }
 }
 
 void VehicleRunStatePage::showEvent(QShowEvent *)
@@ -223,40 +233,20 @@ void VehicleRunStatePage::on_BTNPlus1_clicked()
 {
     this->database->data_CCU->N_SIM_SPEED++;
 }
+void VehicleRunStatePage::DrawFaults(int i)
+{
+    QString Num = QString::number(i+(m_currentPageIndex-1)*MAXCNTPERPAGE+1);
+    this->labellist.at(i)->setText(CrrcFault::getCrrcFault()->getCurrentFaultName(i+(m_currentPageIndex-1)*MAXCNTPERPAGE));
+    if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i+(m_currentPageIndex-1)*MAXCNTPERPAGE) == "1")
+        this->labellist.at(i)->setStyleSheet(FAULTLEVEL1);
+    else if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i+(m_currentPageIndex-1)*MAXCNTPERPAGE) == "2")
+        this->labellist.at(i)->setStyleSheet(FAULTLEVEL2);
+    else if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i+(m_currentPageIndex-1)*MAXCNTPERPAGE) == "3")
+        this->labellist.at(i)->setStyleSheet(FAULTLEVEL3);
+}
 void VehicleRunStatePage::timer3sEvent()
 {
-    FirstFaultIndex++;
-    for(int i =0;i<labellist.size();i++)
-    {
-        if((i+FirstFaultIndex)>CrrcFault::getCrrcFault()->getCurrentFaultListSize())
-        {
-            if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i+FirstFaultIndex-CrrcFault::getCrrcFault()->getCurrentFaultListSize()) == "1")
-            {
-                labellist.at(i)->setStyleSheet(FAULTLEVEL1);
-            }else if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i+FirstFaultIndex-CrrcFault::getCrrcFault()->getCurrentFaultListSize()) == "2")
-            {
-                labellist.at(i)->setStyleSheet(FAULTLEVEL2);
-            }else if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i+FirstFaultIndex-CrrcFault::getCrrcFault()->getCurrentFaultListSize()) == "3")
-            {
-                labellist.at(i)->setStyleSheet(FAULTLEVEL3);
-            }
-            labellist.at(i)->setText(CrrcFault::getCrrcFault()->getCurrentFaultName(i+FirstFaultIndex-CrrcFault::getCrrcFault()->getCurrentFaultListSize()));
-        }
-        else
-        {
-            if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i+FirstFaultIndex) == "1")
-            {
-                labellist.at(i)->setStyleSheet(FAULTLEVEL1);
-            }else if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i+FirstFaultIndex) == "2")
-            {
-                labellist.at(i)->setStyleSheet(FAULTLEVEL2);
-            }else if(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i+FirstFaultIndex) == "3")
-            {
-                labellist.at(i)->setStyleSheet(FAULTLEVEL3);
-            }
-            labellist.at(i)->setText(CrrcFault::getCrrcFault()->getCurrentFaultName(i+FirstFaultIndex));
-
-        }
-
-    }
+    m_currentPageIndex++;
+    if(m_currentPageIndex > m_totalPageIndex)
+        m_currentPageIndex = 1;
 }

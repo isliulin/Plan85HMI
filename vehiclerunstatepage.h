@@ -40,6 +40,8 @@ private:
     QList<QLabel*> labellist;
     void FaultRoll();
 
+    int m_currentPageIndex,m_totalPageIndex,m_totalFaultNum,m_currentPageFaultNum;
+    void DrawFaults(int i);
 };
 
 #endif // VEHICLERUNSTATEPAGE_H
