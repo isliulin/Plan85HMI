@@ -174,4 +174,55 @@ void Data_RIOM::updateData()
     RIOM2_AX1_LifeSign_U8 = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x220,18);//RIO1AX1生命信号
     RIOM2_DI123_SlfChk = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x221,19);//自检标志位
 
+    M1_R1_B_LIHGT_CABCHANGE = CrrcMvb::getCrrcMvb()->getBool(0x218,20,6);//换端
+    M1_R1_B_LIGHT_BATLOW = CrrcMvb::getCrrcMvb()->getBool(0x218,20,5);//蓄电池低压
+    M1_R1_B_LIGHT_CPR = CrrcMvb::getCrrcMvb()->getBool(0x218,20,4);//压缩机故障
+    M1_R1_B_LIGHT_ISO_ACU = CrrcMvb::getCrrcMvb()->getBool(0x218,20,3);//辅助隔离
+    M1_R1_B_LIGHT_ISO_AXI = CrrcMvb::getCrrcMvb()->getBool(0x218,20,2);//轴隔离
+    M1_R1_B_LIGHT_MCB_OFF = CrrcMvb::getCrrcMvb()->getBool(0x218,20,1);//主断分
+    M1_R1_B_LIGHT_OTHERCAB = CrrcMvb::getCrrcMvb()->getBool(0x218,20,0);//他端占用
+
+
+   M1_R2_B_COVER_SM2_RELAY = CrrcMvb::getCrrcMvb()->getBool(0x228,19,1);//车顶通风继电器2
+   M1_R2_B_C3_CPR = CrrcMvb::getCrrcMvb()->getBool(0x228,19,0);//压缩机接触器3命令
+   M1_R2_B_C2_CPR = CrrcMvb::getCrrcMvb()->getBool(0x228,20,7);//压缩机接触器2命令
+   M1_R2_B_C1_CPR = CrrcMvb::getCrrcMvb()->getBool(0x228,20,6);//压缩机接触器1命令
+   M1_R2_B_MCBON1 = CrrcMvb::getCrrcMvb()->getBool(0x228,20,5);//主断闭合
+   M1_R2_B_Q_FLT_LOCK = CrrcMvb::getCrrcMvb()->getBool(0x228,20,3);//单节模式输出
+   M1_R2_B_DEADMAN_ALARM1 = CrrcMvb::getCrrcMvb()->getBool(0x228,20,1);//无人警惕报警
+   M1_R2_B_Q1_PT = CrrcMvb::getCrrcMvb()->getBool(0x228,20,0);//升弓继电器
+   M1_R2_B_DEADMAN_ALARM2 = CrrcMvb::getCrrcMvb()->getBool(0x228,22,5);//无人警惕报警
+   M1_R2_B_PARKBRAKE_LIGHT = CrrcMvb::getCrrcMvb()->getBool(0x228,22,4);//停放制动按钮指示灯
+   M1_R2_B_C_PC_QUAI = CrrcMvb::getCrrcMvb()->getBool(0x228,22,3);//库内充电继电器
+   M1_R2_B_C_IS_QUAI = CrrcMvb::getCrrcMvb()->getBool(0x228,22,2);//库用工作继电器
+   M1_R2_B_BATCUT_FORBID = CrrcMvb::getCrrcMvb()->getBool(0x228,22,1);//蓄电池禁止切除继电器
+   M1_R2_B_Q_FIRE1_T = CrrcMvb::getCrrcMvb()->getBool(0x228,22,0);//它节防火管报警
+   M1_R2_B_Q_FIRE1_B = CrrcMvb::getCrrcMvb()->getBool(0x228,23,7);//本节防火管报警
+   M1_R2_B_Q_DJM_F = CrrcMvb::getCrrcMvb()->getBool(0x228,23,6);//主断故障继电器
+   M1_R2_B_BAT_LOW = CrrcMvb::getCrrcMvb()->getBool(0x228,23,5);//蓄电池继电器，八轴车：（欠压保护）
+   M1_R2_B_Q_UAI = CrrcMvb::getCrrcMvb()->getBool(0x228,23,4);//辅入库继电器
+   M1_R2_B_MCBON2 = CrrcMvb::getCrrcMvb()->getBool(0x228,23,0);//主断闭合
+   M1_R2_B_Q_FIRE2_T = CrrcMvb::getCrrcMvb()->getBool(0x228,25,5);//它节防火管报警
+   M1_R2_B_Q_FIRE2_B = CrrcMvb::getCrrcMvb()->getBool(0x228,25,4);//本节防火管报警
+   M1_R2_B_MSCT_BRAKE = CrrcMvb::getCrrcMvb()->getBool(0x228,25,2);//制动
+   M1_R2_B_MSCT_NEUTRAL = CrrcMvb::getCrrcMvb()->getBool(0x228,25,1);//零位
+   M1_R2_B_MSCT_TRACTION = CrrcMvb::getCrrcMvb()->getBool(0x228,25,0);//牵引
+   M1_R2_B_DIR_BACK = CrrcMvb::getCrrcMvb()->getBool(0x228,26,7);//向后
+   M1_R2_B_DIR_FORWARD = CrrcMvb::getCrrcMvb()->getBool(0x228,26,6);//向前
+   M1_R2_B_PARKB_RELAY = CrrcMvb::getCrrcMvb()->getBool(0x228,26,4);//停放制动继电器
+   M1_R2_B_FLL_RELAY = CrrcMvb::getCrrcMvb()->getBool(0x228,26,3);//轮缘润滑继电器
+   M1_R2_B_Q2_CAB = CrrcMvb::getCrrcMvb()->getBool(0x228,26,2);//操纵端激活继电器2
+   M1_R2_B_Q1_CAB = CrrcMvb::getCrrcMvb()->getBool(0x228,26,1);//操纵端激活继电器1
+   M1_R2_B_SPEED_ZERO  = CrrcMvb::getCrrcMvb()->getBool(0x228,28,3);//零速
+   M1_R2_B_Q2_PT = CrrcMvb::getCrrcMvb()->getBool(0x228,28,2);//升弓继电器2：是否为它节继电器
+   M1_R2_B_DANJIE_Q_MU = CrrcMvb::getCrrcMvb()->getBool(0x228,28,1);//单节升弓继电器
+   M1_R2_B_H_HT_OPEN = CrrcMvb::getCrrcMvb()->getBool(0x228,28,0);//高压隔离开关继电器-关
+   M1_R2_B_H_HT_CLOSE = CrrcMvb::getCrrcMvb()->getBool(0x228,29,7);//高压隔离开关继电器-开
+   M1_R2_B_SAND_BACK = CrrcMvb::getCrrcMvb()->getBool(0x228,29,6);//后撒沙
+   M1_R2_B_SAND_FORWARD = CrrcMvb::getCrrcMvb()->getBool(0x228,29,5);//前撒沙
+   M1_R2_B_AIR_ELE_LOCK = CrrcMvb::getCrrcMvb()->getBool(0x228,29,4);//空电联锁信号
+   M1_R2_B_BCU_EM = CrrcMvb::getCrrcMvb()->getBool(0x228,29,3);//紧急制动—BCU
+   M1_R2_B_DEADMAN_BCU = CrrcMvb::getCrrcMvb()->getBool(0x228,29,1);//无人警惕—BCU
+   M1_R2_B_CPR_AUX_RELAY = CrrcMvb::getCrrcMvb()->getBool(0x228,29,0);//辅助压缩机继电器
+
 }
