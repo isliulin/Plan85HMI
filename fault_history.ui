@@ -253,7 +253,7 @@ border:1px solid white;
     <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
-    <string>asdhfksahdfkjdf</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="PB_down">

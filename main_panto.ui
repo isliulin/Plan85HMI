@@ -20,11 +20,7 @@
 }
 QPushButton
 {
-	font:14px;
-    color: rgb(0,0,0);
-	background-color: rgb(0, 255, 0);
-	border-top: 2px solid white;	
-	border-left: 2px solid white;
+font: 16px;color: rgb(192,192,192);background-color: rgb(0, 0, 0);border: 1px solid white;border-top: 2px solid white;border-left: 2px solid white;
 }
 QLabel
 {
@@ -108,10 +104,7 @@ color:rgb(255,255,255);
     <string>1</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">	font:16px;
-    color: rgb(255,255,255);
-	background-color: rgb(0, 0, 0);
-border:2px solid white;</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>速度加</string>
@@ -130,10 +123,7 @@ border:2px solid white;</string>
     <string>2</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">	font:16px;
-    color: rgb(255,255,255);
-	background-color: rgb(0, 0, 0);
-border:2px solid white;</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>速度减</string>
@@ -152,10 +142,7 @@ border:2px solid white;</string>
     <string>3</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">	font:16px;
-    color: rgb(255,255,255);
-	background-color: rgb(0, 0, 0);
-border:2px solid white;</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>激活</string>
