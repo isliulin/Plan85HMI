@@ -44,7 +44,7 @@ font: 16px;color: rgb(192,192,192);background-color: rgb(0, 0, 0);border-top: 2p
     <string>分相线路返回模式:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="LBL_Tips2">
+  <widget class="QLabel" name="LBL_Tips2_2">
    <property name="geometry">
     <rect>
      <x>290</x>
@@ -122,6 +122,26 @@ font:16px;</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_ReturnMode">
+   <property name="geometry">
+    <rect>
+     <x>404</x>
+     <y>110</y>
+     <width>141</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,0);
+</string>
+   </property>
+   <property name="text">
+    <string>常规线路</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
  </widget>

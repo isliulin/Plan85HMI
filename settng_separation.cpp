@@ -10,6 +10,7 @@ Settng_Separation::Settng_Separation(QWidget *parent) :
     foreach (QPushButton* button, modeButtonList) {
         connect(button,SIGNAL(pressed()),this,SLOT(modePressEvent()));
     }
+    count = 0;
 }
 
 Settng_Separation::~Settng_Separation()
@@ -19,16 +20,16 @@ Settng_Separation::~Settng_Separation()
 
 void Settng_Separation::updatePage()
 {
+
     if(this->database->data_CCU->M1_D1_B_NSC_DISTANCE1)
     {
-        this->ui->BTN_NormalLine->setStyleSheet(NButtonDOWN);
+        this->ui->LBL_ReturnMode->setText("普通线路");
     }else if(this->database->data_CCU->M1_D1_B_NSC_DISTANCE2)
     {
-        this->ui->BTN_FreightLine->setStyleSheet(NButtonDOWN);
+        this->ui->LBL_ReturnMode->setText("货运专线");
     }else
     {
-        this->ui->BTN_NormalLine->setStyleSheet(NButtonUP);
-        this->ui->BTN_FreightLine->setStyleSheet(NButtonUP);
+        this->ui->LBL_ReturnMode->setText("");
     }
 
 }
@@ -42,24 +43,40 @@ void Settng_Separation::modePressEvent()
     modeIndex = ((QPushButton *)this->sender())->whatsThis().toInt();
     switch (modeIndex) {
     case 1:
-        if(!this->database->data_CCU->M1_D1_B_NSC_DISTANCE1)
-        {
-            this->database->data_CCU->B_NSC_DISTANCE1 = true;
-            this->database->data_CCU->B_NSC_DISTANCE2 = false;
-        }else
-        {
-        }
+        this->ui->BTN_NormalLine->setStyleSheet(NButtonDOWN);
+        timerNormal = startTimer(3000);
+        this->database->data_CCU->B_NSC_DISTANCE1 = true;
         break;
     case 2:
-        if(!this->database->data_CCU->M1_D1_B_NSC_DISTANCE2)
-        {
-            this->database->data_CCU->B_NSC_DISTANCE1 = false;
-            this->database->data_CCU->B_NSC_DISTANCE2 = true;
-        }else
-        {
-        }
+        this->ui->BTN_FreightLine->setStyleSheet(NButtonDOWN);
+        timerFreight = startTimer(3000);
+        this->database->data_CCU->B_NSC_DISTANCE2 = true;
         break;
     default:
         break;
     }
 }
+
+void Settng_Separation::timerEvent(QTimerEvent *e)
+{
+    if(timerNormal == e->timerId())
+    {
+        killTimer(timerNormal);
+        this->ui->BTN_NormalLine->setStyleSheet(NButtonUP);
+        this->database->data_CCU->B_NSC_DISTANCE1 = false;
+        timerNormal = 0;
+    }else if(timerFreight == e->timerId())
+    {
+        killTimer(timerFreight);
+        this->ui->BTN_FreightLine->setStyleSheet(NButtonUP);
+        this->database->data_CCU->B_NSC_DISTANCE2 = false;
+        timerFreight = 0;
+    }
+}
+
+void Settng_Separation::hideEvent(QHideEvent *)
+{
+    this->database->data_CCU->B_NSC_DISTANCE1 = false;
+    this->database->data_CCU->B_NSC_DISTANCE2 = false;
+}
+

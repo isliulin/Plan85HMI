@@ -1,6 +1,6 @@
 #ifndef DATA_CCU_H
 #define DATA_CCU_H
-
+#include "qdatetime.h"
 class Data_CCU
 {
 public:
@@ -98,6 +98,9 @@ public:
    M1_D1_B_MESG_BYTE2_BIT2,M1_D1_B_MESG_BYTE2_BIT3,M1_D1_B_MESG_BYTE2_BIT4,M1_D1_B_MESG_BYTE2_BIT5,M1_D1_B_MESG_BYTE2_BIT6,M1_D1_B_MESG_BYTE2_BIT7,
    M1_D1_B_P712CHECK0,M1_D1_B_P712CHECK1;
 
+   QDateTime HMI_DateTime_foruse;
+    bool CCUOnline;
+    bool CheckLifesignal(unsigned char lifeSignal);
 };
 
 #endif // DATA_CCU_H

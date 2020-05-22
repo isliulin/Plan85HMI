@@ -17,6 +17,7 @@ public:
     ~Settng_Others();
     void updatePage();
     void timerEvent(QTimerEvent *e);
+    void hideEvent(QHideEvent*);
 
 private slots:
     void modePressEvent();
@@ -24,7 +25,7 @@ private slots:
 private:
     Ui::Settng_Others *ui;
     QList<QPushButton* > ModebuttonList,NumbuttonList;
-    int modeIndex,timerSave;
+    int modeIndex,timerSave,timerNorMode,timerSumMode;
     QString numValue,inputValue;
 };
 

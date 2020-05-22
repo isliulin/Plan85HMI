@@ -332,3 +332,7 @@ OTHER_FILES += \
     log4qt/log4qt.pri \
     log4qt/Log4Qt.pri
 QMAKE_CXXFLAGS +=  -Wno-unused-parameter
+
+DISTFILES += \
+    images/TrainLogo.png \
+    images/TrainLogo-reverse.png
