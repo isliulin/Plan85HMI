@@ -337,7 +337,7 @@ border:1px solid white;
    </property>
    <property name="styleSheet">
     <string notr="true">border:0px;
-color:green;</string>
+color:yellow;</string>
    </property>
    <property name="text">
     <string>U盘状态：</string>
@@ -357,7 +357,7 @@ color:green;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:0px;
-color:green;</string>
+color:yellow;</string>
    </property>
    <property name="text">
     <string>系统没有检测到U盘，请插入U盘后下载文件</string>
@@ -377,7 +377,7 @@ color:green;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:0px;
-color:green;</string>
+color:yellow;</string>
    </property>
    <property name="text">
     <string>未找到文件</string>
@@ -397,7 +397,7 @@ color:green;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:0px;
-color:green;</string>
+color:yellow;</string>
    </property>
    <property name="text">
     <string>文件状态：</string>
@@ -417,7 +417,7 @@ color:green;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:0px;
-color:green;</string>
+color:yellow;</string>
    </property>
    <property name="text">
     <string>U盘容量不足或没有U盘错误</string>
@@ -437,7 +437,7 @@ color:green;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:0px;
-color:green;</string>
+color:yellow;</string>
    </property>
    <property name="text">
     <string>下载信息：</string>
@@ -457,7 +457,7 @@ color:green;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:0px;
-color:green;</string>
+color:yellow;</string>
    </property>
    <property name="text">
     <string>下载进度：</string>
