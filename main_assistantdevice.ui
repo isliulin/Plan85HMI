@@ -32,17 +32,137 @@ color:rgb(255,255,255);
 }
 </string>
   </property>
-  <widget class="QCheckBox" name="checkBox">
+  <widget class="QPushButton" name="PB_AirPressTest">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>230</y>
-     <width>97</width>
-     <height>22</height>
+     <x>310</x>
+     <y>50</y>
+     <width>191</width>
+     <height>41</height>
     </rect>
    </property>
+   <property name="whatsThis">
+    <string>1</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:16px;color: rgb(255,255,255);background-color: rgb(0, 0, 0);border:2px solid white;</string>
+   </property>
    <property name="text">
-    <string>CheckBox</string>
+    <string>空压机测试</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_MwindTest_1">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>110</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>2</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:16px;color: rgb(255,255,255);background-color: rgb(0, 0, 0);border:2px solid white;</string>
+   </property>
+   <property name="text">
+    <string>机械间风机1测试</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_MwindTest_2">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>170</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>3</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:16px;color: rgb(255,255,255);background-color: rgb(0, 0, 0);border:2px solid white;</string>
+   </property>
+   <property name="text">
+    <string>机械间风机2测试</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_CoolWindTest_1">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>230</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>4</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:16px;color: rgb(255,255,255);background-color: rgb(0, 0, 0);border:2px solid white;</string>
+   </property>
+   <property name="text">
+    <string>冷却塔风机1测试</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_CoolWindTest_2">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>290</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>5</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:16px;color: rgb(255,255,255);background-color: rgb(0, 0, 0);border:2px solid white;</string>
+   </property>
+   <property name="text">
+    <string>冷却塔风机2测试</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_TractWindTest_1">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>350</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>6</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:16px;color: rgb(255,255,255);background-color: rgb(0, 0, 0);border:2px solid white;</string>
+   </property>
+   <property name="text">
+    <string>牵引风机1测试</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_TractWindTest_2">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>410</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>7</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:16px;color: rgb(255,255,255);background-color: rgb(0, 0, 0);border:2px solid white;</string>
+   </property>
+   <property name="text">
+    <string>牵引风机2测试</string>
    </property>
   </widget>
  </widget>

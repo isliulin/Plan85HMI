@@ -16,7 +16,7 @@ Navigator::Navigator(QWidget *parent) :
     }
 
     buttonIndexList<<uMainData_TrainOutline<<uSettng_Bypass<<uCondition_PantoUp<<
-                 uDeviceData_breaker<<uMain_Simulate<<uNULL<<uNULL<<uNULL<<uFault_Current<<uUniteMode;
+                 uDeviceData_breaker<<uMain_Simulate<<uNULL<<uNULL<<uNULL<<uFault_Current<<uUnityMode;
     buttonNameList<<"主要\n数据"<<"机车\n设置"<<"运行\n条件"<<"设备\n数据"<<"维护\n测试"
                     <<""<<""<<""<<"故障\n查询"<<"合屏\n模式";
     m_oldposition = m_position = uMiddleTraction;
@@ -35,13 +35,12 @@ void Navigator::NBpressEvent()
         buttons[i]->setStyleSheet(NButtonUP);
     }
 
-    qDebug()<<m_position;
     buttonIndexList.clear();
     switch (m_position)
     {
         case uMiddleTraction:
         buttonIndexList<<uMainData_TrainOutline<<uSettng_Bypass<<uCondition_PantoUp<<uDeviceData_breaker<<
-                     uMain_Simulate<<uNULL<<uNULL<<uNULL<<uFault_Current<<uUniteMode;
+                     uMain_Simulate<<uNULL<<uNULL<<uNULL<<uFault_Current<<uUnityMode;
         break;
         case uMiddleMainData:
         buttonIndexList<<uMainData_TrainOutline<<uMainData_DriverOutline<<uMainData_TracBrakeOutline<<uNULL<<
@@ -68,8 +67,12 @@ void Navigator::NBpressEvent()
 					  <<uNULL<<uNULL<<uNULL<<uNULL<<uVehicleRunStatePage;
 		break;
 
+        case uMiddleUnite:
+        buttonIndexList<<uVehicleRunStatePage<<uBrakeMode<<uUnityMode<<uNULL<<uNULL
+                      <<uNULL<<uNULL<<uNULL<<uNULL<<uNULL;
+        break;
+
     }
-    qDebug()<<buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt());
     changePage(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()));
 }
 void Navigator::updateButtonsNamesByPositon(enum pagePosition p)
@@ -105,6 +108,11 @@ void Navigator::updateButtonsNamesByPositon(enum pagePosition p)
         buttonNameList<<"升弓\n条件"<<"主断\n条件"<<"牵引\n条件"<<"制动\n条件"
                         <<""<<""<<""<<""<<""<<"主界面";
         break;
+
+        case uMiddleUnite:
+        buttonNameList<<"牵引\n模式"<<"制动\模式"<<"合屏\n模式"<<""
+                        <<""<<""<<""<<""<<""<<"";
+        break;
     }
     for(int i = 0; i < buttons.size();i++)
     {
@@ -120,7 +128,12 @@ void Navigator::updateButtonsNamesByPositon(enum pagePosition p)
                 buttons[i]->setStyleSheet(NButtonUP);
             }
 
-        }else
+        }else if(m_position == uMiddleUnite)
+        {
+            ui->NButton3->setStyleSheet(NButtonDOWN);
+
+        }
+        else
         {
             ui->NButton1->setStyleSheet(NButtonDOWN);
         }

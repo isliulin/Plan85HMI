@@ -18,6 +18,7 @@ class Navigator;
 class VehicleRunStatePage;
 class CrrcMvb;
 class CrrcFault;
+class CrrcFault;
 class Simulation;
 
 class MainData_TrainOutline;
@@ -43,10 +44,13 @@ class Main_Datetime;
 class Fault_Current;
 class Fault_History;
 class Fault_Download;
-class Panto_Condition;
-class Breaker_Condition;
-class Brake_Condition;
-class Traction_Condition;
+class Unity;
+class Condition_PantoUp;
+class Condition_Breaker;
+class Condition_Brake;
+class Condition_Traction;
+class Unity_Brake;
+
 
 class Widget : public QWidget
 {
@@ -75,7 +79,6 @@ private:
     Header *header;
     CrrcMvb* crrcMvb;
     CrrcFault* crrcFault;
-
     MainData_TrainOutline* mainData_TrainOutline;
     MainData_DriverOutline* mainData_DriverOutline;
     MainData_TracBrakeOutline* mainData_TracBrakeOutline;
@@ -102,10 +105,13 @@ private:
 
     Simulation* simulation;
 
-    Panto_Condition* panto_Condition;
-    Brake_Condition* brake_Condition;
-    Breaker_Condition* breaker_Condition;
-    Traction_Condition* traction_Condition;
+    Unity* unity;
+    Unity_Brake* unity_Brake;
+    Condition_PantoUp* condition_PantoUp;
+    Condition_Brake* condition_Brake;
+    Condition_Breaker* condition_Breaker;
+    Condition_Traction* condition_Traction;
+
 };
 
 #endif // WIDGET_H

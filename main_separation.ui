@@ -31,6 +31,99 @@ QLabel
 color:rgb(255,255,255);
 }</string>
   </property>
+  <widget class="QPushButton" name="PB_testActive">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>120</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font:16px;
+    color: rgb(255,255,255);
+	background-color: rgb(0, 0, 0);
+border:2px solid white;
+</string>
+   </property>
+   <property name="text">
+    <string>自动过分相测试激活</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_testCancel">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>120</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font:16px;
+    color: rgb(255,255,255);
+	background-color: rgb(0, 0, 0);
+border:2px solid white;
+</string>
+   </property>
+   <property name="text">
+    <string>自动过分相测试取消</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>260</y>
+     <width>81</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>请输入速度</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_input_value">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>286</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_send">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>370</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font:16px;
+    color: rgb(255,255,255);
+	background-color: rgb(0, 0, 0);
+border:2px solid white;
+</string>
+   </property>
+   <property name="text">
+    <string>发送数据</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
