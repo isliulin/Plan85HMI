@@ -137,7 +137,7 @@ color:rgb(255,255,255);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: green;</string>
+    <string notr="true">color: yellow;</string>
    </property>
    <property name="text">
     <string>00:00:00</string>
@@ -156,7 +156,7 @@ color:rgb(255,255,255);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: green;</string>
+    <string notr="true">color: yellow;</string>
    </property>
    <property name="text">
     <string>0.00.00</string>
@@ -175,7 +175,7 @@ color:rgb(255,255,255);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: green;</string>
+    <string notr="true">color: yellow;</string>
    </property>
    <property name="text">
     <string>00:00:00</string>
@@ -194,7 +194,7 @@ color:rgb(255,255,255);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: green;</string>
+    <string notr="true">color: yellow;</string>
    </property>
    <property name="text">
     <string>0.00.00</string>
@@ -233,7 +233,7 @@ color:rgb(255,255,255);
    </property>
    <property name="styleSheet">
     <string notr="true">border:1px solid white;
-color:green;</string>
+color: yellow;</string>
    </property>
    <property name="text">
     <string>2017</string>
@@ -253,7 +253,7 @@ color:green;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:1px solid white;
-color:green;</string>
+color: yellow;</string>
    </property>
    <property name="text">
     <string>0</string>
@@ -292,7 +292,7 @@ color:green;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:1px solid white;
-color:green;</string>
+color: yellow;</string>
    </property>
    <property name="text">
     <string>1</string>
@@ -331,7 +331,7 @@ color:green;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:1px solid white;
-color:green;</string>
+color: yellow;</string>
    </property>
    <property name="text">
     <string>0</string>
@@ -370,7 +370,7 @@ color:green;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:1px solid white;
-color:green;</string>
+color: yellow;</string>
    </property>
    <property name="text">
     <string>1</string>
@@ -409,7 +409,7 @@ color:green;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:1px solid white;
-color:green;</string>
+color: yellow;</string>
    </property>
    <property name="text">
     <string>0</string>

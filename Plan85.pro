@@ -134,9 +134,7 @@ SOURCES += main.cpp\
     unity_brake.cpp \
     widgets/ctrlkpadiagram.cpp \
     widgets/ctrlflowdiagram.cpp \
-<<<<<<< HEAD
-    widgets/ctrlnumbertable.cpp
-=======
+    widgets/ctrlnumbertable.cpp\
     devicedatabreaker.cpp \
     devicedatasiv.cpp \
     devicedataversion.cpp \
@@ -144,7 +142,6 @@ SOURCES += main.cpp\
     devicedatamainconv.cpp \
     devicedatanetwork.cpp \
     devicedatariom.cpp
->>>>>>> 74d6f72f6e615c4eb03a394303936710cd46a086
 
 
 HEADERS  += widget.h \
@@ -262,9 +259,7 @@ HEADERS  += widget.h \
     unity_brake.h \
     widgets/ctrlkpadiagram.h \
     widgets/ctrlflowdiagram.h \
-<<<<<<< HEAD
-    widgets/ctrlnumbertable.h
-=======
+    widgets/ctrlnumbertable.h\
     devicedatabreaker.h \
     devicedatasiv.h \
     devicedataversion.h \
@@ -272,7 +267,6 @@ HEADERS  += widget.h \
     devicedatamainconv.h \
     devicedatanetwork.h \
     devicedatariom.h
->>>>>>> 74d6f72f6e615c4eb03a394303936710cd46a086
 
 
 
@@ -321,12 +315,9 @@ FORMS    += widget.ui \
     widgets/ctrlspeedometer.ui \
     unity_brake.ui \
     widgets/ctrlkpadiagram.ui \
-<<<<<<< HEAD
     widgets/ctrlflowdiagram.ui \
-    widgets/ctrlnumbertable.ui
-=======
+    widgets/ctrlnumbertable.ui\
     widgets/ctrlflowdiagram.ui\
->>>>>>> 74d6f72f6e615c4eb03a394303936710cd46a086
     maindata_tracbrakeoutline.ui \
     devicedatabreaker.ui \
     devicedatasiv.ui \
