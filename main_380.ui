@@ -165,7 +165,7 @@ color: rgb(255, 255, 255);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:1px solid white;
-color: green;</string>
+color: yellow;</string>
    </property>
    <property name="text">
     <string>相序错误</string>
@@ -182,7 +182,7 @@ color: green;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:1px solid white;
-color: green;</string>
+color: yellow;</string>
    </property>
    <property name="text">
     <string>正常位</string>
@@ -199,7 +199,7 @@ color: green;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:1px solid white;
-color: green;</string>
+color: yellow;</string>
    </property>
    <property name="text">
     <string>正常</string>
@@ -216,7 +216,7 @@ color: green;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:1px solid white;
-color: green;</string>
+color: yellow;</string>
    </property>
    <property name="text">
     <string>未工作</string>

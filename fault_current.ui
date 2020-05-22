@@ -106,7 +106,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -122,7 +122,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -138,7 +138,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -154,7 +154,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -170,7 +170,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -186,7 +186,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -202,7 +202,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -218,7 +218,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -234,7 +234,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -250,7 +250,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -266,7 +266,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -282,7 +282,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -298,7 +298,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -314,7 +314,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -330,7 +330,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -346,7 +346,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -362,7 +362,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -378,7 +378,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -394,7 +394,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -410,7 +410,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -426,7 +426,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -442,7 +442,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -458,7 +458,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -474,7 +474,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -490,7 +490,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -506,7 +506,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -522,7 +522,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -538,7 +538,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -554,7 +554,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -570,7 +570,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -586,7 +586,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -602,7 +602,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -618,7 +618,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -634,7 +634,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -650,7 +650,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -666,7 +666,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -682,7 +682,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -698,7 +698,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -714,7 +714,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -730,7 +730,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -746,7 +746,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -762,7 +762,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -778,7 +778,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -794,7 +794,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -810,7 +810,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -826,7 +826,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -842,7 +842,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -858,7 +858,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -874,7 +874,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -890,7 +890,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -906,7 +906,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -922,7 +922,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -938,7 +938,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -954,7 +954,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -970,7 +970,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -986,7 +986,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -1002,7 +1002,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -1018,7 +1018,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -1034,7 +1034,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -1050,7 +1050,7 @@ border:1px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -1144,7 +1144,7 @@ border:1px solid white;
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 0, 0);
 border:1px solid white;
-color:green;</string>
+color:yellow;</string>
    </property>
    <property name="text">
     <string>1</string>
@@ -1165,7 +1165,7 @@ color:green;</string>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 0, 0);
 border:1px solid white;
-color:green;</string>
+color:yellow;</string>
    </property>
    <property name="text">
     <string>1</string>

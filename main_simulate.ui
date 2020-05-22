@@ -147,7 +147,7 @@ border:2px solid white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: green;
+    <string notr="true">color: yellow;
 font-size:16px;
 border:2px solid white;</string>
    </property>
@@ -165,7 +165,7 @@ border:2px solid white;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: green;
+    <string notr="true">color: yellow;
 font-size:16px;
 border:2px solid white;</string>
    </property>
