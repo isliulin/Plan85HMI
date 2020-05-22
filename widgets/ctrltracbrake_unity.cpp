@@ -12,9 +12,15 @@ CtrlTracBrake_Unity::~CtrlTracBrake_Unity()
 {
     delete ui;
 }
-void CtrlTracBrake_Unity::setCtrlValueRect(int value, bool trac, bool brake)
+void CtrlTracBrake_Unity::setCtrlValueRect(int value)
 {
     QString t_style;
+    bool trac, brake;
+    if(value > 0)
+        trac  =true;
+    else
+        brake = true;
+
     if(trac)
     {
         t_style = DARKBLUE;

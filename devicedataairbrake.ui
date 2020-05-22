@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DeviceDataAirBrake</class>
+ <widget class="QWidget" name="DeviceDataAirBrake">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	background-color: black;
+}
+QPushButton
+{
+	font:14px;
+    color: rgb(0,0,0);
+	background-color: rgb(0, 255, 0);
+	border-top: 2px solid white;	
+	border-left: 2px solid white;
+}
+QLabel
+{
+color:rgb(255,255,255);
+border:2px  solid white;
+font:20px &quot;SImHei&quot;;
+}
+</string>
+  </property>
+  <widget class="QLabel" name="label2">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>150</y>
+     <width>200</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>制动缸</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label1">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>110</y>
+     <width>200</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string> 投入/切除</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>70</y>
+     <width>200</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string> 主控/从控</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label3">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>190</y>
+     <width>200</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string> 均衡风缸</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label4">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>230</y>
+     <width>200</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>总风缸</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label5">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>270</y>
+     <width>200</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>列车管</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label7">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>350</y>
+     <width>200</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>列车管额定压力</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label6">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>310</y>
+     <width>200</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>流量</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelBrake">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>150</y>
+     <width>300</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label0">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>70</y>
+     <width>300</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
+   <property name="text">
+    <string>从控</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelRatedPress">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>350</y>
+     <width>300</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelAveWind">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>190</y>
+     <width>300</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelFlow">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>310</y>
+     <width>300</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelInputCut">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>110</y>
+     <width>300</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
+   <property name="text">
+    <string>未定义</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelTrainPipe">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>270</y>
+     <width>300</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelTotalWind">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>230</y>
+     <width>300</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

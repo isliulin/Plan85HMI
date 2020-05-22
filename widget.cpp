@@ -43,6 +43,15 @@
 #include "maindata_tracbrakeoutline.h"
 #include "unity.h"
 #include "unity_brake.h"
+
+#include "devicedataairbrake.h"
+#include "devicedatabreaker.h"
+#include "devicedatamainconv.h"
+#include "devicedatanetwork.h"
+#include "devicedatariom.h"
+#include "devicedatasiv.h"
+#include "devicedataversion.h"
+
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -216,6 +225,27 @@ Widget::Widget(QWidget *parent) :
     this->unity_Brake->setMyBase(uMiddleUnite,QString("电空制动"));
     this->unity_Brake->hide();
 
+    this->deviceDataAirBrake = new DeviceDataAirBrake(this);
+    this->deviceDataAirBrake->setMyBase(uMiddleDeviceData, QString("空气制动"));
+    this->deviceDataAirBrake->hide();
+    this->deviceDataBreaker = new DeviceDataBreaker(this);
+    this->deviceDataBreaker->setMyBase(uMiddleDeviceData, QString("断路器"));
+    this->deviceDataBreaker->hide();
+    this->deviceDataMainConv = new DeviceDataMainConv(this);
+    this->deviceDataMainConv->setMyBase(uMiddleDeviceData, QString("主变流"));
+    this->deviceDataMainConv->hide();
+    this->deviceDataNetwork = new DeviceDataNetwork(this);
+    this->deviceDataNetwork->setMyBase(uMiddleDeviceData, QString("在线状态"));
+    this->deviceDataNetwork->hide();
+    this->deviceDataRIOM = new DeviceDataRIOM(this);
+    this->deviceDataRIOM->setMyBase(uMiddleDeviceData, QString("信号状态"));
+    this->deviceDataRIOM->hide();
+    this->deviceDataSIV = new DeviceDataSIV(this);
+    this->deviceDataSIV->setMyBase(uMiddleDeviceData, QString("辅助"));
+    this->deviceDataSIV->hide();
+    this->deviceDataVersion = new DeviceDataVersion(this);
+    this->deviceDataVersion->setMyBase(uMiddleDeviceData, QString("软件版本"));
+
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
     this->widgets.insert(uMainData_DriverOutline,this->mainData_DriverOutline);
@@ -247,6 +277,15 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uCondition_Brake,this->condition_Brake);
     this->widgets.insert(uBrakeMode,this->unity_Brake);
 
+    this->widgets.insert(uDeviceDataBreaker, this->deviceDataBreaker);
+    this->widgets.insert(uDeviceDataSIV, this->deviceDataSIV);
+    this->widgets.insert(uDeviceDataMainConv, this->deviceDataMainConv);
+    this->widgets.insert(uDeviceDataNetwork, this->deviceDataNetwork);
+    this->widgets.insert(uDeviceDataVersion, this->deviceDataVersion);
+    this->widgets.insert(uDeviceDataRIOM, this->deviceDataRIOM);
+    this->widgets.insert(uDeviceDataAirBrake, this->deviceDataAirBrake);
+
+
     this->header->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();
 }
@@ -276,6 +315,29 @@ void Widget::updatePage()
     {
         crrcFault->start();
     }
+    // define local time for recording and showing
+    QDateTime dateTimeLocal;
+    if(this->database->data_CCU->M1_D1_N_MPU_LIFE && faultdelaycnt>45)
+    {
+        this->database->data_CCU->HMI_DateTime_foruse = QDateTime::fromTime_t(database->data_TCN->TrainLocal->N_DATE_TIME);
+
+        if(this->database->data_CCU->HMI_DateTime_foruse.isValid())
+        {
+
+        }else
+        {
+            this->database->data_CCU->HMI_DateTime_foruse.setDate(dateTimeLocal.currentDateTime().date());
+            this->database->data_CCU->HMI_DateTime_foruse.setTime(dateTimeLocal.currentDateTime().time());
+        }
+        VCUtime2HMI10s();
+
+    }else
+    {
+        this->database->data_CCU->HMI_DateTime_foruse.setDate(dateTimeLocal.currentDateTime().date());
+        this->database->data_CCU->HMI_DateTime_foruse.setTime(dateTimeLocal.currentDateTime().time());
+    }
+    this->crrcFault->getLocalDateTime(this->database->data_CCU->HMI_DateTime_foruse);
+
     counter >= 100 ? (counter = 1) : (counter ++);
 
 
@@ -349,10 +411,9 @@ void Widget::showEvent(QShowEvent *)
             }
 
             //source
-            CrrcMvb::getCrrcMvb()->addSourcePort(0x710,MVB_FCode4,32);
-            CrrcMvb::getCrrcMvb()->addSourcePort(0x711,MVB_FCode4,128);
-            CrrcMvb::getCrrcMvb()->addSourcePort(0x712,MVB_FCode4,128);
-            CrrcMvb::getCrrcMvb()->addSourcePort(0x713,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSourcePort(0x300,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSourcePort(0x301,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSourcePort(0x302,MVB_FCode4,128);
 
             //sink
             //acu
@@ -381,9 +442,10 @@ void Widget::showEvent(QShowEvent *)
             CrrcMvb::getCrrcMvb()->addSinkPort(0x229,MVB_FCode4,512);
 
             //ddu
-            CrrcMvb::getCrrcMvb()->addSinkPort(0x300,MVB_FCode4,128);
-            CrrcMvb::getCrrcMvb()->addSinkPort(0x301,MVB_FCode4,128);
-            CrrcMvb::getCrrcMvb()->addSinkPort(0x302,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x710,MVB_FCode4,32);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x711,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x712,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x713,MVB_FCode4,128);
 
             //cmd
             CrrcMvb::getCrrcMvb()->addSinkPort(0x310,MVB_FCode4,128);
@@ -610,4 +672,83 @@ void Widget::translateLanguage()
     }
 
     delete translator;
+}
+void Widget::VCUtime2HMI10s()
+{
+    static int count10stimer = 0;
+    QDateTime dateTimeSystem;
+//    qDebug()<< "CCU TIME: " <<dateTimeCcu.date().year()<<dateTimeCcu.date().month()<<dateTimeCcu.date().day() << dateTimeCcu.toTime_t()
+//            << "IDU TIME: " << dateTimeSystem.currentDateTime().date().year()<<dateTimeSystem.currentDateTime().date().month()<<dateTimeSystem.currentDateTime().date().day()
+//            << dateTimeSystem.currentDateTime().toTime_t();
+
+    if((bool(this->database->data_CCU->HMI_DateTime_foruse.date().year() > 1999) && bool(this->database->data_CCU->HMI_DateTime_foruse.date().year() < 2038)))
+    {
+        int timeDiff = ( this->database->data_CCU->HMI_DateTime_foruse.toTime_t()-dateTimeSystem.currentDateTime().toTime_t());
+
+
+
+        if(bool(bool(timeDiff<-10 )||bool(timeDiff>10))  )
+        {
+            if(count10stimer > 0)
+            {
+                if(count10stimer++ >30)
+                {
+                    count10stimer = 0;
+                }
+            }else
+            {
+                //logger()->info("执行自动校时，与CCU时间差为: "+QString::number(timeDiff)+" s");
+
+                count10stimer = 1;
+#ifndef USER_DEBUG_MODE
+                systimeset(this->database->data_CCU->HMI_DateTime_foruse.date().year(),
+                           this->database->data_CCU->HMI_DateTime_foruse.date().month(),
+                           this->database->data_CCU->HMI_DateTime_foruse.date().day(),
+                           this->database->data_CCU->HMI_DateTime_foruse.time().hour(),
+                           this->database->data_CCU->HMI_DateTime_foruse.time().minute(),
+                           this->database->data_CCU->HMI_DateTime_foruse.time().second(),)
+//                systimeset(this->database->CTAL_SysTimeYear_U8+2000,this->database->CTAL_SysTimeMonth_U8,this->database->CTAL_SysTimeDay_U8
+//                           ,this->database->CTAL_SysTimeHour_U8,this->database->CTAL_SysTimeMinute_U8,this->database->CTAL_SysTimeSecond_U8);
+#endif
+            }
+        }else
+        {
+            count10stimer = 0;
+        }
+
+    }
+}
+bool Widget::systimeset(unsigned short int year,unsigned short int month,unsigned short int day,
+                             unsigned short int hour,unsigned short int minute,unsigned short int second)
+{
+#ifndef WINDOWS_MODE
+
+    time_t t;
+    struct tm nowtime;
+    nowtime.tm_sec = second; // second
+    nowtime.tm_min = minute; ///*       Minutes.[0-59]
+    nowtime.tm_hour = hour;  ///*       Hours.   [0-23]
+    nowtime.tm_mday = day;   ///*       Day.[1-31]
+    nowtime.tm_mon = month - 1; ///*       Month.   [0-11]
+    nowtime.tm_year = year - 1900; ///*       Year-       1900.
+    nowtime.tm_isdst = -1;    ///*       DST.[-1/0/1]
+    t = mktime(&nowtime);
+    stime(&t);
+
+    QDate date( year, month, day );
+    QTime time( hour, minute, second );
+    QString dateStr = date.toString( "yyyy-MM-dd" );
+    QString timeStr = time.toString( "hh:mm:ss" );
+    QString hwclockStr = "hwclock --set --date \"";
+    dateStr.replace(QRegExp("-"), "");
+    timeStr.replace(QRegExp("-"), ":");
+    hwclockStr = hwclockStr + dateStr + " " + timeStr + "\"";
+#ifdef QT_VERSION_5_6
+    char *c=hwclockStr.toLatin1().data();
+#else
+    char *c=hwclockStr.toAscii().data();
+#endif
+    system(c);
+#endif
+    return true;
 }

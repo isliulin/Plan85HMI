@@ -3,7 +3,7 @@
 
 #include <QWidget>
 #include "mybase.h"
-
+#include "qtimer.h"
 #include "widgets/ctrlnetvoltage.h"
 #include "widgets/ctrlnetcurrent.h"
 #include "widgets/ctrlcontrolvoltage.h"
@@ -27,7 +27,7 @@ private slots:
     void on_BTNMinus1_clicked();
 
     void on_BTNPlus1_clicked();
-
+    void timer3sEvent();
 private:
     Ui::VehicleRunStatePage *ui;
 
@@ -35,6 +35,11 @@ private:
     CtrlNetCurrent* ctrlNetCurrent;
     CtrlControlVoltage* ctrlControlVoltage;
     CtrlTracBrake* ctrlTracBrake;
+    QTimer *timer3s;
+    int FirstFaultIndex;
+    QList<QLabel*> labellist;
+    void FaultRoll();
+
 };
 
 #endif // VEHICLERUNSTATEPAGE_H

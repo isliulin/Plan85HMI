@@ -16,7 +16,7 @@ Navigator::Navigator(QWidget *parent) :
     }
 
     buttonIndexList<<uMainData_TrainOutline<<uSettng_Bypass<<uCondition_PantoUp<<
-                 uDeviceData_breaker<<uMain_Simulate<<uNULL<<uNULL<<uNULL<<uFault_Current<<uUnityMode;
+                 uDeviceDataBreaker<<uMain_Simulate<<uNULL<<uNULL<<uNULL<<uFault_Current<<uUnityMode;
     buttonNameList<<"主要\n数据"<<"机车\n设置"<<"运行\n条件"<<"设备\n数据"<<"维护\n测试"
                     <<""<<""<<""<<"故障\n查询"<<"合屏\n模式";
     m_oldposition = m_position = uMiddleTraction;
@@ -39,7 +39,7 @@ void Navigator::NBpressEvent()
     switch (m_position)
     {
         case uMiddleTraction:
-        buttonIndexList<<uMainData_TrainOutline<<uSettng_Bypass<<uCondition_PantoUp<<uDeviceData_breaker<<
+        buttonIndexList<<uMainData_TrainOutline<<uSettng_Bypass<<uCondition_PantoUp<<uDeviceDataBreaker<<
                      uMain_Simulate<<uNULL<<uNULL<<uNULL<<uFault_Current<<uUnityMode;
         break;
         case uMiddleMainData:
@@ -71,6 +71,10 @@ void Navigator::NBpressEvent()
         buttonIndexList<<uVehicleRunStatePage<<uBrakeMode<<uUnityMode<<uNULL<<uNULL
                       <<uNULL<<uNULL<<uNULL<<uNULL<<uNULL;
         break;
+
+    case uMiddleDeviceData:
+        buttonIndexList<<uDeviceDataBreaker<<uDeviceDataSIV<<uDeviceDataMainConv<<uDeviceDataNetwork<<uDeviceDataVersion
+                      <<uDeviceDataRIOM<<uDeviceDataAirBrake<<uNULL<<uNULL<<uVehicleRunStatePage;
 
     }
     changePage(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()));
@@ -112,6 +116,11 @@ void Navigator::updateButtonsNamesByPositon(enum pagePosition p)
         case uMiddleUnite:
         buttonNameList<<"牵引\n模式"<<"制动\模式"<<"合屏\n模式"<<""
                         <<""<<""<<""<<""<<""<<"";
+        break;
+
+    case uMiddleDeviceData:
+        buttonNameList<<"断路器"<<"辅助"<<"主变流"<<"在线\n状态"
+                        <<"软件\n版本"<<"信号\n状态"<<"空气\n制动"<<""<<""<<"主界面";
         break;
     }
     for(int i = 0; i < buttons.size();i++)

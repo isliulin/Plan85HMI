@@ -51,6 +51,15 @@ class Condition_Brake;
 class Condition_Traction;
 class Unity_Brake;
 
+//设备数据
+class DeviceDataBreaker;
+class DeviceDataSIV;
+class DeviceDataMainConv;
+class DeviceDataNetwork;
+class DeviceDataVersion;
+class DeviceDataRIOM;
+class DeviceDataAirBrake;
+
 
 class Widget : public QWidget
 {
@@ -64,6 +73,10 @@ public:
     QMap<int, MyBase *> widgets;
 
     ~Widget();
+    void VCUtime2HMI10s();
+
+    bool systimeset(unsigned short int year,unsigned short int month,unsigned short int day,
+                     unsigned short int hour,unsigned short int min,unsigned short int sec);
 
 public slots:
     void changePage(int page);
@@ -112,6 +125,13 @@ private:
     Condition_Breaker* condition_Breaker;
     Condition_Traction* condition_Traction;
 
+    DeviceDataBreaker* deviceDataBreaker;
+    DeviceDataSIV* deviceDataSIV;
+    DeviceDataMainConv* deviceDataMainConv;
+    DeviceDataNetwork* deviceDataNetwork;
+    DeviceDataVersion* deviceDataVersion;
+    DeviceDataRIOM* deviceDataRIOM;
+    DeviceDataAirBrake* deviceDataAirBrake;
 };
 
 #endif // WIDGET_H

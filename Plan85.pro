@@ -134,7 +134,17 @@ SOURCES += main.cpp\
     unity_brake.cpp \
     widgets/ctrlkpadiagram.cpp \
     widgets/ctrlflowdiagram.cpp \
+<<<<<<< HEAD
     widgets/ctrlnumbertable.cpp
+=======
+    devicedatabreaker.cpp \
+    devicedatasiv.cpp \
+    devicedataversion.cpp \
+    devicedataairbrake.cpp \
+    devicedatamainconv.cpp \
+    devicedatanetwork.cpp \
+    devicedatariom.cpp
+>>>>>>> 74d6f72f6e615c4eb03a394303936710cd46a086
 
 
 HEADERS  += widget.h \
@@ -252,7 +262,17 @@ HEADERS  += widget.h \
     unity_brake.h \
     widgets/ctrlkpadiagram.h \
     widgets/ctrlflowdiagram.h \
+<<<<<<< HEAD
     widgets/ctrlnumbertable.h
+=======
+    devicedatabreaker.h \
+    devicedatasiv.h \
+    devicedataversion.h \
+    devicedataairbrake.h \
+    devicedatamainconv.h \
+    devicedatanetwork.h \
+    devicedatariom.h
+>>>>>>> 74d6f72f6e615c4eb03a394303936710cd46a086
 
 
 
@@ -301,9 +321,20 @@ FORMS    += widget.ui \
     widgets/ctrlspeedometer.ui \
     unity_brake.ui \
     widgets/ctrlkpadiagram.ui \
+<<<<<<< HEAD
     widgets/ctrlflowdiagram.ui \
     widgets/ctrlnumbertable.ui
+=======
+    widgets/ctrlflowdiagram.ui\
+>>>>>>> 74d6f72f6e615c4eb03a394303936710cd46a086
     maindata_tracbrakeoutline.ui \
+    devicedatabreaker.ui \
+    devicedatasiv.ui \
+    devicedataversion.ui \
+    devicedataairbrake.ui \
+    devicedatamainconv.ui \
+    devicedatanetwork.ui \
+    devicedatariom.ui
 
 
 
@@ -314,3 +345,7 @@ OTHER_FILES += \
     log4qt/log4qt.pri \
     log4qt/Log4Qt.pri
 QMAKE_CXXFLAGS +=  -Wno-unused-parameter
+
+DISTFILES += \
+    images/TrainLogo.png \
+    images/TrainLogo-reverse.png
