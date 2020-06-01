@@ -96,7 +96,7 @@ border:1px solid white;
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
+  <widget class="QLabel" name="lbl_1_3">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -105,11 +105,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_6">
+  <widget class="QLabel" name="lbl_1_4">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -118,11 +121,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_7">
+  <widget class="QLabel" name="lbl_1_2">
    <property name="geometry">
     <rect>
      <x>140</x>
@@ -131,11 +137,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_8">
+  <widget class="QLabel" name="lbl_1_1">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -144,11 +153,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_9">
+  <widget class="QLabel" name="lbl_2_3">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -157,11 +169,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_10">
+  <widget class="QLabel" name="lbl_2_4">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -170,11 +185,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_11">
+  <widget class="QLabel" name="lbl_2_2">
    <property name="geometry">
     <rect>
      <x>140</x>
@@ -183,11 +201,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_12">
+  <widget class="QLabel" name="lbl_2_1">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -196,11 +217,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_13">
+  <widget class="QLabel" name="lbl_3_3">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -209,11 +233,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_14">
+  <widget class="QLabel" name="lbl_3_4">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -222,11 +249,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_15">
+  <widget class="QLabel" name="lbl_5_1">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -235,11 +265,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_16">
+  <widget class="QLabel" name="lbl_5_4">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -248,11 +281,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_17">
+  <widget class="QLabel" name="lbl_4_3">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -261,11 +297,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_18">
+  <widget class="QLabel" name="lbl_4_2">
    <property name="geometry">
     <rect>
      <x>140</x>
@@ -274,11 +313,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_19">
+  <widget class="QLabel" name="lbl_5_3">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -287,11 +329,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_20">
+  <widget class="QLabel" name="lbl_3_2">
    <property name="geometry">
     <rect>
      <x>140</x>
@@ -300,11 +345,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_21">
+  <widget class="QLabel" name="lbl_4_4">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -313,11 +361,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_22">
+  <widget class="QLabel" name="lbl_5_2">
    <property name="geometry">
     <rect>
      <x>140</x>
@@ -326,11 +377,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_23">
+  <widget class="QLabel" name="lbl_3_1">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -339,11 +393,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_24">
+  <widget class="QLabel" name="lbl_4_1">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -352,11 +409,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_25">
+  <widget class="QLabel" name="lbl_6_1">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -365,11 +425,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_26">
+  <widget class="QLabel" name="lbl_8_3">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -378,11 +441,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_27">
+  <widget class="QLabel" name="lbl_6_2">
    <property name="geometry">
     <rect>
      <x>140</x>
@@ -391,11 +457,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_28">
+  <widget class="QLabel" name="lbl_6_4">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -404,11 +473,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_29">
+  <widget class="QLabel" name="lbl_9_3">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -417,11 +489,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_30">
+  <widget class="QLabel" name="lbl_11_2">
    <property name="geometry">
     <rect>
      <x>140</x>
@@ -430,11 +505,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_31">
+  <widget class="QLabel" name="lbl_9_1">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -443,11 +521,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_32">
+  <widget class="QLabel" name="lbl_8_2">
    <property name="geometry">
     <rect>
      <x>140</x>
@@ -456,11 +537,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_33">
+  <widget class="QLabel" name="lbl_9_2">
    <property name="geometry">
     <rect>
      <x>140</x>
@@ -469,11 +553,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_34">
+  <widget class="QLabel" name="lbl_9_4">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -482,11 +569,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_35">
+  <widget class="QLabel" name="lbl_11_1">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -495,11 +585,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_36">
+  <widget class="QLabel" name="lbl_10_2">
    <property name="geometry">
     <rect>
      <x>140</x>
@@ -508,11 +601,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_37">
+  <widget class="QLabel" name="lbl_8_1">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -521,11 +617,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_38">
+  <widget class="QLabel" name="lbl_10_3">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -534,11 +633,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_39">
+  <widget class="QLabel" name="lbl_10_1">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -547,11 +649,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_40">
+  <widget class="QLabel" name="lbl_10_4">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -560,11 +665,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_41">
+  <widget class="QLabel" name="lbl_7_1">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -573,11 +681,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_42">
+  <widget class="QLabel" name="lbl_7_3">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -586,11 +697,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_43">
+  <widget class="QLabel" name="lbl_11_3">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -599,11 +713,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_44">
+  <widget class="QLabel" name="lbl_7_2">
    <property name="geometry">
     <rect>
      <x>140</x>
@@ -612,11 +729,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_45">
+  <widget class="QLabel" name="lbl_7_4">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -625,11 +745,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_46">
+  <widget class="QLabel" name="lbl_6_3">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -638,11 +761,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_47">
+  <widget class="QLabel" name="lbl_11_4">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -651,11 +777,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_48">
+  <widget class="QLabel" name="lbl_8_4">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -664,11 +793,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_49">
+  <widget class="QLabel" name="lbl_15_3">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -677,11 +809,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_50">
+  <widget class="QLabel" name="lbl_14_4">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -690,11 +825,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_51">
+  <widget class="QLabel" name="lbl_13_3">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -703,11 +841,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_52">
+  <widget class="QLabel" name="lbl_13_2">
    <property name="geometry">
     <rect>
      <x>140</x>
@@ -716,11 +857,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_53">
+  <widget class="QLabel" name="lbl_12_1">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -729,11 +873,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_54">
+  <widget class="QLabel" name="lbl_15_4">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -742,11 +889,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_55">
+  <widget class="QLabel" name="lbl_14_2">
    <property name="geometry">
     <rect>
      <x>140</x>
@@ -755,11 +905,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_56">
+  <widget class="QLabel" name="lbl_15_2">
    <property name="geometry">
     <rect>
      <x>140</x>
@@ -768,11 +921,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_57">
+  <widget class="QLabel" name="lbl_12_2">
    <property name="geometry">
     <rect>
      <x>140</x>
@@ -781,11 +937,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_58">
+  <widget class="QLabel" name="lbl_14_1">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -794,11 +953,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_59">
+  <widget class="QLabel" name="lbl_12_4">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -807,11 +969,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_60">
+  <widget class="QLabel" name="lbl_13_1">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -820,11 +985,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_61">
+  <widget class="QLabel" name="lbl_12_3">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -833,11 +1001,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_62">
+  <widget class="QLabel" name="lbl_15_1">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -846,11 +1017,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_63">
+  <widget class="QLabel" name="lbl_13_4">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -859,11 +1033,14 @@ border:1px solid white;
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_64">
+  <widget class="QLabel" name="lbl_14_3">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -871,6 +1048,9 @@ border:1px solid white;
      <width>301</width>
      <height>27</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -952,7 +1132,7 @@ border:1px solid white;
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_69">
+  <widget class="QLabel" name="lbl_totalPage">
    <property name="geometry">
     <rect>
      <x>410</x>
@@ -964,7 +1144,7 @@ border:1px solid white;
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 0, 0);
 border:1px solid white;
-color:green;</string>
+color:yellow;</string>
    </property>
    <property name="text">
     <string>1</string>
@@ -973,7 +1153,7 @@ color:green;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_70">
+  <widget class="QLabel" name="lbl_currentPage">
    <property name="geometry">
     <rect>
      <x>520</x>
@@ -985,7 +1165,7 @@ color:green;</string>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 0, 0);
 border:1px solid white;
-color:green;</string>
+color:yellow;</string>
    </property>
    <property name="text">
     <string>1</string>
@@ -994,7 +1174,7 @@ color:green;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="PB_up">
    <property name="geometry">
     <rect>
      <x>600</x>
@@ -1004,15 +1184,13 @@ color:green;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 0, 0);
-color: rgb(255, 255, 255);
-border:1px solid white;</string>
+    <string notr="true">font: 16px;color: rgb(192,192,192);background-color: rgb(0, 0, 0);border-top: 2px solid white;border-left: 2px solid white;</string>
    </property>
    <property name="text">
     <string>上一页</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="PB_down">
    <property name="geometry">
     <rect>
      <x>690</x>
@@ -1022,12 +1200,10 @@ border:1px solid white;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 0, 0);
-color: rgb(255, 255, 255);
-border:1px solid white;</string>
+    <string notr="true">font: 16px;color: rgb(192,192,192);background-color: rgb(0, 0, 0);border-top: 2px solid white;border-left: 2px solid white;</string>
    </property>
    <property name="text">
-    <string>上一页</string>
+    <string>下一页</string>
    </property>
   </widget>
  </widget>

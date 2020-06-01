@@ -127,7 +127,7 @@ color:rgb(255,255,255);
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_7">
+  <widget class="QLabel" name="lbl_CCU_date">
    <property name="geometry">
     <rect>
      <x>183</x>
@@ -137,7 +137,7 @@ color:rgb(255,255,255);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: green;</string>
+    <string notr="true">color: yellow;</string>
    </property>
    <property name="text">
     <string>00:00:00</string>
@@ -146,7 +146,7 @@ color:rgb(255,255,255);
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_8">
+  <widget class="QLabel" name="lbl_CCU_time">
    <property name="geometry">
     <rect>
      <x>183</x>
@@ -156,7 +156,7 @@ color:rgb(255,255,255);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: green;</string>
+    <string notr="true">color: yellow;</string>
    </property>
    <property name="text">
     <string>0.00.00</string>
@@ -165,7 +165,7 @@ color:rgb(255,255,255);
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_9">
+  <widget class="QLabel" name="lbl_SYS_date">
    <property name="geometry">
     <rect>
      <x>503</x>
@@ -175,7 +175,7 @@ color:rgb(255,255,255);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: green;</string>
+    <string notr="true">color: yellow;</string>
    </property>
    <property name="text">
     <string>00:00:00</string>
@@ -184,7 +184,7 @@ color:rgb(255,255,255);
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_10">
+  <widget class="QLabel" name="lbl_SYS_time">
    <property name="geometry">
     <rect>
      <x>503</x>
@@ -194,7 +194,7 @@ color:rgb(255,255,255);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: green;</string>
+    <string notr="true">color: yellow;</string>
    </property>
    <property name="text">
     <string>0.00.00</string>
@@ -222,7 +222,7 @@ color:rgb(255,255,255);
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_13">
+  <widget class="QLabel" name="lbl_Set_Year">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -233,7 +233,7 @@ color:rgb(255,255,255);
    </property>
    <property name="styleSheet">
     <string notr="true">border:1px solid white;
-color:green;</string>
+color: yellow;</string>
    </property>
    <property name="text">
     <string>2017</string>
@@ -242,7 +242,7 @@ color:green;</string>
     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_15">
+  <widget class="QLabel" name="lbl_Set_Hour">
    <property name="geometry">
     <rect>
      <x>450</x>
@@ -253,7 +253,7 @@ color:green;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:1px solid white;
-color:green;</string>
+color: yellow;</string>
    </property>
    <property name="text">
     <string>0</string>
@@ -281,7 +281,7 @@ color:green;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_19">
+  <widget class="QLabel" name="lbl_Set_Month">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -292,7 +292,7 @@ color:green;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:1px solid white;
-color:green;</string>
+color: yellow;</string>
    </property>
    <property name="text">
     <string>1</string>
@@ -320,7 +320,7 @@ color:green;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_23">
+  <widget class="QLabel" name="lbl_Set_Minute">
    <property name="geometry">
     <rect>
      <x>450</x>
@@ -331,7 +331,7 @@ color:green;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:1px solid white;
-color:green;</string>
+color: yellow;</string>
    </property>
    <property name="text">
     <string>0</string>
@@ -359,7 +359,7 @@ color:green;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_27">
+  <widget class="QLabel" name="lbl_Set_Day">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -370,7 +370,7 @@ color:green;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:1px solid white;
-color:green;</string>
+color: yellow;</string>
    </property>
    <property name="text">
     <string>1</string>
@@ -398,7 +398,7 @@ color:green;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_31">
+  <widget class="QLabel" name="lbl_Set_Second">
    <property name="geometry">
     <rect>
      <x>450</x>
@@ -409,7 +409,7 @@ color:green;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:1px solid white;
-color:green;</string>
+color: yellow;</string>
    </property>
    <property name="text">
     <string>0</string>
@@ -437,7 +437,7 @@ color:green;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="PB_Year_Dec">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -446,6 +446,9 @@ color:green;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="whatsThis">
+    <string>1</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">border-image: url(:/images/images/left.png);</string>
    </property>
@@ -453,7 +456,7 @@ color:green;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="PB_Year_Asc">
    <property name="geometry">
     <rect>
      <x>280</x>
@@ -462,6 +465,9 @@ color:green;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="whatsThis">
+    <string>2</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">border-image: url(:/images/images/right.png);</string>
    </property>
@@ -469,7 +475,7 @@ color:green;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="PB_Month_Dec">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -478,6 +484,9 @@ color:green;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="whatsThis">
+    <string>3</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">border-image: url(:/images/images/left.png);</string>
    </property>
@@ -485,7 +494,7 @@ color:green;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QPushButton" name="PB_Month_Asc">
    <property name="geometry">
     <rect>
      <x>280</x>
@@ -494,6 +503,9 @@ color:green;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="whatsThis">
+    <string>4</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">border-image: url(:/images/images/right.png);</string>
    </property>
@@ -501,7 +513,7 @@ color:green;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_5">
+  <widget class="QPushButton" name="PB_Day_Dec">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -510,6 +522,9 @@ color:green;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="whatsThis">
+    <string>5</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">border-image: url(:/images/images/left.png);</string>
    </property>
@@ -517,7 +532,7 @@ color:green;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_6">
+  <widget class="QPushButton" name="PB_Day_Asc">
    <property name="geometry">
     <rect>
      <x>280</x>
@@ -526,6 +541,9 @@ color:green;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="whatsThis">
+    <string>6</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">border-image: url(:/images/images/right.png);</string>
    </property>
@@ -533,7 +551,7 @@ color:green;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_7">
+  <widget class="QPushButton" name="PB_Hour_Dec">
    <property name="geometry">
     <rect>
      <x>370</x>
@@ -542,6 +560,9 @@ color:green;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="whatsThis">
+    <string>7</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">border-image: url(:/images/images/left.png);</string>
    </property>
@@ -549,7 +570,7 @@ color:green;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_8">
+  <widget class="QPushButton" name="PB_Hour_Asc">
    <property name="geometry">
     <rect>
      <x>580</x>
@@ -558,6 +579,9 @@ color:green;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="whatsThis">
+    <string>8</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">border-image: url(:/images/images/right.png);</string>
    </property>
@@ -565,7 +589,7 @@ color:green;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_9">
+  <widget class="QPushButton" name="PB_Minute_Des">
    <property name="geometry">
     <rect>
      <x>370</x>
@@ -574,6 +598,9 @@ color:green;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="whatsThis">
+    <string>9</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">border-image: url(:/images/images/left.png);</string>
    </property>
@@ -581,7 +608,7 @@ color:green;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_10">
+  <widget class="QPushButton" name="PB_Minute_Asc">
    <property name="geometry">
     <rect>
      <x>580</x>
@@ -590,6 +617,9 @@ color:green;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="whatsThis">
+    <string>10</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">border-image: url(:/images/images/right.png);</string>
    </property>
@@ -597,7 +627,7 @@ color:green;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_11">
+  <widget class="QPushButton" name="PB_Second_Dec">
    <property name="geometry">
     <rect>
      <x>370</x>
@@ -606,6 +636,9 @@ color:green;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="whatsThis">
+    <string>11</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">border-image: url(:/images/images/left.png);</string>
    </property>
@@ -613,7 +646,7 @@ color:green;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_12">
+  <widget class="QPushButton" name="PB_Second_Asc">
    <property name="geometry">
     <rect>
      <x>580</x>
@@ -622,6 +655,9 @@ color:green;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="whatsThis">
+    <string>12</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">border-image: url(:/images/images/right.png);</string>
    </property>
@@ -629,14 +665,17 @@ color:green;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_13">
+  <widget class="QPushButton" name="PB_Update">
    <property name="geometry">
     <rect>
      <x>650</x>
-     <y>410</y>
+     <y>407</y>
      <width>91</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="whatsThis">
+    <string>0</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:2px solid white;

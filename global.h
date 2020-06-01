@@ -64,6 +64,9 @@
 #define PANTOSETUP "image: url(:/images/images/pantoSetUP.png);"
 #define PANTOSETISO "image: url(:/images/images/pantoSetISO.png);"
 
+#define MAINBUTTONUP  "font:16px;color: rgb(255,255,255);background-color: rgb(0, 0, 0);border:2px solid white;"
+#define MAINBUTTONDOWN "font:16px;color: rgb(255,255,255);background-color: yellow;border:2px solid white;"
+//#define
 
 #include <stdlib.h>
 

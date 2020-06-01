@@ -18,6 +18,7 @@ class Navigator;
 class VehicleRunStatePage;
 class CrrcMvb;
 class CrrcFault;
+class CrrcFault;
 class Simulation;
 
 class MainData_TrainOutline;
@@ -91,7 +92,6 @@ private:
     Header *header;
     CrrcMvb* crrcMvb;
     CrrcFault* crrcFault;
-
     MainData_TrainOutline* mainData_TrainOutline;
     MainData_DriverOutline* mainData_DriverOutline;
     MainData_TracBrakeOutline* mainData_TracBrakeOutline;

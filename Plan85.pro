@@ -134,6 +134,7 @@ SOURCES += main.cpp\
     unity_brake.cpp \
     widgets/ctrlkpadiagram.cpp \
     widgets/ctrlflowdiagram.cpp \
+    widgets/ctrlnumbertable.cpp\
     devicedatabreaker.cpp \
     devicedatasiv.cpp \
     devicedataversion.cpp \
@@ -258,6 +259,7 @@ HEADERS  += widget.h \
     unity_brake.h \
     widgets/ctrlkpadiagram.h \
     widgets/ctrlflowdiagram.h \
+    widgets/ctrlnumbertable.h\
     devicedatabreaker.h \
     devicedatasiv.h \
     devicedataversion.h \
@@ -313,6 +315,8 @@ FORMS    += widget.ui \
     widgets/ctrlspeedometer.ui \
     unity_brake.ui \
     widgets/ctrlkpadiagram.ui \
+    widgets/ctrlflowdiagram.ui \
+    widgets/ctrlnumbertable.ui\
     widgets/ctrlflowdiagram.ui\
     maindata_tracbrakeoutline.ui \
     devicedatabreaker.ui \
