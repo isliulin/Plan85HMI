@@ -1548,7 +1548,7 @@ border-radius:3px ;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="LBL_RIOM2_2">
+  <widget class="QLabel" name="LBL_ERM">
    <property name="geometry">
     <rect>
      <x>330</x>
@@ -1611,6 +1611,42 @@ border-radius:3px ;</string>
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>110</y>
+     <width>41</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:black;
+border:0px;
+color:white;</string>
+   </property>
+   <property name="text">
+    <string>MVB</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>10</y>
+     <width>41</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:black;
+border:0px;
+color:white;</string>
+   </property>
+   <property name="text">
+    <string>WTB</string>
    </property>
   </widget>
   <zorder>Border_Mic</zorder>
@@ -1704,10 +1740,12 @@ border-radius:3px ;</string>
   <zorder>LBL_MPU2</zorder>
   <zorder>LBL_MVB_8</zorder>
   <zorder>LBL_GW1</zorder>
-  <zorder>LBL_RIOM2_2</zorder>
+  <zorder>LBL_ERM</zorder>
   <zorder>LBL_MVB_68</zorder>
   <zorder>LBL_MVB_69</zorder>
   <zorder>LBL_MVB_70</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -14,6 +14,8 @@ class DeviceDataNetwork : public MyBase
 public:
     explicit DeviceDataNetwork(QWidget *parent = 0);
     ~DeviceDataNetwork();
+    void updateState(QLabel *label, bool onLine, bool isMaster = true);
+    void updatePage();
 
 private:
     Ui::DeviceDataNetwork *ui;
