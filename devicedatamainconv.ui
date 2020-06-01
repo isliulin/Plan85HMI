@@ -1441,8 +1441,6 @@ color:rgb(255,255,0);</string>
   <zorder>LBL_Maincnv</zorder>
   <zorder>LBL_Tip_10</zorder>
   <zorder>LBL_IS_CF3</zorder>
-  <zorder>LBL_PC_CF2</zorder>
-  <zorder>LBL_IS_QUAI</zorder>
   <zorder>LBL_Volta2</zorder>
   <zorder>LINE_5</zorder>
   <zorder>LINE_31</zorder>
@@ -1457,13 +1455,11 @@ color:rgb(255,255,0);</string>
   <zorder>LBL_PC_QUAI</zorder>
   <zorder>LINE_30</zorder>
   <zorder>LBL_Tip_7</zorder>
-  <zorder>LBL_PC_CF3</zorder>
   <zorder>LBL_Tip_16</zorder>
   <zorder>LBL_Tip_19</zorder>
   <zorder>LBL_4QS2</zorder>
   <zorder>LINE_26</zorder>
   <zorder>LBL_T5</zorder>
-  <zorder>LBL_PC_CF4</zorder>
   <zorder>LINE_13</zorder>
   <zorder>LBL_M4</zorder>
   <zorder>LBL_4QS3</zorder>
@@ -1479,7 +1475,6 @@ color:rgb(255,255,0);</string>
   <zorder>LBL_M1</zorder>
   <zorder>LBL_Tip_11</zorder>
   <zorder>LBL_INV4</zorder>
-  <zorder>LBL_IS_CF1</zorder>
   <zorder>LINE_27</zorder>
   <zorder>LINE_24</zorder>
   <zorder>LBL_QUAI</zorder>
@@ -1498,6 +1493,11 @@ color:rgb(255,255,0);</string>
   <zorder>LBL_Volta1</zorder>
   <zorder>LBL_INV1</zorder>
   <zorder>LBL_4QS4</zorder>
+  <zorder>LBL_PC_CF4</zorder>
+  <zorder>LBL_PC_CF3</zorder>
+  <zorder>LBL_IS_QUAI</zorder>
+  <zorder>LBL_PC_CF2</zorder>
+  <zorder>LBL_IS_CF1</zorder>
  </widget>
  <resources/>
  <connections/>
