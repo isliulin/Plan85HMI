@@ -14,6 +14,10 @@ class DeviceDataAirBrake : public MyBase
 public:
     explicit DeviceDataAirBrake(QWidget *parent = 0);
     ~DeviceDataAirBrake();
+    void brakeValue(QLabel* label, unsigned short int value);
+    void updatePage();
+    void udpateNames(QLabel* label, bool judgeKey);
+    void bcuStates(QLabel *label, bool state1, bool state2);
 
 private:
     Ui::DeviceDataAirBrake *ui;

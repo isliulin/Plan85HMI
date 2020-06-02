@@ -63,5 +63,11 @@
         <file>images/HandCut.png</file>
         <file>images/TrainLogo.png</file>
         <file>images/TrainLogo-reverse.png</file>
+        <file>images/SWcloseV.png</file>
+        <file>images/SWopenV.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>images/SWcloseV.png</file>
+        <file>images/SWopenV.png</file>
     </qresource>
 </RCC>

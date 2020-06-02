@@ -30,21 +30,20 @@ QLabel
 {
 color:rgb(255,255,255);
 border:2px  solid white;
-font:20px &quot;SImHei&quot;;
 }
 </string>
   </property>
   <widget class="QLabel" name="label2">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>150</y>
+     <x>140</x>
+     <y>130</y>
      <width>200</width>
-     <height>40</height>
+     <height>30</height>
     </rect>
    </property>
    <property name="text">
-    <string>制动缸</string>
+    <string>制动缸BC1压力</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -53,10 +52,10 @@ font:20px &quot;SImHei&quot;;
   <widget class="QLabel" name="label1">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>110</y>
+     <x>140</x>
+     <y>100</y>
      <width>200</width>
-     <height>40</height>
+     <height>30</height>
     </rect>
    </property>
    <property name="text">
@@ -69,10 +68,10 @@ font:20px &quot;SImHei&quot;;
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>140</x>
      <y>70</y>
      <width>200</width>
-     <height>40</height>
+     <height>30</height>
     </rect>
    </property>
    <property name="text">
@@ -85,14 +84,14 @@ font:20px &quot;SImHei&quot;;
   <widget class="QLabel" name="label3">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>140</x>
      <y>190</y>
      <width>200</width>
-     <height>40</height>
+     <height>30</height>
     </rect>
    </property>
    <property name="text">
-    <string> 均衡风缸</string>
+    <string> 均衡风缸ER压力</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -101,30 +100,14 @@ font:20px &quot;SImHei&quot;;
   <widget class="QLabel" name="label4">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>230</y>
+     <x>140</x>
+     <y>220</y>
      <width>200</width>
-     <height>40</height>
+     <height>30</height>
     </rect>
    </property>
    <property name="text">
-    <string>总风缸</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label5">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>270</y>
-     <width>200</width>
-     <height>40</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>列车管</string>
+    <string>总风缸MR压力</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -133,14 +116,14 @@ font:20px &quot;SImHei&quot;;
   <widget class="QLabel" name="label7">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>350</y>
+     <x>140</x>
+     <y>280</y>
      <width>200</width>
-     <height>40</height>
+     <height>30</height>
     </rect>
    </property>
    <property name="text">
-    <string>列车管额定压力</string>
+    <string>列车管BP压力</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -149,10 +132,10 @@ font:20px &quot;SImHei&quot;;
   <widget class="QLabel" name="label6">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>310</y>
+     <x>140</x>
+     <y>250</y>
      <width>200</width>
-     <height>40</height>
+     <height>30</height>
     </rect>
    </property>
    <property name="text">
@@ -162,13 +145,13 @@ font:20px &quot;SImHei&quot;;
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelBrake">
+  <widget class="QLabel" name="labelBC1">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>150</y>
+     <x>340</x>
+     <y>130</y>
      <width>300</width>
-     <height>40</height>
+     <height>30</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -181,13 +164,13 @@ font:20px &quot;SImHei&quot;;
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label0">
+  <widget class="QLabel" name="labelMainControl">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>340</x>
      <y>70</y>
      <width>300</width>
-     <height>40</height>
+     <height>30</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -200,13 +183,13 @@ font:20px &quot;SImHei&quot;;
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelRatedPress">
+  <widget class="QLabel" name="labelBP">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>350</y>
+     <x>340</x>
+     <y>280</y>
      <width>300</width>
-     <height>40</height>
+     <height>30</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -219,13 +202,13 @@ font:20px &quot;SImHei&quot;;
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelAveWind">
+  <widget class="QLabel" name="labelER">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>340</x>
      <y>190</y>
      <width>300</width>
-     <height>40</height>
+     <height>30</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -241,10 +224,10 @@ font:20px &quot;SImHei&quot;;
   <widget class="QLabel" name="labelFlow">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>310</y>
+     <x>340</x>
+     <y>250</y>
      <width>300</width>
-     <height>40</height>
+     <height>30</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -260,10 +243,10 @@ font:20px &quot;SImHei&quot;;
   <widget class="QLabel" name="labelInputCut">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>110</y>
+     <x>340</x>
+     <y>100</y>
      <width>300</width>
-     <height>40</height>
+     <height>30</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -276,14 +259,17 @@ font:20px &quot;SImHei&quot;;
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelTrainPipe">
+  <widget class="QLabel" name="labelMR">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>270</y>
+     <x>340</x>
+     <y>220</y>
      <width>300</width>
-     <height>40</height>
+     <height>30</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -292,13 +278,29 @@ font:20px &quot;SImHei&quot;;
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelTotalWind">
+  <widget class="QLabel" name="label2_2">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>230</y>
+     <x>140</x>
+     <y>160</y>
+     <width>200</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>制动缸BC2压力</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelBC2">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>160</y>
      <width>300</width>
-     <height>40</height>
+     <height>30</height>
     </rect>
    </property>
    <property name="styleSheet">
