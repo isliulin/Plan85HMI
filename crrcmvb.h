@@ -1,7 +1,7 @@
 #ifndef CRRCMVB_H
 #define CRRCMVB_H
-#include "mvbcx/c_mvbsock.h"
-
+#include "./include/inc_all.h"
+#include "mvb_cls.h"
 #define _CRRC_MVB_VERSION 1
 #define _CRRC_MVB_SUPERVISION_TIME 1
 #include "QMap"
@@ -89,7 +89,7 @@ public:
     //**********************
 
     //**********************MVB通信同步，在主程序循环中调用，完成数据接受、发送功能。
-    ////目前做法，接受到的、要发送的数据均放入portData数据结构中
+    //目前做法，接受到的、要发送的数据均放入portData数据结构中
     void synchronizeMvbData();
 
     //**********************获取MVB接受数据，被外部调用

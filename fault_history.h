@@ -29,7 +29,7 @@ private slots:
 
 private:
     Ui::Fault_History *ui;
-    QList<QList<QLabel *>> labelsList;
+    QList<QList<QLabel *> > labelsList;
     int currentFaultPage;
     int totalPage;
     void updateFaultList();

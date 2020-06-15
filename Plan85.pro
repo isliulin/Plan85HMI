@@ -77,12 +77,6 @@ SOURCES += main.cpp\
     faulttypebean.cpp \
     faultbean.cpp \
     log4qt/log4qt_init.cpp \
-    mvbcx/MVBC02C/BBD_C02C.c \
-    mvbcx/MVBC02C/bus_opt.c \
-    mvbcx/MVBC02C/os_hal.c \
-    mvbcx/c_mvbsock.cpp \
-    cxExtDev/blacklightthread.cpp \
-    cxExtDev/externaldevicelib.cpp \
     data/data_ccu.cpp \
     settng_bypass.cpp \
     settng_panto.cpp \
@@ -141,7 +135,9 @@ SOURCES += main.cpp\
     devicedataairbrake.cpp \
     devicedatamainconv.cpp \
     devicedatanetwork.cpp \
-    devicedatariom.cpp
+    devicedatariom.cpp \
+    main_allportdata.cpp \
+    mvb_cls.cpp
 
 
 HEADERS  += widget.h \
@@ -199,15 +195,6 @@ HEADERS  += widget.h \
     faulttypebean.h \
     faultbean.h \
     log4qt/custom.h \
-    mvbcx/MVBC02C/BBD_C02C.h \
-    mvbcx/MVBC02C/bus_opt.h \
-    mvbcx/MVBC02C/C02C_Def.h \
-    mvbcx/MVBC02C/mue_pd_full.h \
-    mvbcx/MVBC02C/os_hal.h \
-    mvbcx/MVBC02C/tcn_def.h \
-    mvbcx/c_mvbsock.h \
-    cxExtDev/blacklightthread.h \
-    cxExtDev/externaldevicelib.h \
     data/data_ccu.h \
     maindata_trainoutline.h \
     settng_bypass.h \
@@ -266,7 +253,19 @@ HEADERS  += widget.h \
     devicedataairbrake.h \
     devicedatamainconv.h \
     devicedatanetwork.h \
-    devicedatariom.h
+    devicedatariom.h \
+    main_allportdata.h \
+    include/tcn_def.h \
+    include/tcn_am.h \
+    include/mue_sv.h \
+    include/mue_pd_full.h \
+    include/mue_osl.h \
+    include/mue_def.h \
+    include/mue_cch.h \
+    include/mue_ba_config.h \
+    include/mue_acc.h \
+    include/inc_all.h \
+    mvb_cls.h
 
 
 
@@ -325,7 +324,8 @@ FORMS    += widget.ui \
     devicedataairbrake.ui \
     devicedatamainconv.ui \
     devicedatanetwork.ui \
-    devicedatariom.ui
+    devicedatariom.ui \
+    main_allportdata.ui
 
 
 
@@ -340,3 +340,22 @@ QMAKE_CXXFLAGS +=  -Wno-unused-parameter
 DISTFILES += \
     images/TrainLogo.png \
     images/TrainLogo-reverse.png
+
+if(!contains(DEFINES, USER_DEBUG_MODE)){
+
+
+
+INCLUDEPATH += ./include/
+unix:!macx: LIBS += -L$$PWD/lib/ -lmd_lib
+unix:!macx: LIBS += -L$$PWD/lib/ -lmue_lib
+
+INCLUDEPATH += $$PWD/include
+DEPENDPATH += $$PWD/include
+
+unix:!macx: PRE_TARGETDEPS += $$PWD/lib/libmd_lib.a
+unix:!macx: PRE_TARGETDEPS += $$PWD/lib/libmue_lib.a
+
+LIBS += -L lib -liorw
+}
+
+

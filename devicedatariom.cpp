@@ -438,61 +438,116 @@ void DeviceDataRIOM::updatePage()
     {
         if (1 == this->page)
         {
-            states << false << false << false << false << false << false << false << false
-                   << false << false << false << false << false << false << false << false
-                   << false << false << false << false << false << false << false << false;
+            states << database->data_RIOM->RIOM2_B_QS_GHV_1 << database->data_RIOM->RIOM2_B_HIGHV_SWITCH
+                   << database->data_RIOM->RIOM2_B_MA_SU_PT_1 << database->data_RIOM->RIOM2_B_YV_PAN_1
+                   << database->data_RIOM->RIOM2_B_CPR_AUX_ISO_VALVE << database->data_RIOM->RIOM2_B_OILFLOW1_STATE1
+                   << database->data_RIOM->RIOM2_B_TPH_1 << database->data_RIOM->RIOM2_B_DZ_TFP_1
+                   << database->data_RIOM->RIOM2_B_OILFLOW2_STATE1 << false
+                   << database->data_RIOM->RIOM2_B_BRAKEPRESS_SWITCH1 << database->data_RIOM->RIOM2_B_LOOP_GHV
+                   << database->data_RIOM->RIOM2_B_MCB_STATE1 << database->data_RIOM->RIOM2_B_PARKBRAKE_SWITCH2
+                   << database->data_RIOM->RIOM2_B_NOFIRE_VALVE_1 << database->data_RIOM->RIOM2_B_H_HT_SWITCH
+                   << database->data_RIOM->RIOM2_B_LKJ_EM << database->data_RIOM->RIOM2_B_EBRAKE_ISO_VALVE_1
+                   << database->data_RIOM->RIOM2_B_24V_FAULT << database->data_RIOM->RIOM2_B_BCU_EM
+                   << database->data_RIOM->RIOM2_B_BCU_FAULT << database->data_RIOM->RIOM2_B_BCU_Ul
+                   << database->data_RIOM->RIOM2_B_MA3_CP680_1 << database->data_RIOM->RIOM2_B_CPR_AUX_SWITCH1;
             updateDio(this->diTable1, states, _COLUMNDI);
             states.clear();
 
-            states << false << false << false << false << false << false << false << false
-                   << false << false << false << false << false << false << false << false
-                   << false << false << false << false << false << false << false << false;
+            states << database->data_RIOM->RIOM2_B_QS_GHV_2 << database->data_RIOM->RIOM2_B_MCB_STATE2
+                   << database->data_RIOM->RIOM2_B_MA_SU_PT_2 << false
+                   << database->data_RIOM->RIOM2_B_YV_PAN_2 << database->data_RIOM->RIOM2_B_TPH_2
+                   << database->data_RIOM->RIOM2_B_DZ_TFP_2 << database->data_RIOM->RIOM2_B_OILFLOW2_STATE2
+                   << false << database->data_RIOM->RIOM2_B_BRAKEPRESS_SWITCH2
+                   << database->data_RIOM->RIOM2_B_OILFLOW1_STATE2 << database->data_RIOM->RIOM2_B_BUCH_RELAY_ALARM
+                   << database->data_RIOM->RIOM2_B_BUCH_RELAY_OFFMCB << database->data_RIOM->RIOM2_B_MA3_CP680_2
+                   << database->data_RIOM->RIOM2_B_NOFIRE_VALVE_2 << database->data_RIOM->RIOM2_B_EBRAKE_ISO_VALVE_2
+                   << database->data_RIOM->RIOM2_B_MA2_CP500_1 << false
+                   << database->data_RIOM->RIOM2_B_SM_TEMP_50 << database->data_RIOM->RIOM2_B_SM_TEMP_35
+                   << false << database->data_RIOM->RIOM2_B_SM_TEMP_ZERO_25 << false << false;
             updateDio(this->diTable2, states, _COLUMNDI);
             states.clear();
         }
         else if (2 == this->page)
         {
-            states << false << false << false << false << false << false << false << false
-                   << false << false << false << false << false << false << false << false
-                   << false << false << false << false << false << false << false << false;
+            states << database->data_RIOM->RIOM2_B_C_QUAI << database->data_RIOM->RIOM2_B_Q_PP_QUAI
+                   << database->data_RIOM->RIOM2_B_Z_QUAI_M << database->data_RIOM->RIOM2_B_Z_QUAI_T
+                   << database->data_RIOM->RIOM2_B_C_CPR_AUX << database->data_RIOM->RIOM2_B_RB_URG
+                   << database->data_RIOM->RIOM2_B_DJ_QUAI << database->data_RIOM->RIOM2_B_C_PC_QUAI
+                   << database->data_RIOM->RIOM2_B_C_IS_QUAI << database->data_RIOM->RIOM2_B_ANSC1
+                   << database->data_RIOM->RIOM2_B_ANSC2 << database->data_RIOM->RIOM2_B_ANSC_FAULT
+                   << database->data_RIOM->RIOM2_B_SBCM << database->data_RIOM->RIOM2_B_MONUL
+                   << false << false << false << false << false << false << false << false << false << false;
             updateDio(this->diTable1, states, _COLUMNDI);
             states.clear();
 
-            states << false << false << false << false << false << false << false << false
-                   << false << false << false << false << false << false << false << false
-                   << false << false << false << false << false << false << false << false;
+            states << database->data_RIOM->RIOM2_B_C2_CPR_1 << database->data_RIOM->RIOM2_B_C3_CPR_2
+                   << database->data_RIOM->RIOM2_B_Q_REC << database->data_RIOM->RIOM2_B_Q_TH_CPR_1
+                   << database->data_RIOM->RIOM2_B_C1_CPR_1 << database->data_RIOM->RIOM2_B_DRY_FAULT
+                   << database->data_RIOM->RIOM2_B_OVERCURRENT_Q1L_M1 << database->data_RIOM->RIOM2_B_PARKBRAKE_ISO_FS1
+                   << database->data_RIOM->RIOM2_B_RB_IS_CF1 << false
+                   << database->data_RIOM->RIOM2_B_PANTO_F_LOOP << database->data_RIOM->RIOM2_B_PANTO_B_LOOP
+                   << database->data_RIOM->RIOM2_B_MCB_F_LOOP << database->data_RIOM->RIOM2_B_MCB_B_LOOP
+                   << database->data_RIOM->RIOM2_B_Q_FLT_LOCK << false
+                   << false << false
+                   << database->data_RIOM->RIOM2_B_CPR_AUX_STOP << false
+                   << false << database->data_RIOM->RIOM2_B_BRAKE_BACK << false << false;
             updateDio(this->diTable2, states, _COLUMNDI);
             states.clear();
         }
         else if (3 == this->page)
         {
-            states << false << false << false << false << false << false << false << false
-                   << false << false << false << false << false << false << false << false
-                   << false << false << false << false << false << false << false << false;
+            states << database->data_RIOM->RIOM2_B_C2_CPR_2 << database->data_RIOM->RIOM2_B_C3_CPR_2
+                   << database->data_RIOM->RIOM2_B_Q_TH_CPR_2 << database->data_RIOM->RIOM2_B_C1_CPR_2
+                   << database->data_RIOM->RIOM2_B_OVERCURRENT_Q1L_M2 << database->data_RIOM->RIOM2_B_PARKBRAKE_ISO_FS2
+                   << database->data_RIOM->RIOM2_B_RB_IS_CF2 << database->data_RIOM->RIOM2_B_SAND_ISO_VALVE
+                   << database->data_RIOM->RIOM2_B_COVER_SM1 << database->data_RIOM->RIOM2_B_PARKBRAKE_SWITCH1
+                   << database->data_RIOM->RIOM2_B_Loco_Elec_Emer << database->data_RIOM->RIOM2_B_Q_PHEAT3
+                   << database->data_RIOM->RIOM2_B_HEAT_BELOW_ZERO << database->data_RIOM->RIOM2_B_COVER_SM2
+                   << false << database->data_RIOM->RIOM2_B_MA1_CP750_1
+                   << database->data_RIOM->RIOM2_B_MA2_CP500_2 << false
+                   << database->data_RIOM->RIOM2_B_MA1_D1 << database->data_RIOM->RIOM2_B_MA2_D1
+                   << false << false
+                   << database->data_RIOM->RIOM2_B_HEAT_FORCE << false;
             updateDio(this->diTable1, states, _COLUMNDI);
             states.clear();
 
-            states << false << false << false << false << false << false << false << false
-                   << false << false << false << false << false << false << false << false;
+            states << database->data_RIOM->M1_R2_B_Q1_PT << database->data_RIOM->M1_R2_B_DEADMAN_ALARM1
+                   << false << database->data_RIOM->M1_R2_B_Q_FLT_LOCK
+                   << false << database->data_RIOM->M1_R2_B_MCBON1
+                   << database->data_RIOM->M1_R2_B_C1_CPR << database->data_RIOM->M1_R2_B_C2_CPR
+                   << database->data_RIOM->M1_R2_B_COVER_SM2_RELAY << false << false << false << false << false << false << false;
             updateDio(this->doTable2, states, _COLUMNDO);
             states.clear();
         }
         else if (4 == this->page)
         {
-            states << false << false << false << false << false << false << false << false
-                   << false << false << false << false << false << false << false << false;
+            states << database->data_RIOM->M1_R2_B_MCBON1 << false << false << false
+                   << database->data_RIOM->M1_R2_B_Q_UAI << database->data_RIOM->M1_R2_B_BAT_LOW
+                   << database->data_RIOM->M1_R2_B_Q_DJM_F << database->data_RIOM->M1_R2_B_Q_FIRE1_B
+                   << database->data_RIOM->M1_R2_B_Q_FIRE1_T << database->data_RIOM->M1_R2_B_BATCUT_FORBID
+                   << database->data_RIOM->M1_R2_B_C_IS_QUAI << database->data_RIOM->M1_R2_B_C_PC_QUAI
+                   << database->data_RIOM->M1_R2_B_PARKBRAKE_LIGHT << database->data_RIOM->M1_R2_B_DEADMAN_ALARM2 << false << false;
             updateDio(this->doTable1, states, _COLUMNDO);
             states.clear();
 
-            states << false << false << false << false << false << false << false << false
-                   << false << false << false << false << false << false << false << false;
+            states << false << database->data_RIOM->M1_R2_B_Q1_CAB
+                   << database->data_RIOM->M1_R2_B_Q2_CAB << database->data_RIOM->M1_R2_B_FLL_RELAY
+                   << database->data_RIOM->M1_R2_B_PARKB_RELAY << false
+                   << database->data_RIOM->M1_R2_B_DIR_FORWARD << database->data_RIOM->M1_R2_B_DIR_BACK
+                   << database->data_RIOM->M1_R2_B_MSCT_TRACTION << database->data_RIOM->M1_R2_B_MSCT_NEUTRAL
+                   << database->data_RIOM->M1_R2_B_MSCT_BRAKE << false
+                   << database->data_RIOM->M1_R2_B_Q_FIRE2_B << database->data_RIOM->M1_R2_B_Q_FIRE2_T
+                   << false << false;
             updateDio(this->doTable2, states, _COLUMNDO);
             states.clear();
         }
         else if (5 == this->page)
         {
-            states << false << false << false << false << false << false << false << false
-                   << false << false << false << false << false << false << false << false;
+            states << database->data_RIOM->M1_R2_B_CPR_AUX_RELAY << database->data_RIOM->M1_R2_B_DEADMAN_BCU
+                   << false << database->data_RIOM->M1_R2_B_BCU_EM << database->data_RIOM->M1_R2_B_AIR_ELE_LOCK
+                   << database->data_RIOM->M1_R2_B_SAND_FORWARD << database->data_RIOM->M1_R2_B_SAND_BACK << database->data_RIOM->M1_R2_B_H_HT_CLOSE
+                   << database->data_RIOM->M1_R2_B_H_HT_OPEN << database->data_RIOM->M1_R2_B_DANJIE_Q_MU << database->data_RIOM->M1_R2_B_Q2_PT
+                   << database->data_RIOM->M1_R2_B_SPEED_ZERO << false << false << false << false;
             updateDio(this->doTable1, states, _COLUMNDO);
             states.clear();
         }

@@ -109,51 +109,102 @@ public:
      ;bool    RIOM2_DI123_SlfChk_IN4
      ;bool    RIOM2_DI123_SlfChk_IN3
      ;bool    RIOM2_DI123_SlfChk_IN2
-     ;bool    RIOM2_DI123_SlfChk_IN1
+     ;bool    RIOM2_DI123_SlfChk_IN1;
 
-     ;bool    RIOM2_B_PARKBRAKE_OFF
-     ;bool    RIOM2_B_PARKBRAKE_ON
-     ;bool    RIOM2_B_CAB_CHANGE
-     ;bool    RIOM2_B_MSCT_N
-     ;bool    RIOM2_B_MSCT_T23
-     ;bool    RIOM2_B_MSCT_B23
-     ;bool    RIOM2_B_MSCT_T13
-     ;bool    RIOM2_B_MSCT_B13
-     ;bool    RIOM2_B_MSCT_T_1
-     ;bool    RIOM2_B_MSCT_B_1
-     ;bool    RIOM2_B_DIR_ZERO_1
-     ;bool    RIOM2_B_DIR_BACKWARD_1
-     ;bool    RIOM2_B_DIR_FORWARD_1
-     ;bool    RIOM2_B_EmBrButtton_1
-     ;bool    RIOM2_B_MCBOFF_1
-     ;bool    RIOM2_B_MCBON_1
-     ;bool    RIOM2_B_PG_DN_1
-     ;bool    RIOM2_B_PG_UP_1
-     ;bool    RIOM2_B_CABKEY_1
-     ;bool    RIOM2_B_MNSC
-     ;bool    RIOM2_B_AIRCONDITION_FAULT
-     ;bool    RIOM2_B_FOOT_SAND
-     ;bool    RIOM2_B_CONS
-     ;bool    RIOM2_B_RESET
-     ;bool    RIOM2_B_CPR_R
-     ;bool    RIOM2_B_CPR_P
-     ;bool    RIOM2_B_DEADMAN_FOOT
-     ;bool    RIOM2_B_DEADMAN_BUTTON
-     ;bool    RIOM2_B_HORN_HIGH
-     ;bool    RIOM2_B_HORN_LOW
-     ;bool    RIOM2_B_HORN_ELEC
 
-     ;bool    RIOM2_B_MSCT_T_2
-     ;bool    RIOM2_B_MSCT_B_2
-     ;bool    RIOM2_B_DIR_ZERO_2
-     ;bool    RIOM2_B_DIR_BACKWARD_2
-     ;bool    RIOM2_B_DIR_FORWARD_2
-     ;bool    RIOM2_B_EmBrButtton_2
-     ;bool    RIOM2_B_MCBOFF_2
-     ;bool    RIOM2_B_MCBON_2
-     ;bool    RIOM2_B_PG_DN_2
-     ;bool    RIOM2_B_PG_UP_2
-     ;bool    RIOM2_B_CABKEY_2;
+  bool    RIOM2_B_CPR_AUX_SWITCH1                ;
+  bool    RIOM2_B_MA3_CP680_1                    ;
+  bool    RIOM2_B_BCU_Ul                         ;
+  bool    RIOM2_B_BCU_FAULT                      ;
+  bool    RIOM2_B_BCU_EM                         ;
+  bool    RIOM2_B_24V_FAULT                      ;
+  bool    RIOM2_B_EBRAKE_ISO_VALVE_1             ;
+  bool    RIOM2_B_LKJ_EM                         ;
+  bool    RIOM2_B_H_HT_SWITCH                    ;
+  bool    RIOM2_B_NOFIRE_VALVE_1                 ;
+  bool    RIOM2_B_PARKBRAKE_SWITCH2              ;
+  bool    RIOM2_B_MCB_STATE1                     ;
+  bool    RIOM2_B_LOOP_GHV                       ;
+  bool    RIOM2_B_BRAKEPRESS_SWITCH1             ;
+  bool    RIOM2_B_OILFLOW2_STATE1                ;
+  bool    RIOM2_B_DZ_TFP_1                       ;
+  bool    RIOM2_B_TPH_1                          ;
+  bool    RIOM2_B_OILFLOW1_STATE1                ;
+  bool    RIOM2_B_CPR_AUX_ISO_VALVE              ;
+  bool    RIOM2_B_YV_PAN_1                       ;
+  bool    RIOM2_B_MA_SU_PT_1                     ;
+  bool    RIOM2_B_HIGHV_SWITCH                   ;
+  bool    RIOM2_B_QS_GHV_1                       ;
+  bool    RIOM2_B_SM_TEMP_ZERO_25                ;
+  bool    RIOM2_B_SM_TEMP_35                     ;
+  bool    RIOM2_B_SM_TEMP_50                     ;
+  bool    RIOM2_B_MA2_CP500_1                    ;
+  bool    RIOM2_B_EBRAKE_ISO_VALVE_2             ;
+  bool    RIOM2_B_NOFIRE_VALVE_2                 ;
+  bool    RIOM2_B_MA3_CP680_2                    ;
+  bool    RIOM2_B_BUCH_RELAY_OFFMCB              ;
+  bool    RIOM2_B_BUCH_RELAY_ALARM               ;
+  bool    RIOM2_B_OILFLOW1_STATE2                ;
+  bool    RIOM2_B_BRAKEPRESS_SWITCH2             ;
+  bool    RIOM2_B_OILFLOW2_STATE2                ;
+  bool    RIOM2_B_DZ_TFP_2                       ;
+  bool    RIOM2_B_TPH_2                          ;
+  bool    RIOM2_B_YV_PAN_2                       ;
+  bool    RIOM2_B_MA_SU_PT_2                     ;
+  bool    RIOM2_B_MCB_STATE2                     ;
+  bool    RIOM2_B_QS_GHV_2                       ;
+  bool    RIOM2_B_MONUL                          ;
+  bool    RIOM2_B_SBCM                           ;
+  bool    RIOM2_B_ANSC_FAULT                     ;
+  bool    RIOM2_B_ANSC2                          ;
+  bool    RIOM2_B_ANSC1                          ;
+  bool    RIOM2_B_C_IS_QUAI                      ;
+  bool    RIOM2_B_C_PC_QUAI                      ;
+  bool    RIOM2_B_DJ_QUAI                        ;
+  bool    RIOM2_B_RB_URG                         ;
+  bool    RIOM2_B_C_CPR_AUX                      ;
+  bool    RIOM2_B_Z_QUAI_T                       ;
+  bool    RIOM2_B_Z_QUAI_M                       ;
+  bool    RIOM2_B_Q_PP_QUAI                      ;
+  bool    RIOM2_B_C_QUAI                         ;
+  bool    RIOM2_B_P221CHECK0                     ;
+  bool    RIOM2_B_P221CHECK1                     ;
+  bool    RIOM2_B_BRAKE_BACK                     ;
+  bool    RIOM2_B_CPR_AUX_STOP                   ;
+  bool    RIOM2_B_Q_FLT_LOCK                     ;
+  bool    RIOM2_B_MCB_B_LOOP                     ;
+  bool    RIOM2_B_MCB_F_LOOP                     ;
+  bool    RIOM2_B_PANTO_B_LOOP                   ;
+  bool    RIOM2_B_PANTO_F_LOOP                   ;
+  bool    RIOM2_B_RB_IS_CF1                      ;
+  bool    RIOM2_B_PARKBRAKE_ISO_FS1              ;
+  bool    RIOM2_B_OVERCURRENT_Q1L_M1             ;
+  bool    RIOM2_B_DRY_FAULT                      ;
+  bool    RIOM2_B_C1_CPR_1                       ;
+  bool    RIOM2_B_Q_TH_CPR_1                     ;
+  bool    RIOM2_B_Q_REC                          ;
+  bool    RIOM2_B_C3_CPR_1                       ;
+  bool    RIOM2_B_C2_CPR_1                       ;
+  bool    RIOM2_B_HEAT_FORCE                     ;
+  bool    RIOM2_B_MA2_D1                         ;
+  bool    RIOM2_B_MA1_D1                         ;
+  bool    RIOM2_B_MA2_CP500_2                    ;
+  bool    RIOM2_B_MA1_CP750_1                    ;
+  bool    RIOM2_B_COVER_SM2                      ;
+  bool    RIOM2_B_HEAT_BELOW_ZERO                ;
+  bool    RIOM2_B_Q_PHEAT3                       ;
+  bool    RIOM2_B_Loco_Elec_Emer                 ;
+  bool    RIOM2_B_PARKBRAKE_SWITCH1              ;
+  bool    RIOM2_B_COVER_SM1                      ;
+  bool    RIOM2_B_SAND_ISO_VALVE                 ;
+  bool    RIOM2_B_RB_IS_CF2                      ;
+  bool    RIOM2_B_PARKBRAKE_ISO_FS2              ;
+  bool    RIOM2_B_OVERCURRENT_Q1L_M2             ;
+  bool    RIOM2_B_C1_CPR_2                       ;
+  bool    RIOM2_B_Q_TH_CPR_2                     ;
+  bool    RIOM2_B_C3_CPR_2                       ;
+  bool    RIOM2_B_C2_CPR_2                       ;
+
 
       unsigned short int     RIOM1_N_MSCT1;
       unsigned short int     RIOM2_N_MSCT1;
@@ -211,7 +262,7 @@ public:
       bool	M1_R2_B_Q_FIRE1_B;
       bool	M1_R2_B_Q_DJM_F;
       bool	M1_R2_B_BAT_LOW;
-      bool	M1_R2_B_Q_UAI;;
+      bool	M1_R2_B_Q_UAI;
       bool	M1_R2_B_MCBON2;
       bool	M1_R2_B_Q_FIRE2_T;
       bool	M1_R2_B_Q_FIRE2_B;

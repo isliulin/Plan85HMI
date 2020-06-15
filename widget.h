@@ -59,7 +59,7 @@ class DeviceDataNetwork;
 class DeviceDataVersion;
 class DeviceDataRIOM;
 class DeviceDataAirBrake;
-
+class Main_Allportdata;
 
 class Widget : public QWidget
 {
@@ -132,6 +132,8 @@ private:
     DeviceDataVersion* deviceDataVersion;
     DeviceDataRIOM* deviceDataRIOM;
     DeviceDataAirBrake* deviceDataAirBrake;
+
+    Main_Allportdata* main_Allportdata;
 };
 
 #endif // WIDGET_H

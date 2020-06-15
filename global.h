@@ -13,7 +13,7 @@
 #define TRAINUPR "border:1px solid white;image: url(:/images/images/Cheti-reverse.png);background-color:black;"
 
 //#define WINDOWS_MODE
-#define QT_VERSION_5_6
+//#define QT_VERSION_5_6
 
 #define YELLOW     "background-color:rgb(240,240,0);border:1px solid white;"
 #define GREEN     "background-color:rgb(0,240,0);border:1px solid white;"
@@ -101,6 +101,8 @@ enum pageIndex
     uMainData_TrainOutline,
     uMainData_DriverOutline,
     uMainData_TracBrakeOutline,
+    uMainData_AllportsData,
+
     //机车设置
     uSettng_Bypass,
     uSettng_Panto,

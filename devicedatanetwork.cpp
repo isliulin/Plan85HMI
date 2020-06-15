@@ -32,6 +32,8 @@ void DeviceDataNetwork::updatePage()
     updateState(ui->LBL_BCU, this->database->data_CCU->M1_D1_B_BCU_ONLINE);
     updateState(ui->LBL_CMD, this->database->data_CCU->M1_D1_B_6A_ONLINE);
     updateState(ui->LBL_ERM, this->database->data_CCU->M1_D1_B_ERM_ONLINE);
+
+    qDebug()<<this->database->data_CCU->M1_D1_B_ACU1_ONLINE;
 }
 
 void DeviceDataNetwork::updateState(QLabel *label, bool onLine, bool isMaster)
