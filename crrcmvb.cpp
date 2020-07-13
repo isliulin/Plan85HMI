@@ -166,14 +166,14 @@ void CrrcMvb::synchronizeMvbData()
             if(result != MUE_RESULT_OK)
             {
                 qDebug("dugon Read Error");
-                return;
+                //return;
             }else
             {
-                qDebug("dugon Read Port = %d OK,result = %d cycle = %d",pointer->port,portData[pointer->port]->status,portData[pointer->port]->cycle);
-                for(int i = 0;i<32;i++){
-                    printf(" %2x ",portData[pointer->port]->data[i]);
-                }
-                printf("\n\n");
+//                qDebug("dugon Read Port = %d OK,result = %d cycle = %d",pointer->port,portData[pointer->port]->status,portData[pointer->port]->cycle);
+//                for(int i = 0;i<32;i++){
+//                    printf(" %2x ",portData[pointer->port]->data[i]);
+//                }
+//                printf("\n\n");
             }
 
         }

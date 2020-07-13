@@ -232,7 +232,7 @@ void Data_CCU::updateData()
     CrrcMvb::getCrrcMvb()->setBool(0x300,25,7,B_AXLE_25TON);//轴重25吨
     CrrcMvb::getCrrcMvb()->setUnsignedInt(0x300,26,N_SIM_SPEED);//模拟机车速度 单位：km/h
     CrrcMvb::getCrrcMvb()->setUnsignedInt(0x300,28,N_SIM_LINE_VOLT);//模拟网压 单位：V
-    CrrcMvb::getCrrcMvb()->setUnsignedChar(0x300,30,N_DDU_LIFE);//DDU生命信号 （0~255递增）
+    CrrcMvb::getCrrcMvb()->setUnsignedChar(0x300,30,N_DDU_LIFE++);//DDU生命信号 （0~255递增）
     CrrcMvb::getCrrcMvb()->setBool(0x300,31,0,B_VT_MT1_ST);//牵引风机1测试：1测试，0停止
     CrrcMvb::getCrrcMvb()->setBool(0x300,31,1,B_VT_MT2_ST);//牵引风机2测试：1测试，0停止
     CrrcMvb::getCrrcMvb()->setBool(0x300,31,4,B_VT_SM1_ST);//机械间风机1测试：1测试，0停止

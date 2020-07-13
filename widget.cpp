@@ -57,17 +57,18 @@ Widget::Widget(QWidget *parent) :
     ui(new Ui::Widget)
 {
     ui->setupUi(this);
-
+    qDebug()<<"step1: before desktop!";
     QDesktopWidget *desktop = QApplication::desktop();
 
-    if (desktop->width() == 800 && desktop->height() == 600)
-    {
-        this->showFullScreen();
-    }
-    else
-    {
-        this->move((desktop->width() - this->width()) / 2, (desktop->height() - this->height()) / 2);
-    }
+//    if (desktop->width() == 800 && desktop->height() == 600)
+//    {
+//        this->showFullScreen();
+//    }
+//    else
+//    {
+//        this->move((desktop->width() - this->width()) / 2, (desktop->height() - this->height()) / 2);
+//    }
+    qDebug()<<"step2: database!";
 
     this->database = new Database();
     MyBase::database = this->database;
@@ -310,6 +311,7 @@ void Widget::updatePage()
         crrcMvb->synchronizeMvbData();
         this->simulation->installMvb(CrrcMvb::getCrrcMvb());
         this->database->updateData();
+
     }
     this->header->updatePage();
     this->widgets[MyBase::currentPage]->updatePage();
