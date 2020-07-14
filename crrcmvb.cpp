@@ -1,5 +1,4 @@
 #include "crrcmvb.h"
-#include "global.h"
 
 #define CRRC_MVB_DEBUG_MODE
 
@@ -52,14 +51,12 @@ bool CrrcMvb::InitReadPortData()
     {
         for(int i = 0;i<portConfigure.size();i++)
         {
-            if(portConfigure.at(i)->type == MVB_Sink)
-            {
+            if(portConfigure.at(i)->type == MVB_Sink){
                 result = M_MVB.MVB_init_port(M_MVB.p_bus_ctrl,MUE_PD_FULL_PORT_CONFIG_SINK,(WORD16)portConfigure.at(i)->port,portConfigure.at(i)->size);
             }else if(portConfigure.at(i)->type == MVB_Source)
             {
                 result = M_MVB.MVB_init_port(M_MVB.p_bus_ctrl,MUE_PD_FULL_PORT_CONFIG_SRC,(WORD16)portConfigure.at(i)->port,portConfigure.at(i)->size);
-            }else if(portConfigure.at(i)->type == MVB_Virtual)
-            {
+            }else if(portConfigure.at(i)->type == MVB_Virtual){
                 result = MUE_RESULT_OK;
             }
             else
@@ -74,8 +71,8 @@ bool CrrcMvb::InitReadPortData()
     //启动MVB
     if(result == MUE_RESULT_OK)
     {
-        qDebug("MVB_init_port Msg.No %d",Msg.No);
-        M_MVB.MVB_Start(M_MVB.p_bus_ctrl,0x011);//MVB地址
+        qDebug("MVB_init_port Msg.No %d,p_bus_ctrl = %d \n",Msg.No,*((int*)M_MVB.p_bus_ctrl));
+        M_MVB.MVB_Start(M_MVB.p_bus_ctrl,0x032);//MVB地址
     }
     else
     {
@@ -128,9 +125,8 @@ bool CrrcMvb::addPort(unsigned short port, FCode size, PortType type, unsigned s
         this->portData.insert(port, new crrc_port_data(cycle));
         this->portConfigure << new struct crrc_port(port, t_size, type, cycle);
     }
-    else
-    {
-        qDebug() << "the port"<< port<<" has already been in the port list"<< __FILE__ << __LINE__;;
+    else{
+        qDebug() << "the port has already been in the port list"<< __FILE__ << __LINE__;;
     }
 }
 
@@ -170,11 +166,14 @@ void CrrcMvb::synchronizeMvbData()
             if(result != MUE_RESULT_OK)
             {
                 qDebug("dugon Read Error");
-                return;
+                //return;
             }else
             {
-                qDebug("dugon Read OK");
-
+//                qDebug("dugon Read Port = %d OK,result = %d cycle = %d",pointer->port,portData[pointer->port]->status,portData[pointer->port]->cycle);
+//                for(int i = 0;i<32;i++){
+//                    printf(" %2x ",portData[pointer->port]->data[i]);
+//                }
+//                printf("\n\n");
             }
 
         }
@@ -187,11 +186,11 @@ void CrrcMvb::synchronizeMvbData()
             //检测写取是否成功
             if(result != MUE_RESULT_OK)
             {
-                //qDebug("dugon Write Error");
+                qDebug("dugon Write Error");
                 return;
             }else
             {
-                //qDebug("dugon Write OK");
+                qDebug("dugon Write OK");
 
             }
         }

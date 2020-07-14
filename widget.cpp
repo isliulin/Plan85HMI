@@ -51,23 +51,24 @@
 #include "devicedatariom.h"
 #include "devicedatasiv.h"
 #include "devicedataversion.h"
-
+#include "main_allportdata.h"
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
 {
     ui->setupUi(this);
-
+    qDebug()<<"step1: before desktop!";
     QDesktopWidget *desktop = QApplication::desktop();
 
-    if (desktop->width() == 800 && desktop->height() == 600)
-    {
-        this->showFullScreen();
-    }
-    else
-    {
-        this->move((desktop->width() - this->width()) / 2, (desktop->height() - this->height()) / 2);
-    }
+//    if (desktop->width() == 800 && desktop->height() == 600)
+//    {
+//        this->showFullScreen();
+//    }
+//    else
+//    {
+//        this->move((desktop->width() - this->width()) / 2, (desktop->height() - this->height()) / 2);
+//    }
+    qDebug()<<"step2: database!";
 
     this->database = new Database();
     MyBase::database = this->database;
@@ -112,6 +113,10 @@ Widget::Widget(QWidget *parent) :
     this->mainData_TracBrakeOutline = new MainData_TracBrakeOutline(this);
     this->mainData_TracBrakeOutline->setMyBase(uMiddleMainData,QString("牵引制动"));
     this->mainData_TracBrakeOutline->hide();
+
+    this->main_Allportdata = new Main_Allportdata(this);
+    this->main_Allportdata->setMyBase(uMiddleMainData,QString("数据监控"));
+    this->main_Allportdata->hide();
 
     //add setting pages
     this->settng_Bypass = new Settng_Bypass(this);
@@ -284,6 +289,7 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uDeviceDataVersion, this->deviceDataVersion);
     this->widgets.insert(uDeviceDataRIOM, this->deviceDataRIOM);
     this->widgets.insert(uDeviceDataAirBrake, this->deviceDataAirBrake);
+    this->widgets.insert(uMainData_AllportsData, this->main_Allportdata);
 
 
     this->header->setPageName(this->widgets[uVehicleRunStatePage]->name);
@@ -305,6 +311,7 @@ void Widget::updatePage()
         crrcMvb->synchronizeMvbData();
         this->simulation->installMvb(CrrcMvb::getCrrcMvb());
         this->database->updateData();
+
     }
     this->header->updatePage();
     this->widgets[MyBase::currentPage]->updatePage();
@@ -435,8 +442,9 @@ void Widget::showEvent(QShowEvent *)
             CrrcMvb::getCrrcMvb()->addSinkPort(0x211,MVB_FCode4,32);
             CrrcMvb::getCrrcMvb()->addSinkPort(0x212,MVB_FCode4,512);
             CrrcMvb::getCrrcMvb()->addSinkPort(0x220,MVB_FCode4,128);
-            CrrcMvb::getCrrcMvb()->addSinkPort(0x221,MVB_FCode4,32);
-            CrrcMvb::getCrrcMvb()->addSinkPort(0x222,MVB_FCode4,512);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x221,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x222,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0x223,MVB_FCode4,512);
             CrrcMvb::getCrrcMvb()->addSinkPort(0x218,MVB_FCode4,128);
             CrrcMvb::getCrrcMvb()->addSinkPort(0x228,MVB_FCode4,64);
             CrrcMvb::getCrrcMvb()->addSinkPort(0x229,MVB_FCode4,512);
@@ -617,17 +625,31 @@ void Widget::showEvent(QShowEvent *)
             CrrcMvb::getCrrcMvb()->addSinkPort(0xfc2,MVB_FCode4,128);
             CrrcMvb::getCrrcMvb()->addSinkPort(0xfc3,MVB_FCode4,128);
 
-
-
+            //OTHERS
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xFD0,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xFD1,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xFD2,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xFD3,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xFD4,MVB_FCode4,256);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xFD5,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xFD6,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xFD7,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xFD8,MVB_FCode4,128);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xFD9,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xFDA,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xFDB,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xFDC,MVB_FCode4,64);
+            CrrcMvb::getCrrcMvb()->addSinkPort(0xFDD,MVB_FCode4,64);
 
         }
 #endif
 
+#ifndef USER_DEBUG_MODE
         if(crrcMvb->InitReadPortData())
         {
             logger()->error("MVB板卡设置操作模式失败");
         }
-
+#endif
         timer->start(333);
     }else
     {
@@ -706,7 +728,7 @@ void Widget::VCUtime2HMI10s()
                            this->database->data_CCU->HMI_DateTime_foruse.date().day(),
                            this->database->data_CCU->HMI_DateTime_foruse.time().hour(),
                            this->database->data_CCU->HMI_DateTime_foruse.time().minute(),
-                           this->database->data_CCU->HMI_DateTime_foruse.time().second(),)
+                           this->database->data_CCU->HMI_DateTime_foruse.time().second());
 //                systimeset(this->database->CTAL_SysTimeYear_U8+2000,this->database->CTAL_SysTimeMonth_U8,this->database->CTAL_SysTimeDay_U8
 //                           ,this->database->CTAL_SysTimeHour_U8,this->database->CTAL_SysTimeMinute_U8,this->database->CTAL_SysTimeSecond_U8);
 #endif

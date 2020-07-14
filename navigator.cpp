@@ -44,7 +44,7 @@ void Navigator::NBpressEvent()
         break;
         case uMiddleMainData:
         buttonIndexList<<uMainData_TrainOutline<<uMainData_DriverOutline<<uMainData_TracBrakeOutline<<uNULL<<
-                     uNULL<<uNULL<<uNULL<<uNULL<<uNULL<<uVehicleRunStatePage;
+                     uNULL<<uNULL<<uNULL<<uNULL<<uMainData_AllportsData<<uVehicleRunStatePage;
         break;
         case uMiddleSetting:
         buttonIndexList<<uSettng_Bypass<<uSettng_Panto<<uSettng_Distance<<uSettng_TrainCode<<

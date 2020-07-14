@@ -13,7 +13,7 @@
 #define TRAINUPR "border:1px solid white;image: url(:/images/images/Cheti-reverse.png);background-color:black;"
 
 //#define WINDOWS_MODE
-#define QT_VERSION_5_6
+//#define QT_VERSION_5_6
 
 #define YELLOW     "background-color:rgb(240,240,0);border:1px solid white;"
 #define GREEN     "background-color:rgb(0,240,0);border:1px solid white;"
@@ -64,8 +64,8 @@
 #define PANTOSETUP "image: url(:/images/images/pantoSetUP.png);"
 #define PANTOSETISO "image: url(:/images/images/pantoSetISO.png);"
 
-#define MAINBUTTONUP  "font:16px;color: rgb(255,255,255);background-color: rgb(0, 0, 0);border:2px solid white;"
-#define MAINBUTTONDOWN "font:16px;color: rgb(255,255,255);background-color: yellow;border:2px solid white;"
+#define MAINBUTTONUP   "font: 16px;color: rgb(192,192,192);background-color: rgb(0, 0, 0);border: 1px solid white;border-top: 2px solid white;border-left: 2px solid white;"
+#define MAINBUTTONDOWN "font: 16px;color: rgb(0, 0, 0);background-color: rgb(240, 240, 0);border: 1px solid white;border-bottom: 2px solid white;border-right: 2px solid white;"
 //#define
 
 #include <stdlib.h>
@@ -101,6 +101,8 @@ enum pageIndex
     uMainData_TrainOutline,
     uMainData_DriverOutline,
     uMainData_TracBrakeOutline,
+    uMainData_AllportsData,
+
     //机车设置
     uSettng_Bypass,
     uSettng_Panto,
